@@ -273,8 +273,11 @@ import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import checkboxpng from "../../assets/images/Checbox container (1).png";
+import { useNavigate } from "react-router-dom";
+import Navbar2 from "../../components/Navbar2";
 
 function SellCarFormFindMechanic() {
+  const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -292,6 +295,7 @@ function SellCarFormFindMechanic() {
 
   return (
     <>
+      <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] min-h-screen py-10">
         <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
           <div className="md:col-span-6">
@@ -401,7 +405,9 @@ function SellCarFormFindMechanic() {
             </p>
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
-            <button className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+            <button
+              onClick={() => navigate("/sellyourcar/appointment")}
+              className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
               Next
             </button>
           </div>

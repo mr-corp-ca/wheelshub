@@ -143,7 +143,7 @@
 //               </h1>
 //             </div>
 //           </div>
-          
+
 //           <div className="py-5">
 //             <hr className="text-gray-5 border-2" />
 //           </div>
@@ -182,10 +182,12 @@ import tickImage from "../../assets/images/ticksign.png";
 import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from "../../components/Button";
 import greentickicon from "../../assets/images/greentickicon.png";
+import Navbar2 from "../../components/Navbar2";
 
 function SellCarFormVerificationProcess() {
   return (
     <>
+      <Navbar2 />
       <div className="w-full flex items-center justify-center px-4 my-5">
         <div className="verificationProcess p-6 sm:p-10 w-full lg:w-[70vw]">
           <div className="flex items-center justify-center flex-col gap-5">

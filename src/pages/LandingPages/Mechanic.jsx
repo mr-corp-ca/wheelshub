@@ -22,14 +22,16 @@ import carmechanic from "../../assets/images/carmechanic.png";
 import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
+import Navbar2 from "../../components/Navbar2";
+import { useNavigate } from "react-router-dom";
 
 export default function Mechanic() {
   const [value, setValue] = useState(0);
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -47,6 +49,7 @@ export default function Mechanic() {
 
   return (
     <>
+      <Navbar2 />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
@@ -68,7 +71,7 @@ export default function Mechanic() {
           <div className="mt-5">
             {/* Accordion */}
             <div className="border-2 rounded-xl">
-            <Accordion defaultExpanded>
+              <Accordion defaultExpanded>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel6a-content"
@@ -79,13 +82,13 @@ export default function Mechanic() {
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
-                <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
-            <input
-              type="text"
-              placeholder="Search here"
-              className="ml-2 w-full border-none focus:outline-none"
-            />
-          </div>
+                  <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
+                    <input
+                      type="text"
+                      placeholder="Search here"
+                      className="ml-2 w-full border-none focus:outline-none"
+                    />
+                  </div>
                 </AccordionDetails>
               </Accordion>
               <Accordion defaultExpanded>
@@ -95,7 +98,7 @@ export default function Mechanic() {
                   id="panel5a-header"
                 >
                   <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
-                  Popularity
+                    Popularity
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -112,86 +115,88 @@ export default function Mechanic() {
                       <input type="checkbox" />
                       <h1>Verified</h1>
                     </div>
-                   
+
                   </div>
                 </AccordionDetails>
               </Accordion>
-            
-             
+
+
             </div>
           </div>
         </div>
         {/* content of cards */}
         <div className="p-4 mt-2 lg:w-3/4">
-        <div className="">
-          <div className="newRequests py-4">
-            <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
-            Mechanics
-            </h1>
-          </div>
+          <div className="">
+            <div className="newRequests py-4">
+              <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                Mechanics
+              </h1>
+            </div>
 
-          <div className="flex items-center flex-wrap gap-5 pt-10 pb-5">
-            <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
-              Verified
-            </button>
-            <button className="rounded-lg bg-white border border-gray-300 text-gray-800 px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">
-              Nearby
-            </button>
-            <button className="rounded-lg bg-white border border-gray-300 text-gray-800 px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">
-              Most viewed
-            </button>
-          </div>
+            <div className="flex items-center flex-wrap gap-5 pt-10 pb-5">
+              <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                Verified
+              </button>
+              <button className="rounded-lg bg-white border border-gray-300 text-gray-800 px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">
+                Nearby
+              </button>
+              <button className="rounded-lg bg-white border border-gray-300 text-gray-800 px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">
+                Most viewed
+              </button>
+            </div>
 
-          <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Array(6)
-              .fill()
-              .map((_, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="card border rounded-2xl flex flex-col gap-4"
-                  >
-                    <div>
-                      <img
-                        src={carmechanic}
-                        alt="Car"
-                        className="w-full h-auto rounded-t-2xl"
-                      />
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Array(6)
+                .fill()
+                .map((_, index) => {
+                  return (
+                    <div
+                      onClick={() => navigate("/details")}
+
+                      key={index}
+                      className="card border rounded-2xl flex flex-col gap-4"
+                    >
+                      <div>
+                        <img
+                          src={carmechanic}
+                          alt="Car"
+                          className="w-full h-auto rounded-t-2xl"
+                        />
+                      </div>
+                      <div className="px-3 flex items-center justify-between">
+                        <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
+                          BL Car Mechanics
+                        </h1>
+                        <img src={hearticon} alt="Heart icon" />
+                      </div>
+                      <div className="flex items-center px-3 justify-between">
+                        <h1 className="text-base font-normal font-Work-sans text-custom-blue underline">
+                          7711 128 St, Surrey, BC V3W 4E6, Canada
+                        </h1>
+                      </div>
+                      <div className="px-3 flex items-center gap-3">
+                        <img src={yellowstar} alt="Yellow star" />
+                        <h1 className="text-sm font-normal font-Work-sans text-gray-800">
+                          430 Reviews
+                        </h1>
+                      </div>
+                      <div className="flex items-center gap-2 px-3">
+                        <img src={bluetick} alt="Yellow tick" />
+                        <p className="text-sm font-normal font-Work-sans text-gray-800">
+                          Verified by Wheeldealhub
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center pb-4 md:pb-5 mx-5">
+                        <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+                          Call now - +650 334 4545
+                        </button>
+                      </div>
                     </div>
-                    <div className="px-3 flex items-center justify-between">
-                      <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                        BL Car Mechanics
-                      </h1>
-                      <img src={hearticon} alt="Heart icon" />
-                    </div>
-                    <div className="flex items-center px-3 justify-between">
-                      <h1 className="text-base font-normal font-Work-sans text-custom-blue underline">
-                        7711 128 St, Surrey, BC V3W 4E6, Canada
-                      </h1>
-                    </div>
-                    <div className="px-3 flex items-center gap-3">
-                      <img src={yellowstar} alt="Yellow star" />
-                      <h1 className="text-sm font-normal font-Work-sans text-gray-800">
-                        430 Reviews
-                      </h1>
-                    </div>
-                    <div className="flex items-center gap-2 px-3">
-                      <img src={bluetick} alt="Yellow tick" />
-                      <p className="text-sm font-normal font-Work-sans text-gray-800">
-                        Verified by Wheeldealhub
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center pb-4 md:pb-5 mx-5">
-                      <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
-                      Call now - +650 334 4545
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
           </div>
-        </div>
-        <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
+          <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800">
               Load more
             </button>

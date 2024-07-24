@@ -14,19 +14,19 @@
 //     const [tabActive, setTabActive] = useState("home");
 //     const [openDropdown, setOpenDropdown] = useState(false)
 //     const handleClick = (item) => {
-      
+
 //         setTabActive(item);
 //       };
-    
+
 //       const bidsClick = () => {
-       
+
 //         handleClick("bids")
-     
+
 //       }
 //       const investmentClick = () => {
-    
+
 //         handleClick("investments");
-   
+
 //       }
 //   return (
 //     <>
@@ -221,10 +221,13 @@ import youtube from "../../assets/images/youtube.png";
 import twitter from "../../assets/images/twitter.png";
 import waveicon from "../../assets/images/Wave.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
+import Navbar2 from '../../components/Navbar2';
+import { useNavigate } from 'react-router-dom';
 
 function SellCarForm() {
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
+  const navigate = useNavigate()
 
   const handleClick = (item) => {
     setTabActive(item);
@@ -240,6 +243,7 @@ function SellCarForm() {
 
   return (
     <>
+      <Navbar2 />
       <div className='firstpart bg-[#f3f3f3] h-[100vh] py-10'>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-28 w-full md:w-[70%] mx-auto px-5 md:px-0'>
           <div className='md:col-span-6'>
@@ -293,7 +297,9 @@ function SellCarForm() {
             </div>
           </div>
           <div className='flex items-center justify-center pt-10 pb-5'>
-            <button className="h-11 w-32 rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+            <button
+              onClick={() => navigate("/sellyourcar/mechanic")}
+              className="h-11 w-32 rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
               Next
             </button>
           </div>

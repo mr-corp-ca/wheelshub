@@ -21,7 +21,7 @@
 //                 Sing up to continue
 //               </h1>
 //             </div>
-            
+
 //             <div className="flex items-center gap-4 my-7 ">
 //                 <div className=" flex items-center gap-2">
 //               <input
@@ -127,15 +127,20 @@ import { Input } from "../../components/Input";
 import googleIcon from "../../assets/images/google.png"
 import appleIcon from "../../assets/images/apple (1).png"
 import arrow from "../../assets/images/Arrow 1.png"
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Signup() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-6">
           <div className="relative">
             <img src={car} className="w-full h-full object-cover" alt="Car" />
-            <span className="text-base font-semibold font-inter text-white absolute flex items-center gap-3 top-10 left-10">
+            <span
+              onClick={() => navigate(-1)}
+              className=" cursor-pointer text-base font-semibold font-inter text-white absolute flex items-center gap-3 top-10 left-10">
               <img src={arrow} alt="Arrow" /> Go back
             </span>
           </div>
@@ -180,6 +185,11 @@ function Signup() {
                 </div>
                 <div className="w-full text-center flex items-center justify-center">
                   <button
+                    onClick={() => {
+                      toast.success("Signed up")
+                      navigate("/login")
+                    }}
+
                     className={
                       "w-full text-base rounded-xl px-2 py-3 my-5 font-inter font-medium self-center items-center bg-custom-blue text-white"
                     }
@@ -195,13 +205,13 @@ function Signup() {
                   <button className="text-base font-semibold font-inter text-gray-1 border rounded-xl w-full lg:w-[128px] h-[44px] flex items-center justify-center gap-3">
                     <span>
                       <img src={googleIcon} alt="Google Icon" />
-                    </span> 
+                    </span>
                     Google
                   </button>
                   <button className="text-base font-semibold font-inter text-gray-1 border rounded-xl w-full lg:w-[128px] h-[44px] flex items-center justify-center gap-3">
                     <span>
                       <img src={appleIcon} alt="Apple Icon" />
-                    </span> 
+                    </span>
                     Apple id
                   </button>
                 </div>

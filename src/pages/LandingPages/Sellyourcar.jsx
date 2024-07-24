@@ -52,10 +52,16 @@ import radio from "../../assets/images/Shape (1).png";
 import radio2 from "../../assets/images/Shape (2).png";
 import greenticke from "../../assets/images/greeticke.png";
 import teamicon from "../../assets/images/teamwork 1.png";
+import Navbar2 from '../../components/Navbar2';
+import { Button } from '../../components/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Sellyourcar() {
+  const navigate = useNavigate()
+
   return (
     <>
+      <Navbar2 />
       <div className="mainpart">
         <div className="firstpart h-[100vh] bg-[#f3f3f3] flex flex-col items-center justify-center">
           <div className="w-full sm:w-[90%] md:w-[70%] grid gridcols bg-emerald-600 mx-auto px-4 ">
@@ -70,13 +76,13 @@ function Sellyourcar() {
                     alt=""
                   />{" "}
                 </span>
-               <br />from Home
+                <br />from Home
               </h1>
             </div>
-           
+
           </div>
           <div className="w-full sm:w-[90%] md:w-[70vw] mx-auto px-4   bg-yellow-200 gap-4 mt-5">
-          <div>
+            <div>
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="" className="w-6 h-6 sm:w-8 sm:h-8" />
                 <h1 className="text-base sm:text-lg font-medium font-Work-sans text-gray-800">
@@ -96,7 +102,10 @@ function Sellyourcar() {
                 </h1>
               </div>
             </div>
-            </div>
+          </div>
+          <Button
+            onClick={() => navigate("/sellyourcar/form  ")}
+            title={"Next"} />
         </div>
       </div>
     </>
@@ -110,7 +119,7 @@ export default Sellyourcar;
 
 
 
-  {/* <div className='bg-white rounded-xl my-14 py-10 border z-30'>
+{/* <div className='bg-white rounded-xl my-14 py-10 border z-30'>
           <div className='flex items-center justify-center'>
             <h1 className='text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1'>
               Where do you want to sell your car?

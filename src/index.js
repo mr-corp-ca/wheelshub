@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { LoginContextProvider } from './Context/LoginContext';
+import { RoleContextProvider } from './Context/RoleContext';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LoginContextProvider>
+      <RoleContextProvider>
+        <ToastContainer />
+        <App />
+      </RoleContextProvider>
+    </LoginContextProvider>
   </React.StrictMode>
 );
 

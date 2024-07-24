@@ -16,7 +16,10 @@ import yellowstar from "../../assets/images/staryellow.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import checkboxpng from "../../assets/images/Checbox container (1).png";
 import calenderImg from "../../assets/images/calender.png"
+import { useNavigate } from "react-router-dom";
+import Navbar2 from "../../components/Navbar2";
 function SellCarFormAppointmentTime() {
+  const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -50,12 +53,13 @@ function SellCarFormAppointmentTime() {
 
   return (
     <>
+      <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] min-h-screen h-[50vh] py-10">
         <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
           <div className="md:col-span-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800">
-            Book a Convenient Time with
-            Your Mechanic
+              Book a Convenient Time with
+              Your Mechanic
             </h1>
             <div className="flex flex-col gap-4 mt-5">
               <div className="flex items-center gap-5">
@@ -85,41 +89,41 @@ function SellCarFormAppointmentTime() {
 
         <div className="w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16 mt-10">
           <div className=' flex items-center justify-center'>
-    <div className="  rounded-xl ">
-      <h2 className=" text-[28px] text-center font-bold font-inter text-gray-1 mb-4">Reschedule mechanic appointment</h2>
-      <div className="flex flex-wrap justify-center mb-4">
-        {days.map((day) => (
-          <button
-            key={day}
-            className={`p-2 m-1 rounded ${
-              selectedDay === day ? 'bg-blue-500 text-white' : 'bg-gray-200'
-            }`}
-            onClick={() => setSelectedDay(day)}
-          >
-            {day}
-          </button>
-        ))}
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
-        {times.map((time) => (
-          <button
-            key={time}
-            className={`p-2 rounded ${
-              selectedTime === time ? 'bg-blue-500 text-white' : 'bg-gray-200'
-            } ${time === '1:00-2:00 PM' ? 'opacity-50 cursor-not-allowed' : ''}`}
-            onClick={() => time !== '1:00-2:00 PM' && setSelectedTime(time)}
-          >
-            {time}
-          </button>
-        ))}
-      </div>
-      <div className=' flex items-center justify-center'>
-      <button className="w-1/2 py-2 bg-blue-500 text-white rounded-lg">
-        Update appointment
-      </button>
-      </div>
-    </div>
-    </div>
+            <div className="  rounded-xl ">
+              <h2 className=" text-[28px] text-center font-bold font-inter text-gray-1 mb-4">Reschedule mechanic appointment</h2>
+              <div className="flex flex-wrap justify-center mb-4">
+                {days.map((day) => (
+                  <button
+                    key={day}
+                    className={`p-2 m-1 rounded ${selectedDay === day ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                      }`}
+                    onClick={() => setSelectedDay(day)}
+                  >
+                    {day}
+                  </button>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
+                {times.map((time) => (
+                  <button
+                    key={time}
+                    className={`p-2 rounded ${selectedTime === time ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                      } ${time === '1:00-2:00 PM' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    onClick={() => time !== '1:00-2:00 PM' && setSelectedTime(time)}
+                  >
+                    {time}
+                  </button>
+                ))}
+              </div>
+              <div className=' flex items-center justify-center'>
+                <button
+                  onClick={() => navigate("/sellyourcar/findDealer")}
+                  className="w-1/2 py-2 bg-blue-500 text-white rounded-lg">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

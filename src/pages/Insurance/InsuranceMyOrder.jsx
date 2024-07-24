@@ -11,7 +11,7 @@ function InsuranceMyOrder() {
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-7">
             <div className="heading flex items-center justify-between mb-5">
-              <h1  className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
+              <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
                 My Order
               </h1>
             </div>
@@ -37,8 +37,8 @@ function InsuranceMyOrder() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate("/insuranceform1")}}  className="w-full h-[44px] rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
-                      Submit details
+                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className="w-full h-[44px] rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
+                        Submit details
                       </button>
                     </div>
                   </div>

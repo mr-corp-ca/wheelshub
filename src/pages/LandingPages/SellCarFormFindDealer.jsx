@@ -16,7 +16,10 @@ import yellowstar from "../../assets/images/staryellow.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import checkboxpng from "../../assets/images/Checbox container (1).png";
 import dealerimg from "../../assets/images/dealer.png"
+import { useNavigate } from "react-router-dom";
+import Navbar2 from "../../components/Navbar2";
 function SellCarFormFindDealer() {
+  const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -34,12 +37,13 @@ function SellCarFormFindDealer() {
 
   return (
     <>
+      <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] min-h-screen py-10">
         <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
           <div className="md:col-span-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800">
-            Pick a Dealer for Professional
-            Car Verification
+              Pick a Dealer for Professional
+              Car Verification
             </h1>
             <div className="flex flex-col gap-4 mt-5">
               <div className="flex items-center gap-5">
@@ -123,7 +127,7 @@ function SellCarFormFindDealer() {
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
                       <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
-                      Call now - +650 334 4545
+                        Call now - +650 334 4545
                       </button>
                     </div>
                   </div>
@@ -144,7 +148,9 @@ function SellCarFormFindDealer() {
             </p>
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
-            <button className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+            <button
+              onClick={() => navigate("/sellyourcar/dealerAppointmentForm")}
+              className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
               Next
             </button>
           </div>

@@ -315,6 +315,7 @@ import youtube from "../../assets/images/youtube.png";
 import twitter from "../../assets/images/twitter.png";
 import waveicon from "../../assets/images/Wave.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
+import Navbar2 from "../../components/Navbar2";
 
 
 
@@ -329,7 +330,7 @@ export default function AccordionUsage() {
   const [openDropdown, setOpenDropdown] = useState(false);
 
 
-  
+
   const handleClick = (item) => {
     setTabActive(item);
   };
@@ -344,6 +345,7 @@ export default function AccordionUsage() {
 
   return (
     <>
+      <Navbar2 />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
@@ -390,9 +392,8 @@ export default function AccordionUsage() {
                       onChange={handleChange}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${
-                          (value / 32000) * 100
-                        }%, #e5e7eb ${(value / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
+                          }%, #e5e7eb ${(value / 32000) * 100}%)`,
                       }}
                     />
                   </div>
@@ -446,9 +447,8 @@ export default function AccordionUsage() {
                       onChange={handleChange}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${
-                          (value / 32000) * 100
-                        }%, #e5e7eb ${(value / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
+                          }%, #e5e7eb ${(value / 32000) * 100}%)`,
                       }}
                     />
                   </div>
@@ -479,9 +479,8 @@ export default function AccordionUsage() {
                       onChange={handleChange}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${
-                          (value / 32000) * 100
-                        }%, #e5e7eb ${(value / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
+                          }%, #e5e7eb ${(value / 32000) * 100}%)`,
                       }}
                     />
                   </div>

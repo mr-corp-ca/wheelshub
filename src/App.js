@@ -51,11 +51,14 @@ import FinanceLandingPage from "./pages/LandingPages/FinanceLandingPage";
 import BuyACarDetails from "./pages/LandingPages/BuyACarDetails";
 import DealerDetails from "./pages/LandingPages/DealerDetails";
 import BuyACarDetailsDialog from "./pages/LandingPages/BuyACarDetailsDialog";
-import {Navbar} from "./components/Navbar"
-import {Sidebar} from './components/Sidebar'
+import { Navbar } from "./components/Navbar"
+import { Sidebar } from './components/Sidebar'
 import { useEffect } from "react";
 import { DropdownSidebar } from "./components/DropdownSidebar";
 import Navbar2 from "./components/Navbar2";
+import { useRoleContext } from "./Context/RoleContext";
+import DealerDashboard from "./pages/Dealer/DealerDashboard";
+import Employees from "./pages/Insurance/Employees";
 
 
 export const Layout = () => {
@@ -66,19 +69,6 @@ export const Layout = () => {
   }, [pathname]);
 
   return (
-    // <div className='xl:grid xl:grid-cols-12 w-full flex'>
-    //   <div className='w-full xl:col-span-12   flex flex-col '>
-    //     <Navbar2/>
-    //     <DropdownSidebar />
-    //     </div>
-    //     <div className=" xl:col-span-3 flex ">
-    //     <Sidebar />
-    //     </div>
-    //     <main className=" col-span-9 "> {/* Adjust padding as necessary */}
-    //       <Outlet />
-    //     </main>
-    // </div>
-
     <div className='w-full flex flex-col xl:grid xl:grid-cols-12'>
       <div className='w-full xl:col-span-12 flex flex-col'>
         <Navbar2 />
@@ -96,221 +86,248 @@ export const Layout = () => {
   )
 }
 
-
-
-const router = createBrowserRouter([
-  {
-    path: "navbar2",
-    element: <Navbar2/>
-  },
-  {
-    path: "/",
-    element: <Login />,
-  },
-
-  {
-    path: "/signup",
-    element: <SignUp />,
-  },
-  {
-    path: "/",
-    element: <Layout/>,
-    children: [
-
-      {
-        path: "finance",
-        element: <Finance/>
-      },
-      {
-        path: "myorder",
-        element: <MyOrder/>
-      },
-      {
-        path: "subscriptions",
-        element: <Subscriptions/>
-      },
-      {
-        path: "chats",
-        element: <Chats/>
-      },
-      {
-        path: "insurancemyorder",
-        element: <InsuranceMyOrder/>
-      },
-      {
-        path: "insurancepayment",
-        element: <Payments/>
-      },
-      {
-        path: "insurance",
-        element: <Insurance/>
-      },
-      {
-        path: "insuranceform1",
-        element: <InsuranceForm1/>
-      },
-      {
-        path: "insuranceform2",
-        element: <InsuranceForm2/>
-      },
-      {
-        path: "mechanicdashboard",
-        element: <MechanicDashboard/>
-      },
-      {
-        path: "mechanicverifynow",
-        element: <MechanicVerifyNow/>
-      },
-      {
-        path: "mechanicverifynow2",
-        element: <MechanicVerifyNow2/>
-      },
-      {
-        path: "mechanicverifynow3",
-        element: <MechanicVerifyNow3/>
-      },
-      {
-        path: "submit",
-        element: <Submit/>
-      },
-      {
-        path: "representativedashboard",
-        element: <RepresentativeDashboard/>
-      },
-      {
-        path: "appointments",
-        element: <Appointments/>
-      },
-      {
-        path: "appointmentsdetails",
-        element: <AppointmentsDetails/>
-      },
-      {
-        path: "dealerdetailpage",
-        element: <DealerDetailsPage/>
-      },
-      {
-        path: "dealerappointments",
-        element: <DealerAppointments/>
-      },
-      {
-        path: "dealerhandoverdetails",
-        element: <DealerHandoverDetails/>
-      },
-      {
-        path: "customerdashboard",
-        element: <CustomerDashboard/>
-      },
-      {
-        path: "myCarlistingcustomer",
-        element: <MyCarListingCustomer/>
-      },
-      {
-        path: "mycarlistingdetails",
-        element: <MyCarListingDetails/>
-      },
-      {
-        path: "insurancelogin",
-        element: <InsuranceLogin/>
-      },
-      {
-        path: "settinglogin",
-        element: <Setting/>
-      },
-      {
-        path: "rescheduledialog",
-        element: <RescheduleDialog/>
-      },
-      {
-        path: "paymentprocessmycarlisting",
-        element: <PaymentProcessMyCarListing/>
-      },
-      // {
-      //   path: "signup",
-      //   element: <Signup/>
-      // },
-      // {
-      //   path: "login",
-      //   element: <Login/>
-      // },
-      {
-        path: "homelandingpage",
-        element: <Home/>
-      },
-      {
-        path: "sellyourcar",
-        element: <Sellyourcar/>
-      },
-      {
-        path: "sellcarform",
-        element: <SellCarForm/>
-      },
-      {
-        path: "sellcarformfindmechanic",
-        element: <SellCarFormFindMechanic/>
-      },
-      {
-        path: "sellcarformappointmenttime",
-        element: <SellCarFormAppointmentTime/>
-      },
-      {
-        path: "sellcarformfinddealer",
-        element: <SellCarFormFindDealer/>
-      },
-      {
-        path: "sellcarformappointmentdealer",
-        element: <SellCarFormAppointmentDealer/>
-      },
-      {
-        path: "sellcarformappointmentdealerpaymentprocess",
-        element: <SellCarFormAppointmentDealerPaymentProcess/>
-      },
-      {
-        path: "sellcarformverificationprocess",
-        element: <SellCarFormVerificationProcess/>
-      },
-      {
-        path: "buyacar",
-        element: <AccordionUsage/>
-      },
-      {
-        path: "mechanic",
-        element: <Mechanic/>
-      },
-      {
-        path: "dealer",
-        element: <Dealer/>
-      },
-      {
-        path: "insurancelandingpage",
-        element: <InsuranceLandingPage/>
-      },
-      {
-        path: "financelandingpage",
-        element: <FinanceLandingPage/>
-      },
-      {
-        path: "buyacardetails",
-        element: <BuyACarDetails/>
-      },
-      {
-        path: "landingpagedealerdetails",
-        element: <DealerDetails/>
-      },
-      {
-        path: "buyacardetailsdialog",
-        element: <BuyACarDetailsDialog/>
-      }
-    ]
-  }
- 
- 
-]);
-
 function App() {
+  const { role } = useRoleContext()
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
+    },
+    {
+      path: "sellyourcar",
+      children: [
+        {
+          path: "",
+          element: <Sellyourcar />,
+        },
+        {
+          path: "form",
+          element: <SellCarForm />,
+        },
+        {
+          path: "mechanic",
+          element: <SellCarFormFindMechanic />
+        },
+        {
+          path: "appointment",
+          element: <SellCarFormAppointmentTime />
+        },
+        {
+          path: "findDealer",
+          element: <SellCarFormFindDealer />
+        },
+        {
+          path: "dealerAppointmentForm",
+          element: <SellCarFormAppointmentDealer />
+        },
+        {
+          path: "appointmentPaymentProcess",
+          element: <SellCarFormAppointmentDealerPaymentProcess />
+        },
+        {
+          path: "verificationProcess",
+          element: <SellCarFormVerificationProcess />
+        },
+      ]
+    },
+    {
+      path: "buyacar",
+      element: <AccordionUsage />
+    },
+    {
+      path: "mechanic",
+      element: <Mechanic />
+    },
+    {
+      path: "dealer",
+      element: <Dealer />
+    },
+    {
+      path: "insurance",
+      element: <InsuranceLandingPage />
+    },
+    {
+      path: "finances",
+      element: <FinanceLandingPage />
+    },
+    {
+      path: "buyacardetails",
+      element: <BuyACarDetails />
+    },
+    {
+      path: "details",
+      element: <DealerDetails />
+    },
+    {
+      path: "buyacardetailsdialog",
+      element: <BuyACarDetailsDialog />
+    },
+    // for individual
+    {
+      path: "/dashboard",
+      element: <Layout />,
+      children: [
+        {
+          path: "",
+          element:
+            role === "Individual" ? <CustomerDashboard /> :
+              role === "Dealer" ? <DealerDashboard /> :
+                role === "Mechanic" ? <MechanicDashboard /> :
+                  role === "Insurance" ? <Insurance /> :
+                    role === "Finance" ? <Finance /> : ""
+        },
+
+        {
+          path:
+            role === "Individual" ? "myorder" :
+              role === "Dealer" ? "myorder" :
+                role === "Mechanic" ? "appointments" :
+                  role === "Insurance" ? "myorder" :
+                    role === "Finance" ? "myorder" : "",
+          element:
+            role === "Individual" ? <MyOrder /> :
+              role === "Dealer" ? <DealerHandoverDetails /> :
+                role === "Mechanic" ? <MyOrder /> :
+                  role === "Insurance" ? <InsuranceMyOrder /> :
+                    role === "Finance" ? <MyOrder /> : "",
+        },
+        {
+          path:
+            role === "Individual" ? "carListings" :
+              role === "Dealer" ? "newRequest" :
+                role === "Mechanic" ? "newRequest" :
+                  role === "Insurance" ? "newRequest" :
+                    role === "Finance" ? "newRequest" : "",
+          element:
+            role === "Individual" ? <MyCarListingCustomer /> :
+              role === "Dealer" ? <DealerAppointments /> :
+                role === "Mechanic" ? <MyOrder /> :
+                  role === "Insurance" ? <MyOrder /> :
+                    role === "Finance" ? <Finance /> : ""
+        },
+        {
+          path: "subscriptions",
+          element: <Subscriptions />
+        },
+        {
+          path: "chats",
+          element: <Chats />
+        },
+        {
+          path: "insurancemyorder",
+          element: <InsuranceMyOrder />
+        },
+        {
+          path: "payments",
+          element: <Payments />
+        },
+        {
+          path: "settings",
+          element: <Setting />
+        },
+
+
+        // For 
+        {
+          path: "insurance",
+          element: <Insurance />
+        },
+        {
+          path: "insuranceform1",
+          element: <InsuranceForm1 />
+        },
+        {
+          path: "insuranceform2",
+          element: <InsuranceForm2 />
+        },
+        {
+          path: "mechanicdashboard",
+          element: <MechanicDashboard />
+        },
+        {
+          path: "mechanicverifynow",
+          element: <MechanicVerifyNow />
+        },
+        {
+          path: "mechanicverifynow2",
+          element: <MechanicVerifyNow2 />
+        },
+        {
+          path: "mechanicverifynow3",
+          element: <MechanicVerifyNow3 />
+        },
+        {
+          path: "submit",
+          element: <Submit />
+        },
+        {
+          path: "representativedashboard",
+          element: <RepresentativeDashboard />
+        },
+        {
+          path: "appointments",
+          element: <Appointments />
+        },
+        {
+          path: "appointmentsdetails",
+          element: <AppointmentsDetails />
+        },
+        {
+          path: "dealerdetailpage",
+          element: <DealerDetailsPage />
+        },
+        {
+          path: "dealerappointments",
+          element: <DealerAppointments />
+        },
+        {
+          path: "dealerhandoverdetails",
+          element: <DealerHandoverDetails />
+        },
+        {
+          path: "customerdashboard",
+          element: <CustomerDashboard />
+        },
+        {
+          path: "myCarlistingcustomer",
+          element: <MyCarListingCustomer />
+        },
+        {
+          path: "mycarlistingdetails",
+          element: <MyCarListingDetails />
+        },
+        {
+          path: "insurancelogin",
+          element: <InsuranceLogin />
+        },
+        {
+          path: "settinglogin",
+          element: <Setting />
+        },
+        {
+          path: "rescheduledialog",
+          element: <RescheduleDialog />
+        },
+        {
+          path: "paymentprocessmycarlisting",
+          element: <PaymentProcessMyCarListing />
+        },
+      ]
+    }
+  ]);
+
   return (
     <div className="App">
-       <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </div>
   );
 }

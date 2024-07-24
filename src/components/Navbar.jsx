@@ -14,7 +14,7 @@ export const Navbar = () => {
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto xl:p-3 gap-x-4">
 
                     {/* Mobile Logo */}
-                    <Link to={""} className="flex xl:hidden items-center space-x-3 rtl:space-x-reverse">
+                    <Link to={"/"} className="flex xl:hidden items-center space-x-3 rtl:space-x-reverse">
                         <img src={IMAGES?.logo} className="h-10" alt="Quick Bid Logo" />
                     </Link>
 

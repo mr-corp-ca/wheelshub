@@ -108,10 +108,12 @@ import bluetick from "../../assets/images/bluetick (2).png";
 import contact from "../../assets/images/contact.png";
 import maps from "../../assets/images/maps.png";
 import gmail from "../../assets/images/gmail.png";
+import Navbar2 from "../../components/Navbar2";
 
 function DealerDetails() {
   return (
     <>
+      <Navbar2 />
       <div className="grid grid-cols-1 lg:grid-cols-12 p-5 lg:p-10 gap-5 lg:gap-10">
         <div className="col-span-12 lg:col-span-6">
           <img src={usedCarsImage} className="w-full" alt="Used Cars" />
