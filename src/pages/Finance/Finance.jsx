@@ -111,8 +111,8 @@ function Finance() {
     <>
       <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <div className="col-span-12 lg:col-span-7">
-            <div className="heading flex items-center justify-between mb-5">
+          <div className="col-span-12 lg:col-span-8">
+            <div className="heading flex flex-wrap items-center justify-between mb-5">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
                 New Car listings
               </h1>
@@ -125,7 +125,7 @@ function Finance() {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center flex-wrap gap-3">
                       <div>
                         <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
                       </div>
@@ -150,7 +150,7 @@ function Finance() {
                 </div>
               ))}
           </div>
-          <div className="payments col-span-12 lg:col-span-5 ">
+          <div className="payments col-span-12 lg:col-span-4 ">
             <div className="flex items-center justify-start mb-10">
               <h1 className="text-lg lg:text-xl font-semibold font-inter text-gray-1">
                 Payments

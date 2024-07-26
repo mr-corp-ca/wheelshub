@@ -76,10 +76,10 @@ export const Layout = () => {
       <div className='xl:hidden'>
         <DropdownSidebar />
       </div>
-      <div className='hidden xl:block xl:col-span-3 lg:ml-[10%] lg:mr-20'>
+      <div className='hidden xl:block xl:col-span-2 '>
         <Sidebar />
       </div>
-      <main className='col-span-9 p-4'>
+      <main className='col-span-10 p-4'>
         <Outlet />
       </main>
     </div>

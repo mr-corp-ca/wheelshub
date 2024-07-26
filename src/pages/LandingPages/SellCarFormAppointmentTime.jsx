@@ -54,43 +54,38 @@ function SellCarFormAppointmentTime() {
   return (
     <>
       <Navbar2 />
-      <div className="firstpart bg-[#f3f3f3] min-h-screen h-[50vh] py-10">
-        <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
-          <div className="md:col-span-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800">
-              Book a Convenient Time with
-              Your Mechanic
+      <div className="firstpart bg-[#f3f3f3] h-fit py-32">
+      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20'>
+          <div className='md:col-span-9 '>
+            <h1 className='text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 '>
+            Book a Convenient Time with
+            Your Mechanic
             </h1>
-            <div className="flex flex-col gap-4 mt-5">
-              <div className="flex items-center gap-5">
+            <div className='flex flex-col gap-4 mt-5 '>
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Higher profits
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Flexible timings</h1>
               </div>
-              <div className="flex items-center gap-5">
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Easy process
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Minimized Wait Times</h1>
               </div>
-              <div className="flex items-center gap-5">
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  100% Trusted
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Personalized Service</h1>
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:col-span-2 items-center justify-center">
-            <img src={calenderImg} alt="Mechanic" />
+          <div className='hidden md:col-span-3 md:flex items-center justify-center '>
+            <img src={calenderImg} alt="Man smiling" />
           </div>
         </div>
-
-        <div className="w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16 mt-10">
-          <div className=' flex items-center justify-center'>
+      </div>
+      <div className="cardpart flex justify-center bg-white mx-5">
+        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
+        <div className=' flex items-center justify-center'>
             <div className="  rounded-xl ">
-              <h2 className=" text-[28px] text-center font-bold font-inter text-gray-1 mb-4">Reschedule mechanic appointment</h2>
+              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 mb-4">Reschedule mechanic appointment</h2>
               <div className="flex flex-wrap justify-center mb-4">
                 {days.map((day) => (
                   <button
@@ -125,9 +120,9 @@ function SellCarFormAppointmentTime() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="banner mt-[300px]">
+        </div>
+     
+      <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 

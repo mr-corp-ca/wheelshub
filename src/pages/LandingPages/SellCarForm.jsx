@@ -244,13 +244,13 @@ function SellCarForm() {
   return (
     <>
       <Navbar2 />
-      <div className='firstpart bg-[#f3f3f3] h-[100vh] py-10'>
-        <div className='grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-28 w-full md:w-[70%] mx-auto px-5 md:px-0'>
-          <div className='md:col-span-6'>
-            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800'>
+      <div className='firstpart bg-[#f3f3f3] h-[110vh] lg:py-10'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:w-[80%] mx-auto px-5 md:px-0 lg:pt-20'>
+          <div className='md:col-span-6 pt-10'>
+            <h1 className='text-[30px] lg:text-[48px] font-bold font-inter text-gray-800 '>
               Enter Your Personal Information
             </h1>
-            <div className='flex flex-col gap-4 mt-5'>
+            <div className='flex flex-col gap-4 my-10 lg:my-20'>
               <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
                 <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Higher profits</h1>
@@ -265,11 +265,11 @@ function SellCarForm() {
               </div>
             </div>
           </div>
-          <div className='hidden md:col-span-6 xl:flex items-center justify-center'>
+          <div className='hidden md:col-span-6 lg:flex items-center justify-center -mr-10'>
             <img src={mansmiling} alt="Man smiling" />
           </div>
         </div>
-        <div className='details border bg-white rounded-xl w-full md:w-[70%] mx-auto py-10 px-5 md:px-32 mt-10'>
+        <div className='details border bg-white rounded-xl w-full md:w-[80%] mx-auto py-10 px-5 md:px-32'>
           <div className='flex items-center justify-center'>
             <h1 className='text-2xl md:text-3xl font-inter font-bold text-gray-800'>Enter personal details</h1>
           </div>

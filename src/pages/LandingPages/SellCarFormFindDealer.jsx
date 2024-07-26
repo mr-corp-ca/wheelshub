@@ -38,44 +38,46 @@ function SellCarFormFindDealer() {
   return (
     <>
       <Navbar2 />
-      <div className="firstpart bg-[#f3f3f3] min-h-screen py-10">
-        <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
-          <div className="md:col-span-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800">
-              Pick a Dealer for Professional
-              Car Verification
+      <div className="firstpart bg-[#f3f3f3] h-fit py-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-32">
+          <div className="md:col-span-9 ">
+            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+            Pick a Dealer for Professional
+            Car Verification
             </h1>
-            <div className="flex flex-col gap-4 mt-5">
+            <div className="flex flex-col gap-4 mt-5 ">
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Higher profits
+                Enhanced Credibility
                 </h1>
               </div>
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Easy process
+                Increased Market Value
                 </h1>
               </div>
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  100% Trusted
+                Faster Sales Process
                 </h1>
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:col-span-2 items-center justify-center">
-            <img src={dealerimg} alt="Mechanic" />
+          <div className="hidden md:col-span-3 lg:flex items-center justify-center ">
+            <img src={dealerimg} alt="Man smiling" />
           </div>
         </div>
+      </div>
 
-        <div className="w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16 mt-10">
+      <div className="cardpart flex justify-center bg-white ">
+        <div className=" mb-20 lg:-mt-10 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
-            <h1>Select Dealer to  check the car</h1>
+            <h1>Select mechanic to check the car</h1>
           </div>
-          <div className="flex items-center gap-5 pt-10 pb-5">
+          <div className="flex flex-wrap items-center gap-5 pt-10 pb-5">
             <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
               Verified
             </button>
@@ -127,7 +129,7 @@ function SellCarFormFindDealer() {
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
                       <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
-                        Call now - +650 334 4545
+                        Select mechanic
                       </button>
                     </div>
                   </div>
@@ -149,14 +151,14 @@ function SellCarFormFindDealer() {
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button
-              onClick={() => navigate("/sellyourcar/dealerAppointmentForm")}
-              className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+              onClick={() => navigate("/sellyourcar/appointment")}
+              className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
+            >
               Next
             </button>
           </div>
         </div>
       </div>
-
       <div className="banner mt-10">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
