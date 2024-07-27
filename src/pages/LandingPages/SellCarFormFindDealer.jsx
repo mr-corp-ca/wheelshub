@@ -40,7 +40,7 @@ function SellCarFormFindDealer() {
       <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-32">
-          <div className="md:col-span-9 ">
+          <div className="md:col-span-8 ">
             <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
             Pick a Dealer for Professional
             Car Verification
@@ -66,14 +66,14 @@ function SellCarFormFindDealer() {
               </div>
             </div>
           </div>
-          <div className="hidden md:col-span-3 lg:flex items-center justify-center ">
+          <div className="hidden md:col-span-4 lg:flex items-center justify-center ">
             <img src={dealerimg} alt="Man smiling" />
           </div>
         </div>
       </div>
 
       <div className="cardpart flex justify-center bg-white ">
-        <div className=" mb-20 lg:-mt-10 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
+        <div className=" mb-20 lg:-mt-32 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
             <h1>Select mechanic to check the car</h1>
           </div>

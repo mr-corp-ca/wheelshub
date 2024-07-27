@@ -19,7 +19,7 @@ import calenderImg from "../../assets/images/calender.png";
 import paymentImg from "../../assets/images/paymentimg.png";
 import { useNavigate } from "react-router-dom";
 function SellCarFormAppointmentDealerPaymentProcess() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -38,51 +38,35 @@ function SellCarFormAppointmentDealerPaymentProcess() {
   const [selectedDay, setSelectedDay] = useState("Wed 17");
   const [selectedTime, setSelectedTime] = useState("10:00-11:00 AM");
 
-  const days = ["Mon 17", "Tue 17", "Wed 17", "Thu 17", "Fri 17", "Sat 17"];
-  const times = [
-    "9:00-10:00 AM",
-    "10:00-11:00 AM",
-    "11:00-12:00 PM",
-    "1:00-2:00 PM",
-    "2:00-3:00 PM",
-    "3:00-4:00 PM",
-    "4:00-5:00 PM",
-    "5:00-6:00 PM",
-  ];
-
   return (
     <>
-      <div className="firstpart bg-[#f3f3f3] min-h-screen h-[50vh] py-10">
-        <div className="grid grid-cols-1 md:grid-cols-8 w-full md:w-[70%] mx-auto px-5 md:px-0">
-          <div className="md:col-span-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter text-gray-800">
-              Confirm Your Mechanic and Dealer Appointments - $50 Each
+      <div className="firstpart bg-[#f3f3f3] h-fit py-32">
+      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20'>
+          <div className='md:col-span-9 '>
+            <h1 className='text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 '>
+            Confirm Your Mechanic and Dealer
+            Appointments - $50 Each
             </h1>
-            <div className="flex flex-col gap-4 mt-5">
-              <div className="flex items-center gap-5">
+            <div className='flex flex-col gap-4 mt-5 '>
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Higher profits
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Flexible timings</h1>
               </div>
-              <div className="flex items-center gap-5">
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  Easy process
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Minimized Wait Times</h1>
               </div>
-              <div className="flex items-center gap-5">
+              <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
-                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
-                  100% Trusted
-                </h1>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Personalized Service</h1>
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:col-span-2 items-center justify-center">
-            <img src={paymentImg} alt="Mechanic" />
+          <div className='hidden md:col-span-3 md:flex items-center justify-center '>
+            <img src={paymentImg} alt="Man smiling" />
           </div>
         </div>
+       
 
         {/* <div className="w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16 mt-10">
           <div className="payment ">
@@ -181,8 +165,11 @@ function SellCarFormAppointmentDealerPaymentProcess() {
           </div>
         </div> */}
 
-        <div className="w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16 mt-10">
-          <div className="payment">
+       
+      </div>
+      <div className="cardpart flex justify-center bg-white mx-5">
+        <div className=" mb-16 -mt-16 w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
+        <div className="payment">
             <div className="rounded-xl">
               <div className="flex items-center justify-center">
                 <h1 className="text-2xl md:text-[28px] font-bold font-inter text-gray-800">
@@ -221,7 +208,10 @@ function SellCarFormAppointmentDealerPaymentProcess() {
                 <div className="right w-full md:w-[50%]">
                   <div className="voucher p-5">
                     <div>
-                      <label htmlFor="card-number" className="block text-sm md:text-base font-medium font-inter text-gray-800">
+                      <label
+                        htmlFor="card-number"
+                        className="block text-sm md:text-base font-medium font-inter text-gray-800"
+                      >
                         Card number
                       </label>
                       <input
@@ -233,7 +223,10 @@ function SellCarFormAppointmentDealerPaymentProcess() {
                     </div>
                     <div className="flex flex-col md:flex-row items-center gap-6 my-5">
                       <div className="w-full">
-                        <label htmlFor="valid-through" className="block text-sm md:text-base font-medium font-inter text-gray-800">
+                        <label
+                          htmlFor="valid-through"
+                          className="block text-sm md:text-base font-medium font-inter text-gray-800"
+                        >
                           Valid through
                         </label>
                         <input
@@ -244,7 +237,10 @@ function SellCarFormAppointmentDealerPaymentProcess() {
                         />
                       </div>
                       <div className="w-full">
-                        <label htmlFor="cvv" className="block text-sm md:text-base font-medium font-inter text-gray-800">
+                        <label
+                          htmlFor="cvv"
+                          className="block text-sm md:text-base font-medium font-inter text-gray-800"
+                        >
                           CVV
                         </label>
                         <input
@@ -266,21 +262,16 @@ function SellCarFormAppointmentDealerPaymentProcess() {
               <div className="flex items-center justify-center pb-4 md:pb-5">
                 <button
                   onClick={() => navigate("/sellyourcar/verificationProcess")}
-                  className="h-[44px] md:h-[52px] px-[24px] md:px-[44px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+                  className="h-[44px] md:h-[52px] px-[24px] md:px-[44px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
+                >
                   Proceed to pay
                 </button>
               </div>
             </div>
           </div>
         </div>
-
-
-
-
-
-      </div>
-
-      <div className="banner mt-[300px]">
+        </div>
+      <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 

@@ -57,8 +57,8 @@ function Appointments() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate("/insuranceform1")}}  className="w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
-                      Review
+                      <button onClick={()=>{navigate("/insuranceform1")}}  className="w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center">
+                      Verify
                       </button>
                     </div>
                   </div>

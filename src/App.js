@@ -59,6 +59,13 @@ import Navbar2 from "./components/Navbar2";
 import { useRoleContext } from "./Context/RoleContext";
 import DealerDashboard from "./pages/Dealer/DealerDashboard";
 import Employees from "./pages/Insurance/Employees";
+import Selcartopublic from "./pages/LandingPages/Selcartopublic";
+import Info from "./pages/Customer Login/Info";
+import HandoverAppointment from "./pages/Customer Login/HandoverAppointment";
+import MechanicAppointments from "./pages/Mechanic/MechanicAppointments";
+import VerficationProfile from "./pages/Company Representative/VerficationProfile";
+import UploadDocuments from "./pages/Company Representative/UploadDocuments";
+import VerificationInProgress from "./pages/Company Representative/VerificationInProgress";
 
 
 export const Layout = () => {
@@ -171,6 +178,18 @@ function App() {
       path: "buyacardetailsdialog",
       element: <BuyACarDetailsDialog />
     },
+    {
+      path: "selcartopublic",
+      element: <Selcartopublic/>
+    },
+    {
+      path: "info",
+      element: <Info/>
+    },
+    {
+      path: "handoverappointment",
+      element: <HandoverAppointment/>
+    },
     // for individual
     {
       path: "/dashboard",
@@ -178,6 +197,7 @@ function App() {
       children: [
         {
           path: "",
+          
           element:
             role === "Individual" ? <CustomerDashboard /> :
               role === "Dealer" ? <DealerDashboard /> :
@@ -266,12 +286,28 @@ function App() {
           element: <MechanicVerifyNow3 />
         },
         {
+          path: "mechanicappointments",
+          element: <MechanicAppointments/>
+        },
+        {
           path: "submit",
           element: <Submit />
         },
         {
           path: "representativedashboard",
           element: <RepresentativeDashboard />
+        },
+        {
+          path: "verificationprofile",
+          element: <VerficationProfile/>
+        },
+        {
+          path: "uploaddocuments",
+          element: <UploadDocuments/>
+        },
+        {
+          path: "verificationinprogress",
+          element: <VerificationInProgress/>
         },
         {
           path: "appointments",
@@ -321,6 +357,7 @@ function App() {
           path: "paymentprocessmycarlisting",
           element: <PaymentProcessMyCarListing />
         },
+       
       ]
     }
   ]);
