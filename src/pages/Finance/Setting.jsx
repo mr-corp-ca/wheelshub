@@ -2,8 +2,9 @@ import React from "react";
 import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
-
+import { Navigate, useNavigate } from "react-router-dom";
 function Setting() {
+  const navigate = useNavigate()
   return (
     <>
     <div className="w-full h-[100vh] flex items-center justify-center">
@@ -65,6 +66,7 @@ function Setting() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
+            onClick={()=>{navigate('/dashboard/verificationprocess')}}
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }

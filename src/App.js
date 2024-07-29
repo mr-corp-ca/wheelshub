@@ -28,7 +28,7 @@ import CustomerDashboard from "./pages/Customer Login/CustomerDashboard";
 import MyCarListingCustomer from "./pages/Customer Login/MyCarListingCustomer";
 import MyCarListingDetails from "./pages/Customer Login/MyCarListingDetails";
 import InsuranceLogin from "./pages/Customer Login/InsuranceLogin";
-import Setting from "./pages/Customer Login/Setting";
+import Setting from './pages/Finance/Setting'
 import RescheduleDialog from "./pages/Customer Login/RescheduleDialog";
 import PaymentProcessMyCarListing from "./pages/Customer Login/PaymentProcessMyCarListing";
 import SignUp from "./pages/OnBoarding/Signup";
@@ -66,7 +66,14 @@ import MechanicAppointments from "./pages/Mechanic/MechanicAppointments";
 import VerficationProfile from "./pages/Company Representative/VerficationProfile";
 import UploadDocuments from "./pages/Company Representative/UploadDocuments";
 import VerificationInProgress from "./pages/Company Representative/VerificationInProgress";
-
+import Verification from "./pages/Finance/Verification";
+import VerificationinProcess from "./pages/Finance/VerificationinProcess";
+import ClaimNow from "./pages/Customer Login/ClaimNow";
+import MechanicVerification from "./pages/Customer Login/MechanicVerification";
+import DealerVerification from "./pages/Customer Login/DealerVerification";
+import InsuranceDetails from "./pages/Customer Login/InsuranceDetails";
+import Settings from "./pages/Customer Login/Settings";
+import MyOrderLogin from "./pages/Customer Login/MyOrdersLogin";
 
 export const Layout = () => {
   const { pathname } = useLocation()
@@ -110,7 +117,7 @@ function App() {
       element: <SignUp />,
     },
     {
-      path: "sellyourcar",
+      path: "/sellyourcar",
       children: [
         {
           path: "",
@@ -118,7 +125,11 @@ function App() {
         },
         {
           path: "form",
-          element: <SellCarForm />,
+          element: <SellCarForm />,  // Wheel Hub
+        },
+        {
+          path: "selcartopublic",
+          element: <Selcartopublic/> // Public Place
         },
         {
           path: "mechanic",
@@ -178,10 +189,7 @@ function App() {
       path: "buyacardetailsdialog",
       element: <BuyACarDetailsDialog />
     },
-    {
-      path: "selcartopublic",
-      element: <Selcartopublic/>
-    },
+   
     {
       path: "info",
       element: <Info/>
@@ -197,13 +205,13 @@ function App() {
       children: [
         {
           path: "",
-          
+
           element:
             role === "Individual" ? <CustomerDashboard /> :
               role === "Dealer" ? <DealerDashboard /> :
                 role === "Mechanic" ? <MechanicDashboard /> :
                   role === "Insurance" ? <Insurance /> :
-                    role === "Finance" ? <Finance /> : ""
+                    role === "Finance" ? <Verification/> : ""
         },
 
         {
@@ -251,8 +259,12 @@ function App() {
           element: <Payments />
         },
         {
-          path: "settings",
-          element: <Setting />
+          path: "setting",
+          element: <Setting/>
+        },
+        {
+          path: "verificationprocess",
+          element: <VerificationinProcess/>
         },
 
 
@@ -334,6 +346,10 @@ function App() {
           element: <CustomerDashboard />
         },
         {
+          path: 'myorderslogin',
+          element: <MyOrderLogin/>
+        },
+        {
           path: "myCarlistingcustomer",
           element: <MyCarListingCustomer />
         },
@@ -342,12 +358,20 @@ function App() {
           element: <MyCarListingDetails />
         },
         {
+          path: 'claimnow',
+          element: <ClaimNow/>
+        },
+        {
           path: "insurancelogin",
           element: <InsuranceLogin />
         },
         {
+          path: 'insurancedetails',
+          element: <InsuranceDetails/>
+        },
+        {
           path: "settinglogin",
-          element: <Setting />
+          element: <Settings />
         },
         {
           path: "rescheduledialog",
@@ -357,7 +381,14 @@ function App() {
           path: "paymentprocessmycarlisting",
           element: <PaymentProcessMyCarListing />
         },
-       
+        {
+          path: 'mechanicverification',
+          element: <MechanicVerification/>
+        },
+        {
+          path: 'dealerverification',
+          element: <DealerVerification/>
+        }
       ]
     }
   ]);

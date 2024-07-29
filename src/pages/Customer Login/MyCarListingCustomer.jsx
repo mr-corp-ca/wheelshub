@@ -3,7 +3,9 @@ import audi2 from "../../assets/images/audi2.png";
 import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import bluetick from "../../assets/images/verified.png"
+import { Navigate, useNavigate } from "react-router-dom";
 function MyCarListingCustomer() {
+  const navigate = useNavigate()
     const cars = [
         {
             buttonName: "View details",
@@ -68,7 +70,7 @@ function MyCarListingCustomer() {
                     <p className={`text-xs font-normal font-Work-sans ${value.textColor}`}>{value.verification}</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate("/dashboard/mycarlistingdetails")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       {value.buttonName}
                     </button>
                   </div>

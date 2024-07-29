@@ -6,7 +6,7 @@ import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
-function Setting() {
+function Settings() {
   const tabs = [
     "Account",
     "Security",
@@ -43,7 +43,7 @@ function Setting() {
           Settings
         </h1>
       </div>
-      <div className=" md:w-[60%]  p-5 flex flex-col gap-4 ">
+      <div className=" md:w-[80%]  p-5 flex flex-col gap-4 ">
         <div className="overflow-x-auto">
 
           <div className="flex flex-wrap  min-w-max flex-row gap-6 justify-center sm:justify-start space-x-0 sm:space-x-4 mb-4">
@@ -300,4 +300,4 @@ function Setting() {
   );
 }
 
-export default Setting;
+export default Settings;

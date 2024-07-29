@@ -321,6 +321,8 @@ import Navbar2 from "../../components/Navbar2";
 
 export default function AccordionUsage() {
   const [value, setValue] = useState(0);
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -389,7 +391,10 @@ export default function AccordionUsage() {
                       min="0"
                       max="32000"
                       value={value}
-                      onChange={handleChange}
+                      onChange={(e)=>{
+                        e.preventDefault();
+                        setValue(e.target.value)
+                      }}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
                         background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
@@ -436,19 +441,22 @@ export default function AccordionUsage() {
                   {/* Progress bar */}
                   <div className="flex flex-col items-center border-b border-dashed pb-3">
                     <div className="w-full flex justify-between text-blue-500">
-                      <span>${value}</span>
+                      <span>${value1}</span>
                       <span>$32000</span>
                     </div>
                     <input
                       type="range"
                       min="0"
                       max="32000"
-                      value={value}
-                      onChange={handleChange}
+                      value={value1}
+                      onChange={(e)=>{
+                        e.preventDefault();
+                        setValue1(e.target.value)
+                      }}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
-                          }%, #e5e7eb ${(value / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value1 / 32000) * 100
+                          }%, #e5e7eb ${(value1 / 32000) * 100}%)`,
                       }}
                     />
                   </div>
@@ -468,19 +476,22 @@ export default function AccordionUsage() {
                   {/* Progress bar */}
                   <div className="flex flex-col items-center border-b border-dashed pb-3">
                     <div className="w-full flex justify-between text-blue-500">
-                      <span>${value}</span>
+                      <span>${value2}</span>
                       <span>$32000</span>
                     </div>
                     <input
                       type="range"
                       min="0"
                       max="32000"
-                      value={value}
-                      onChange={handleChange}
+                      value={value2}
+                      onChange={(e)=>{
+                        e.preventDefault();
+                        setValue2(e.target.value)
+                      }}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${(value / 32000) * 100
-                          }%, #e5e7eb ${(value / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value2 / 32000) * 100
+                          }%, #e5e7eb ${(value2 / 32000) * 100}%)`,
                       }}
                     />
                   </div>

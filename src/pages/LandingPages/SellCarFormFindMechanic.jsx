@@ -398,7 +398,8 @@ function SellCarFormFindMechanic() {
             </button>
           </div>
           <div className="flex items-center justify-center gap-5">
-            <img src={checkboxpng} alt="Checkbox" />
+            {/* <img src={checkboxpng} alt="Checkbox" /> */}
+            <input type="checkbox" className="h-4 w-4" />
             <p className="text-lg font-normal font-inter text-gray-800">
               I agree to pay the mechanic fee of $250 after successful
               verification

@@ -169,11 +169,12 @@ import audiCar from "../../assets/images/audicar.png";
 import grayDot from "../../assets/images/graydot.png";
 import markIcon from "../../assets/images/mark.png"
 import poster from "../../assets/images/poster.png"
-
+import { Navigate, useNavigate } from 'react-router-dom';
 function CustomerDashboard() {
+  const naivgate = useNavigate()
   return (
     <>
-      <div className='mainpart grid grid-cols-1 lg:grid-cols-10 gap-5 p-5 lg:p-10'>
+      <div className='mainpart grid grid-cols-1 lg:grid-cols-10 gap-5'>
         <div className='leftpart col-span-6'>
           <div className='imgpart relative'>
             <img src={ad1Img} className='w-full' alt="Advertisement" />
@@ -193,7 +194,7 @@ function CustomerDashboard() {
                     <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
                     <div className='flex flex-col gap-3'>
                       <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">Mercedes-Benz E 220 d</h1>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2">
                         <h1 className="text-xs lg:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
                         <img src={grayDot} alt="dot" />
                         <h1 className="text-xs lg:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
@@ -204,7 +205,7 @@ function CustomerDashboard() {
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0 flex flex-col gap-5">
-                    <button className=" w-[156px] h-[44px] rounded-lg bg-custom-blue text-white text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">View car</button>
+                    <button onClick={()=>{naivgate('/dashboard/myCarlistingcustomer')}} className=" w-[156px] h-[44px] rounded-lg bg-custom-blue text-white text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">View car</button>
                     <button className=" w-[156px] h-[44px] rounded-lg border border-gray-1 text-gray-1 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">Remove</button>
                   </div>
                 </div>

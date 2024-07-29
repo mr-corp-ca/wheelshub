@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdsIcon, AuctionIcon, ClaimIcon, DashboardIcon, InvestmentsIcon, LogoutIcon, MyBidsIcon, SettingsIcon, SupportIcon, WalletIcon, MyOrders, NewRequests, Subscriptions } from '../assets/svgs/SidebarSvg';
+import { AdsIcon, AuctionIcon, ClaimIcon, DashboardIcon, InvestmentsIcon, LogoutIcon, MyBidsIcon, SettingsIcon, SupportIcon, WalletIcon, MyOrders, NewRequests, Subscriptions, Insurance } from '../assets/svgs/SidebarSvg';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import IMAGES from '../assets/IMAGES';
 import { useRoleContext } from '../Context/RoleContext';
@@ -18,7 +18,7 @@ export const Sidebar = () => {
         {
             name: "My orders",
             icon: MyOrders,
-            navigate: "/dashboard/myorder"
+            navigate: "/dashboard/myorderslogin"
         },
         {
             name:
@@ -30,6 +30,11 @@ export const Sidebar = () => {
             icon: NewRequests,
             navigate:
                 role === "Dealer" ? "/dashboard/newRequest" : "/dashboard/carListings"
+        },
+        {
+            name: "Insurance",
+            icon: Insurance,
+            navigate: '/dashboard/insurancelogin'
         },
         {
             name: "Subscriptions",
@@ -51,7 +56,7 @@ export const Sidebar = () => {
         {
             name: "Settings",
             icon: SettingsIcon,
-            navigate: "/dashboard/settings"
+            navigate: "/dashboard/settinglogin"
         },
 
         {

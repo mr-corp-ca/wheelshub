@@ -29,8 +29,9 @@
 import React from 'react'
 import idImage from '../../assets/images/id 1.png'
 import { Button } from '../../components/Button'
-
+import { Navigate, useNavigate } from 'react-router-dom'
 function Verification() {
+  const navigate = useNavigate()
   return (
     <>
       <div className='w-full h-screen flex items-center justify-center px-4'>
@@ -44,7 +45,7 @@ function Verification() {
             </h6>
           </div>
           <div>
-            <Button title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium"} />
+            <Button onClick={()=>{navigate('/dashboard/setting')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
           </div>
         </div>
       </div>

@@ -15,11 +15,15 @@ import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import checkboxpng from "../../assets/images/Checbox container (1).png";
-import calenderImg from "../../assets/images/calender.png"
+import calenderImg from "../../assets/images/calender.png";
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
+import back from "../../assets/images/back.png";
+import forw from "../../assets/images/forw.png";
+import calen from "../../assets/images/calen.png";
+
 function SellCarFormAppointmentTime() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -35,93 +39,117 @@ function SellCarFormAppointmentTime() {
     handleClick("investments");
   };
 
+  const [selectedDay, setSelectedDay] = useState("Wed 17");
+  const [selectedTime, setSelectedTime] = useState("10:00-11:00 AM");
 
-  const [selectedDay, setSelectedDay] = useState('Wed 17');
-  const [selectedTime, setSelectedTime] = useState('10:00-11:00 AM');
-
-  const days = ['Mon 17', 'Tue 17', 'Wed 17', 'Thu 17', 'Fri 17', 'Sat 17'];
+  const days = ["Mon 18", "Tue 19", "Wed 20", "Thu 21", "Fri 22", "Sat 23"];
   const times = [
-    '9:00-10:00 AM',
-    '10:00-11:00 AM',
-    '11:00-12:00 PM',
-    '1:00-2:00 PM',
-    '2:00-3:00 PM',
-    '3:00-4:00 PM',
-    '4:00-5:00 PM',
-    '5:00-6:00 PM',
+    "9:00-10:00 AM",
+    "10:00-11:00 AM",
+    "11:00-12:00 PM",
+    "1:00-2:00 PM",
+    "2:00-3:00 PM",
+    "3:00-4:00 PM",
+    "4:00-5:00 PM",
+    "5:00-6:00 PM",
   ];
 
   return (
     <>
       <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
-      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20'>
-          <div className='md:col-span-9 '>
-            <h1 className='text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 '>
-            Book a Convenient Time with
-            Your Mechanic
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20">
+          <div className="md:col-span-9 ">
+            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+              Book a Convenient Time with Your Mechanic
             </h1>
-            <div className='flex flex-col gap-4 mt-5 '>
-              <div className='flex items-center gap-5'>
+            <div className="flex flex-col gap-4 mt-5 ">
+              <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Flexible timings</h1>
+                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                  Flexible timings
+                </h1>
               </div>
-              <div className='flex items-center gap-5'>
+              <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Minimized Wait Times</h1>
+                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                  Minimized Wait Times
+                </h1>
               </div>
-              <div className='flex items-center gap-5'>
+              <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Personalized Service</h1>
+                <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                  Personalized Service
+                </h1>
               </div>
             </div>
           </div>
-          <div className='hidden md:col-span-3 md:flex items-center justify-center '>
+          <div className="hidden md:col-span-3 md:flex items-center justify-center ">
             <img src={calenderImg} alt="Man smiling" />
           </div>
         </div>
       </div>
       <div className="cardpart flex justify-center bg-white mx-5">
         <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
-        <div className=' flex items-center justify-center'>
+          <div className=" flex items-center justify-center">
             <div className="  rounded-xl ">
-              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 mb-4">Reschedule mechanic appointment</h2>
-              <div className="flex flex-wrap justify-center mb-4">
+              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 mb-4">
+                Reschedule mechanic appointment
+              </h2>
+              <div className="flex items-center flex-wrap justify-center mb-4">
+                <img src={back} alt="" className=" cursor-pointer" />
                 {days.map((day) => (
                   <button
                     key={day}
-                    className={`p-2 m-1 rounded ${selectedDay === day ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                      }`}
+                    className={`p-2 m-1 rounded ${
+                      selectedDay === day
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-200"
+                    }`}
                     onClick={() => setSelectedDay(day)}
                   >
                     {day}
                   </button>
                 ))}
+                <img src={forw} alt="" className=" cursor-pointer" />
+                
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4 ">
                 {times.map((time) => (
                   <button
                     key={time}
-                    className={`p-2 rounded ${selectedTime === time ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                      } ${time === '1:00-2:00 PM' ? 'opacity-50 cursor-not-allowed' : ''}`}
-                    onClick={() => time !== '1:00-2:00 PM' && setSelectedTime(time)}
+                    className={`p-2 rounded ${
+                      selectedTime === time
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-200"
+                    } ${
+                      time === "1:00-2:00 PM"
+                        ? "opacity-50 cursor-not-allowed"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      time !== "1:00-2:00 PM" && setSelectedTime(time)
+                    }
                   >
                     {time}
                   </button>
                 ))}
               </div>
-              <div className=' flex items-center justify-center'>
+              <div className=" flex items-center justify-center">
                 <button
-                  onClick={() => navigate("/sellyourcar/findDealer")}
-                  className="w-1/2 py-2 bg-blue-500 text-white rounded-lg">
+                  onClick={() =>
+                    navigate("/sellyourcar/appointmentPaymentProcess")
+                  }
+                  className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
+                >
                   Next
                 </button>
               </div>
             </div>
           </div>
         </div>
-        </div>
-     
+      </div>
+
       <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>

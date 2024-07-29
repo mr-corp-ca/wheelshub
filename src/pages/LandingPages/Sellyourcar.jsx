@@ -65,7 +65,8 @@ import twitter from "../../assets/images/twitter.png";
 import waveicon from "../../assets/images/Wave.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import { useState } from 'react';
-
+import { useLoginContext } from '../../Context/LoginContext';
+import { useRoleContext } from '../../Context/RoleContext';
 
 function Sellyourcar() {
   const navigate = useNavigate()
@@ -85,8 +86,20 @@ function Sellyourcar() {
   const investmentClick = () => {
     handleClick("investments");
   };
+
+  const [loginType, setLoginType] = useState("")
+  const { isLoggedIn, setIsLoggedIn } = useLoginContext()
+  const { setRole } = useRoleContext()
+  console.log(loginType)
+
+  const [borderColor, setBorderColor] = useState('')
+   
+  const handleborderColor = (item) =>{
+    setBorderColor(item)
+  }
   return (
     <>
+ 
       <Navbar2 />
       <div className="mainpart">
         <div className="firstpart h-[100vh] bg-[#f3f3f3] flex flex-col items-center justify-center">
@@ -140,10 +153,14 @@ function Sellyourcar() {
             </h1>
           </div>
           <div className='py-10 flex flex-col md:flex-row items-center justify-center gap-10'>
-            <div className='border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4'>
+            <div onClick={()=>{handleborderColor('blue1')}} className={`${borderColor === 'blue1'? 'border-2  border-custom-blue': ' border-2'} border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}>
               <div className='flex items-center gap-4'>
                 {/* <img src={radio} alt="" /> */}
-                <input type="radio" name='same' className=' h-5 w-5' />
+                <input type="radio" value={'form'} 
+                 checked={loginType === 'form'}
+                    onChange={(e) => {
+                      setLoginType(e.target.value)
+                    }} name='same' className=' h-5 w-5' />
                 <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>WheelDealHub</h1>
               </div>
               <div>
@@ -160,10 +177,15 @@ function Sellyourcar() {
                 </div>
               </div>
             </div>
-            <div className='border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4'>
+            <div onClick={()=>{handleborderColor('blue2')}} className={`${borderColor === 'blue2'? 'border-2  border-custom-blue': ' border-2'} border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}>
               <div className='flex items-center gap-4'>
                 {/* <img src={radio} alt="" /> */}
-                <input type="radio" name='same' className=' h-5 w-5'/>
+                <input type="radio"  value={'selcartopublic'} 
+                 checked={loginType === 'selcartopublic'}
+                    onChange={(e) => {
+                      setLoginType(e.target.value)
+                    }}
+                 name='same' className=' h-5 w-5'/>
                 <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Public sale</h1>
               </div>
               <div>
@@ -182,7 +204,19 @@ function Sellyourcar() {
             </div>
           </div>
           <div className='flex items-center justify-center'>
-            <button className="h-11 md:h-12 rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+            <button onClick={(e) => {
+                      e.preventDefault()
+                      if (loginType === "") {
+                        alert("Please select where you want to sale ")
+                      }
+                      else {
+                        setIsLoggedIn(true)
+                        setRole(loginType)
+                        navigate(`/sellyourcar/${loginType}`)
+                      }
+                    }}
+            
+            className="h-11 md:h-12 rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
               Next
             </button>
           </div>
