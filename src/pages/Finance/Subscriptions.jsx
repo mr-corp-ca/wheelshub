@@ -226,7 +226,7 @@ function Subscriptions() {
             My Order
           </h1>
         </div>
-        <div className="cards py-4 md:py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-16">
+        <div className="cards py-4 md:py-5 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
           {[
             { title: "Silver", price: "$70", color: "text-custom-blue", bgColor: "bg-white", textColor: "text-custom-blue" },
             { title: "Gold", price: "$100", color: "text-white", bgColor: "bg-custom-blue", textColor: "text-white" },
@@ -266,8 +266,8 @@ function Subscriptions() {
           ))}
         </div>
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="heading mb-5 col-span-1">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="heading mb-5 col-span-2">
               <div className="flex items-center justify-between">
                 <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
                   New Car listings
@@ -278,7 +278,7 @@ function Subscriptions() {
               </div>
               <div className="card py-4">
                 <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-wrap items-center gap-4">
                     <div>
                       <img src={mailGift} alt="Mail Gift" className="w-24 h-24 md:w-auto md:h-auto" />
                     </div>

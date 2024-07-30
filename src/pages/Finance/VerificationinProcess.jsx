@@ -78,8 +78,9 @@ import React from 'react';
 import tickImage from "../../assets/images/ticksign.png";
 import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from '../../components/Button';
-
+import { Navigate, useNavigate } from 'react-router-dom';
 function VerificationinProcess() {
+ const navigate = useNavigate()
   return (
     <>
       <div className='w-full flex items-center justify-center px-4 my-5'>
@@ -145,7 +146,7 @@ function VerificationinProcess() {
           </div>
 
           <div className='flex items-center justify-center py-3'>
-            <button className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[24px] py-[12px] border-gray-1 flex items-center justify-center'>
+            <button onClick={()=>{navigate('/dashboard/finance')}} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[24px] py-[12px] border-gray-1 flex items-center justify-center'>
               Need help
             </button>
           </div>

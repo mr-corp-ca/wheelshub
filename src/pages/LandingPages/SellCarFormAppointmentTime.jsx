@@ -138,7 +138,7 @@ function SellCarFormAppointmentTime() {
               <div className=" flex items-center justify-center">
                 <button
                   onClick={() =>
-                    navigate("/sellyourcar/appointmentPaymentProcess")
+                    navigate("/sellyourcar/findDealer")
                   }
                   className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
                 >

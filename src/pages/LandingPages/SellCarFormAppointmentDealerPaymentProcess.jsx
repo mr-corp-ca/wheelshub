@@ -41,7 +41,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
   return (
     <>
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
-      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[90%] mx-auto px-5 md:px-10 lg:pt-20'>
           <div className='md:col-span-9 '>
             <h1 className='text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 '>
             Confirm Your Mechanic and Dealer
@@ -168,7 +168,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
        
       </div>
       <div className="cardpart flex justify-center bg-white mx-5">
-        <div className=" mb-16 -mt-16 w-full md:w-[80%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
+        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
         <div className="payment">
             <div className="rounded-xl">
               <div className="flex items-center justify-center">

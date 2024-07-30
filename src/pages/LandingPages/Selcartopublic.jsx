@@ -55,10 +55,11 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 // import Navbar2 from '../../components/Navbar2';
 import { Navbar } from '../../components/Navbar';
 import { NavigateBeforeSharp } from '@mui/icons-material';
-
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const Selcartopublic = () => {
+  const navigate = useNavigate();
     const [tabActive, setTabActive] = useState("home");
     const handleClick = (item) => {
   
@@ -282,7 +283,7 @@ const Selcartopublic = () => {
 
 
                     {/* for button send request */}
-                    <div className=' flex justify-center  py-12'><button className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
+                    <div className=' flex justify-center  py-12'><button     onClick={() => navigate("/sellyourcar/mechanic")} className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
                  
                   text-[white] text-[18px] font-medium bg-[#6F9CFF] border rounded-lg  items-center flex justify-center'>Next</button></div>
                 </div>

@@ -316,7 +316,8 @@ import twitter from "../../assets/images/twitter.png";
 import waveicon from "../../assets/images/Wave.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import Navbar2 from "../../components/Navbar2";
-
+import bluetick from "../../assets/images/bluetickzigzag.png"
+import { useNavigate } from "react-router-dom";
 
 
 export default function AccordionUsage() {
@@ -345,6 +346,7 @@ export default function AccordionUsage() {
     handleClick("investments");
   };
 
+  const navigate = useNavigate()
   return (
     <>
       <Navbar2 />
@@ -605,7 +607,7 @@ export default function AccordionUsage() {
             </button>
           </div>
 
-          <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {Array(30)
               .fill()
               .map((_, index) => {
@@ -645,14 +647,22 @@ export default function AccordionUsage() {
                       </h1>
                     </div>
                     <div className="flex items-center gap-2 px-3">
-                      <img src={yellowTick} alt="" />
-                      <p className="text-xs font-normal font-Work-sans text-[#FFB543]">
-                        Verification pending
+                      <div className="flex items-center gap-1">
+                      <img src={bluetick} alt="" />
+                      <p className="text-xs font-normal font-Work-sans text-gray-1">
+                      Verified by Mechanic
                       </p>
+                      </div>
+                      <div  className=" flex items-center gap-1">
+                      <img src={bluetick} alt="" />
+                      <p className="text-xs font-normal font-Work-sans text-gray-1">
+                      Verified by Dealer
+                      </p>
+                      </div>
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
-                      <button className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
-                        Chat now
+                      <button onClick={()=>{navigate('/buyacardetails')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                      View details
                       </button>
                     </div>
                   </div>

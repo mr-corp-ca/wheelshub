@@ -164,7 +164,7 @@ const data = [
 function Payments() {
   return (
     <div className="p-6 grid grid-cols-12 gap-5">
-      <div className="col-span-12 lg:col-span-7">
+      <div className="col-span-12 lg:col-span-8">
         <div className="paymentHeading">
           <h1 className="text-2xl font-semibold font-inter text-gray-1">
             Payments
@@ -218,7 +218,7 @@ function Payments() {
           </div>
         </div>
       </div>
-      <div className="col-span-12 lg:col-span-5">
+      <div className="col-span-12 lg:col-span-4">
         <div className="heading flex items-center justify-between mb-5">
           <h1 className="text-xl font-semibold font-inter text-[#161616]">
             Recent Transactions

@@ -4,8 +4,31 @@ import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import documentfile from "../../assets/images/document.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import ClaimNow from "../Customer Login/ClaimNow";
+import VerifiedSuccessful from "./VerifiedSuccessful";
+import { useState } from "react";
 function InsuranceForm2() {
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   const navigate = useNavigate()
+
+  // const handleClick = () =>{
+  //   navigate("/dashboard/myorder")
+    
+  // }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className=" p-10">
@@ -21,7 +44,7 @@ function InsuranceForm2() {
         </div>
       </div>
       <div className=" flex px-10 py-5">
-        <div className="w-full lg:w-[60%]  border p-5 rounded-xl">
+        <div className="w-full lg:w-[90%]  border p-5 rounded-xl">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">
@@ -30,8 +53,8 @@ function InsuranceForm2() {
             </div>
           </div>
           <div className="pt-3">
-            <form className="space-y-8">
-              <div className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="space-y-5 px-20">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full relative">
                     <Input label={"Insurance registration form"} placeholder={"Full name"} className={"relative"} />
@@ -60,7 +83,7 @@ function InsuranceForm2() {
 
               <div className="w-full text-center flex items-center justify-center">
                 <button
-                  onClick={() => navigate("/dashboard/myorder")}
+                  onClick={handleShowPopup}
                   className={
                     "w-[217px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
                   }
@@ -68,6 +91,7 @@ function InsuranceForm2() {
                 >
                   Submit details
                 </button>
+                {showPopup && <VerifiedSuccessful show={showPopup} onClose={handleClosePopup} />}
               </div>
             </form>
           </div>

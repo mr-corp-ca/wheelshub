@@ -5,7 +5,7 @@ import { Input } from "../../components/Input";
 import documentfile from "../../assets/images/document.png"
 import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
-function MechanicVerifyNow2() {
+function DealerVerifyNow2() {
    const navigate = useNavigate()
    const handleSubmit=(e)=>{
     e.preventDefault()
@@ -78,7 +78,7 @@ function MechanicVerifyNow2() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dashboard/mechanicverifynow3')}}
+            onClick={()=>{navigate('/dashboard/dealerverify3')}}
               className={
                 "w-[117px] text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }
@@ -95,4 +95,4 @@ function MechanicVerifyNow2() {
   );
 }
 
-export default MechanicVerifyNow2;
+export default DealerVerifyNow2;

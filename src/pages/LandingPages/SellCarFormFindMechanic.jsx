@@ -292,6 +292,12 @@ function SellCarFormFindMechanic() {
     handleClick("investments");
   };
 
+  const [buttonClick, setButtonClick] = useState(null)
+
+  const handleButtonClick = (index) =>{
+    setButtonClick(index)
+  }
+
   return (
     <>
       <Navbar2 />
@@ -383,8 +389,8 @@ function SellCarFormFindMechanic() {
                       </p>
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
-                      <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
-                        Select mechanic
+                    <button onClick={()=>{handleButtonClick(index)}} className={`h-[44px] md:h-[48px] ${buttonClick===index ? 'px-[30px]' : 'px-[24px]'} px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${buttonClick === index ? 'bg-custom-green': 'bg-custom-blue'}`}>
+                        {buttonClick === index ? 'Selected' : 'Select mechanic'}
                       </button>
                     </div>
                   </div>

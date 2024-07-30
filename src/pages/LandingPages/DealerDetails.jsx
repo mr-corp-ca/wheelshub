@@ -210,7 +210,7 @@ function DealerDetails() {
                 </p>
               </div>
             </div>
-            <div className="w-full lg:w-[524px] rounded-xl p-4 bg-[#eeeeee] flex flex-col gap-3">
+            <div className="w-full xl:w-[524px] rounded-xl p-4 bg-[#eeeeee] flex flex-col gap-3">
               <div>
                 <h1 className="text-sm lg:text-lg font-medium font-Work-sans text-gray-4">
                   Opening hours (Mon-Sat)
@@ -230,7 +230,7 @@ function DealerDetails() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-5 my-5">
+      <div className="flex flex-wrap items-center justify-center gap-5 my-5 mx-5">
         <div className="border shadow rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
           <div>
             <img src={contact} alt="Contact Icon" className="w-10 lg:w-auto" />
@@ -264,7 +264,7 @@ function DealerDetails() {
       </div>
       <div className="blueRectangle w-[90%] lg:w-[80%] mx-auto py-10 lg:py-16">
         <div className="bg-custom-blue rounded-xl px-8 lg:px-[64px] py-8 lg:py-[32px]">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
+          <div className="flex flex-wrap items-center justify-between gap-10 lg:gap-0">
             <div className="flex flex-col items-center">
               <img src={manImage} alt="" className="w-16 lg:w-auto" />
               <h1 className="text-2xl lg:text-[36px] font-bold font-inter text-white mt-2 lg:mt-4">
@@ -327,7 +327,7 @@ function DealerDetails() {
                   .fill()
                   .map((_, i) => (
                     <div key={i} className="bg-white rounded-xl shadow-md p-7">
-                      <div className="flex items-center gap-5">
+                      <div className="flex flex-wrap items-center gap-5">
                         <div>
                           <div className="w-[64px] h-[64px] rounded-full bg-[#cecece]"></div>
                         </div>

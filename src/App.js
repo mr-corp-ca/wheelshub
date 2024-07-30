@@ -74,6 +74,9 @@ import DealerVerification from "./pages/Customer Login/DealerVerification";
 import InsuranceDetails from "./pages/Customer Login/InsuranceDetails";
 import Settings from "./pages/Customer Login/Settings";
 import MyOrderLogin from "./pages/Customer Login/MyOrdersLogin";
+import DealerVerifyNow from "./pages/Dealer/DealerVerifyNow";
+import DealerVerifyNow2 from "./pages/Dealer/DealerVerifyNow2";
+import DealerVerifyNow3 from "./pages/Dealer/DealerVerify3";
 
 export const Layout = () => {
   const { pathname } = useLocation()
@@ -223,7 +226,7 @@ function App() {
                     role === "Finance" ? "myorder" : "",
           element:
             role === "Individual" ? <MyOrder /> :
-              role === "Dealer" ? <DealerHandoverDetails /> :
+              role === "Dealer" ? <MyOrder /> :
                 role === "Mechanic" ? <MyOrder /> :
                   role === "Insurance" ? <InsuranceMyOrder /> :
                     role === "Finance" ? <MyOrder /> : "",
@@ -247,6 +250,10 @@ function App() {
           element: <Subscriptions />
         },
         {
+          path: "finance",
+          element: <Finance/>
+        },
+        {
           path: "chats",
           element: <Chats />
         },
@@ -266,8 +273,6 @@ function App() {
           path: "verificationprocess",
           element: <VerificationinProcess/>
         },
-
-
         // For 
         {
           path: "insurance",
@@ -330,6 +335,10 @@ function App() {
           element: <AppointmentsDetails />
         },
         {
+          path: 'delaerdashboard',
+          element: <DealerDashboard/>
+        },
+        {
           path: "dealerdetailpage",
           element: <DealerDetailsPage />
         },
@@ -340,6 +349,18 @@ function App() {
         {
           path: "dealerhandoverdetails",
           element: <DealerHandoverDetails />
+        },
+        {
+          path: 'dealerverify',
+          element:<DealerVerifyNow/>
+        },
+        {
+          path: 'dealerverify2',
+          element:<DealerVerifyNow2/>
+        },
+        {
+          path: 'dealerverify3',
+          element:<DealerVerifyNow3/>
         },
         {
           path: "customerdashboard",

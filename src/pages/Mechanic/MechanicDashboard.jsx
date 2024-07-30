@@ -2,9 +2,12 @@ import React from "react";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { useState } from "react";
-
+import ClaimNow from "../Insurance/ClaimNow";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function MechanicDashboard() {
+
+  const navigate = useNavigate()
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -15,11 +18,22 @@ const showDialog = () => {
 const closeDialog = () => {
   setIsVisible(false);
 };
+
+const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <>
-    <div className="p-4 md:p-6 lg:p-8">
-        <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <div className="col-span-12 lg:col-span-7">
+    <div className="p-4">
+        <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
+          <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
               New verificaitons
@@ -50,16 +64,17 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={showDialog} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button onClick={handleShowPopup} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
+                      {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
                     </div>
                   </div>
                 </div>
               ))}
           </div>
-          <div className="payments col-span-12 lg:col-span-5 ">
+          <div className="payments col-span-12 lg:col-span-4 ">
             <div className="flex items-center justify-start mb-10">
               <h1 className="text-lg lg:text-xl font-semibold font-inter text-gray-1">
                 Payments
@@ -140,7 +155,7 @@ const closeDialog = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-7 ">
+          <div className="col-span-12 lg:col-span-8 ">
             <div className="heading flex items-center justify-between">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
               New car verifications
@@ -171,7 +186,7 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={showDialog} className="w-full md:w-[156px] h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/dashboard/mechanicverifynow')}} className="w-full md:w-[156px] h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
                         View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}

@@ -17,7 +17,7 @@ const closeDialog = () => {
 };
   return (
     <>
-    <div className="p-4 md:p-6 lg:p-8">
+    <div className="p-4">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-7">
             <div className="heading flex items-center justify-between mb-5">

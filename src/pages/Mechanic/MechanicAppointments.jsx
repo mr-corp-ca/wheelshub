@@ -37,7 +37,7 @@ function MechanicAppointments() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className="w-full h-[44px] rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
+                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className="w-full h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                     </div>
@@ -64,11 +64,11 @@ function MechanicAppointments() {
                         <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">
                           Mercedes-Benz E 220 d
                         </h1>
-                        <h1 className="text-sm lg:text-lg font-medium font-Work-sans text-gray-4">
-                          12th July 2024 11:00 - 12:00 PM
+                        <h1 className="text-sm lg:text-lg font-medium font-Work-sans text-custom-green">
+                        Verified by you
                         </h1>
                         <h1 className="text-sm lg:text-lg font-medium font-Work-sans text-gray-4">
-                          Winner Name: Sean Wills
+                        12-07-2024 11:00 PM
                         </h1>
                       </div>
                     </div>

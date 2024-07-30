@@ -49,11 +49,11 @@ function DealerHandoverDetails() {
       </div>
         </div>
       <div>
-        <button className='w-[142px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue'>Verify now</button>
+        <button onClick={()=>{navigate('/dashboard/dealerverify')}} className='w-[142px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue'>Verify now</button>
         </div>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-11 px-10 gap-6'>   
-        <div className='leftpart col-span-5'>
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-6'>   
+        <div className='leftpart col-span-7'>
 
         <div className='border rounded-xl p-5 flex items-center gap-5 flex-wrap'>
                 <div>

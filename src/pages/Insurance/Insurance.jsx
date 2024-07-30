@@ -3,6 +3,8 @@ import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import Employees from "./Employees";
 import { useState } from "react";
+import ClaimNow from "./ClaimNow";
+
 
 function Insurance() {
 
@@ -17,11 +19,20 @@ function Insurance() {
     setIsVisible(false);
   };
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <>
-      <div className="p-4 md:p-6 lg:p-8">
+      <div className=" py-10">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <div className="col-span-12 lg:col-span-7">
+          <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
               New Insurance requests
@@ -35,7 +46,7 @@ function Insurance() {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap lg:flex-nowrap items-center gap-3">
                       <div>
                         <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
                       </div>
@@ -52,16 +63,16 @@ function Insurance() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={showDialog} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button  onClick={handleShowPopup} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                         Approve
                       </button>
-                      {isVisible && <Employees onClose={() => setIsVisible(false)} />}
-                    </div>
+                      {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
+                      </div>
                   </div>
                 </div>
               ))}
           </div>
-          <div className="payments col-span-12 lg:col-span-5 ">
+          <div className="payments col-span-12 lg:col-span-4 ">
             <div className="flex items-center justify-start mb-10">
               <h1 className="text-lg lg:text-xl font-semibold font-inter text-gray-1">
                 Payments

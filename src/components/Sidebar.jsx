@@ -78,14 +78,15 @@ export const Sidebar = () => {
             navigate: "/dashboard"
         },
         {
-            name: "My orders",
+            name: "Appointments",
             icon: MyOrders,
-            navigate: "/dashboard/myorder"
+            navigate: "/dashboard/newRequest"
         },
+      
         {
             name: "New requests",
             icon: NewRequests,
-            navigate: "/dashboard/newRequest"
+            navigate: "/dashboard/myorder"
         },
         {
             name: "Subscriptions",
@@ -131,7 +132,7 @@ export const Sidebar = () => {
         {
             name: "Appointments",
             icon: MyOrders,
-            navigate: "/dashboard/appointments"
+            navigate: "/dashboard/mechanicappointments"
         },
         {
             name: "New requests",

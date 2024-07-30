@@ -81,7 +81,7 @@ const closeDialog = () => {
                         <h1 className="text-sm lg:text-base font-medium font-Work-sans text-[#FFB543]">
                         Verification pending
                         </h1>
-                        <button className=" border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
+                        <button onClick={()=>{navigate('/dashboard/insurancedetails')}} className=" border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
                         Verify now
                         </button>
                       </div>

@@ -332,7 +332,7 @@ function Chats() {
                   </div>
                 </div>
                 <div className="rounded-xl border bg-[#f8f8f8] p-5 flex items-center justify-between">
-                  <h1 className="text-sm md:text-base font-normal font-poppins text-gray-4">Write a message ...</h1>
+                  <input className="text-sm md:text-base font-normal font-poppins text-gray-4 bg-[#f8f8f8] w-full h-full border-none outline-none" placeholder="Write a message ..." type="text" />
                   <img src={telegram} alt="" />
                 </div>
               </div>

@@ -27,6 +27,7 @@ import hearticon from "../../assets/images/hearticon.png";
 import grayDot from "../../assets/images/graydot.png";
 import blueicon from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
+import ClaimNow from "./ClaimNow";
 
 function BuyACarDetails() {
   const [progress, setProgress] = useState(32); // Initial progress value
@@ -78,12 +79,22 @@ function BuyACarDetails() {
     setTabClick(items)
   }
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+  
   const navigate = useNavigate();
   return (
     <>
       <Navbar2 />
-      <div className="grid grid-cols-1 lg:grid-cols-11 px-3 lg:px-10 gap-6 mt-10">
-        <div className="leftpart col-span-12 lg:col-span-5">
+      <div className="grid grid-cols-1 lg:grid-cols-12 px-3 lg:px-10 gap-6 mt-10">
+        <div className="leftpart col-span-12 lg:col-span-7">
           <div className="img">
             <img src={audiimg} className="w-full" alt="" />
           </div>
@@ -437,12 +448,13 @@ function BuyACarDetails() {
                 <button className="lg:text-lg font-medium font-Work-sans text-custom-blue underline">Check details</button>
               </div>
               <div className="flex items-center my-5 mt-10 gap-8 justify-center">
-                <button className="h-[44px] w-[124px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+                <button  className="h-[44px] w-[124px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
                   Buy now
                 </button>
-                <button className="h-[44px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-white border border-custom-blue text-custom-blue flex items-center justify-center">
+                <button onClick={handleShowPopup} className="h-[44px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-white border border-custom-blue text-custom-blue flex items-center justify-center">
                   Seller details
                 </button>
+                {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
               </div>
             </div>
           </div>

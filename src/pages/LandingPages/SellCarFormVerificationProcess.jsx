@@ -190,10 +190,10 @@ import tiktok from "../../assets/images/tiktok.png";
 import youtube from "../../assets/images/youtube.png";
 import twitter from "../../assets/images/twitter.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 function SellCarFormVerificationProcess() {
-
+const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
 
@@ -213,9 +213,12 @@ function SellCarFormVerificationProcess() {
   return (
     <>
       <Navbar2 />
-      <div className="w-full flex items-center justify-center px-4 my-5">
-        <div className="verificationProcess p-6 sm:p-10 w-full lg:w-[70vw]">
-          <div className="flex items-center justify-center flex-col gap-5">
+      <div className=" firstpart bg-[#f3f3f3] h-fit py-44">
+      </div>
+      <div className=" md:w-[80%] mx-auto  px-5 md:px-10 lg:pt-20 ">
+        <div className=" bg-white ">
+        <div className=" -mt-[30%] 2xl:-mt-[20%] rounded-xl shadow-2xl mb-10 px-2 lg:px-10 py-8">
+          <div className="flex items-center justify-center flex-col gap-5 px-10">
             <div>
               <img src={greentickicon} alt="" className="max-w-full h-auto" />
             </div>
@@ -223,13 +226,12 @@ function SellCarFormVerificationProcess() {
               <h1 className="text-2xl sm:text-[36px] font-semibold font-inter text-gray-800 text-center">
                 Payment successful!
               </h1>
-              <p className="my-5 text-base font-normal font-plus-jakarta-sans text-gray-600">
+              <p className="my-5 text-base text-center md:text-start font-normal font-plus-jakarta-sans text-gray-600">
                 Payment of $100 is successfully paid to Wheeldealhub
               </p>
             </div>
           </div>
-
-          <div className="border rounded-xl p-5">
+          <div className="border rounded-xl p-5 px-10">
             <div className="border-b border-dashed pb-3 flex flex-wrap  items-center  justify-between w-full gap-4">
               <div className="flex items-center justify-center lg:justify-start flex-wrap gap-5">
                 <div className="img ">
@@ -366,13 +368,14 @@ function SellCarFormVerificationProcess() {
               </div>
             </div>
             <div className="flex items-center justify-center py-3">
-              <button className="text-lg rounded-xl font-Work-sans font-medium w-[123px] h-[48px] px-[24px] py-[12px] bg-custom-blue text-white flex items-center justify-center">
+              <button onClick={()=>{navigate('/')}} className="text-lg rounded-xl font-Work-sans font-medium w-[123px] h-[48px] px-[24px] py-[12px] bg-custom-blue text-white flex items-center justify-center">
                 Close
               </button>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
       <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>

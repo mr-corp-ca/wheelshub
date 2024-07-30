@@ -12,8 +12,20 @@ import man2img from "../../assets/images/insuranceMan2.png"
 import man3img from "../../assets/images/insuranceMan3.png"
 import maninsuit from "../../assets/images/mansuit.png"
 import greentick from "../../assets/images/greentick3.png"
+import VerifiedSuccessful from './VerifiedSuccessful'
+import { useState } from 'react'
 function DealerDetailsPage() {
     const navigate = useNavigate()
+
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handleShowPopup = () => {
+      setShowPopup(true);
+    };
+  
+    const handleClosePopup = () => {
+      setShowPopup(false);
+    };
   return (
     <>
      <div className="">
@@ -136,7 +148,8 @@ function DealerDetailsPage() {
                   </h1>
                 </div>
                 <div>
-                  <button className='w-[136px] h-[48px] px-4 py-2 rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter'>Submit details</button>
+                  <button onClick={handleShowPopup} className='w-[136px] h-[48px] px-4 py-2 rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter'>Complete now</button>
+                  {showPopup && <VerifiedSuccessful show={showPopup} onClose={handleClosePopup} />}
                 </div>
               </div>
             </div>

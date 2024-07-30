@@ -18,6 +18,7 @@ import checkboxpng from "../../assets/images/Checbox container (1).png";
 import dealerimg from "../../assets/images/dealer.png"
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
+import blutick from '../../assets/images/bluetickzigzag.png'
 function SellCarFormFindDealer() {
   const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
@@ -34,7 +35,11 @@ function SellCarFormFindDealer() {
   const investmentClick = () => {
     handleClick("investments");
   };
+  const [buttonClick, setButtonClick] = useState(null)
 
+  const handleButtonClick = (index) =>{
+    setButtonClick(index)
+  }
   return (
     <>
       <Navbar2 />
@@ -122,14 +127,14 @@ function SellCarFormFindDealer() {
                       </h1>
                     </div>
                     <div className="flex items-center gap-2 px-3">
-                      <img src={yellowTick} alt="Yellow tick" />
+                      <img src={blutick} alt="Yellow tick" />
                       <p className="text-sm font-normal font-Work-sans text-gray-800">
                         Verified by Wheeldealhub
                       </p>
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
-                      <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
-                        Select mechanic
+                      <button onClick={()=>{handleButtonClick(index)}} className={`h-[44px] md:h-[48px] ${buttonClick===index ? 'px-[30px]' : 'px-[24px]'} px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${buttonClick === index ? 'bg-custom-green': 'bg-custom-blue'}`}>
+                        {buttonClick === index ? 'Selected' : 'Call now - +650 334 4545'}
                       </button>
                     </div>
                   </div>
@@ -152,7 +157,7 @@ function SellCarFormFindDealer() {
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button
-              onClick={() => navigate("/sellyourcar/appointment")}
+              onClick={() => navigate("/sellyourcar/appointmentPaymentProcess")}
               className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
             >
               Next

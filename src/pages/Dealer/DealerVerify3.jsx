@@ -4,7 +4,7 @@ import graystars from "../../assets/images/graystars.png";
 import crossIcon from "../../assets/images/crossIcon.png";  // Assuming the close icon image file is crossIcon.png
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
-function MechanicVerifyNow3() {
+function DealerVerifyNow3() {
   const navigate = useNavigate();
   const handleSubmit=(e)=>{
     e.preventDefault()
@@ -164,4 +164,4 @@ function MechanicVerifyNow3() {
   );
 }
 
-export default MechanicVerifyNow3;
+export default DealerVerifyNow3;

@@ -60,17 +60,19 @@ import React from "react";
 import audi2 from "../../assets/images/audi2.png";
 import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
+import { useNavigate } from "react-router-dom";
 
 function MyOrder() {
+  const navigate = useNavigate()
   return (
     <>
-      <div className="p-4 md:p-6">
-        <div className="newRequests py-4 md:py-5">
+      <div className="">
+        <div className="newRequests py-4 ">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
             New requests
           </h1>
         </div>
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Array(4)
             .fill()
             .map((_, index) => {
@@ -99,7 +101,7 @@ function MyOrder() {
                     <p className="text-xs font-normal font-Work-sans text-[#FFB543]">Verification pending</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate('/dashboard/chats')}} className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       Chat now
                     </button>
                   </div>

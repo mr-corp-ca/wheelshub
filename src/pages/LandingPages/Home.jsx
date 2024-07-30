@@ -71,7 +71,7 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import Navbar2 from '../../components/Navbar2';
 import { Navbar } from '../../components/Navbar';
 import { NavigateBeforeSharp } from '@mui/icons-material';
-
+import bluetick from '../../assets/images/bluetickzigzag.png'
 function Home() {
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false)
@@ -116,15 +116,21 @@ function Home() {
   //     { icnos: customIcon3, heading: 'Step 3' },
   //     { icnos: customIcon4, heading: 'Step 4' },
   //   ];
+
+  const [buttonClick, setButtonClick] = useState(0)
+
+  const handleButtonClick = (index)=>{
+    setButtonClick(index)
+  }
   return (
     <>
       <Navbar2 />
       <div className=" relative ">
-        <img src={backgroundimg} className=' absolute -z-10 w-full bg-[#f4faff] h-[115vh] ' alt="" />
+        <img src={backgroundimg} className=' absolute -z-10 w-full bg-[#f4faff] h-[130%]' alt="" />
         <div className=" py-8">
           <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:w-[60%] text-center lg:text-left">
-              <h1 className="text-[32px] lg:text-[72px] font-bold text-gray-1 px-20 bg-gradient-to-r from-[#d1eaff] to-[#eef6fd] mt-20">
+            <div className="lg:w-[80%] text-center lg:text-left">
+              <h1 className="text-[32px] lg:text-[72px] font-bold text-gray-1 px-20 bg-gradient-to-r from-[#d1eaff] to-[#eef6fd] mt-20 rounded-br-2xl">
                 Sell Your Car Easily and Profitably
               </h1>
               <p className=" px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2">
@@ -139,8 +145,8 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div className="lg:w-1/2 mt-8 lg:mt-10">
-              <img src={carImage} alt="Car" className="w-full h-auto pr-20" />
+            <div className="lg:w-1/2 mt-8 lg:mt-10 mx-auto">
+              <img src={carImage} alt="Car" className="w-full h-auto lg:pr-20" />
             </div>
           </div>
 
@@ -165,8 +171,11 @@ function Home() {
             </div>
         </div>
       </div> */}
-        <div className='w-[90%] mx-auto my-10 backdrop-blur-3xl'>
-          <div className='flex flex-wrap items-center border border-b-0 w-full lg:w-fit rounded-t-xl'>
+       
+
+      </div>
+      <div className='w-[90%] mx-auto my-10  '>
+          <div className='flex flex-wrap items-center border border-b-0 w-full lg:w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd]'>
             <button className='flex items-center gap-2 text-lg font-medium font-Work-sans text-gray-1 px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r'><img src={car1} alt="car1" />Sell</button>
             <button className='flex items-center gap-2 text-lg font-medium font-Work-sans text-gray-1 px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r'><img src={car2} alt="car2" />Sell</button>
             <button className='flex items-center gap-2 text-lg font-medium font-Work-sans text-gray-1 px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r'><img src={car3} alt="car3" />Sell</button>
@@ -174,7 +183,7 @@ function Home() {
             <button className='flex items-center gap-2 text-lg font-medium font-Work-sans text-gray-1 px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r'><img src={car5} alt="car5" />Sell</button>
             <button className='flex items-center gap-2 text-lg font-medium font-Work-sans text-gray-1 px-[15px] md:px-[30px] py-[10px] md:py-[20px]'><img src={car6} alt="car6" />Sell</button>
           </div>
-          <div className='border rounded-xl rounded-tl-none py-10 shadow-2xl shadow-[#eef6fd]'>
+          <div className='border rounded-xl rounded-tl-none py-10 shadow-2xl shadow-[#eef6fd] backdrop-blur-3xl'>
             <div>
               <h1 className='text-[24px] md:text-[36px] font-semibold font-inter text-gray-1 text-center'>Sell Car instantly on Wheeldealhub from Home</h1>
             </div>
@@ -186,8 +195,6 @@ function Home() {
           </div>
         </div>
 
-
-      </div>
       {/* <div className='howitsworks'>
         <div className='flex items-center justify-center my-20'>
             <h1 className=' text-[64px] font-bold font-inter text-black mt-10'>
@@ -224,12 +231,12 @@ function Home() {
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-[90%] mx-auto'>
           {cards.map((value, i) => (
-            <div key={i} className='card border py-10 px-4 w-full flex items-center justify-center flex-col gap-5 rounded-xl'>
+            <div key={i} className='card border py-10 px-1 2xl:px-4 w-full flex items-center justify-center flex-col gap-5 rounded-xl'>
               <div>
                 <img src={value.icnos} alt="" className='p-4 rounded-xl bg-custom-blue' />
               </div>
               <div>
-                <h1 className='text-[20px] md:text-[24px] lg:text-[32px] font-bold font-inter text-black'>{value.heading}</h1>
+                <h1 className='text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold font-inter text-black'>{value.heading}</h1>
               </div>
               <div>
                 <h1 className='text-center text-sm md:text-base lg:text-lg font-normal text-gray-2 font-Work-sans'>
@@ -359,7 +366,7 @@ function Home() {
 
       <div className="blueRectangle w-[90%] lg:w-[80%] mx-auto py-10 lg:py-16">
         <div className="bg-custom-blue rounded-xl px-8 lg:px-[64px] py-8 lg:py-[32px]">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
+          <div className="flex flex-wrap items-center justify-between gap-10 lg:gap-0">
             <div className="flex flex-col items-center">
               <img src={manImage} alt="" className="w-16 lg:w-auto" />
               <h1 className="text-2xl lg:text-[36px] font-bold font-inter text-white mt-2 lg:mt-4">
@@ -427,8 +434,9 @@ function Home() {
           <div className='flex flex-wrap items-center border border-b w-full md:w-fit rounded-t-xl'>
             {[car1, car2, car3, car4, car5, car6].map((car, index) => (
               <button
+              onClick={()=>{handleButtonClick(index)}}
                 key={index}
-                className='flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans text-gray-1 px-4 py-3 md:px-[30px] md:py-[20px] border-r'
+                className={`${buttonClick === index ? 'backdrop-blur-3xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue' : ''} flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[30px] md:py-[20px] border-r`}
               >
                 <img src={car} alt="" className='w-6 md:w-auto' />Sell
               </button>
@@ -463,13 +471,19 @@ function Home() {
                   <div className="px-3">
                     <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
                   </div>
-                  <div className="flex items-center gap-2 px-3">
-                    <img src={yellowTick} alt="" />
-                    <p className="text-xs font-normal font-Work-sans text-[#FFB543]">Verification pending</p>
+                  <div className="flex items-center px-3">
+                    <div className='flex items-center gap-2'>
+                    <img src={bluetick} alt="" />
+                    <p className="text-xs font-normal font-Work-sans text-gray-1">Verified by Mechanic</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                    <img src={bluetick} alt="" />
+                    <p className="text-xs font-normal font-Work-sans  text-gray-1">Verified by Dealer</p>
+                    </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
-                      Chat now
+                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                      View Details
                     </button>
                   </div>
                 </div>
@@ -505,7 +519,7 @@ function Home() {
                   .fill()
                   .map((_, i) => (
                     <div key={i} className="bg-white rounded-xl shadow-md p-7">
-                      <div className="flex items-center gap-5">
+                      <div className="flex flex-wrap items-center gap-5">
                         <div>
                           <div className="w-[64px] h-[64px] rounded-full bg-[#cecece]"></div>
                         </div>

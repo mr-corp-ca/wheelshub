@@ -20,7 +20,7 @@ function InsuranceForm1() {
         </div>
       </div>
       <div className=" px-10 py-5">
-        <div className=" w-full lg:w-[60%] border p-5 rounded-xl">
+        <div className=" w-full lg:w-[90%] border p-5 rounded-xl">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">
@@ -30,7 +30,7 @@ function InsuranceForm1() {
           </div>
           <div className="pt-3">
             <form className="space-y-8">
-              <div className="space-y-5">
+              <div className="space-y-5 lg:px-20">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full">
                     <Input label={"Insurance agent"} placeholder={"Full name"} />
