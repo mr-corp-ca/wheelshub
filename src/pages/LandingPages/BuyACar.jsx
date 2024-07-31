@@ -318,6 +318,7 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import Navbar2 from "../../components/Navbar2";
 import bluetick from "../../assets/images/bluetickzigzag.png"
 import { useNavigate } from "react-router-dom";
+import Banner from "../../components/Banner";
 
 
 export default function AccordionUsage() {
@@ -671,7 +672,7 @@ export default function AccordionUsage() {
           </div>
         </div>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -752,7 +753,8 @@ export default function AccordionUsage() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

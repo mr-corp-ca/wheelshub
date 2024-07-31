@@ -191,6 +191,7 @@ import youtube from "../../assets/images/youtube.png";
 import twitter from "../../assets/images/twitter.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import { Navigate, useNavigate } from "react-router-dom";
+import Banner from "../../components/Banner";
 
 function SellCarFormVerificationProcess() {
 const navigate = useNavigate()
@@ -376,7 +377,7 @@ const navigate = useNavigate()
         </div>
         </div>
         </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -473,7 +474,8 @@ const navigate = useNavigate()
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

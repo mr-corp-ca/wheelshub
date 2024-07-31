@@ -19,6 +19,7 @@ import dealerimg from "../../assets/images/dealer.png"
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
 import blutick from '../../assets/images/bluetickzigzag.png'
+import Banner from "../../components/Banner";
 function SellCarFormFindDealer() {
   const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
@@ -80,7 +81,7 @@ function SellCarFormFindDealer() {
       <div className="cardpart flex justify-center bg-white ">
         <div className=" mb-20 lg:-mt-32 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
-            <h1>Select mechanic to check the car</h1>
+            <h1>Select Dealer to check the car</h1>
           </div>
           <div className="flex flex-wrap items-center gap-5 pt-10 pb-5">
             <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
@@ -165,7 +166,7 @@ function SellCarFormFindDealer() {
           </div>
         </div>
       </div>
-      <div className="banner mt-10">
+      {/* <div className="banner mt-10">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -262,7 +263,8 @@ function SellCarFormFindDealer() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

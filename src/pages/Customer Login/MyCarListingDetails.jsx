@@ -40,13 +40,13 @@ function MyCarListingDetails() {
   return (
     <>
       <div className="grid grid-cols-11 p-3">
-        <div className="flex flex-col gap-4 col-span-7 lg:col-span-9">
+        <div className="flex  flex-col gap-4 col-span-7 lg:col-span-9">
           <div className="">
             <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">
              My car listings
             </h1>
           </div>
-          <div className="flex flex-row gap-2 md:gap-x-2 ">
+          <div className="flex items-center flex-row gap-2 md:gap-x-2 ">
             <svg
               width="8"
               height="14"
@@ -151,7 +151,7 @@ function MyCarListingDetails() {
                     <button     onClick={handleShowPopup} className=" h-[44px] md:h-[52px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans border border-custom-blue text-custom-blue flex items-center justify-center ">
                     Reschedule appointment
                     </button>
-                    {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
+                    {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} hide={'hidden'} />}
                   </div>
                   <div>
                     <div>

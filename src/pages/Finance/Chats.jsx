@@ -294,7 +294,7 @@ function Chats() {
                 <div>
                   <div className="chat1right">
                     <div className="flex items-center justify-end">
-                      <h1 className="text-sm md:text-base font-normal font-public-sans p-4 bg-custom-blue text-white rounded-l-xl h-[44px] flex items-center rounded-tr-xl w-fit">
+                      <h1 className="text-sm md:text-base font-normal font-public-sans py-[12px] px-[16px] bg-custom-blue text-white rounded-l-xl  flex items-center rounded-tr-xl">
                         Hey! we provide Finance services for used car sales at minimum interest prices.
                       </h1>
                     </div>
@@ -313,7 +313,7 @@ function Chats() {
                   </div>
                   <div className="chat1right pb-10">
                     <div className="flex items-center justify-end">
-                      <h1 className="text-sm md:text-base font-normal font-public-sans p-4 bg-custom-blue text-white rounded-l-xl h-[44px] flex items-center rounded-tr-xl w-fit">
+                      <h1 className="text-sm md:text-base font-normal font-public-sans py-[12px] px-[16px] bg-custom-blue text-white rounded-l-xl flex items-center rounded-tr-xl w-fit">
                         Sure, Let me explain all interest prices for difference type of cars.
                       </h1>
                     </div>

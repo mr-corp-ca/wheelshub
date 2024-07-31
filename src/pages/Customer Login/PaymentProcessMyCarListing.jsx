@@ -195,7 +195,7 @@ function PaymentProcessMyCarListing() {
                 Verifications
               </h1>
             </div>
-            <div className="flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/dashboard/mechanicverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>
@@ -211,13 +211,13 @@ function PaymentProcessMyCarListing() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/dashboard/dealerverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-sm md:text-2xl font-semibold font-inter text-gray-1">
-                  Mechanic appointment
+                  Dealer appointment
                 </h1>
                 <p className="lg:text-lg font-medium font-Work-sans text-gray-4">
                   12th July 2024 11:00 - 12:00 PM

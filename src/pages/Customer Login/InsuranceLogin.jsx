@@ -48,7 +48,7 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/insurancedetails')}} className="w-full h-[44px] rounded-xl border border-gray-1 px-4  py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button onClick={()=>{navigate('/dashboard/insuranceactivedetail')}} className="w-full h-[44px] rounded-xl border border-gray-1 px-4  py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                       View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}

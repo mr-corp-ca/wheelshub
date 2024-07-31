@@ -33,7 +33,7 @@ function DealerVerification() {
   return (
     <>
     
-      <div className='grid grid-cols-11 p-3'>
+      <div className='grid grid-cols-12 p-3'>
         <div className='flex flex-col gap-4 col-span-7 lg:col-span-9'>
         <div className="">
         <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">My car listings</h1>
@@ -50,7 +50,7 @@ function DealerVerification() {
         </div>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-12 px-3 gap-3'>   
-        <div className='leftpart col-span-6'>
+        <div className='leftpart col-span-7'>
 
         <div className='border rounded-xl p-5 flex items-center gap-5 flex-wrap'>
                 <div>
@@ -165,12 +165,12 @@ function DealerVerification() {
             </div>
            
         </div>
-        <div className='rightpart col-span-6 lg:col-span-6'>
+        <div className='rightpart col-span-6 lg:col-span-5'>
             {review.map((value, i)=>{
                return(
                 <>
                    <div key={i} className='reviewbox'>
-            <div className='heading flex items-center justify-between'>
+            <div className='heading flex flex-wrap items-center justify-between'>
                 <div>
                     <h1 className=' text-2xl font-semibold font-inter text-gray-1'>{value.name}</h1>
                 </div>

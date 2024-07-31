@@ -72,6 +72,7 @@ import Navbar2 from '../../components/Navbar2';
 import { Navbar } from '../../components/Navbar';
 import { NavigateBeforeSharp } from '@mui/icons-material';
 import bluetick from '../../assets/images/bluetickzigzag.png'
+import Banner from '../../components/Banner';
 function Home() {
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false)
@@ -129,8 +130,8 @@ function Home() {
         <img src={backgroundimg} className=' absolute -z-10 w-full bg-[#f4faff] h-[130%]' alt="" />
         <div className=" py-8">
           <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:w-[80%] text-center lg:text-left">
-              <h1 className="text-[32px] lg:text-[72px] font-bold text-gray-1 px-20 bg-gradient-to-r from-[#d1eaff] to-[#eef6fd] mt-20 rounded-br-2xl">
+            <div className="lg:w-[82%] text-center lg:text-left">
+              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-20 bg-gradient-to-r from-[#d1eaff] to-[#eef6fd] mt-20 rounded-br-2xl">
                 Sell Your Car Easily and Profitably
               </h1>
               <p className=" px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2">
@@ -238,7 +239,7 @@ function Home() {
               <div>
                 <h1 className='text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold font-inter text-black'>{value.heading}</h1>
               </div>
-              <div>
+              <div className=' px-4'>
                 <h1 className='text-center text-sm md:text-base lg:text-lg font-normal text-gray-2 font-Work-sans'>
                   Create an account on WDH to get started. Provide your personal information.
                 </h1>
@@ -436,7 +437,7 @@ function Home() {
               <button
               onClick={()=>{handleButtonClick(index)}}
                 key={index}
-                className={`${buttonClick === index ? 'backdrop-blur-3xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue' : ''} flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[30px] md:py-[20px] border-r`}
+                className={`${buttonClick === index ? ' bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue' : ''} flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[30px] md:py-[20px] border-r`}
               >
                 <img src={car} alt="" className='w-6 md:w-auto' />Sell
               </button>
@@ -447,7 +448,7 @@ function Home() {
 
 
       <div className='cars w-[90%] mx-auto'>
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
           {Array(4)
             .fill()
             .map((_, index) => {
@@ -471,7 +472,7 @@ function Home() {
                   <div className="px-3">
                     <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
                   </div>
-                  <div className="flex items-center px-3">
+                  <div className="flex items-center gap-2 px-3">
                     <div className='flex items-center gap-2'>
                     <img src={bluetick} alt="" />
                     <p className="text-xs font-normal font-Work-sans text-gray-1">Verified by Mechanic</p>
@@ -559,7 +560,7 @@ function Home() {
       <div>
         <img src={waveicon} className='w-full' alt="" />
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 
@@ -649,6 +650,9 @@ function Home() {
             © 2022 wheeldealhub. All Rights Reserved
           </h1>
         </div>
+      </div> */}
+      <div>
+      <Banner/>
       </div>
     </>
   );

@@ -220,7 +220,7 @@ import mailGift from "../../assets/images/mailGift.png";
 function Subscriptions() {
   return (
     <>
-      <div className="p-4 md:p-10">
+      <div className=" my-5">
         <div className="myorderheading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
             My Order

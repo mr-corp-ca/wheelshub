@@ -18,6 +18,7 @@ import checkboxpng from "../../assets/images/Checbox container (1).png";
 import calenderImg from "../../assets/images/calender.png";
 import paymentImg from "../../assets/images/paymentimg.png";
 import { useNavigate } from "react-router-dom";
+import Banner from "../../components/Banner";
 function SellCarFormAppointmentDealerPaymentProcess() {
   const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
@@ -271,7 +272,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
           </div>
         </div>
         </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -368,7 +369,8 @@ function SellCarFormAppointmentDealerPaymentProcess() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

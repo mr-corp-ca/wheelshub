@@ -18,14 +18,21 @@ function MechanicVerifyNow3() {
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+
+  const [rating, setRating] = useState(0);
+    
+  const handleStarClick = (index) => {
+    setRating(index + 1);
+  }
+  
   return (
     <>
-      <div className="p-4 md:p-10">
+      <div className=" my-5">
         <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
           Dashboard
         </h1>
       </div>
-      <div className="flex flex-row items-center gap-x-2 px-4 md:px-10">
+      <div className="flex flex-row items-center gap-x-2 my-5">
         <svg
           width="8"
           height="14"
@@ -52,7 +59,7 @@ function MechanicVerifyNow3() {
           </p>
         </div>
       </div>
-      <div className="flex px-4 md:px-10 py-5">
+      <div className="flex my-5">
         <div className="w-full lg:w-[90%] border p-5 py-8 md:py-16 rounded-xl">
           <div className="flex items-center justify-center flex-col gap-6">
             <h1 className="text-lg md:text-[28px] font-bold font-inter text-gray-1">
@@ -66,13 +73,39 @@ function MechanicVerifyNow3() {
                   <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
                     <div className="w-full">
                       <div className="flex items-center justify-between">
+                        <div>
                         <label
                           htmlFor="engine1"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
                           Engine
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        </div>
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <div>
+                        <div className="flex space-x-1">
+      {[...Array(5)].map((_, index) => (
+        <svg
+          key={index}
+          onClick={() => handleStarClick(index)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill={index < rating ? "yellow" : "none"}
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className={`h-5 w-5 cursor-pointer ${
+            index < rating ? 'text-yellow-400' : 'text-gray-400'
+          }`}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
+          />
+        </svg>
+      ))}
+      </div>
+                        </div>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -85,13 +118,39 @@ function MechanicVerifyNow3() {
                     </div>
                     <div className="w-full">
                       <div className="flex items-center justify-between">
+                      <div>
                         <label
-                          htmlFor="engine2"
+                          htmlFor="engine1"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
                           Engine
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        </div>
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <div>
+                        <div className="flex space-x-1">
+      {[...Array(5)].map((_, index) => (
+        <svg
+          key={index}
+          onClick={() => handleStarClick(index)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill={index < rating ? "yellow" : "none"}
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className={`h-5 w-5 cursor-pointer ${
+            index < rating ? 'text-yellow-400' : 'text-gray-400'
+          }`}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
+          />
+        </svg>
+      ))}
+      </div>
+                        </div>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -106,13 +165,39 @@ function MechanicVerifyNow3() {
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 py-5">
                     <div className="w-full">
                       <div className="flex items-center justify-between">
+                      <div>
                         <label
-                          htmlFor="engine3"
+                          htmlFor="engine1"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
                           Engine
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        </div>
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <div>
+                        <div className="flex space-x-1">
+      {[...Array(5)].map((_, index) => (
+        <svg
+          key={index}
+          onClick={() => handleStarClick(index)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill={index < rating ? "yellow" : "none"}
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className={`h-5 w-5 cursor-pointer ${
+            index < rating ? 'text-yellow-400' : 'text-gray-400'
+          }`}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
+          />
+        </svg>
+      ))}
+      </div>
+                        </div>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -125,13 +210,39 @@ function MechanicVerifyNow3() {
                     </div>
                     <div className="w-full">
                       <div className="flex items-center justify-between">
+                         <div>
                         <label
-                          htmlFor="engine4"
+                          htmlFor="engine1"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
                           Engine
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        </div>
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <div>
+                        <div className="flex space-x-1">
+      {[...Array(5)].map((_, index) => (
+        <svg
+          key={index}
+          onClick={() => handleStarClick(index)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill={index < rating ? "yellow" : "none"}
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className={`h-5 w-5 cursor-pointer ${
+            index < rating ? 'text-yellow-400' : 'text-gray-400'
+          }`}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
+          />
+        </svg>
+      ))}
+      </div>
+                        </div>
                       </div>
                       <div className="pt-1">
                         <textarea

@@ -6,8 +6,9 @@ import gallery from "../../assets/images/gallery.png";
 import photo from "../../assets/images/photo.png";
 import crossicon from "../../assets/images/crossIcon.png";
 import greentickrounded from "../../assets/images/roundedGreentick.png"
+import { useNavigate } from "react-router-dom";
 function VerifiedSuccessful({ show, onClose, hidden }) {
-    
+    const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -61,7 +62,7 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
                   </h1>
                 </div>
                 <div  className=" flex items-center justify-center">
-                  <button onClick={onClose} className=" text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
+                  <button onClick={()=>{navigate('/dashboard/insurancemyorder')}} className=" text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
                 </div>
               </div>
             </div>

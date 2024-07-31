@@ -50,16 +50,16 @@ function ClaimNow({ show, onClose, hidden }) {
           </div> */}
           <div className="flex justify-between md:mb-6"></div>
           <form onSubmit={handleSubmit}>
-            <div className=" mx-3 p-10 bg-white shadow-lg rounded-xl border">
+            <div className=" mx-5 p-10 bg-white shadow-lg rounded-xl border">
             <div className="">
                     <h1 className="text-2xl md:text-3xl font-bold font-inter text-gray-800">
-                      Insurance Request
+                    Verification request
                     </h1>
                   </div>
                   <div className="my-4">
                     <div className="card py-4">
                       <div className="card1 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                        <div className="flex flex-wrap items-center gap-3">
+                        <div className="flex  flex-wrap items-center gap-3">
                           <img
                             src={audiCar}
                             alt="Car"
@@ -90,7 +90,7 @@ function ClaimNow({ show, onClose, hidden }) {
                     <button
                     onClick={onClose}
                       type="button"
-                      className="w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-sm lg:text-lg font-worksans rounded-xl text-white flex items-center justify-center"
+                      className="w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-lg font-worksans rounded-xl text-white flex items-center justify-center"
                     >
                       Approve Request
                     </button>

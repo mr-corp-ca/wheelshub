@@ -24,6 +24,8 @@ import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
+import treelogo from '../../assets/images/treeimage.png'
+import Banner from "../../components/Banner";
 
 export default function FinanceLandingPage() {
   const [value, setValue] = useState(0);
@@ -158,7 +160,7 @@ export default function FinanceLandingPage() {
                     >
                       <div>
                         <img
-                          src={carmechanic}
+                          src={treelogo}
                           alt="Car"
                           className="w-full h-auto rounded-t-2xl"
                         />
@@ -203,7 +205,7 @@ export default function FinanceLandingPage() {
           </div>
         </div>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -284,7 +286,8 @@ export default function FinanceLandingPage() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

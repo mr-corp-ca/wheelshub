@@ -223,6 +223,7 @@ import waveicon from "../../assets/images/Wave.png";
 import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import Navbar2 from '../../components/Navbar2';
 import { useNavigate } from 'react-router-dom';
+import Banner from '../../components/Banner';
 
 function SellCarForm() {
   const [tabActive, setTabActive] = useState("home");
@@ -309,7 +310,7 @@ function SellCarForm() {
       <div className='py-10'>
         {/* <img src={waveicon} className='w-full' alt="Wave icon" /> */}
       </div>
-      <div className="banner mt-[100px] md:mt-[100px] lg:mt-[100px] xl:mt-[400px] 2xl:mt-[200px]">
+      {/* <div className="banner mt-[100px] md:mt-[100px] lg:mt-[100px] xl:mt-[400px] 2xl:mt-[200px]">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -390,7 +391,8 @@ function SellCarForm() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

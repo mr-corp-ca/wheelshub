@@ -44,6 +44,7 @@ import { useLoginContext } from '../Context/LoginContext';
 import { OutlineButton } from './OutlineButton';
 import { Button } from './Button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import menuIcon from '../assets/images/Frame.png'
 // import menuIcon from '../assets/images/menuIcon.png'; // Add a menu icon
 
 function Navbar2() {
@@ -61,7 +62,7 @@ function Navbar2() {
     <>
       <nav className='border-b-2'>
         <div className='py-3 w-[90%] mx-auto flex items-center justify-between'>
-          <Link to="/" className='w-[108px] h-[78px]'>
+          <Link to="/" className=' w-[70px] lg:w-[108px] h-[78px] flex items-center'>
             <img src={wheeldeallogo} alt='WheelDeal Logo' className='object-cover' />
           </Link>
           <div className='hidden lg:flex items-center gap-5'>
@@ -79,7 +80,7 @@ function Navbar2() {
             {isLoggedIn ?
               <>
                 <div className='lg:hidden flex items-center'>
-                  <img src={bellIcon} alt='Bell Icon' />
+                  <img src={menuIcon} alt='Bell Icon' />
                 </div>
                 <div>
                   <img src={profilePic} alt='Profile Pic' />
@@ -103,7 +104,7 @@ function Navbar2() {
           </div>
           <div className='lg:hidden flex items-center'>
             <button onClick={toggleMenu}>
-              <img src={bellIcon} alt='Menu Icon' />
+              <img src={menuIcon} alt='Menu Icon' />
             </button>
           </div>
         </div>
@@ -120,7 +121,7 @@ function Navbar2() {
               <li onClick={() => navigate("/")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("contact") ? "text-custom-blue" : " text-gray-1"}`}>Contact us</li>
               <div className='flex gap-5'>
                 <div>
-                  <img src={bellIcon} alt='Bell Icon' />
+                  <img src={menuIcon} alt='Bell Icon' />
                 </div>
                 <div>
                   <img src={profilePic} alt='Profile Pic' />

@@ -207,7 +207,7 @@ import man3img from "../../assets/images/insuranceMan3.png"
 import documentIcon from "../../assets/images/system-uicons_document.png"
 import ClaimNow from './ClaimNow'
 import { useState } from 'react'
-function InsuranceDetails() {
+function InsuranceActiveDetail() {
   const navigate = useNavigate()
 
   const [showPopup, setShowPopup] = useState(false);
@@ -308,7 +308,7 @@ function InsuranceDetails() {
                 </div>
               </div>
             </div>
-            <div className='border rounded-xl p-5 bg-[#f0f4fe]'>
+            {/* <div className='border rounded-xl p-5 bg-[#f0f4fe]'>
               <div className='w-full md:w-[50%] flex items-center flex-col justify-center mx-auto gap-5'>
                 <div>
                   <h1   className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Verify now</h1>
@@ -323,7 +323,7 @@ function InsuranceDetails() {
                   {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} hidden={'hidden'} />}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className='border rounded-xl p-5 py-10 col-span-1 lg:col-span-5'>
@@ -385,4 +385,4 @@ function InsuranceDetails() {
   )
 }
 
-export default InsuranceDetails
+export default InsuranceActiveDetail

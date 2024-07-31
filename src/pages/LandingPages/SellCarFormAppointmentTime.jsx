@@ -21,6 +21,7 @@ import Navbar2 from "../../components/Navbar2";
 import back from "../../assets/images/back.png";
 import forw from "../../assets/images/forw.png";
 import calen from "../../assets/images/calen.png";
+import Banner from "../../components/Banner";
 
 function SellCarFormAppointmentTime() {
   const navigate = useNavigate();
@@ -150,7 +151,7 @@ function SellCarFormAppointmentTime() {
         </div>
       </div>
 
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -247,7 +248,8 @@ function SellCarFormAppointmentTime() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

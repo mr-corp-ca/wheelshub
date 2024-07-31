@@ -24,6 +24,12 @@ import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
+import redbg from '../../assets/images/redbg.png'
+import offwhite from '../../assets/images/offwhitebg.png'
+import skylinelogo from '../../assets/images/skyllinelogo.png'
+import basantlogo from '../../assets/images/basantlogo.png'
+import Banner from "../../components/Banner";
+
 
 export default function InsuranceLandingPage() {
   const [value, setValue] = useState(0);
@@ -156,12 +162,8 @@ export default function InsuranceLandingPage() {
                       key={index}
                       className="card border rounded-2xl flex flex-col gap-4"
                     >
-                      <div>
-                        <img
-                          src={carmechanic}
-                          alt="Car"
-                          className="w-full h-auto rounded-t-2xl"
-                        />
+                      <div className=" flex items-center justify-center h-[212px] bg-[#efefef] rounded-t-2xl">
+                      <img src={basantlogo} alt="" />
                       </div>
                       <div className="px-3 flex items-center justify-between">
                         <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
@@ -203,7 +205,7 @@ export default function InsuranceLandingPage() {
           </div>
         </div>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -284,7 +286,8 @@ export default function InsuranceLandingPage() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

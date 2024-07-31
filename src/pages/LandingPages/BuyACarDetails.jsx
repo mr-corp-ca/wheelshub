@@ -28,6 +28,7 @@ import grayDot from "../../assets/images/graydot.png";
 import blueicon from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import ClaimNow from "./ClaimNow";
+import Banner from "../../components/Banner";
 
 function BuyACarDetails() {
   const [progress, setProgress] = useState(32); // Initial progress value
@@ -538,7 +539,7 @@ function BuyACarDetails() {
         </div>
 
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -635,7 +636,8 @@ function BuyACarDetails() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

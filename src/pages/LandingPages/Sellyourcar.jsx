@@ -67,6 +67,9 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import { useState } from 'react';
 import { useLoginContext } from '../../Context/LoginContext';
 import { useRoleContext } from '../../Context/RoleContext';
+import modeldesgin from '../../assets/images/manwithfinger.png'
+import Banner from '../../components/Banner';
+
 
 function Sellyourcar() {
   const navigate = useNavigate()
@@ -102,9 +105,9 @@ function Sellyourcar() {
  
       <Navbar2 />
       <div className="mainpart">
-        <div className="firstpart h-[100vh] bg-[#f3f3f3] flex flex-col items-center justify-center">
-          <div className="w-full sm:w-[90%] md:w-[70%] grid gridcols mx-auto px-4 ">
-            <div className=" flex flex-col 2xl:items-center">
+        {/* <div className="firstpart h-fit bg-[#f3f3f3] py-44">
+          <div className="w-[70%] mx-auto px-4 ">
+            <div className=" flex flex-col ">
               <h1 className=" lg:text-[48px] font-bold font-inter text-gray-800">
                 Sell Car instantly on{" "}
                 <span className=" lg:text-[48px] font-bold font-inter text-gray-800 relative">
@@ -118,9 +121,7 @@ function Sellyourcar() {
                 <br />from Home
               </h1>
             </div>
-
-          </div>
-          <div className="w-full sm:w-[90%] md:w-[70vw] mx-auto px-4  gap-4 mt-5">
+          <div className=" mx-auto px-4  gap-4 mt-5">
             <div>
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="" className="" />
@@ -142,11 +143,41 @@ function Sellyourcar() {
               </div>
             </div>
           </div>
-          {/* <Button
-            onClick={() => navigate("/sellyourcar/form  ")}
-            title={"Next"} /> */}
+
+          </div>
+         
+        </div> */}
+         <div className=' py-32  bg-[#F3F3F3]   flex justify-center'>
+            <div className=' items-center  grid lg:grid-cols-12'>
+                <div className='w-full px-[24px] lg:px-0   flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative lg:left-[30px] xl:left-[120px] '>
+                <div className='lg:text-[48px] text-[25px] text-[#333333] lg:w-[821px] font-bold w-full'><h6>Sell Car instantly on Wheeldeal hub from Home</h6></div>
+                    <div className='flex flex-col gap-[24px] '>
+                    <div className='flex gap-[24px]'>
+                        <div><img src={greentick} alt="" /></div>
+                        <div><h6 className='lg:text-[18px] font-medium'>Higher profits</h6></div>
+                    </div>
+
+                    <div className='flex gap-[24px]'>
+                        <div><img src={greentick} alt="" /></div>
+                        <div><h6 className='lg:text-[18px] font-medium'>Higher profits</h6></div>
+                    </div>
+
+                    <div className='flex gap-[24px]'>
+                        <div><img src={greentick} alt="" /></div>
+                        <div><h6 className='lg:text-[18px] font-medium'>Higher profits</h6></div>
+                    </div>
+                    </div>
+
+                </div>
+
+                {/* 2nd div from images */}
+                <div className='hidden lg:block col-span-4   relative xl:right-[50px] lg:right-[20px]'>
+                      <img src={modeldesgin} alt="" />
+                </div>
+            </div>
+
         </div>
-        <div className='bg-white rounded-xl my-14 py-10 border z-30 w-[70%] mx-auto -mt-20'>
+        <div className='bg-white rounded-xl my-14 py-10 px-5 border z-30 w-[90%] lg:max-w-[1200px] mx-auto -mt-32'>
           <div className='flex items-center justify-center'>
             <h1 className='text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1'>
               Where do you want to sell your car?
@@ -216,12 +247,12 @@ function Sellyourcar() {
                       }
                     }}
             
-            className="h-11 md:h-12 rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+            className="h-[52px] w-[129px] rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
               Next
             </button>
           </div>
         </div> 
-        <div className="banner">
+        {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -318,7 +349,8 @@ function Sellyourcar() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
       </div>
     </>
   );

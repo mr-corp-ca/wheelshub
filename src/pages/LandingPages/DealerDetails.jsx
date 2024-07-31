@@ -155,6 +155,7 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 // import Navbar2 from '../../components/Navbar2';
 import { Navbar } from '../../components/Navbar';
 import { NavigateBeforeSharp } from '@mui/icons-material';
+import Banner from "../../components/Banner";
 
 
 
@@ -364,7 +365,7 @@ function DealerDetails() {
           </button>
         </div>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 
@@ -451,7 +452,8 @@ function DealerDetails() {
             © 2022 wheeldealhub. All Rights Reserved
           </h1>
         </div>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

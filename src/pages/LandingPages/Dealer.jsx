@@ -24,6 +24,12 @@ import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
+import redbg from '../../assets/images/redbg.png'
+import offwhite from '../../assets/images/offwhitebg.png'
+import skylinelogo from '../../assets/images/skyllinelogo.png'
+import basantlogo from '../../assets/images/basantlogo.png'
+import dealerfamily from '../../assets/images/dealerfamily.png'
+import Banner from "../../components/Banner";
 
 export default function Mechanic() {
   const [value, setValue] = useState(0);
@@ -47,6 +53,16 @@ export default function Mechanic() {
     handleClick("investments");
   };
 
+  const card = [
+    {
+      background : redbg,
+      logo: skylinelogo,
+    },
+    {
+      background : offwhite,
+      logo : basantlogo
+    }
+  ]
   return (
     <>
       <Navbar2 />
@@ -129,7 +145,7 @@ export default function Mechanic() {
           <div className="">
             <div className="newRequests py-4">
               <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
-                Dealer
+                Dealers
               </h1>
             </div>
 
@@ -157,7 +173,7 @@ export default function Mechanic() {
                     >
                       <div>
                         <img
-                          src={carmechanic}
+                          src={dealerfamily}
                           alt="Car"
                           className="w-full h-auto rounded-t-2xl"
                         />
@@ -202,7 +218,7 @@ export default function Mechanic() {
           </div>
         </div>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -283,7 +299,8 @@ export default function Mechanic() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

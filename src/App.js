@@ -77,6 +77,8 @@ import MyOrderLogin from "./pages/Customer Login/MyOrdersLogin";
 import DealerVerifyNow from "./pages/Dealer/DealerVerifyNow";
 import DealerVerifyNow2 from "./pages/Dealer/DealerVerifyNow2";
 import DealerVerifyNow3 from "./pages/Dealer/DealerVerify3";
+import InsuranceActiveDetail from "./pages/Customer Login/InsuranceActiveDetail";
+import Sellcar from "./pages/LandingPages/Sellcar";
 
 export const Layout = () => {
   const { pathname } = useLocation()
@@ -90,7 +92,7 @@ export const Layout = () => {
       <div className='w-full xl:col-span-12 flex flex-col'>
         <Navbar2 />
       </div>
-      <div className='xl:hidden'>
+      <div className='xl:hidden px-5'>
         <DropdownSidebar />
       </div>
       <div className='hidden xl:block xl:col-span-2 '>
@@ -158,6 +160,7 @@ function App() {
           path: "verificationProcess",
           element: <SellCarFormVerificationProcess />
         },
+       
       ]
     },
     {
@@ -391,6 +394,10 @@ function App() {
           element: <InsuranceDetails/>
         },
         {
+          path: 'insuranceactivedetail',
+          element: <InsuranceActiveDetail/>
+        },
+        {
           path: "settinglogin",
           element: <Settings />
         },
@@ -409,7 +416,8 @@ function App() {
         {
           path: 'dealerverification',
           element: <DealerVerification/>
-        }
+        },
+       
       ]
     }
   ]);

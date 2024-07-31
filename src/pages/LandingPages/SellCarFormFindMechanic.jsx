@@ -275,6 +275,7 @@ import checkboxpng from "../../assets/images/Checbox container (1).png";
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
 import axios from "axios";
+import Banner from "../../components/Banner";
 function SellCarFormFindMechanic() {
   const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
@@ -422,7 +423,7 @@ function SellCarFormFindMechanic() {
         </div>
       </div>
 
-      <div className="banner">
+      {/* <div className="banner">
         <img src={banner} className="w-full" alt="Banner" />
       </div>
 
@@ -519,7 +520,8 @@ function SellCarFormFindMechanic() {
         <h1 className="text-white font-medium text-sm font-Work-sans">
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
-      </div>
+      </div> */}
+      <Banner/>
     </>
   );
 }

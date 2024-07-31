@@ -7,7 +7,7 @@ function Setting() {
   const navigate = useNavigate()
   return (
     <>
-    <div className="w-full h-[100vh] flex items-center justify-center">
+    <div className="w-full flex items-center justify-center">
     <div className="w-full sm:w-[80%] border p-5 rounded-xl">
       <div className=" ">
         <div className=" flex items-center justify-center flex-col gap-6">

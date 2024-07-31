@@ -6,7 +6,9 @@ import gallery from "../../assets/images/gallery.png";
 import photo from "../../assets/images/photo.png";
 import crossicon from "../../assets/images/crossIcon.png";
 import greentickrounded from "../../assets/images/roundedGreentick.png"
-function ClaimNow({ show, onClose, hidden }) {
+import { useNavigate } from "react-router-dom";
+function ClaimNow({ show, onClose, hidden, hide }) {
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -46,7 +48,6 @@ function ClaimNow({ show, onClose, hidden }) {
   }, [show]);
 
   if (!show) return null;
-
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="">
@@ -66,7 +67,7 @@ function ClaimNow({ show, onClose, hidden }) {
               <h2 className="text-[28px] text-center font-bold font-inter text-gray-1 mb-4">
                 Reschedule mechanic appointment
               </h2>
-              <div className="flex flex-wrap justify-center mb-4">
+              <div className="flex flex-wrap justify-center my-10">
                 {days.map((day) => (
                   <button
                     key={day}
@@ -102,7 +103,7 @@ function ClaimNow({ show, onClose, hidden }) {
                   </button>
                 ))}
               </div>
-              <div className=" flex items-center justify-center">
+              <div className=" flex items-center justify-center py-5">
                 <button
                   onClick={onClose}
                   className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
@@ -111,7 +112,7 @@ function ClaimNow({ show, onClose, hidden }) {
                 </button>
               </div>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className={`flex flex-col gap-3 ${hide}`}>
                 <div className="img flex items-center justify-center">
                   <img src={greentickrounded} alt="" />
                 </div>
@@ -122,7 +123,7 @@ function ClaimNow({ show, onClose, hidden }) {
                   </h1>
                 </div>
                 <div  className=" flex items-center justify-center">
-                  <button onClick={onClose} className=" text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
+                  <button onClick={()=>{navigate('/dashboard/insurancelogin')}} className=" text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
                 </div>
               </div>
             </div>

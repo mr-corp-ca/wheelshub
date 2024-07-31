@@ -194,7 +194,7 @@ function CustomerDashboard() {
                     <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
                     <div className='flex flex-col gap-3'>
                       <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">Mercedes-Benz E 220 d</h1>
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         <h1 className="text-xs lg:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
                         <img src={grayDot} alt="dot" />
                         <h1 className="text-xs lg:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
@@ -254,7 +254,7 @@ function CustomerDashboard() {
                 <img src={markIcon} alt="Icon" />
                 <h1 className='text-base font-semibold font-inter text-gray-1'>Car handover</h1>
               </div>
-              <div className='outer flex items-center border-b border-dashed pb-3 gap-5'>
+              <div className='outer flex flex-wrap items-center border-b border-dashed pb-3 gap-5'>
                 <div className='border-r pr-5 flex flex-col gap-3'>
                   <h1 className='text-base font-medium font-inter text-gray-1'>Car make</h1>
                   <p className='text-sm font-normal font-inter text-gray-4'>Audi A4</p>
@@ -268,10 +268,10 @@ function CustomerDashboard() {
                   <p className='text-sm font-normal font-inter text-gray-4'>10:00 AM</p>
                 </div>
               </div>
-              <div className='flex items-center gap-2 py-5 mt-5'>
+              <div className='flex  items-center gap-2 py-5 mt-5'>
                 <h1 className='text-base font-semibold font-inter text-gray-1'>Dealer details</h1>
               </div>
-              <div className='outer flex items-center border-b border-dashed pb-3 gap-5'>
+              <div className='outer flex flex-wrap items-center border-b border-dashed pb-3 gap-5'>
                 <div className='border-r pr-5 flex flex-col gap-3'>
                   <h1 className='text-base font-medium font-inter text-gray-1'>Location</h1>
                   <p className='text-sm font-normal font-inter text-custom-blue underline'>188m Surrey</p>

@@ -31,7 +31,7 @@ const [showPopup, setShowPopup] = useState(false);
 
   return (
     <>
-    <div className="p-4">
+    <div className=" py-5">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
           <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">

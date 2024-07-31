@@ -56,6 +56,7 @@ import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import { Navbar } from '../../components/Navbar';
 import { NavigateBeforeSharp } from '@mui/icons-material';
 import { Navigate, useNavigate } from 'react-router-dom';
+import Banner from '../../components/Banner';
 
 
 const Selcartopublic = () => {
@@ -78,6 +79,7 @@ const Selcartopublic = () => {
     }
     return (
         <>
+        <Navbar2/>
         <div>
             {/* for first main div */}
 
@@ -290,7 +292,7 @@ const Selcartopublic = () => {
 
             </div>
         </div>
-        <div className="banner">
+        {/* <div className="banner">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 
@@ -377,7 +379,8 @@ const Selcartopublic = () => {
             © 2022 wheeldealhub. All Rights Reserved
           </h1>
         </div>
-      </div>
+      </div> */}
+      <Banner/>
         </>
         
     )

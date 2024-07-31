@@ -20,9 +20,10 @@ function Insurance() {
   };
 
   const [showPopup, setShowPopup] = useState(false);
-
-  const handleShowPopup = () => {
+  const [popup, setpopup] = useState(null)
+  const handleShowPopup = (index) => {
     setShowPopup(true);
+    setpopup(index)
   };
 
   const handleClosePopup = () => {
@@ -63,10 +64,10 @@ function Insurance() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button  onClick={handleShowPopup} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button  onClick={()=>{handleShowPopup(index)}} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                         Approve
                       </button>
-                      {showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
+                      {popup === index && showPopup && <ClaimNow show={showPopup} onClose={handleClosePopup} />}
                       </div>
                   </div>
                 </div>
