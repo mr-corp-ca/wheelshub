@@ -1,14 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import graystars from "../../assets/images/graystars.png";
-import crossIcon from "../../assets/images/crossIcon.png";  // Assuming the close icon image file is crossIcon.png
+import crossIcon from "../../assets/images/crossIcon.png"; // Assuming the close icon image file is crossIcon.png
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
+import Stars from "./Stars";
 function MechanicVerifyNow3() {
   const navigate = useNavigate();
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const [showPopup, setShowPopup] = useState(false);
 
   const handleShowPopup = () => {
@@ -19,12 +20,7 @@ function MechanicVerifyNow3() {
     setShowPopup(false);
   };
 
-  const [rating, setRating] = useState(0);
-    
-  const handleStarClick = (index) => {
-    setRating(index + 1);
-  }
-  
+
   return (
     <>
       <div className=" my-5">
@@ -74,37 +70,17 @@ function MechanicVerifyNow3() {
                     <div className="w-full">
                       <div className="flex items-center justify-between">
                         <div>
-                        <label
-                          htmlFor="engine1"
-                          className="block text-base font-medium font-inter text-gray-1"
-                        >
-                          Engine
-                        </label>
+                          <label
+                            htmlFor="engine1"
+                            className="block text-base font-medium font-inter text-gray-1"
+                          >
+                            Engine
+                          </label>
                         </div>
                         {/* <img src={graystars} alt="Rating" /> */}
                         <div>
-                        <div className="flex space-x-1">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          onClick={() => handleStarClick(index)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={index < rating ? "yellow" : "none"}
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className={`h-5 w-5 cursor-pointer ${
-            index < rating ? 'text-yellow-400' : 'text-gray-400'
-          }`}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
-          />
-        </svg>
-      ))}
-      </div>
+
+                        <Stars/>
                         </div>
                       </div>
                       <div className="pt-1">
@@ -118,38 +94,17 @@ function MechanicVerifyNow3() {
                     </div>
                     <div className="w-full">
                       <div className="flex items-center justify-between">
-                      <div>
-                        <label
-                          htmlFor="engine1"
-                          className="block text-base font-medium font-inter text-gray-1"
-                        >
-                          Engine
-                        </label>
+                        <div>
+                          <label
+                            htmlFor="engine1"
+                            className="block text-base font-medium font-inter text-gray-1"
+                          >
+                            Exterior
+                          </label>
                         </div>
                         {/* <img src={graystars} alt="Rating" /> */}
                         <div>
-                        <div className="flex space-x-1">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          onClick={() => handleStarClick(index)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={index < rating ? "yellow" : "none"}
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className={`h-5 w-5 cursor-pointer ${
-            index < rating ? 'text-yellow-400' : 'text-gray-400'
-          }`}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
-          />
-        </svg>
-      ))}
-      </div>
+                        <Stars/>
                         </div>
                       </div>
                       <div className="pt-1">
@@ -165,38 +120,17 @@ function MechanicVerifyNow3() {
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 py-5">
                     <div className="w-full">
                       <div className="flex items-center justify-between">
-                      <div>
-                        <label
-                          htmlFor="engine1"
-                          className="block text-base font-medium font-inter text-gray-1"
-                        >
-                          Engine
-                        </label>
+                        <div>
+                          <label
+                            htmlFor="engine1"
+                            className="block text-base font-medium font-inter text-gray-1"
+                          >
+                            Interior
+                          </label>
                         </div>
                         {/* <img src={graystars} alt="Rating" /> */}
                         <div>
-                        <div className="flex space-x-1">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          onClick={() => handleStarClick(index)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={index < rating ? "yellow" : "none"}
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className={`h-5 w-5 cursor-pointer ${
-            index < rating ? 'text-yellow-400' : 'text-gray-400'
-          }`}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
-          />
-        </svg>
-      ))}
-      </div>
+                        <Stars/>
                         </div>
                       </div>
                       <div className="pt-1">
@@ -210,38 +144,17 @@ function MechanicVerifyNow3() {
                     </div>
                     <div className="w-full">
                       <div className="flex items-center justify-between">
-                         <div>
-                        <label
-                          htmlFor="engine1"
-                          className="block text-base font-medium font-inter text-gray-1"
-                        >
-                          Engine
-                        </label>
+                        <div>
+                          <label
+                            htmlFor="engine1"
+                            className="block text-base font-medium font-inter text-gray-1"
+                          >
+                            Tires
+                          </label>
                         </div>
                         {/* <img src={graystars} alt="Rating" /> */}
                         <div>
-                        <div className="flex space-x-1">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          onClick={() => handleStarClick(index)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={index < rating ? "yellow" : "none"}
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className={`h-5 w-5 cursor-pointer ${
-            index < rating ? 'text-yellow-400' : 'text-gray-400'
-          }`}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73-1.64 7.03z"
-          />
-        </svg>
-      ))}
-      </div>
+                        <Stars/>
                         </div>
                       </div>
                       <div className="pt-1">
@@ -259,13 +172,17 @@ function MechanicVerifyNow3() {
               <div className="w-full text-center flex items-center justify-center">
                 <button
                   onClick={handleShowPopup}
-                  className="w-[224px] text-sm rounded-lg px-2 py-3 font-inter font-semibold bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                  className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-[224px] text-sm rounded-lg px-2 py-3 font-inter font-semibold bg-custom-blue text-white shadow-2xl shadow-custom-blue"
                   title="Mark as verified"
                 >
                   Mark as verified
                 </button>
-                {showPopup && <VerifiedSuccessful show={showPopup} onClose={handleClosePopup} />}
-
+                {showPopup && (
+                  <VerifiedSuccessful
+                    show={showPopup}
+                    onClose={handleClosePopup}
+                  />
+                )}
               </div>
             </form>
           </div>

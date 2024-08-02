@@ -4,6 +4,7 @@ import graystars from "../../assets/images/graystars.png";
 import crossIcon from "../../assets/images/crossIcon.png";  // Assuming the close icon image file is crossIcon.png
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
+import Stars from "../Mechanic/Stars";
 function DealerVerifyNow3() {
   const navigate = useNavigate();
   const handleSubmit=(e)=>{
@@ -72,7 +73,8 @@ function DealerVerifyNow3() {
                         >
                           Engine
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <Stars/>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -89,9 +91,10 @@ function DealerVerifyNow3() {
                           htmlFor="engine2"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
-                          Engine
+                          Exterior
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <Stars/>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -110,9 +113,10 @@ function DealerVerifyNow3() {
                           htmlFor="engine3"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
-                          Engine
+                          Interior
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <Stars/>
                       </div>
                       <div className="pt-1">
                         <textarea
@@ -129,9 +133,10 @@ function DealerVerifyNow3() {
                           htmlFor="engine4"
                           className="block text-base font-medium font-inter text-gray-1"
                         >
-                          Engine
+                          Tires
                         </label>
-                        <img src={graystars} alt="Rating" />
+                        {/* <img src={graystars} alt="Rating" /> */}
+                        <Stars/>
                       </div>
                       <div className="pt-1">
                         <textarea

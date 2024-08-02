@@ -37,10 +37,10 @@ function DealerVerifyNow() {
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full">
-                <Input label={"Registration year"} placeholder={"Full name"} />
+                <Input label={"Registration year"} placeholder={"Select"} />
               </div>
               <div className="w-full">
-                <Input label={"Insruance"} placeholder={"Last name"} />
+                <Input label={"Insruance"} placeholder={"Select"} />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -48,39 +48,39 @@ function DealerVerifyNow() {
                 <Input
                   type={"number"}
                   label={"Fuel type"}
-                  placeholder={"+1"}
+                  placeholder={"Select"}
                 />
               </div>
               <div className="w-full">
-                <Input label={"RTO"} placeholder={"Email id"} />
+                <Input label={"RTO"} placeholder={"Type here"} />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"KMs driven"} placeholder={"Type business name"} />
+                <Input label={"KMs driven"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
                 <Input
                   label={"Seats"}
-                  placeholder={"Type business address"}
+                  placeholder={"5"}
                 />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"Ownership"} placeholder={"Type business name"} />
+                <Input label={"Ownership"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
-                <Input label={"engine displacement"} placeholder={"Type business name"} />
+                <Input label={"Engine displacement"} placeholder={"Type here"} />
               </div>
               
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"Transmission"} placeholder={"Type business name"} />
+                <Input label={"Transmission"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
-                <Input label={"Year of manufacturing"} placeholder={"Type business name"} />
+                <Input label={"Year of manufacturing"} placeholder={"Type here"} />
               </div>
               
             </div>

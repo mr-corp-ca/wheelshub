@@ -25,39 +25,68 @@ import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
-
+import graybg from '../../assets/images/graybg.png'
+import ocean from '../../assets/images/ocean-park-logo-216w.png'
+import offwhite from '../../assets/images/whitebg.png'
+import redbg from '../../assets/images/redbg.png'
+import purplebg from '../../assets/images/purplebg.png'
+import blackbg from '../../assets/images/blackbg.png'
+import orangebg from '../../assets/images/orangedbg.png'
+import corapedlogo from '../../assets/images/cropped-GARLOGO2022-2-192x192 1.png'
+import protechogo from '../../assets/images/Pro-Tech Auto Repairs.png'
+import aramlogo from '../../assets/images/Aram’s AUTO Repairs.png'
+import logoss from '../../assets/images/logo-1.png'
+import daleslogo from '../../assets/images/DalesLogo@ 1.png'
+import newtonlogo from '../../assets/images/image 53.png'
+import snjautologo from '../../assets/images/SNJ Automotive Repair.png'
+import njlogo from '../../assets/images/NJ Auto Repair Mechanic.png'
 export default function Mechanic() {
-  const [value, setValue] = useState(0);
+
+  const cardsData = [
+    {
+      background: 'bg-gray-600',
+      logo: ocean,
+      name: 'Ocean Park Automotive Ltd'
+    },
+    {
+      background: 'bg-red-500',
+      logo: njlogo,
+      name: 'NJ Auto Repair Mechanic'
+    },
+    {
+      background: 'bg-black',
+      logo: logoss,
+      name: 'White Rock Automotive',
+    },
+    {
+      background: 'bg-black',
+      logo: aramlogo,
+      name: 'Arams Auto Repairs'
+    },
+    {
+      background: 'bg-orange-500',
+      logo: protechogo,
+      name: 'Pro-Tech Auto Repairs Ltd'
+    },
+    {
+      background: 'bg-white',
+      logo: corapedlogo,
+      name: 'Genesis Auto Repair Ltd.'
+    },
+  ]
+
   const navigate = useNavigate()
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-  const [tabActive, setTabActive] = useState("home");
-  const [openDropdown, setOpenDropdown] = useState(false);
-
-  const handleClick = (item) => {
-    setTabActive(item);
-  };
-
-  const bidsClick = () => {
-    handleClick("bids");
-  };
-
-  const investmentClick = () => {
-    handleClick("investments");
-  };
 
   return (
     <>
       <Navbar2 />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
+        <div className="sidebar lg:w-[25%] lg:pl-10 p-4 lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <img src={filterIcon} alt="Filter Icon" />
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            <h1 className="text-2xl lg:text-[32px] font-inter font-bold text-gray-1">
               Filter
             </h1>
           </div>
@@ -78,15 +107,15 @@ export default function Mechanic() {
                   aria-controls="panel6a-content"
                   id="panel6a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Location
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
+                  <div className="  flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
                     <input
                       type="text"
-                      placeholder="Search here"
+                      placeholder="Type location"
                       className="ml-2 w-full border-none focus:outline-none"
                     />
                   </div>
@@ -98,7 +127,7 @@ export default function Mechanic() {
                   aria-controls="panel5a-content"
                   id="panel5a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Popularity
                   </h1>
                 </AccordionSummary>
@@ -106,15 +135,15 @@ export default function Mechanic() {
                   <div className="">
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>All</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">All</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Most popular</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Most popular</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Verified</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Verified</h1>
                     </div>
 
                   </div>
@@ -129,7 +158,7 @@ export default function Mechanic() {
         <div className="p-4 mt-2 lg:w-3/4">
           <div className="">
             <div className="newRequests py-4">
-              <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+              <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
                 Mechanics
               </h1>
             </div>
@@ -146,10 +175,9 @@ export default function Mechanic() {
               </button>
             </div>
 
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Array(6)
-                .fill()
-                .map((_, index) => {
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {cardsData
+                .map((value, index) => {
                   return (
                     <div
                       onClick={() => navigate("/details")}
@@ -157,16 +185,12 @@ export default function Mechanic() {
                       key={index}
                       className="card border rounded-2xl flex flex-col gap-4"
                     >
-                      <div>
-                        <img
-                          src={carmechanic}
-                          alt="Car"
-                          className="w-full h-auto rounded-t-2xl"
-                        />
+                      <div className={` h-[212px] rounded-t-2xl flex items-center justify-center ${value.background}`}>
+                        <img src={value.logo} alt="" />
                       </div>
                       <div className="px-3 flex items-center justify-between">
                         <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                          BL Car Mechanics
+                        {value.name}
                         </h1>
                         <img src={hearticon} alt="Heart icon" />
                       </div>
@@ -204,88 +228,6 @@ export default function Mechanic() {
           </div>
         </div>
       </div>
-      {/* <div className="banner">
-        <img src={banner} className="w-full" alt="Banner" />
-      </div>
-
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className="w-[90vw] lg:w-[80vw] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
-            <div className="first w-full lg:w-[35%]">
-              <div>
-                <img src={quickBidLogo} alt="Quick Bid Logo" />
-              </div>
-              <div>
-                <p className="text-base lg:text-lg font-normal font-Work-sans text-gray-800 py-5 lg:py-10">
-                  But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <img src={facebook} alt="Facebook" />
-                </div>
-                <div>
-                  <img src={twitter} alt="Twitter" />
-                </div>
-                <div>
-                  <img src={tiktok} alt="TikTok" />
-                </div>
-                <div>
-                  <img src={youtube} alt="YouTube" />
-                </div>
-              </div>
-            </div>
-            <div className="second w-full lg:w-[15%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Our Services
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Home
-                </h3>
-                <h3 onClick={() => bidsClick()} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Bids
-                </h3>
-                <h3 onClick={() => investmentClick()} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Investments
-                </h3>
-                <h3 onClick={() => handleClick("about")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  About us
-                </h3>
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Contact us
-                </h3>
-              </div>
-            </div>
-            <div className="third w-full lg:w-[35%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Contact
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  +012-334-5864
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  info.alva@example.com
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  2048 Wexford Way Wings SC 287290
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="companyName h-[100px] bg-[#4f4f4f] flex items-center justify-center">
-        <h1 className="text-white font-medium text-sm font-Work-sans">
-          © 2022 wheeldealhub. All Rights Reserved
-        </h1>
-      </div> */}
       <Banner/>
     </>
   );

@@ -333,6 +333,57 @@ export const DropdownSidebar = () => {
         },
     ]
 
+    const companyRepresentativeSidebarData = [
+        {
+            name: "Dashboard",
+            icon: <DashboardIcon/>,
+            navigate: "/dashboard/representativedashboard"
+        },
+        {
+            name: "Appointments",
+            icon: <MyOrders/>,
+            navigate: "/dashboard/appointments"
+        },
+        // {
+        //     name: "New Requests",
+        //     icon: <NewRequests/>,
+        //     navigate: "/dashboard/newRequest"
+        // },
+        {
+            name: "Subscriptions",
+            icon: <Subscriptions/>,
+            navigate: "/dashboard/subscriptions"
+        },
+
+
+        {
+            name: "Chats",
+            icon: <AdsIcon/>,
+            navigate: "/dashboard/chats"
+        },
+        {
+            name: "Payments",
+            icon: <ClaimIcon/>,
+            navigate: "/dashboard/payments"
+        },
+        {
+            name: "Settings",
+            icon: <SettingsIcon/>,
+            navigate: "/dashboard/settinglogin"
+        },
+
+        {
+            name: "Help",
+            icon: <SupportIcon/>,
+            navigate: "/"
+        },
+        {
+            name: "Logout",
+            icon: <LogoutIcon/>,
+            navigate: "/"
+        },
+    ]
+
 
 
     return (
@@ -346,11 +397,13 @@ export const DropdownSidebar = () => {
                     role === "Dealer" ? dealerSideBarData :
                         role === "Mechanic" ? mechanicSideBarData :
                             role === "Insurance" ? insuranceSideBarData :
+                            role === "Company Representative" ? companyRepresentativeSidebarData :
                                 role === "Finance" ? financeSideBarData : individualSideBarData).filter(item => location.pathname.includes(item.navigate))[0]?.icon, { color: "#6F9CFF" })}
                     {(role === "Individual" ? individualSideBarData :
                     role === "Dealer" ? dealerSideBarData :
                         role === "Mechanic" ? mechanicSideBarData :
                             role === "Insurance" ? insuranceSideBarData :
+                            role === "Company Representative" ? companyRepresentativeSidebarData :
                                 role === "Finance" ? financeSideBarData : individualSideBarData).filter(item => location.pathname.includes(item.navigate))[0].name}
                 </div>
                 <svg className="w-2.5 h-2.5 ms-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -365,6 +418,7 @@ export const DropdownSidebar = () => {
                     role === "Dealer" ? dealerSideBarData :
                         role === "Mechanic" ? mechanicSideBarData :
                             role === "Insurance" ? insuranceSideBarData :
+                            role === "Company Representative" ? companyRepresentativeSidebarData :
                                 role === "Finance" ? financeSideBarData : individualSideBarData).map((item, index) => (
                         <li>
                             <NavLink

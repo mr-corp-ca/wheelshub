@@ -357,7 +357,7 @@ export default function AccordionUsage() {
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <img src={filterIcon} alt="Filter Icon" />
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            <h1 className="text-lg lg:text-[32px] font-inter font-bold text-gray-1">
               Filter
             </h1>
           </div>
@@ -378,7 +378,7 @@ export default function AccordionUsage() {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Budget
                   </h1>
                 </AccordionSummary>
@@ -386,8 +386,8 @@ export default function AccordionUsage() {
                   {/* Progress bar */}
                   <div className="flex flex-col items-center border-b border-dashed pb-3">
                     <div className="w-full flex justify-between text-blue-500">
-                      <span>${value}</span>
-                      <span>$32000</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">${value}</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">$32000</span>
                     </div>
                     <input
                       type="range"
@@ -413,19 +413,19 @@ export default function AccordionUsage() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Brand
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
                   {/* Dropdown */}
                   <div className="flex w-full items-center border border-gray-300 rounded-md px-3 py-2">
-                    <select className="text-base w-full font-medium text-gray-800 ml-2 border-none focus:outline-none">
-                      <option value="">Select</option>
-                      <option value="audi">Audi</option>
-                      <option value="bmw">BMW</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="tesla">Tesla</option>
+                    <select className=" w-full text-base font-medium font-inter text-gray-1 ml-2 border-none focus:outline-none">
+                      <option className=" text-base font-medium font-inter text-gray-1" value="">Select</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="audi">Audi</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="bmw">BMW</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="mercedes">Mercedes</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="tesla">Tesla</option>
                     </select>
                   </div>
                 </AccordionDetails>
@@ -436,7 +436,7 @@ export default function AccordionUsage() {
                   aria-controls="panel3a-content"
                   id="panel3a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Model year
                   </h1>
                 </AccordionSummary>
@@ -444,13 +444,13 @@ export default function AccordionUsage() {
                   {/* Progress bar */}
                   <div className="flex flex-col items-center border-b border-dashed pb-3">
                     <div className="w-full flex justify-between text-blue-500">
-                      <span>${value1}</span>
-                      <span>$32000</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">{value1}</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">2024</span>
                     </div>
                     <input
                       type="range"
                       min="0"
-                      max="32000"
+                      max="2024"
                       value={value1}
                       onChange={(e)=>{
                         e.preventDefault();
@@ -458,8 +458,8 @@ export default function AccordionUsage() {
                       }}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${(value1 / 32000) * 100
-                          }%, #e5e7eb ${(value1 / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value1 / 2024) * 100
+                          }%, #e5e7eb ${(value1 / 2024) * 100}%)`,
                       }}
                     />
                   </div>
@@ -471,7 +471,7 @@ export default function AccordionUsage() {
                   aria-controls="panel4a-content"
                   id="panel4a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Kilometers driven
                   </h1>
                 </AccordionSummary>
@@ -479,13 +479,13 @@ export default function AccordionUsage() {
                   {/* Progress bar */}
                   <div className="flex flex-col items-center border-b border-dashed pb-3">
                     <div className="w-full flex justify-between text-blue-500">
-                      <span>${value2}</span>
-                      <span>$32000</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">{value2}KM</span>
+                      <span className=" text-sm font-medium font-Work-sans text-custom-blue">4500KM</span>
                     </div>
                     <input
                       type="range"
                       min="0"
-                      max="32000"
+                      max="4500"
                       value={value2}
                       onChange={(e)=>{
                         e.preventDefault();
@@ -493,8 +493,8 @@ export default function AccordionUsage() {
                       }}
                       className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #60a5fa ${(value2 / 32000) * 100
-                          }%, #e5e7eb ${(value2 / 32000) * 100}%)`,
+                        background: `linear-gradient(to right, #60a5fa ${(value2 / 4500) * 100
+                          }%, #e5e7eb ${(value2 / 4500) * 100}%)`,
                       }}
                     />
                   </div>
@@ -506,7 +506,7 @@ export default function AccordionUsage() {
                   aria-controls="panel5a-content"
                   id="panel5a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Fuel type
                   </h1>
                 </AccordionSummary>
@@ -514,19 +514,19 @@ export default function AccordionUsage() {
                   <div className="">
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Diesel</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Diesel</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Petrol</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Petrol</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>CNG</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">CNG</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Electric</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Electric</h1>
                     </div>
                   </div>
                 </AccordionDetails>
@@ -537,12 +537,19 @@ export default function AccordionUsage() {
                   aria-controls="panel6a-content"
                   id="panel6a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Location
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
                   {/* Location content here */}
+                  <div className="flex w-full items-center border border-gray-300 rounded-md px-3 py-2">
+                    <select className=" w-full text-base font-medium font-inter text-gray-1 ml-2 border-none focus:outline-none">
+                      <option className=" text-base font-medium font-inter text-gray-1" value="">Lahore</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="audi">Karachi</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="bmw">Islamabad</option>
+                    </select>
+                  </div>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -551,12 +558,21 @@ export default function AccordionUsage() {
                   aria-controls="panel7a-content"
                   id="panel7a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Body type
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
                   {/* Body type content here */}
+                  <div className="flex w-full items-center border border-gray-300 rounded-md px-3 py-2">
+                    <select className=" w-full text-base font-medium font-inter text-gray-1 ml-2 border-none focus:outline-none">
+                      <option className=" text-base font-medium font-inter text-gray-1" value="">Sedan</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="audi">Coupe</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="bmw">Sport</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="mercedes">Off road</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="tesla">Convertible</option>
+                    </select>
+                  </div>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -565,12 +581,18 @@ export default function AccordionUsage() {
                   aria-controls="panel8a-content"
                   id="panel8a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Ownership
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
                   {/* Ownership content here */}
+                  <div className="flex w-full items-center border border-gray-300 rounded-md px-3 py-2">
+                    <select className=" w-full text-base font-medium font-inter text-gray-1 ml-2 border-none focus:outline-none">
+                      <option className=" text-base font-medium font-inter text-gray-1" value="">Own</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="audi">Company</option>
+                    </select>
+                  </div>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -579,24 +601,34 @@ export default function AccordionUsage() {
                   aria-controls="panel9a-content"
                   id="panel9a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
                     Color
                   </h1>
                 </AccordionSummary>
-                <AccordionDetails>{/* Color content here */}</AccordionDetails>
+                <AccordionDetails>{/* Color content here */}
+                <div className="flex w-full items-center border border-gray-300 rounded-md px-3 py-2">
+                    <select className=" w-full text-base font-medium font-inter text-gray-1 ml-2 border-none focus:outline-none">
+                      <option className=" text-base font-medium font-inter text-gray-1" value="">White</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="audi">Black</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="bmw">Grey</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="mercedes">Red</option>
+                      <option className=" text-base font-medium font-inter text-gray-1" value="tesla">Ash</option>
+                    </select>
+                  </div>
+                </AccordionDetails>
               </Accordion>
             </div>
           </div>
         </div>
         {/* content of cards */}
         <div className="p-4 lg:w-3/4">
-          <div className="newRequests py-4">
-            <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+          <div className="newRequests my-6">
+            <h1 className="text-xl lg:text-[32px] font-bold font-inter text-gray-1">
               Cars nearby your location
             </h1>
           </div>
 
-          <div className="flex items-center flex-wrap gap-5 pt-10 pb-5">
+          <div className="flex items-center flex-wrap gap-5 pt-10 my-7">
             <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
               Verified
             </button>

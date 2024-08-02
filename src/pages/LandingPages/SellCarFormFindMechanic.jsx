@@ -276,6 +276,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
 import axios from "axios";
 import Banner from "../../components/Banner";
+import whitetick from '../../assets/images/whitetick.png'
 function SellCarFormFindMechanic() {
   const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
@@ -391,7 +392,7 @@ function SellCarFormFindMechanic() {
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
                     <button onClick={()=>{handleButtonClick(index)}} className={`h-[44px] md:h-[48px] ${buttonClick===index ? 'px-[30px]' : 'px-[24px]'} px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${buttonClick === index ? 'bg-custom-green': 'bg-custom-blue'}`}>
-                        {buttonClick === index ? 'Selected' : 'Select mechanic'}
+                        {buttonClick === index ? <span className="flex items-center justify-center gap-2"><img src={whitetick} alt="" />Selected</span> : 'Select mechanic'}
                       </button>
                     </div>
                   </div>

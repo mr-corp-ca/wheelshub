@@ -94,7 +94,7 @@ function BuyACarDetails() {
   return (
     <>
       <Navbar2 />
-      <div className="grid grid-cols-1 lg:grid-cols-12 px-3 lg:px-10 gap-6 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 w-[90%] mx-auto gap-6 mt-10">
         <div className="leftpart col-span-12 lg:col-span-7">
           <div className="img">
             <img src={audiimg} className="w-full" alt="" />
@@ -116,8 +116,8 @@ function BuyACarDetails() {
                 Car overview
               </h1>
             </div>
-            <div className="flex flex-col md:flex-row justify-between pt-5 gap-5 md:gap-0">
-              <div className="flex flex-col gap-5 ">
+            <div className="flex flex-col md:flex-row justify-between pt-5 gap-5 md:gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
                 <div className="flex items-center gap-5 justify-between">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Registration year
@@ -159,7 +159,7 @@ function BuyACarDetails() {
                   </h1>
                 </div>
               </div>
-              <div className="flex flex-col gap-5 ">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
                 <div className="flex items-center gap-5 justify-between">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Insurance
@@ -209,8 +209,8 @@ function BuyACarDetails() {
                 Specification
               </h1>
             </div>
-            <div className="flex flex-col md:flex-row  justify-between pt-5 gap-5 md:gap-0">
-              <div className="flex flex-col gap-5">
+            <div className="flex flex-col md:flex-row  justify-between pt-5 gap-5 md:gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
                 <div className="flex items-center gap-5 justify-between">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Engine
@@ -236,7 +236,7 @@ function BuyACarDetails() {
                   </h1>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
                 <div className="flex items-center gap-5 justify-between">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Mileage
@@ -479,10 +479,10 @@ function BuyACarDetails() {
               </button>
             </div>
             {/* Progress bar */}
-            <div className="flex flex-col items-center pb-3 my-5">
-              <div className="w-full flex justify-between text-blue-500">
-                <span>${value}</span>
-                <span>$32000</span>
+            <div className="flex flex-col items-center my-5">
+              <div className="w-full flex justify-between text-blue-500 my-2">
+                <span className=" text-sm font-medium font-Work-sans text-custom-blue">${value}</span>
+                <span className=" text-sm font-medium font-Work-sans text-custom-blue">$32000</span>
               </div>
               <input
                 type="range"

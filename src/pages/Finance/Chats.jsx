@@ -204,11 +204,11 @@ import telegram from "../../assets/images/telegram.png";
 function Chats() {
   return (
     <>
-      <div className="chatsMainPart p-4 md:p-8">
+      <div className="chatsMainPart">
         <div className="chatHeading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Chats</h1>
         </div>
-        <div className="ChatWholepart my-6">
+        <div className="ChatWholepart my-5">
           <div className="rounded-xl border">
             <div className="upersection grid grid-cols-12">
               <div className="leftuper p-3 flex justify-between col-span-12 md:col-span-3 items-center border-r border-b">

@@ -1,78 +1,74 @@
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
 import filterIcon from "../../assets/images/filter 1.png";
-import searchIcon from "../../assets/images/Vector (1).png";
-import { useState } from "react";
-import audi2 from "../../assets/images/audi2.png";
-import grayDot from "../../assets/images/graydot.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import waveicon from "../../assets/images/Wave.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-import carmechanic from "../../assets/images/carmechanic.png";
 import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
-import redbg from '../../assets/images/redbg.png'
-import offwhite from '../../assets/images/offwhitebg.png'
-import skylinelogo from '../../assets/images/skyllinelogo.png'
-import basantlogo from '../../assets/images/basantlogo.png'
 import dealerfamily from '../../assets/images/dealerfamily.png'
 import Banner from "../../components/Banner";
-
+import dnsautosale from '../../assets/images/DND AUTO sales LTD.png'
+import drivehive from '../../assets/images/drivehive-logo.png'
+import headerlogo from '../../assets/images/header_logo_6631183477bd3 (2).png'
+import logo from '../../assets/images/Logo (1).png'
+import legacycar from '../../assets/images/Legacy cars.png'
+import skyline from '../../assets/images/Logo 1.png'
+import basantlogo from '../../assets/images/basantlogo.png'
+import acura from '../../assets/images/acruarmd-oem-h-cmyk-c-small.png'
 export default function Mechanic() {
-  const [value, setValue] = useState(0);
   const navigate = useNavigate()
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
 
-  const [tabActive, setTabActive] = useState("home");
-  const [openDropdown, setOpenDropdown] = useState(false);
-
-  const handleClick = (item) => {
-    setTabActive(item);
-  };
-
-  const bidsClick = () => {
-    handleClick("bids");
-  };
-
-  const investmentClick = () => {
-    handleClick("investments");
-  };
-
-  const card = [
+  const cardsData = [
     {
-      background : redbg,
-      logo: skylinelogo,
+      background: '#efefef',
+      logo: acura,
+      name: 'Ocean Park Automotive'
     },
     {
-      background : offwhite,
-      logo : basantlogo
-    }
+      background: 'bg-red-500',
+      logo: skyline,
+      name: 'NJ Auto Repair Mechanic'
+    },
+    {
+      background: 'bg-purple-500',
+      logo: legacycar,
+      name: 'White Rock Automotive',
+    },
+    {
+      background: 'bg-black',
+      logo: logo,
+      name: 'Arams Auto Repairs'
+    },
+    {
+      background: 'bg-sky-300',
+      logo: dnsautosale,
+      name: 'Pro-Tech Auto Repairs Ltd'
+    },
+    {
+      background: '#f3f3f3',
+      logo: drivehive,
+      name: 'Genesis Auto Repair Ltd.'
+    },
+    {
+      background: '#efefef',
+      logo: basantlogo,
+      name: 'Genesis Auto Repair Ltd.'
+    },
   ]
   return (
     <>
       <Navbar2 />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
+        <div className="sidebar lg:w-[25%] p-4 lg:pl-10 lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <img src={filterIcon} alt="Filter Icon" />
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            <h1 className="text-2xl lg:text-[32px] font-inter font-bold text-gray-1">
               Filter
             </h1>
           </div>
@@ -93,15 +89,15 @@ export default function Mechanic() {
                   aria-controls="panel6a-content"
                   id="panel6a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Location
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
+                  <div className="  flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
                     <input
                       type="text"
-                      placeholder="Search here"
+                      placeholder="Type location"
                       className="ml-2 w-full border-none focus:outline-none"
                     />
                   </div>
@@ -113,7 +109,7 @@ export default function Mechanic() {
                   aria-controls="panel5a-content"
                   id="panel5a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Popularity
                   </h1>
                 </AccordionSummary>
@@ -121,15 +117,15 @@ export default function Mechanic() {
                   <div className="">
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>All</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">All</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Most popular</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Most popular</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Verified</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Verified</h1>
                     </div>
 
                   </div>
@@ -144,8 +140,8 @@ export default function Mechanic() {
         <div className="p-4 mt-2 lg:w-3/4">
           <div className="">
             <div className="newRequests py-4">
-              <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
-                Dealers
+            <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
+                Dealer
               </h1>
             </div>
 
@@ -162,25 +158,20 @@ export default function Mechanic() {
             </div>
 
             <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Array(6)
-                .fill()
-                .map((_, index) => {
+              {cardsData
+                .map((value, index) => {
                   return (
                     <div
                       onClick={() => navigate("/details")}
                       key={index}
-                      className="card border rounded-2xl flex flex-col gap-4"
+                      className={`card border rounded-2xl flex flex-col gap-4`}
                     >
-                      <div>
-                        <img
-                          src={dealerfamily}
-                          alt="Car"
-                          className="w-full h-auto rounded-t-2xl"
-                        />
+                     <div className={` h-[212px] rounded-t-2xl flex items-center justify-center ${value.background}`}>
+                        <img src={value.logo} alt="" />
                       </div>
                       <div className="px-3 flex items-center justify-between">
                         <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                          BL Car Mechanics
+                          {value.name}
                         </h1>
                         <img src={hearticon} alt="Heart icon" />
                       </div>
@@ -218,88 +209,6 @@ export default function Mechanic() {
           </div>
         </div>
       </div>
-      {/* <div className="banner">
-        <img src={banner} className="w-full" alt="Banner" />
-      </div>
-
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className="w-[90vw] lg:w-[80vw] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
-            <div className="first w-full lg:w-[35%]">
-              <div>
-                <img src={quickBidLogo} alt="Quick Bid Logo" />
-              </div>
-              <div>
-                <p className="text-base lg:text-lg font-normal font-Work-sans text-gray-800 py-5 lg:py-10">
-                  But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <img src={facebook} alt="Facebook" />
-                </div>
-                <div>
-                  <img src={twitter} alt="Twitter" />
-                </div>
-                <div>
-                  <img src={tiktok} alt="TikTok" />
-                </div>
-                <div>
-                  <img src={youtube} alt="YouTube" />
-                </div>
-              </div>
-            </div>
-            <div className="second w-full lg:w-[15%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Our Services
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Home
-                </h3>
-                <h3 onClick={() => bidsClick()} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Bids
-                </h3>
-                <h3 onClick={() => investmentClick()} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Investments
-                </h3>
-                <h3 onClick={() => handleClick("about")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  About us
-                </h3>
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Contact us
-                </h3>
-              </div>
-            </div>
-            <div className="third w-full lg:w-[35%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Contact
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  +012-334-5864
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  info.alva@example.com
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  2048 Wexford Way Wings SC 287290
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="companyName h-[100px] bg-[#4f4f4f] flex items-center justify-center">
-        <h1 className="text-white font-medium text-sm font-Work-sans">
-          © 2022 wheeldealhub. All Rights Reserved
-        </h1>
-      </div> */}
       <Banner/>
     </>
   );

@@ -127,11 +127,11 @@ function BuyACarDetailsDialog() {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <img src={locations} alt="Location" className="w-6 md:w-auto" />
-          <h1 className="text-sm md:text-base font-normal font-Work-sans text-custom-blue">
+          <h1 className="text-sm md:text-base font-normal font-Work-sans text-custom-blue underline">
             7711 128 St, Surrey, BC V3W 4E6, Canada
           </h1>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <img src={calls} alt="Call" className="w-6 md:w-auto" />
           <h1 className="text-sm md:text-base font-normal font-Work-sans text-gray-1">
             +1 *** *** ****

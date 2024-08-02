@@ -94,10 +94,10 @@ function SellCarFormAppointmentTime() {
         <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
           <div className=" flex items-center justify-center">
             <div className="  rounded-xl ">
-              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 mb-4">
+              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5">
                 Reschedule mechanic appointment
               </h2>
-              <div className="flex items-center flex-wrap justify-center mb-4">
+              <div className="flex items-center flex-wrap justify-center my-7">
                 <img src={back} alt="" className=" cursor-pointer" />
                 {days.map((day) => (
                   <button
@@ -115,7 +115,7 @@ function SellCarFormAppointmentTime() {
                 <img src={forw} alt="" className=" cursor-pointer" />
                 
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4 ">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 my-7 ">
                 {times.map((time) => (
                   <button
                     key={time}

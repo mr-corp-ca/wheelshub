@@ -57,11 +57,11 @@ function InsuranceForm2() {
               <div className="space-y-5 ">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full relative">
-                    <Input label={"Insurance registration form"} placeholder={"Full name"} className={"relative"} />
+                    <Input label={"Insurance registration form"} placeholder={"Upload"} className={"relative"} />
                     <img src={documentfile} className=" absolute top-10 right-2" alt="" />
                   </div>
                   <div className="w-full relative">
-                    <Input label={"Bill reciept"} placeholder={"Last name"} />
+                    <Input label={"Bill reciept"} placeholder={"Upload"} />
                     <img src={documentfile} className=" absolute top-10 right-2" alt="" />
                   </div>
                 </div>
@@ -70,12 +70,12 @@ function InsuranceForm2() {
                     <Input
                       type={"number"}
                       label={"Other documents(optional)"}
-                      placeholder={"+1"}
+                      placeholder={"Upload"}
                     />
                     <img src={documentfile} className=" absolute top-10 right-2" alt="" />
                   </div>
                   <div className="w-full relative">
-                    <Input label={"Other documents(optional)"} placeholder={"Email id"} />
+                    <Input label={"Other documents(optional)"} placeholder={"Upload"} />
                     <img src={documentfile} className=" absolute top-10 right-2" alt="" />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ function InsuranceForm2() {
                 <button
                   onClick={handleShowPopup}
                   className={
-                    "w-[217px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
+                    "w-[217px]  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                   }
                   title={""}
                 >

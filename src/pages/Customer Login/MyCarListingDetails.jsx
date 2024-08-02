@@ -123,7 +123,7 @@ function MyCarListingDetails() {
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-sm md:text-2xl font-semibold font-inter text-gray-1">
-                  Mechanic appointment
+                  Dealer appointment
                 </h1>
                 <p className="lg:text-lg font-medium font-Work-sans text-gray-4">
                   12th July 2024 11:00 - 12:00 PM

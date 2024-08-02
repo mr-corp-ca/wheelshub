@@ -20,11 +20,11 @@ function MechanicAppointments() {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-4 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col md:flex-row items-center gap-3">
                       <div>
-                        <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
+                        <img src={audiCar} alt="Car" className="" />
                       </div>
-                      <div>
+                      <div className=" text-center md:text-start">
                         <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">
                           Mercedes-Benz E 220 d
                         </h1>
@@ -32,12 +32,12 @@ function MechanicAppointments() {
                           12th July 2024 11:00 - 12:00 PM
                         </h1>
                         <h1 className="text-sm lg:text-lg font-medium font-Work-sans text-gray-4">
-                          Winner Name: Sean Wills
+                          Winner Name:{" "} <span className="text-sm lg:text-lg font-medium font-Work-sans text-gray-2">Sean Wills</span> 
                         </h1>
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className="w-full h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
+                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className=" hover:text-white hover:bg-custom-blue hover:border-none w-full md:h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                     </div>
@@ -56,11 +56,11 @@ function MechanicAppointments() {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col md:flex-row items-center gap-3">
                       <div>
-                        <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
+                        <img src={audiCar} alt="Car" className="" />
                       </div>
-                      <div>
+                      <div className=" text-center md:text-start">
                         <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">
                           Mercedes-Benz E 220 d
                         </h1>

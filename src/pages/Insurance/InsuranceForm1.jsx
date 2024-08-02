@@ -33,10 +33,10 @@ function InsuranceForm1() {
               <div className="space-y-5 lg:px-20">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full">
-                    <Input label={"Insurance agent"} placeholder={"Full name"} />
+                    <Input label={"Insurance agent"} placeholder={"Type here"} />
                   </div>
                   <div className="w-full">
-                    <Input label={"Insurance price"} placeholder={"Last name"} />
+                    <Input label={"Insurance price"} placeholder={"Type here"} />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -44,27 +44,27 @@ function InsuranceForm1() {
                     <Input
                       type={"number"}
                       label={"Insurance start date"}
-                      placeholder={"+1"}
+                      placeholder={"Type here"}
                     />
                   </div>
                   <div className="w-full">
-                    <Input label={"Insurance end date"} placeholder={"Email id"} />
+                    <Input label={"Insurance end date"} placeholder={"Type here"} />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full">
-                    <Input label={"Customer name"} placeholder={"Type business name"} />
+                    <Input label={"Customer name"} placeholder={"Type here"} />
                   </div>
                   <div className="w-full">
                     <Input
                       label={"Representative name"}
-                      placeholder={"Type business address"}
+                      placeholder={"Type here"}
                     />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full lg:w-1/2">
-                    <Input label={"Coupon code"} placeholder={"Type business name"} />
+                    <Input label={"Coupon code"} placeholder={"Type here"} />
                   </div>
 
                 </div>
@@ -74,7 +74,7 @@ function InsuranceForm1() {
                 <button
                   onClick={() => { navigate("/dashboard/insuranceform2") }}
                   className={
-                    "w-[129px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
+                    " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                   }
                   title={""}
                 >

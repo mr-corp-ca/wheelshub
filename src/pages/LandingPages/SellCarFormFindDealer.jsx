@@ -20,6 +20,9 @@ import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
 import blutick from '../../assets/images/bluetickzigzag.png'
 import Banner from "../../components/Banner";
+import dealerfamily from '../../assets/images/dealerfamily.png'
+import whitetick from '../../assets/images/whitetick.png'
+
 function SellCarFormFindDealer() {
   const navigate = useNavigate()
   const [tabActive, setTabActive] = useState("home");
@@ -45,13 +48,13 @@ function SellCarFormFindDealer() {
     <>
       <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-32">
+        <div className="grid grid-cols-1 md:grid-cols-12  w-full md:max-w-[80%] mx-auto px-5 lg:pt-32">
           <div className="md:col-span-8 ">
             <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
             Pick a Dealer for Professional
             Car Verification
             </h1>
-            <div className="flex flex-col gap-4 mt-5 ">
+            <div className="flex flex-col gap-4 my-10 ">
               <div className="flex items-center gap-5">
                 <img src={greentick} alt="Green tick" />
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
@@ -73,7 +76,7 @@ function SellCarFormFindDealer() {
             </div>
           </div>
           <div className="hidden md:col-span-4 lg:flex items-center justify-center ">
-            <img src={dealerimg} alt="Man smiling" />
+            <img src={dealerimg} alt="Man smiling" className="" />
           </div>
         </div>
       </div>
@@ -105,7 +108,7 @@ function SellCarFormFindDealer() {
                   >
                     <div>
                       <img
-                        src={carmechanic}
+                        src={dealerfamily}
                         alt="Car"
                         className="w-full h-auto rounded-t-2xl"
                       />
@@ -135,7 +138,7 @@ function SellCarFormFindDealer() {
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
                       <button onClick={()=>{handleButtonClick(index)}} className={`h-[44px] md:h-[48px] ${buttonClick===index ? 'px-[30px]' : 'px-[24px]'} px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${buttonClick === index ? 'bg-custom-green': 'bg-custom-blue'}`}>
-                        {buttonClick === index ? 'Selected' : 'Call now - +650 334 4545'}
+                        {buttonClick === index ?  <span className="flex items-center justify-center gap-2"><img src={whitetick} alt="" />Selected</span> : 'Call now - +650 334 4545'}
                       </button>
                     </div>
                   </div>
@@ -158,7 +161,7 @@ function SellCarFormFindDealer() {
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button
-              onClick={() => navigate("/sellyourcar/appointmentPaymentProcess")}
+              onClick={() => navigate("/sellyourcar/dealerAppointmentForm")}
               className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
             >
               Next

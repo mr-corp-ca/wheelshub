@@ -63,7 +63,7 @@ export default function InsuranceLandingPage() {
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <img src={filterIcon} alt="Filter Icon" />
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            <h1 className="text-2xl lg:text-[32px] font-inter font-bold text-gray-1">
               Filter
             </h1>
           </div>
@@ -84,15 +84,15 @@ export default function InsuranceLandingPage() {
                   aria-controls="panel6a-content"
                   id="panel6a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Location
                   </h1>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
+                  <div className="  flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5">
                     <input
                       type="text"
-                      placeholder="Search here"
+                      placeholder="Type location"
                       className="ml-2 w-full border-none focus:outline-none"
                     />
                   </div>
@@ -104,7 +104,7 @@ export default function InsuranceLandingPage() {
                   aria-controls="panel5a-content"
                   id="panel5a-header"
                 >
-                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                  <h1 className="text-xl lg:text-2xl font-semibold text-gray-1 font-inter">
                     Popularity
                   </h1>
                 </AccordionSummary>
@@ -112,15 +112,15 @@ export default function InsuranceLandingPage() {
                   <div className="">
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>All</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">All</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Most popular</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Most popular</h1>
                     </div>
                     <div className="flex items-center gap-5">
                       <input type="checkbox" />
-                      <h1>Verified</h1>
+                      <h1 className=" text-lg font-normal font-Work-sans text-gray-1">Verified</h1>
                     </div>
 
                   </div>
@@ -135,8 +135,8 @@ export default function InsuranceLandingPage() {
         <div className="p-4 mt-2 lg:w-3/4">
           <div className="">
             <div className="newRequests py-4">
-              <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
-                Insurances
+            <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
+                Insurance
               </h1>
             </div>
 

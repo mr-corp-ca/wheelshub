@@ -32,14 +32,14 @@ function DealerHandoverDetails() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="grid grid-cols-11 py-5">
-        <div className="flex flex-col gap-4 col-span-7 lg:col-span-9">
+      <div className="flex gap-4 flex-col md:flex-row items-start md:items-center justify-between py-5">
+        <div className="flex flex-col gap-4 col-span-7 lg:col-span-11">
           <div className="">
             <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">
               Dashboard
             </h1>
           </div>
-          <div className="flex lg:items-center flex-col md:flex-row gap-2 md:gap-x-2 ">
+          <div className="flex items-center gap-2 md:gap-x-2 ">
             <svg
               width="8"
               height="14"
@@ -59,7 +59,7 @@ function DealerHandoverDetails() {
                 onClick={() => navigate(-1)}
                 className="text-gray-1 text-sm lg:text-base hover:cursor-pointer hover:text-black"
               >
-                Car handover/
+               Car verification/
               </p>
               <p className=" text-sm lg:text-base font-semibold text-custom-blue">
                 Mercedes-Benz E 220 D
@@ -120,9 +120,9 @@ function DealerHandoverDetails() {
                 Car overview
               </h1>
             </div>
-            <div className="flex flex-col md:flex-row justify-between pt-5 gap-5 md:gap-0">
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center gap-5">
+            <div className="flex flex-col md:flex-row justify-between pt-5 gap-5 md:gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Registration year
                   </h1>
@@ -130,7 +130,7 @@ function DealerHandoverDetails() {
                     Jun 2018
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Fuel type
                   </h1>
@@ -138,7 +138,7 @@ function DealerHandoverDetails() {
                     Diesel
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Kms Driven
                   </h1>
@@ -146,7 +146,7 @@ function DealerHandoverDetails() {
                     82000 Kms
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Ownership
                   </h1>
@@ -154,7 +154,7 @@ function DealerHandoverDetails() {
                     First Owner
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Transmission
                   </h1>
@@ -163,8 +163,8 @@ function DealerHandoverDetails() {
                   </h1>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Insurance
                   </h1>
@@ -172,7 +172,7 @@ function DealerHandoverDetails() {
                     Comprehensive
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Seats
                   </h1>
@@ -180,7 +180,7 @@ function DealerHandoverDetails() {
                     5 Seats
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     RTO
                   </h1>
@@ -188,7 +188,7 @@ function DealerHandoverDetails() {
                     Surrey
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Engine displacement
                   </h1>
@@ -196,7 +196,7 @@ function DealerHandoverDetails() {
                     1248 CC
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Year of manufacture
                   </h1>
@@ -213,9 +213,9 @@ function DealerHandoverDetails() {
                 Specification
               </h1>
             </div>
-            <div className="flex flex-col md:flex-row  justify-between pt-5 gap-5 md:gap-0">
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center gap-5">
+            <div className="flex flex-col md:flex-row  justify-between pt-5 gap-5 md:gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Engine
                   </h1>
@@ -223,7 +223,7 @@ function DealerHandoverDetails() {
                     1248 CC
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Fuel type
                   </h1>
@@ -231,7 +231,7 @@ function DealerHandoverDetails() {
                     Diesel
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Transmission
                   </h1>
@@ -240,8 +240,8 @@ function DealerHandoverDetails() {
                   </h1>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center gap-5">
+              <div className="flex flex-col gap-5 w-full lg:w-[50%]">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Mileage
                   </h1>
@@ -249,7 +249,7 @@ function DealerHandoverDetails() {
                     28 Kmpl
                   </h1>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center justify-between gap-5">
                   <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-4">
                     Power
                   </h1>

@@ -59,13 +59,13 @@ function ClaimNow({ show, onClose, hidden }) {
                   <div className="my-4">
                     <div className="card py-4">
                       <div className="card1 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                        <div className="flex flex-wrap items-center gap-3">
+                        <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-3">
                           <img
                             src={audiCar}
                             alt="Car"
                             className=""
                           />
-                          <div>
+                          <div className=" text-center md:text-start">
                             <h1 className="text-base md:text-lg font-semibold font-inter text-gray-800">
                               Mercedes-Benz E 220 d
                             </h1>
@@ -73,7 +73,8 @@ function ClaimNow({ show, onClose, hidden }) {
                               12th July 2024 11:00 - 12:00 PM
                             </p>
                             <p className="text-sm md:text-base font-medium font-worksans text-gray-500">
-                              Winner Name: Sean Wills
+                              Winner Name:{" "}
+                              <span className="text-sm md:text-base font-medium font-worksans text-gray-2">Sean Wills</span> 
                             </p>
                           </div>
                         </div>
@@ -83,14 +84,14 @@ function ClaimNow({ show, onClose, hidden }) {
                   <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <button
                       type="button"
-                      className="w-full md:w-[218px] h-[52px] px-4 py-3 border border-gray-300 font-medium text-sm lg:text-lg font-worksans rounded-xl flex items-center justify-center"
+                      className=" hover:bg-custom-blue hover:border-none hover:text-white w-full md:w-[218px] h-[52px] px-4 py-3 border border-gray-300 font-medium text-sm lg:text-lg font-worksans rounded-xl flex items-center justify-center"
                     >
                       Ask for Reschedule
                     </button>
                     <button
                     onClick={onClose}
                       type="button"
-                      className="w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-sm lg:text-lg font-worksans rounded-xl text-white flex items-center justify-center"
+                      className=" hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-sm lg:text-lg font-worksans rounded-xl text-white flex items-center justify-center"
                     >
                       Approve Request
                     </button>

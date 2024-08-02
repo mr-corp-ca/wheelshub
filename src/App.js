@@ -79,6 +79,9 @@ import DealerVerifyNow2 from "./pages/Dealer/DealerVerifyNow2";
 import DealerVerifyNow3 from "./pages/Dealer/DealerVerify3";
 import InsuranceActiveDetail from "./pages/Customer Login/InsuranceActiveDetail";
 import Sellcar from "./pages/LandingPages/Sellcar";
+import InsuranceFormCompany from "./pages/Company Representative/InsuranceFormCompany";
+import UploadDocumentsCompany from "./pages/Company Representative/UploadDocumentsCompany";
+import DealerDetailsCompany from "./pages/Company Representative/DealerDetailsCompany";
 
 export const Layout = () => {
   const { pathname } = useLocation()
@@ -217,6 +220,7 @@ function App() {
               role === "Dealer" ? <DealerDashboard /> :
                 role === "Mechanic" ? <MechanicDashboard /> :
                   role === "Insurance" ? <Insurance /> :
+                  role === "Company Representative" ? <RepresentativeDashboard/> :
                     role === "Finance" ? <Verification/> : ""
         },
 
@@ -336,6 +340,18 @@ function App() {
         {
           path: "appointmentsdetails",
           element: <AppointmentsDetails />
+        },
+        {
+          path: 'dealerdetailscompany',
+          element: <DealerDetailsCompany/>
+        },
+        {
+          path: 'insuranceformcompany',
+          element: <InsuranceFormCompany/>
+        },
+        {
+          path: 'uploaddocumentscompany',
+          element: <UploadDocumentsCompany/>
         },
         {
           path: 'delaerdashboard',

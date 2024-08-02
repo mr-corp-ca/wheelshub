@@ -108,7 +108,7 @@ export const Sidebar = () => {
         {
             name: "Settings",
             icon: SettingsIcon,
-            navigate: "/dashboard/settings"
+            navigate: "/dashboard/settinglogin"
         },
 
         {
@@ -159,7 +159,7 @@ export const Sidebar = () => {
         {
             name: "Settings",
             icon: SettingsIcon,
-            navigate: "/dashboard/settings"
+            navigate: "/dashboard/settinglogin"
         },
 
         {
@@ -208,7 +208,7 @@ export const Sidebar = () => {
         {
             name: "Settings",
             icon: SettingsIcon,
-            navigate: "/dashboard/settings"
+            navigate: "/dashboard/settinglogin"
         },
 
         {
@@ -259,7 +259,57 @@ export const Sidebar = () => {
         {
             name: "Settings",
             icon: SettingsIcon,
-            navigate: "/dashboard/settings"
+            navigate: "/dashboard/settinglogin"
+        },
+
+        {
+            name: "Help",
+            icon: SupportIcon,
+            navigate: "/"
+        },
+        {
+            name: "Logout",
+            icon: LogoutIcon,
+            navigate: "/"
+        },
+    ]
+    const companyRepresentativeSidebarData = [
+        {
+            name: "Dashboard",
+            icon: DashboardIcon,
+            navigate: "/dashboard/representativedashboard"
+        },
+        {
+            name: "Appointments",
+            icon: MyOrders,
+            navigate: "/dashboard/appointments"
+        },
+        // {
+        //     name: "New Requests",
+        //     icon: NewRequests,
+        //     navigate: "/dashboard/newRequest"
+        // },
+        {
+            name: "Subscriptions",
+            icon: Subscriptions,
+            navigate: "/dashboard/subscriptions"
+        },
+
+
+        {
+            name: "Chats",
+            icon: AdsIcon,
+            navigate: "/dashboard/chats"
+        },
+        {
+            name: "Payments",
+            icon: ClaimIcon,
+            navigate: "/dashboard/payments"
+        },
+        {
+            name: "Settings",
+            icon: SettingsIcon,
+            navigate: "/dashboard/settinglogin"
         },
 
         {
@@ -286,6 +336,7 @@ export const Sidebar = () => {
                     role === "Dealer" ? dealerSideBarData :
                         role === "Mechanic" ? mechanicSideBarData :
                             role === "Insurance" ? insuranceSideBarData :
+                            role === "Company Representative" ? companyRepresentativeSidebarData:
                                 role === "Finance" ? financeSideBarData : individualSideBarData)
                     ?.map((data, index) => {
                         const IconComponent = data.icon;

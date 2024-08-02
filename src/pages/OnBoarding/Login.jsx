@@ -39,7 +39,7 @@ function Login() {
               </h1>
             </div>
             <div className="flex flex-wrap items-center gap-4 my-7 ">
-              {['Individual', 'Dealer', 'Mechanic', 'Insurance', 'Finance'].map((type, index) => (
+              {['Individual', 'Dealer', 'Mechanic', 'Insurance', 'Company Representative', 'Finance'].map((type, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <input
                     value={type}

@@ -38,11 +38,11 @@ function MechanicVerifyNow2() {
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full relative">
-                <Input label={"Car Registration"} placeholder={"Full name"} className={"relative"}/>
+                <Input label={"Car Registration"} placeholder={"Upload"} className={"relative"}/>
                 <img src={documentfile} className=" absolute top-10 right-2" alt="" />
               </div>
               <div className="w-full relative">
-                <Input label={"RTO"} placeholder={"Last name"} />
+                <Input label={"RTO"} placeholder={"Upload"} />
                 <img src={documentfile} className=" absolute top-10 right-2" alt="" />
               </div>
             </div>
@@ -51,12 +51,12 @@ function MechanicVerifyNow2() {
                 <Input
                   type={"number"}
                   label={"Service records"}
-                  placeholder={"+1"}
+                  placeholder={"Upload"}
                 />
                 <img src={documentfile} className=" absolute top-10 right-2" alt="" />
               </div>
               <div className="w-full relative">
-                <Input label={"Insurance copy"} placeholder={"Email id"} />
+                <Input label={"Insurance copy"} placeholder={"Upload"} />
                 <img src={documentfile} className=" absolute top-10 right-2" alt="" />
               </div>
             </div>
@@ -80,7 +80,7 @@ function MechanicVerifyNow2() {
             <button
             onClick={()=>{navigate('/dashboard/mechanicverifynow3')}}
               className={
-                "w-[117px] text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                "w-[117px] hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }
               title={""}
             >

@@ -147,18 +147,18 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "Jan", uv: 1000 },
-  { name: "Feb", uv: 3000 },
-  { name: "Mar", uv: 2000 },
-  { name: "Apr", uv: 2780 },
-  { name: "May", uv: 1890 },
-  { name: "Jun", uv: 2390 },
-  { name: "Jul", uv: 3490 },
-  { name: "Aug", uv: 2000 },
-  { name: "Sep", uv: 2780 },
-  { name: "Oct", uv: 1890 },
-  { name: "Nov", uv: 2390 },
-  { name: "Dec", uv: 3490 },
+  { name: "Jan", This_month: 1000 },
+  { name: "Feb", This_month: 3000 },
+  { name: "Mar", This_month: 2000 },
+  { name: "Apr", This_month: 2780 },
+  { name: "May", This_month: 1890 },
+  { name: "Jun", This_month: 2390 },
+  { name: "Jul", This_month: 3490 },
+  { name: "Aug", This_month: 2000 },
+  { name: "Sep", This_month: 2780 },
+  { name: "Oct", This_month: 1890 },
+  { name: "Nov", This_month: 2390 },
+  { name: "Dec", This_month: 3490 },
 ];
 
 function Payments() {
@@ -176,8 +176,8 @@ function Payments() {
               <LineChart data={data}>
                 <Tooltip />
                 <Line
+                  dataKey="This_month"
                   type="monotone"
-                  dataKey="uv"
                   stroke="#8884d8"
                   strokeWidth={2}
                   dot={true}
@@ -196,7 +196,7 @@ function Payments() {
             </div>
             <div>
               <button className="bg-custom-blue text-white rounded-xl px-4 lg:px-8 py-3 lg:py-4 text-sm lg:text-base font-semibold font-inter w-full lg:w-auto h-[48px] flex items-center">
-                Withdraw
+                Add money
               </button>
             </div>
           </div>

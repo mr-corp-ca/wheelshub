@@ -245,13 +245,13 @@ function SellCarForm() {
   return (
     <>
       <Navbar2 />
-      <div className='firstpart bg-[#f3f3f3] h-[110vh] lg:py-10'>
-        <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:w-[80%] mx-auto px-5 md:px-0 lg:pt-20'>
-          <div className='md:col-span-6 pt-10'>
+      <div className='firstpart bg-[#f3f3f3] h-fit py-32 '>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:w-[80%] mx-auto '>
+          <div className='md:col-span-6 mx-5 lg:mx-0'>
             <h1 className='text-[30px] lg:text-[48px] font-bold font-inter text-gray-800 '>
               Enter Your Personal Information
             </h1>
-            <div className='flex flex-col gap-4 my-10 lg:my-20'>
+            <div className='flex flex-col gap-4 my-10'>
               <div className='flex items-center gap-5'>
                 <img src={greentick} alt="Green tick" />
                 <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Higher profits</h1>
@@ -270,7 +270,10 @@ function SellCarForm() {
             <img src={mansmiling} alt="Man smiling" />
           </div>
         </div>
-        <div className='details border bg-white rounded-xl w-full md:w-[80%] mx-auto py-10 px-5 md:px-32'>
+       
+      </div>
+      <div className='bg-white flex justify-center mx-5 lg:mx-0'>
+      <div className='details border bg-white rounded-xl w-full md:w-[80%] mx-auto py-10 px-5 md:px-32 -mt-32 mb-20'>
           <div className='flex items-center justify-center'>
             <h1 className='text-2xl md:text-3xl font-inter font-bold text-gray-800'>Enter personal details</h1>
           </div>
@@ -306,8 +309,7 @@ function SellCarForm() {
           </div>
         </div>
       </div>
-
-      <div className='py-10'>
+      <div className=''>
         {/* <img src={waveicon} className='w-full' alt="Wave icon" /> */}
       </div>
       {/* <div className="banner mt-[100px] md:mt-[100px] lg:mt-[100px] xl:mt-[400px] 2xl:mt-[200px]">
