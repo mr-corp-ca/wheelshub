@@ -135,7 +135,7 @@ export default function InsuranceLandingPage() {
         <div className="p-4 mt-2 lg:w-3/4">
           <div className="">
             <div className="newRequests py-4">
-            <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
+              <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
                 Insurance
               </h1>
             </div>
@@ -163,17 +163,17 @@ export default function InsuranceLandingPage() {
                       className="card border rounded-2xl flex flex-col gap-4"
                     >
                       <div className=" flex items-center justify-center h-[212px] bg-[#efefef] rounded-t-2xl">
-                      <img src={basantlogo} alt="" />
+                        <img src={basantlogo} alt="" />
                       </div>
                       <div className="px-3 flex items-center justify-between">
                         <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                          BL Car Mechanics
+                          Westland Insurance
                         </h1>
                         <img src={hearticon} alt="Heart icon" />
                       </div>
                       <div className="flex items-center px-3 justify-between">
                         <h1 className="text-base font-normal font-Work-sans text-custom-blue underline">
-                          7711 128 St, Surrey, BC V3W 4E6, Canada
+                          3041 152 St #800, Surrey, BC V4P 3K1, Canada
                         </h1>
                       </div>
                       <div className="px-3 flex items-center gap-3">
@@ -287,7 +287,7 @@ export default function InsuranceLandingPage() {
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
       </div> */}
-      <Banner/>
+      <Banner />
     </>
   );
 }

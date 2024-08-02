@@ -61,212 +61,212 @@ import Banner from '../../components/Banner';
 
 const Selcartopublic = () => {
   const navigate = useNavigate();
-    const [tabActive, setTabActive] = useState("home");
-    const handleClick = (item) => {
-  
-      setTabActive(item);
-    };
-  
-    const bidsClick = () => {
-  
-      handleClick("bids")
-  
-    }
-    const investmentClick = () => {
-  
-      handleClick("investments");
-  
-    }
-    return (
-        <>
-        <Navbar2/>
-        <div>
-            {/* for first main div */}
+  const [tabActive, setTabActive] = useState("home");
+  const handleClick = (item) => {
 
-            <div className='lg:h-[85vh] 2xl:h-[85vh] h-[50vh] bg-[#F3F3F3] flex  ' >
-              
-                <div className='w-[100%] mx-auto flex  justify-center items-center '>
-                    <div className=''>
+    setTabActive(item);
+  };
 
-                        <div className=' px-[24px] lg:p-0  flex flex-col gap-[48px] lg:relative lg:bottom-[30px] lg:left-[120px] lg:w-[708px] '>
-                            <div>
-                                <div className='lg:text-[48px] text-[25px] text-[#333333] lg:w-[729px] font-bold'><h6>Unlock Your Car's Value - Enter
-                                    Your Details</h6></div>
-                            </div>
-                            <div className='flex flex-col gap-[24px]'>
-                                <div className='flex gap-[24px]'>
-                                    <div><img src={greentick} alt="" /></div>
-                                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>High value</h6></div>
-                                </div>
+  const bidsClick = () => {
 
-                                <div className='flex gap-[24px]'>
-                                    <div><img src={greentick} alt="" /></div>
-                                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>Your car, your price</h6></div>
-                                </div>
+    handleClick("bids")
 
-                                <div className='flex gap-[24px]'>
-                                    <div><img src={greentick} alt="" /></div>
-                                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>100% Trusted</h6></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* for 2nd imgae div */}
-                    <div className='hidden lg:block '>
-                        <img className='lg:relative top-[30px] lg:right-[70px] w-full' src={carimg} alt="" />
-                    </div>
+  }
+  const investmentClick = () => {
+
+    handleClick("investments");
+
+  }
+  return (
+    <>
+      <Navbar2 />
+      <div>
+        {/* for first main div */}
+
+        <div className='lg:h-[85vh] 2xl:h-[85vh] h-[50vh] bg-[#F3F3F3] flex  ' >
+
+          <div className='w-[100%] mx-auto flex  justify-center items-center '>
+            <div className=' font-inter'>
+
+              <div className=' px-[24px] lg:p-0  flex flex-col gap-[48px] lg:relative lg:bottom-[30px] lg:left-[120px] lg:w-[708px] '>
+                <div>
+                  <div className='lg:text-[48px] text-[25px] text-[#333333] lg:w-[729px] font-bold'><h6>Unlock Your Car's Value - Enter
+                    Your Details</h6></div>
                 </div>
+                <div className='flex flex-col gap-[24px]'>
+                  <div className='flex gap-[24px]'>
+                    <div><img src={greentick} alt="" /></div>
+                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>High value</h6></div>
+                  </div>
+
+                  <div className='flex gap-[24px]'>
+                    <div><img src={greentick} alt="" /></div>
+                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>Your car, your price</h6></div>
+                  </div>
+
+                  <div className='flex gap-[24px]'>
+                    <div><img src={greentick} alt="" /></div>
+                    <div className='lg:text-[18px] font-medium text-[#333333]'><h6>100% Trusted</h6></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            {/* for 2nd main div */}
-            <div className=' '>
-           
-                <div className='  border rounded-2xl bg-white   md:w-[80%] w-[90%] xl:w-[80%] 2xl:w-[58%] mx-auto  relative xl:bottom-[70px]  2xl:bottom-[100px] 
+            {/* for 2nd imgae div */}
+            <div className='hidden lg:block '>
+              <img className='lg:relative top-[30px] lg:right-[70px] w-full' src={carimg} alt="" />
+            </div>
+          </div>
+        </div>
+        {/* for 2nd main div */}
+        <div className=' '>
+
+          <div className='  border rounded-2xl bg-white   md:w-[80%] w-[90%] xl:w-[80%] 2xl:w-[58%] mx-auto  relative xl:bottom-[70px]  2xl:bottom-[100px] 
              lg:bottom-[80px]  sm:bottom-[60px] lg:h-[864px] h-fit'>
-                 
-                    <div className='font-bold lg:text-[28px] text-[20px] flex justify-center py-[50px] px-5 lg:px-0]'><h6>Enter car details</h6></div>
 
-                    {/* for car details code div */}
-                    {/* start */}
-                    {/* 1st */}
-                    <div className='px-8 lg:px-0  lg:flex flex-wrap justify-center gap-[62px] w-full'>
-                        {/* 1st */}
-                        <div>
-                            <h6 className='text-[#333333] text-[16px] font-medium '>Select car make</h6>
+            <div className='font-bold lg:text-[28px] text-[20px] flex justify-center py-[50px] px-5 lg:px-0] font-inter'><h6>Enter car details</h6></div>
 
-                            <div className='lg:w-[400px]  w-full  justify-between  bg-[#FAFAFA]
+            {/* for car details code div */}
+            {/* start */}
+            {/* 1st */}
+            <div className='px-8 lg:px-0  lg:flex flex-wrap justify-center gap-[62px] w-full'>
+              {/* 1st */}
+              <div>
+                <h6 className='text-[#333333] text-[16px] font-medium '>Select car make</h6>
+
+                <div className='lg:w-[400px]  w-full  justify-between  bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]'>
 
 
 
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </div>
+                  <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
 
 
-                        </div>
-                        {/* 2nd */}
-                        <div>
-                            <h6 className='text-[#333333] text-[16px] font-medium'>Model</h6>
+              </div>
+              {/* 2nd */}
+              <div>
+                <h6 className='text-[#333333] text-[16px] font-medium'>Model</h6>
 
-                            <div className='lg:w-[400px]  w-full  justify-between  bg-[#FAFAFA]
+                <div className='lg:w-[400px]  w-full  justify-between  bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]'>
-                                
-                                <div>
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                  <div>
+                    <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
 
-                        </div>
-                    </div>
-                    {/* 2nd */}
-                    <div className=' px-8 lg:px-0  lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full'>
-                        {/* 1st */}
-                        <div>
-                            <h6 className='text-[#333333] text-[16px] font-medium '>Manufacturing year</h6>
+                    </select>
+                  </div>
+                </div>
 
-                            <div className='lg:w-[400px] w-full   justify-between  bg-[#FAFAFA]
+              </div>
+            </div>
+            {/* 2nd */}
+            <div className=' px-8 lg:px-0  lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full'>
+              {/* 1st */}
+              <div>
+                <h6 className='text-[#333333] text-[16px] font-medium '>Manufacturing year</h6>
+
+                <div className='lg:w-[400px] w-full   justify-between  bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]'>
-                                
-                                <div>
-                                   
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                        <option value="2005">2005</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2015">2015</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                  <div>
+
+                    <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                      <option value="2005">2005</option>
+                      <option value="2010">2010</option>
+                      <option value="2015">2015</option>
+
+                    </select>
+                  </div>
+                </div>
 
 
-                        </div>
-                        {/* 2nd */}
-                        <div>
-                            <h6 className='text-[#333333] text-[16px] font-medium'>Kms Driven</h6>
+              </div>
+              {/* 2nd */}
+              <div>
+                <h6 className='text-[#333333] text-[16px] font-medium'>Kms Driven</h6>
 
-                            <div className='lg:w-[400px] w-full   justify-between  bg-[#FAFAFA]
+                <div className='lg:w-[400px] w-full   justify-between  bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]'>
-                                
-                                <div>
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                        <option value="50000">50000</option>
-                                        <option value="18500">18500</option>
-                                        <option value="9000">9000</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                  <div>
+                    <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                      <option value="50000">50000</option>
+                      <option value="18500">18500</option>
+                      <option value="9000">9000</option>
 
-                        </div>
-                    </div>
+                    </select>
+                  </div>
+                </div>
 
-                    {/* 3rd */}
-                    <div className='px-8 lg:px-0    lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full'>
-                        {/* 1st */}
-                        <div>
-                            <h6 className='text-[#333333] lg:text-[16px] font-medium '>VID(vehicle identification number</h6>
+              </div>
+            </div>
 
-                            <div className='lg:w-[400px]    justify-between  bg-[#FAFAFA]
+            {/* 3rd */}
+            <div className='px-8 lg:px-0    lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full'>
+              {/* 1st */}
+              <div>
+                <h6 className='text-[#333333] lg:text-[16px] font-medium '>VID(vehicle identification number</h6>
+
+                <div className='lg:w-[400px]    justify-between  bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]'>
-                               
-                                <div>
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                        <option value="Honda">Honda</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="BMW">BWM</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                  <div>
+                    <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                      <option value="Honda">Honda</option>
+                      <option value="Toyota">Toyota</option>
+                      <option value="BMW">BWM</option>
+
+                    </select>
+                  </div>
+                </div>
 
 
-                        </div>
-                        {/* 2nd */}
-                        <div>
-                            <h6 className='text-[#333333] text-[16px] font-medium'>Transmission</h6>
+              </div>
+              {/* 2nd */}
+              <div>
+                <h6 className='text-[#333333] text-[16px] font-medium'>Transmission</h6>
 
-                            <div className='lg:w-[400px]    justify-between  bg-[#FAFAFA]
+                <div className='lg:w-[400px]    justify-between  bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]'>
-                                
-                                <div>
-                                <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
-                                        <option value="Cvt">Cvt</option>
-                                        <option value="Auto">Auto</option>
-                                        <option value="Manual">Manual</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                  <div>
+                    <select id="cars" class=" rounded-lg lg:w-[360px] w-full px-3 lg:px-0 bg-[#FAFAFA]">
+                      <option value="Cvt">Cvt</option>
+                      <option value="Auto">Auto</option>
+                      <option value="Manual">Manual</option>
 
-                        </div>
+                    </select>
+                  </div>
+                </div>
 
-
-                    </div>
+              </div>
 
 
-                    <div className='px-8 lg:px-0    lg:flex flex-col  items-center mt-[36px]'>
+            </div>
 
-                        <div> <h6 className='text-[16px] font-medium text-[#333333]  '>Notes</h6>
-                            <div className='bg-[#FAFAFA] lg:w-[864px] w-full  border rounded-lg h-[130px]   '></div>
 
-                        </div>
+            <div className='px-8 lg:px-0    lg:flex flex-col  items-center mt-[36px]'>
 
-                    </div>
+              <div> <h6 className='text-[16px] font-medium text-[#333333]  '>Notes</h6>
+                <div className='bg-[#FAFAFA] lg:w-[864px] w-full  border rounded-lg h-[130px]   '></div>
 
-                    {/* images div      */}
-                    <div className='px-8 lg:px-0   flex justify-center mt-[20px]'>
-                        <div><h6 className=' font-medium text-[16px] text-[#333333] '>Upload vehicle images</h6>
-                            <div className=' flex flex-wrap gap-[16px] '>
-                                {/* <img src={img3} alt="" />
+              </div>
+
+            </div>
+
+            {/* images div      */}
+            <div className='px-8 lg:px-0   flex justify-center mt-[20px]'>
+              <div><h6 className=' font-medium text-[16px] text-[#333333] '>Upload vehicle images</h6>
+                <div className=' flex flex-wrap gap-[16px] '>
+                  {/* <img src={img3} alt="" />
                                 <img src={img3} alt="" />
                                 <img src={img3} alt="" />
                                 <img src={img3} alt="" />
@@ -278,21 +278,21 @@ const Selcartopublic = () => {
                                 <img src={img3} alt="" />
                                 <img src={img3} alt="" /> */}
 
-                            </div>
-                        </div>
-                    </div>
-                    {/* end */}
+                </div>
+              </div>
+            </div>
+            {/* end */}
 
 
-                    {/* for button send request */}
-                    <div className=' flex justify-center  py-12'><button     onClick={() => navigate("/sellyourcar/mechanic")} className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
+            {/* for button send request */}
+            <div className=' flex justify-center  py-12'><button onClick={() => navigate("/sellyourcar/mechanic")} className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
                  
                   text-[white] text-[18px] font-medium bg-[#6F9CFF] border rounded-lg  items-center flex justify-center'>Next</button></div>
-                </div>
+          </div>
 
-            </div>
         </div>
-        {/* <div className="banner">
+      </div>
+      {/* <div className="banner">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 
@@ -380,10 +380,10 @@ const Selcartopublic = () => {
           </h1>
         </div>
       </div> */}
-      <Banner/>
-        </>
-        
-    )
+      <Banner />
+    </>
+
+  )
 }
 
 export default Selcartopublic

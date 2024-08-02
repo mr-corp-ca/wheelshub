@@ -131,7 +131,7 @@ export default function FinanceLandingPage() {
         <div className="p-4 mt-2 lg:w-3/4">
           <div className="">
             <div className="newRequests py-4">
-            <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
+              <h1 className="text-xl lg:text-[32px] font-bold text-gray-1 font-inter">
                 Finance
               </h1>
             </div>
@@ -167,7 +167,7 @@ export default function FinanceLandingPage() {
                       </div>
                       <div className="px-3 flex items-center justify-between">
                         <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                          BL Car Mechanics
+                          Ak finance service
                         </h1>
                         <img src={hearticon} alt="Heart icon" />
                       </div>
@@ -287,7 +287,7 @@ export default function FinanceLandingPage() {
           © 2022 wheeldealhub. All Rights Reserved
         </h1>
       </div> */}
-      <Banner/>
+      <Banner />
     </>
   );
 }

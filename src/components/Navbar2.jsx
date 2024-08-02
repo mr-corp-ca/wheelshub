@@ -56,7 +56,7 @@ function Navbar2() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const { isLoggedIn } = useLoginContext()
+  const { isLoggedIn, setIsLoggedIn } = useLoginContext()
 
   return (
     <>
@@ -79,12 +79,16 @@ function Navbar2() {
 
             {isLoggedIn ?
               <>
-                <div className='lg:hidden flex items-center'>
+                {/* <div className='lg:hidden flex items-center'>
                   <img src={menuIcon} alt='Bell Icon' />
-                </div>
-                <div>
+                </div> */}
+                <button onClick={() => navigate("/dashboard")}>
                   <img src={profilePic} alt='Profile Pic' />
-                </div>
+                </button>
+                {/* <OutlineButton
+                  onClick={() => { setIsLoggedIn(false) }}
+                  title={"Log out"}
+                /> */}
               </>
 
               :
@@ -120,12 +124,26 @@ function Navbar2() {
               <li onClick={() => navigate("/finances")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("finances") ? "text-custom-blue" : " text-gray-1"}`}>Finances</li>
               <li onClick={() => navigate("/")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("contact") ? "text-custom-blue" : " text-gray-1"}`}>Contact us</li>
               <div className='flex gap-5'>
-                <div>
+                {/* <div>
                   <img src={menuIcon} alt='Bell Icon' />
-                </div>
-                <div>
-                  <img src={profilePic} alt='Profile Pic' />
-                </div>
+                </div> */}
+                {isLoggedIn ?
+                  <div>
+                    <img src={profilePic} alt='Profile Pic' />
+                  </div>
+                  :
+                  <div className='flex flex-row gap-5 items-center justify-center'>
+                    <OutlineButton
+                      onClick={() => navigate("/login")}
+                      className={"!text-base"}
+                      customPadding={" px-6 py-3 "}
+                      title={"Log in"} />
+                    <Button
+                      onClick={() => navigate("/signup")}
+                      title={"Create a account"}
+                      className={"!min-w-max !px-6 !py-4"} />
+                  </div>
+                }
               </div>
             </ul>
           </div>

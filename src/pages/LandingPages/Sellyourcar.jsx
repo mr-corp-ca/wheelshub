@@ -94,7 +94,7 @@ function Sellyourcar() {
 
   const [borderColor, setBorderColor] = useState("");
 
-  const handleborderColor = (item) => {};
+  const handleborderColor = (item) => { };
 
   const [selectedMechanic, setSelectedMechanic] = useState("");
 
@@ -151,9 +151,9 @@ function Sellyourcar() {
         </div> */}
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
           <div className=" items-center  grid lg:grid-cols-12">
-            <div className="w-full px-[24px] lg:px-0   flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative lg:left-[30px] xl:left-[120px] ">
+            <div className=" font-Work-sans w-full px-[24px] lg:px-0   flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative lg:left-[30px] xl:left-[120px] ">
               <div className="lg:text-[48px] text-[25px] text-[#333333] lg:w-[821px] font-bold w-full">
-                <h6>Sell Car instantly on Wheeldeal hub from Home</h6>
+                <h6 className="font-inter">Sell Car instantly on Wheeldeal hub from Home</h6>
               </div>
               <div className="flex flex-col gap-[24px] ">
                 <div className="flex gap-[24px]">
@@ -161,7 +161,7 @@ function Sellyourcar() {
                     <img src={greentick} alt="" />
                   </div>
                   <div>
-                    <h6 className="lg:text-[18px] font-medium">
+                    <h6 className="lg:text-[18px] font-medium font-Work-sans">
                       Higher profits
                     </h6>
                   </div>
@@ -208,11 +208,10 @@ function Sellyourcar() {
               onClick={() => {
                 handleSelect("form");
               }}
-              className={`${
-                borderColor === "form"
-                  ? "border-2  border-custom-blue"
-                  : " border-2"
-              } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
+              className={`${borderColor === "form"
+                ? "border-2  border-custom-blue"
+                : " border-2"
+                } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
             >
               <div className="flex items-center gap-4">
                 <input
@@ -247,12 +246,11 @@ function Sellyourcar() {
                 </div>
               </div>
             </div>
-            <div onClick={() => {handleSelect("selcartopublic")}}
-              className={`${
-                borderColor === "selcartopublic"
-                  ? "border-2  border-custom-blue"
-                  : " border-2"
-              } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
+            <div onClick={() => { handleSelect("selcartopublic") }}
+              className={`${borderColor === "selcartopublic"
+                ? "border-2  border-custom-blue"
+                : " border-2"
+                } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
             >
               <div className="flex items-center gap-4">
                 <input
