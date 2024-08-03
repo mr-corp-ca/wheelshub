@@ -103,44 +103,44 @@ function Home() {
         </div>
       </div>
       <div className="w-[90%] mx-auto my-10  ">
-        <div className="flex flex-wrap items-center border border-b-0 w-full lg:w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd]">
-          <button   onClick={() => {
+        <div className="flex flex-wrap items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd]">
+          <button onClick={() => {
                   handleClick(1);
                 }} className={`${
                   iconclick === 1
-                    ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
+                    ? " rounded-tl-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r `}>
             <img src={car1} alt="car1" />
             Sell
           </button>
-          <button  onClick={() => {
+          <button onClick={() => {
                   handleClick(2);
                 }} className={`${
                   iconclick === 2
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
             <img src={car2} alt="car2" />
             Buy
           </button>
-          <button  onClick={() => {
+          <button onClick={() => {
                   handleClick(3);
                 }} className={`${
                   iconclick === 3
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
             <img src={car3} alt="car3" />
             Mechanic
           </button>
-          <button  onClick={() => {
+          <button onClick={() => {
                   handleClick(4);
                 }} className={`${
                   iconclick === 4
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
             <img src={car4} alt="car4" />
             Dealer
           </button>
@@ -150,7 +150,7 @@ function Home() {
                   iconclick === 5
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
             <img src={car5} alt="car5" />
             Insurance
           </button>
@@ -158,9 +158,9 @@ function Home() {
                   handleClick(6);
                 }} className={`${
                   iconclick === 6
-                    ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
+                    ? " md:rounded-tr-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
-                } flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px]`}>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px]`}>
             <img src={car6} alt="car6" />
             Finance
           </button>

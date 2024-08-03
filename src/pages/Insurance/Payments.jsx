@@ -163,7 +163,7 @@ const data = [
 
 function Payments() {
   return (
-    <div className="p-6 grid grid-cols-12 gap-5">
+    <div className="my-5 grid grid-cols-12 gap-5">
       <div className="col-span-12 lg:col-span-8">
         <div className="paymentHeading">
           <h1 className="text-2xl font-semibold font-inter text-gray-1">
@@ -186,7 +186,7 @@ function Payments() {
             </ResponsiveContainer>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
-            <div className="mb-4 lg:mb-0">
+            <div className="mb-4 lg:mb-0 text-center md:text-start">
               <h1 className="text-4xl lg:text-5xl font-bold font-inter text-gray-1">
                 $2500.00
               </h1>

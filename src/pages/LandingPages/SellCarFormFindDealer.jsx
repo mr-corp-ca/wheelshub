@@ -1,20 +1,7 @@
 import React, { useState } from "react";
-import mansmiling from "../../assets/images/mansmiling.png";
 import greentick from "../../assets/images/tickofgreen.png";
-import { Input } from "../../components/Input";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import waveicon from "../../assets/images/Wave.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-import mechanicImage from "../../assets/images/themechanic.png";
-import carmechanic from "../../assets/images/carmechanic.png";
 import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import checkboxpng from "../../assets/images/Checbox container (1).png";
 import dealerimg from "../../assets/images/dealer.png"
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
@@ -152,7 +139,6 @@ function SellCarFormFindDealer() {
             </button>
           </div>
           <div className="flex items-center justify-center gap-5">
-            {/* <img src={checkboxpng} alt="Checkbox" /> */}
             <input type="checkbox" className="h-4 w-4" />
             <p className="text-lg font-normal font-inter text-gray-800">
               I agree to pay the mechanic fee of $250 after successful
@@ -169,104 +155,6 @@ function SellCarFormFindDealer() {
           </div>
         </div>
       </div>
-      {/* <div className="banner mt-10">
-        <img src={banner} className="w-full" alt="Banner" />
-      </div>
-
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className="w-[90vw] lg:w-[80vw] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
-            <div className="first w-full lg:w-[35%]">
-              <div>
-                <img src={quickBidLogo} alt="Quick Bid Logo" />
-              </div>
-              <div>
-                <p className="text-base lg:text-lg font-normal font-Work-sans text-gray-800 py-5 lg:py-10">
-                  But who has any right to find fault with a man who chooses to
-                  enjoy a pleasure that has no annoying consequences.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <img src={facebook} alt="Facebook" />
-                </div>
-                <div>
-                  <img src={twitter} alt="Twitter" />
-                </div>
-                <div>
-                  <img src={tiktok} alt="TikTok" />
-                </div>
-                <div>
-                  <img src={youtube} alt="YouTube" />
-                </div>
-              </div>
-            </div>
-            <div className="second w-full lg:w-[15%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Our Services
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3
-                  onClick={() => handleClick("home")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Home
-                </h3>
-                <h3
-                  onClick={() => bidsClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Bids
-                </h3>
-                <h3
-                  onClick={() => investmentClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Investments
-                </h3>
-                <h3
-                  onClick={() => handleClick("about")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  About us
-                </h3>
-                <h3
-                  onClick={() => handleClick("home")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Contact us
-                </h3>
-              </div>
-            </div>
-            <div className="third w-full lg:w-[35%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Contact
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  +012-334-5864
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  info.alva@example.com
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  2048 Wexford Way Wings SC 287290
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="companyName h-[100px] bg-[#4f4f4f] flex items-center justify-center">
-        <h1 className="text-white font-medium text-sm font-Work-sans">
-          © 2022 wheeldealhub. All Rights Reserved
-        </h1>
-      </div> */}
       <Banner/>
     </>
   );

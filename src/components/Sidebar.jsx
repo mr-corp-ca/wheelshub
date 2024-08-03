@@ -349,7 +349,7 @@ export const Sidebar = () => {
                                     <>
                                         <IconComponent color={isActive ? "#6F9CFF" : "#828282"} />
                                         <p
-                                            className={`${isActive ? "text-custom-blue hover:border-r-4" : "text-gray-4"} font-poppins font-semibold xl:text-lg text-base`}>
+                                            className={`${isActive ? "text-custom-blue" : "text-gray-4"} font-poppins font-semibold xl:text-lg text-base`}>
                                             {data?.name}
                                         </p>
                                     </>

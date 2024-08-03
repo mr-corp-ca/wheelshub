@@ -50,7 +50,7 @@ function Banner() {
       <div className="footer py-10 bg-[#e0e0e0]">
         <div className=" w-full lg:w-[90%] mx-auto">
           <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0 px-5 lg:px-0">
-            <div className="first w-[31%] ">
+            <div className="first w-full lg:w-[31%] ">
               <div>
                 <img src={wheelDealLogo} alt="" />
               </div>

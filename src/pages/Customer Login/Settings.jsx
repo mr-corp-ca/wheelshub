@@ -38,12 +38,12 @@ function Settings() {
   return (
     <>
     <div className=" m-5">
-      <div className=" p-5 ">
+      <div className="  ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">
           Settings
         </h1>
       </div>
-      <div className=" md:w-[80%]  p-5 flex flex-col gap-4 ">
+      <div className=" md:w-[80%] my-5 flex flex-col gap-4 ">
         <div className="overflow-x-auto">
 
           <div className="flex flex-wrap  min-w-max flex-row gap-6 justify-center sm:justify-start space-x-0 sm:space-x-4 mb-4">

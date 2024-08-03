@@ -285,101 +285,13 @@ const Selcartopublic = () => {
 
 
                     {/* for button send request */}
-                    <div className=' flex justify-center  py-12'><button     onClick={() => navigate("/sellyourcar/mechanic")} className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
+                    <div className=' flex justify-center  py-12'><button     onClick={() => navigate("/sellyourcar/findmechanic")} className=' w-[129px] h-[52px] py-[15.5px] px-[44px]
                  
                   text-[white] text-[18px] font-medium bg-[#6F9CFF] border rounded-lg  items-center flex justify-center'>Next</button></div>
                 </div>
 
             </div>
         </div>
-        {/* <div className="banner">
-        <img src={banner} className=" w-[100vw]" alt="" />
-      </div>
-
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className="w-[90vw] lg:w-[80vw] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
-            <div className="first w-full lg:w-[35%]">
-              <div>
-                <img src={quickBidLogo} alt="" />
-              </div>
-              <div>
-                <p className="text-base lg:text-lg font-normal font-Work-sans text-gray-1 py-5 lg:py-10">
-                  But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <img src={facebook} alt="" />
-                </div>
-                <div>
-                  <img src={twitter} alt="" />
-                </div>
-                <div>
-                  <img src={tiktok} alt="" />
-                </div>
-                <div>
-                  <img src={youtube} alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="second w-full lg:w-[15%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
-                  Our Services
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Home
-                </h3>
-                <h3
-                  onClick={() => bidsClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Bids
-                </h3>
-                <h3
-                  onClick={() => investmentClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Investments
-                </h3>
-                <h3 onClick={() => handleClick("about")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  About us
-                </h3>
-                <h3 onClick={() => handleClick("home")} className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer">
-                  Contact us
-                </h3>
-              </div>
-            </div>
-            <div className="third w-full lg:w-[35%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
-                  Contact
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  +012-334-5864
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  info.alva@example.com
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  2048 Wexford Way Wings SC 287290
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="companyName h-[100px] bg-[#4f4f4f] flex items-center justify-center">
-        <div className="">
-          <h1 className="text-white font-medium text-sm font-Work-sans">
-            © 2022 wheeldealhub. All Rights Reserved
-          </h1>
-        </div>
-      </div> */}
       <Banner/>
         </>
         

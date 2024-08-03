@@ -70,8 +70,8 @@ function Navbar2() {
               <li onClick={() => navigate("/")} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${pathname === "/" ? "text-custom-blue" : " text-gray-1"}`}>Home</li>
               <li onClick={() => navigate("/sellyourcar")} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${pathname.includes("sellyourcar") ? "text-custom-blue" : " text-gray-1"}`}>Sell Your Car</li>
               <li onClick={() => navigate("/buyacar")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("buyacar") ? "text-custom-blue" : " text-gray-1"}`}>Buy a Car</li>
-              <li onClick={() => navigate("/mechanic")} className={`cursor-pointer  xl:text-lg font-normal font-Work-sans ${pathname.includes("mechanic") ? "text-custom-blue" : " text-gray-1"}`}>Mechanic</li>
-              <li onClick={() => navigate("/dealer")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("dealer") ? "text-custom-blue" : " text-gray-1"}`}>Dealer</li>
+              <li onClick={() => navigate("/mechanicpage")} className={`cursor-pointer  xl:text-lg font-normal font-Work-sans ${pathname.includes("mechanicpage") ? "text-custom-blue" : " text-gray-1"}`}>Mechanic</li>
+              <li onClick={() => navigate("/dealerpage")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("dealerpage") ? "text-custom-blue" : " text-gray-1"}`}>Dealer</li>
               <li onClick={() => navigate("/insurance")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("insurance") ? "text-custom-blue" : " text-gray-1"}`}>Insurance</li>
               <li onClick={() => navigate("/finances")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("finances") ? "text-custom-blue" : " text-gray-1"}`}>Finances</li>
               <li onClick={() => navigate("/")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("contact") ? "text-custom-blue" : " text-gray-1"}`}>Contact us</li>
@@ -80,7 +80,7 @@ function Navbar2() {
             {isLoggedIn ?
               <>
                 <div className='lg:hidden flex items-center'>
-                  <img src={menuIcon} alt='Bell Icon' />
+                  <img src={bellIcon} alt='Bell Icon' />
                 </div>
                 <div>
                   <img src={profilePic} alt='Profile Pic' />
@@ -119,13 +119,25 @@ function Navbar2() {
               <li onClick={() => navigate("/insurance")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("insurance") ? "text-custom-blue" : " text-gray-1"}`}>Insurance</li>
               <li onClick={() => navigate("/finances")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("finances") ? "text-custom-blue" : " text-gray-1"}`}>Finances</li>
               <li onClick={() => navigate("/")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("contact") ? "text-custom-blue" : " text-gray-1"}`}>Contact us</li>
-              <div className='flex gap-5'>
+              <div className='flex items-center gap-5'>
                 <div>
-                  <img src={menuIcon} alt='Bell Icon' />
+                  <img src={bellIcon} alt='Bell Icon' />
                 </div>
                 <div>
                   <img src={profilePic} alt='Profile Pic' />
                 </div>
+              </div>
+
+              <div className='flex flex-row gap-5 items-center justify-center'>
+                <OutlineButton
+                  onClick={() => navigate("/login")}
+                  className={"!text-base"}
+                  customPadding={" px-6 py-3 "}
+                  title={"Log in"} />
+                <Button
+                  onClick={() => navigate("/signup")}
+                  title={"Create a account"}
+                  className={"!min-w-max !px-6 !py-4"} />
               </div>
             </ul>
           </div>

@@ -428,7 +428,7 @@ export const DropdownSidebar = () => {
                                     `  ${isActive ? " text-custom-blue font-semibold bg-custom-blue bg-opacity-10 " : " text-gray-4  "} block px-4 py-2 hover:bg-custom-blue hover:bg-opacity-10  items-center text-base font-poppins`)}>
                                 {({ isActive }) => (
                                     <div className='flex flex-row gap-4 items-center'>
-                                        {React.cloneElement(item.icon, { color: isActive ? "#6F9CFF" : "#828282" })}
+                                        {React.cloneElement(item.icon , { color: isActive ? "#6F9CFF" : "#828282" })}
                                         {item?.name}
                                     </div>
 
