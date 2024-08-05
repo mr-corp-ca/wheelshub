@@ -35,10 +35,10 @@ function Insurance() {
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">
-              <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
+              <h1 className="text-lg lg:text-2xl font-semibold font-inter text-[#161616]">
               New Insurance requests
               </h1>
-              <button className="text-base font-medium font-inter text-custom-blue">
+              <button className="text-sm lg:text-base font-medium font-inter text-custom-blue">
                 View all
               </button>
             </div>

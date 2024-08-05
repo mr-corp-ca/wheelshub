@@ -277,7 +277,7 @@ export const Sidebar = () => {
         {
             name: "Dashboard",
             icon: DashboardIcon,
-            navigate: "/dashboard/representativedashboard"
+            navigate: "/dashboard"
         },
         {
             name: "Appointments",
@@ -344,7 +344,7 @@ export const Sidebar = () => {
                             <NavLink
                                 end
                                 to={data?.navigate}
-                                className={({ isActive }) => ` w-full flex lg:flex-row flex-col items-center lg:justify-start justify-center space-x-4 py-4 px-6 hover:bg-custom-blue hover:bg-opacity-10 outline-none ${isActive ? "bg-custom-blue bg-opacity-10 " : " bg-white"}`}>
+                                className={({ isActive }) => ` w-full flex lg:flex-row flex-col items-center lg:justify-start justify-center space-x-4 py-4 px-6 hover:bg-custom-blue hover:bg-opacity-10 outline-none ${isActive ? "bg-custom-blue bg-opacity-10 border-r-2 border-custom-blue" : " bg-white"}`}>
                                 {({ isActive }) => (
                                     <>
                                         <IconComponent color={isActive ? "#6F9CFF" : "#828282"} />

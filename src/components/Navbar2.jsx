@@ -114,8 +114,8 @@ function Navbar2() {
               <li onClick={() => navigate("/")} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${pathname === "/" ? "text-custom-blue" : " text-gray-1"}`}>Home</li>
               <li onClick={() => navigate("/sellyourcar")} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${pathname.includes("sellyourcar") ? "text-custom-blue" : " text-gray-1"}`}>Sell Your Car</li>
               <li onClick={() => navigate("/buyacar")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("buyacar") ? "text-custom-blue" : " text-gray-1"}`}>Buy a Car</li>
-              <li onClick={() => navigate("/mechanic")} className={`cursor-pointer  xl:text-lg font-normal font-Work-sans ${pathname.includes("mechanic") ? "text-custom-blue" : " text-gray-1"}`}>Mechanic</li>
-              <li onClick={() => navigate("/dealer")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("dealer") ? "text-custom-blue" : " text-gray-1"}`}>Dealer</li>
+              <li onClick={() => navigate("/mechanicpage")} className={`cursor-pointer  xl:text-lg font-normal font-Work-sans ${pathname.includes("mechanicpage") ? "text-custom-blue" : " text-gray-1"}`}>Mechanic</li>
+              <li onClick={() => navigate("/dealerpage")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("dealerpage") ? "text-custom-blue" : " text-gray-1"}`}>Dealer</li>
               <li onClick={() => navigate("/insurance")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("insurance") ? "text-custom-blue" : " text-gray-1"}`}>Insurance</li>
               <li onClick={() => navigate("/finances")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("finances") ? "text-custom-blue" : " text-gray-1"}`}>Finances</li>
               <li onClick={() => navigate("/")} className={`cursor-pointer xl:text-lg font-normal font-Work-sans ${pathname.includes("contact") ? "text-custom-blue" : " text-gray-1"}`}>Contact us</li>

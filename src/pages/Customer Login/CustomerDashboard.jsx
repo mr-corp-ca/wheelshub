@@ -190,8 +190,8 @@ function CustomerDashboard() {
             {Array(3).fill().map((_, index) => (
               <div key={index} className="card py-4">
                 <div className="border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                  <div className="flex items-center gap-3">
-                    <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
+                  <div className="flex flex-col md:flex-row items-center gap-3">
+                    <img src={audiCar} alt="Car" className="" />
                     <div className='flex flex-col gap-3'>
                       <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">Mercedes-Benz E 220 d</h1>
                       <div className="flex flex-wrap items-center gap-2">
@@ -240,7 +240,7 @@ function CustomerDashboard() {
               <input id="kmsDriven" placeholder='Type here' className='w-full px-4 py-3 rounded-xl border outline-none text-base font-medium font-inter text-gray-1 mt-2 bg-[#fafafa]' />
             </div>
             <div className='flex items-center justify-center py-5'>
-              <button className='flex items-center justify-center h-14 px-10 rounded-xl bg-custom-blue text-white text-lg font-medium font-Work-sans shadow-2xl shadow-custom-blue'>Save preference</button>
+              <button className='flex items-center justify-center h-14 px-10 rounded-xl bg-custom-blue text-white text-sm md:text-lg font-medium font-Work-sans shadow-2xl shadow-custom-blue'>Save preference</button>
             </div>
           </div>
 
