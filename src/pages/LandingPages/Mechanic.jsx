@@ -1,44 +1,20 @@
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
 import filterIcon from "../../assets/images/filter 1.png";
-import searchIcon from "../../assets/images/Vector (1).png";
-import { useState } from "react";
-import audi2 from "../../assets/images/audi2.png";
-import grayDot from "../../assets/images/graydot.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import waveicon from "../../assets/images/Wave.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-import carmechanic from "../../assets/images/carmechanic.png";
 import hearticon from "../../assets/images/hearticon.png";
 import yellowstar from "../../assets/images/staryellow.png";
 import bluetick from "../../assets/images/bluetick (2).png"
 import Navbar2 from "../../components/Navbar2";
 import { useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
-import graybg from '../../assets/images/graybg.png'
 import ocean from '../../assets/images/ocean-park-logo-216w.png'
-import offwhite from '../../assets/images/whitebg.png'
-import redbg from '../../assets/images/redbg.png'
-import purplebg from '../../assets/images/purplebg.png'
-import blackbg from '../../assets/images/blackbg.png'
-import orangebg from '../../assets/images/orangedbg.png'
 import corapedlogo from '../../assets/images/cropped-GARLOGO2022-2-192x192 1.png'
 import protechogo from '../../assets/images/Pro-Tech Auto Repairs.png'
 import aramlogo from '../../assets/images/Aram’s AUTO Repairs.png'
 import logoss from '../../assets/images/logo-1.png'
-import daleslogo from '../../assets/images/DalesLogo@ 1.png'
-import newtonlogo from '../../assets/images/image 53.png'
-import snjautologo from '../../assets/images/SNJ Automotive Repair.png'
 import njlogo from '../../assets/images/NJ Auto Repair Mechanic.png'
 export default function Mechanic() {
 

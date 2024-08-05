@@ -140,16 +140,16 @@ function App() {
           element: <Selcartopublic/> // Public Place
         },
         {
-          path: "mechanic",
+          path: "findmechanic",
           element: <SellCarFormFindMechanic />
-        },
-        {
-          path: "appointment",
-          element: <SellCarFormAppointmentTime />
         },
         {
           path: "findDealer",
           element: <SellCarFormFindDealer />
+        },
+        {
+          path: "appointment",
+          element: <SellCarFormAppointmentTime />
         },
         {
           path: "dealerAppointmentForm",
@@ -171,11 +171,11 @@ function App() {
       element: <AccordionUsage />
     },
     {
-      path: "mechanic",
+      path: "mechanicpage",
       element: <Mechanic />
     },
     {
-      path: "dealer",
+      path: "dealerpage",
       element: <Dealer />
     },
     {

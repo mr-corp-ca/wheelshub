@@ -31,11 +31,11 @@ const closeDialog = () => {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col sm:flex-row items-center gap-3">
                       <div>
-                        <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
+                        <img src={audiCar} alt="Car" className="" />
                       </div>
-                      <div>
+                      <div className=" text-center sm:text-start">
                         <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">
                           Mercedes-Benz E 220 d
                         </h1>
@@ -70,20 +70,23 @@ const closeDialog = () => {
               .map((_, index) => (
                 <div key={index} className="card py-4">
                   <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col md:flex-row items-center gap-3">
                       <div>
-                        <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
+                        <img src={audiCar} alt="Car" className="" />
                       </div>
-                      <div>
+                      <div className=" text-center sm:text-start">
                         <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">
                           Mercedes-Benz E 220 d
                         </h1>
                         <h1 className="text-sm lg:text-base font-medium font-Work-sans text-[#FFB543]">
                         Verification pending
                         </h1>
+                        <div className=" flex items-center sm:items-start justify-center sm:justify-start">
                         <button onClick={()=>{navigate('/dashboard/insurancedetails')}} className=" border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
                         Verify now
                         </button>
+
+                        </div>
                       </div>
                     </div>
                   </div>
