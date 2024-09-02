@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import greenTick from "../../assets/images/greenTick.png";
 import pattern from "../../assets/images/Pattern.png";
 import mailGift from "../../assets/images/mailGift.png";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function Subscriptions() {
   const [cardbg, setCardbg] = useState(1)
@@ -11,6 +12,7 @@ function Subscriptions() {
   }
   return (
     <>
+    <Layout active={'Subscriptions'}>
       <div className=" my-5">
         <div className="myorderheading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
@@ -94,6 +96,7 @@ function Subscriptions() {
           </div>
         </div>
       </div> 
+      </Layout>
     </>
   );
 }

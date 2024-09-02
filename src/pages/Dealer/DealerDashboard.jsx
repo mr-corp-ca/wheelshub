@@ -4,6 +4,7 @@ import photo from "../../assets/images/photo.png";
 import { useState } from "react";
 import ClaimNow from "../Insurance/ClaimNow";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function DealerDashboard() {
 
@@ -31,6 +32,7 @@ const [showPopup, setShowPopup] = useState(false);
 
   return (
     <>
+    <Layout active={'Dashboard'}>
     <div className=" py-5">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
           <div className="col-span-12 lg:col-span-8">
@@ -64,7 +66,7 @@ const [showPopup, setShowPopup] = useState(false);
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/dealerdetailpage')}} className=" hover:bg-custom-blue hover:text-white hover:border-none w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button onClick={()=>{navigate('/dealer/dealerdetailpage')}} className=" hover:bg-custom-blue hover:text-white hover:border-none w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -186,7 +188,7 @@ const [showPopup, setShowPopup] = useState(false);
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/dealerhandoverdetails')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/dealer/dealerhandoverdetails')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
                         View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -197,6 +199,7 @@ const [showPopup, setShowPopup] = useState(false);
           </div>
         </div>
       </div>
+      </Layout>
     </>
   )
 }

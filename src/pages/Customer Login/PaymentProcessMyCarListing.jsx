@@ -17,6 +17,9 @@ import man3img from "../../assets/images/insuranceMan3.png"
 import maninsuit from "../../assets/images/mansuit.png"
 import greentick from "../../assets/images/greentick3.png"
 import goldstars from "../../assets/images/goldstars.png"
+import { Layout } from '../../components/Layout/DashboardLayout'
+
+
 function PaymentProcessMyCarListing() {
 
     
@@ -43,7 +46,7 @@ function PaymentProcessMyCarListing() {
     const navigate = useNavigate()
   return (
     <>
-    
+    <Layout active={'My Car listings'}>
       <div className='grid grid-cols-11 p-3'>
         <div className='flex flex-col gap-4 col-span-12 lg:col-span-9'>
         <div className="">
@@ -195,7 +198,7 @@ function PaymentProcessMyCarListing() {
                 Verifications
               </h1>
             </div>
-            <div onClick={()=>{navigate('/dashboard/mechanicverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/customer/mechanicverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>
@@ -211,7 +214,7 @@ function PaymentProcessMyCarListing() {
                 </p>
               </div>
             </div>
-            <div onClick={()=>{navigate('/dashboard/dealerverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/customer/dealerverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>
@@ -284,6 +287,7 @@ function PaymentProcessMyCarListing() {
           
           </div>
       </div>
+      </Layout>
     </>
   )
 }

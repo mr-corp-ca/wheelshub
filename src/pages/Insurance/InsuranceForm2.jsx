@@ -7,6 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import ClaimNow from "../Customer Login/ClaimNow";
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function InsuranceForm2() {
 
   const [showPopup, setShowPopup] = useState(false);
@@ -31,6 +32,7 @@ function InsuranceForm2() {
   };
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className="my-5">
         <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
       </div>
@@ -97,6 +99,7 @@ function InsuranceForm2() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

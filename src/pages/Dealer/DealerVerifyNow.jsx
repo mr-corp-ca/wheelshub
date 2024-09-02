@@ -3,6 +3,7 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function DealerVerifyNow() {
     const navigate = useNavigate()
 
@@ -11,6 +12,7 @@ function DealerVerifyNow() {
     }
   return (
     <>
+    <Layout active={'Dashboard'}>
      <div className=" p-10">
       <h1 className=" text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
     </div>
@@ -88,7 +90,7 @@ function DealerVerifyNow() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate("/dashboard/dealerverify2")}}
+            onClick={()=>{navigate("/dealer/dealerverify2")}}
               className={
                 "w-[129px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }
@@ -101,6 +103,7 @@ function DealerVerifyNow() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   )
 }

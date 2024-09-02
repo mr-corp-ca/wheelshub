@@ -3,6 +3,7 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MechanicVerifyNow() {
   const navigate = useNavigate();
 
@@ -11,6 +12,7 @@ function MechanicVerifyNow() {
   };
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -297,7 +299,7 @@ function MechanicVerifyNow() {
               <div className="  w-full text-center flex items-center justify-center">
                 <button
                   onClick={() => {
-                    navigate("/dashboard/mechanicverifynow2");
+                    navigate("/mechanic/mechanicverifynow2");
                   }}
                   className={
                     "w-[129px] hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-custom-blue text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
@@ -311,6 +313,7 @@ function MechanicVerifyNow() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

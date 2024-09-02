@@ -5,6 +5,7 @@ import crossIcon from "../../assets/images/crossIcon.png";  // Assuming the clos
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
 import Stars from "../Mechanic/Stars";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function DealerVerifyNow3() {
   const navigate = useNavigate();
   const handleSubmit=(e)=>{
@@ -21,6 +22,7 @@ function DealerVerifyNow3() {
   };
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className="p-4 md:p-10">
         <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -165,6 +167,7 @@ function DealerVerifyNow3() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

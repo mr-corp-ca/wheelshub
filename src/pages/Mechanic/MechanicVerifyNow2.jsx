@@ -5,6 +5,7 @@ import { Input } from "../../components/Input";
 import documentfile from "../../assets/images/document.png"
 import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MechanicVerifyNow2() {
    const navigate = useNavigate()
    const handleSubmit=(e)=>{
@@ -12,6 +13,7 @@ function MechanicVerifyNow2() {
    }
   return (
     <>
+    <Layout active={'Dashboard'}>
      <div className=" my-5">
       <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
     </div>
@@ -78,7 +80,7 @@ function MechanicVerifyNow2() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dashboard/mechanicverifynow3')}}
+            onClick={()=>{navigate('/mechanic/mechanicverifynow3')}}
               className={
                 "w-[117px] hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }
@@ -91,6 +93,7 @@ function MechanicVerifyNow2() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   );
 }

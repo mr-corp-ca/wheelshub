@@ -42,7 +42,7 @@ function FormVerified({ show, onClose}) {
             <div className=" flex items-center justify-center">
               <button
                 onClick={() => {
-                  navigate("/dashboard/representativedashboard");
+                  navigate("/representative/representative-dashboard");
                 }}
                 className="hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white"
               >

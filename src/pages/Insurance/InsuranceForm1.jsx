@@ -3,10 +3,15 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
+
+
+
 function InsuranceForm1() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5 ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
       </div>
@@ -72,7 +77,7 @@ function InsuranceForm1() {
 
               <div className="w-full text-center flex items-center justify-center">
                 <button
-                  onClick={() => { navigate("/dashboard/insuranceform2") }}
+                  onClick={() => { navigate("/insurance/insuranceform2") }}
                   className={
                     " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                   }
@@ -85,6 +90,7 @@ function InsuranceForm1() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

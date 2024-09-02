@@ -3,10 +3,12 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function Setting() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Dashboard'}>
     <div className="w-full flex items-center justify-center">
     <div className="w-full sm:w-[80%] border p-5 rounded-xl">
       <div className=" ">
@@ -79,6 +81,7 @@ function Setting() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   );
 }

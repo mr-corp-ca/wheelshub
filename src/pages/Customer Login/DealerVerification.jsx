@@ -14,6 +14,7 @@ import man3img from "../../assets/images/insuranceMan3.png"
 import maninsuit from "../../assets/images/mansuit.png"
 import greentick from "../../assets/images/greentick3.png"
 import goldstars from "../../assets/images/goldstars.png"
+import { Layout } from '../../components/Layout/DashboardLayout'
 function DealerVerification() {
     const review = [
         {
@@ -32,7 +33,7 @@ function DealerVerification() {
     const navigate = useNavigate()
   return (
     <>
-    
+    <Layout active={'My Car listings'}>
       <div className='grid grid-cols-12 p-3'>
         <div className='flex flex-col gap-4 col-span-7 lg:col-span-9'>
         <div className="">
@@ -191,6 +192,7 @@ function DealerVerification() {
           
           </div>
       </div>
+      </Layout>
     </>
   )
 }

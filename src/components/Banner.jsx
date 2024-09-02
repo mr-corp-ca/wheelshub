@@ -33,11 +33,11 @@ function Banner() {
   }
 
   const dealerTab = () =>{
-    navigate('/dealer')
+    navigate('/dealerpage')
     handleScrollToTop()
   }
   const InsuranceTab = () =>{
-    navigate('/insurance')
+    navigate('/insurance-landing-page')
     handleScrollToTop()
   }
   return (

@@ -3,14 +3,16 @@ import React from "react";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MechanicAppointments() {
   const navigate = useNavigate()
   return (
     <>
-      <div className="p-4">
+    <Layout active={'Appointments'}>
+      <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-7">
-            <div className="heading flex items-center justify-between mb-5">
+            <div className="heading flex items-center justify-between">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
               Appointments
               </h1>
@@ -37,7 +39,7 @@ function MechanicAppointments() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className=" hover:text-white hover:bg-custom-blue hover:border-none w-full md:h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
+                      <button onClick={() => { navigate("/mechanic/mechanicverifynow") }} className=" hover:text-white hover:bg-custom-blue hover:border-none w-full md:h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                     </div>
@@ -78,6 +80,7 @@ function MechanicAppointments() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

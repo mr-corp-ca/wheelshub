@@ -4,6 +4,7 @@ import photo from "../../assets/images/photo.png";
 import Employees from "./Employees";
 import { useState } from "react";
 import ClaimNow from "./ClaimNow";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 
 function Insurance() {
@@ -31,7 +32,8 @@ function Insurance() {
   };
   return (
     <>
-      <div className=" py-10">
+    <Layout active={'Dashboard'}>
+      <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">
@@ -157,6 +159,7 @@ function Insurance() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

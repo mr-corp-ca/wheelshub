@@ -200,10 +200,12 @@ import graytick from "../../assets/images/graytick.png";
 import oneBlue from "../../assets/images/oneBlue.png";
 import today from "../../assets/images/today.png";
 import telegram from "../../assets/images/telegram.png";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function Chats() {
   return (
     <>
+    <Layout active={'Chats'}>
       <div className="chatsMainPart">
         <div className="chatHeading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Chats</h1>
@@ -340,6 +342,7 @@ function Chats() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

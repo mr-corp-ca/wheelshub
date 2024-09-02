@@ -10,6 +10,7 @@ import mechanicMan from "../../assets/images/mechanicMan.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import { useState } from "react";
 import ClaimNow from "./ClaimNow";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MyCarListingDetails() {
   const review = [
     {
@@ -39,6 +40,7 @@ function MyCarListingDetails() {
 
   return (
     <>
+    <Layout active={'My Car listings'}>
       <div className="grid grid-cols-11 p-3">
         <div className="flex  flex-col gap-4 col-span-7 lg:col-span-9">
           <div className="">
@@ -75,7 +77,7 @@ function MyCarListingDetails() {
           </div>
         </div>
         <div>
-          <button onClick={()=>{navigate('/dashboard/paymentprocessmycarlisting')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
+          <button onClick={()=>{navigate('/customer/paymentprocessmycarlisting')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
             Edit
           </button>
         </div>
@@ -136,13 +138,13 @@ function MyCarListingDetails() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/dashboard/mechanicverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/mechanicverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/dashboard/dealerverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/dealerverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>
@@ -190,6 +192,7 @@ function MyCarListingDetails() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

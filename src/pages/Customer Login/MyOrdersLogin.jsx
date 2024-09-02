@@ -60,10 +60,12 @@ import React from "react";
 import audi2 from "../../assets/images/audi2.png";
 import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function MyOrderLogin() {
   return (
     <>
+    <Layout active={'My orders'}>
       <div className="">
         <div className="newRequests py-4">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
@@ -108,6 +110,7 @@ function MyOrderLogin() {
             })}
         </div>
       </div>
+      </Layout>
     </>
   );
 }

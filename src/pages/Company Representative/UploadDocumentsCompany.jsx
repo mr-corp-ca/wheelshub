@@ -7,6 +7,7 @@ import gallery from "../../assets/images/gallery.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import FormVerified from "./FormVerified";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function UploadDocumentsCompany() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -24,6 +25,7 @@ function UploadDocumentsCompany() {
   };
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5">
         <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -160,6 +162,7 @@ function UploadDocumentsCompany() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

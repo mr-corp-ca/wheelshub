@@ -30,10 +30,12 @@ import React from 'react'
 import idImage from '../../assets/images/id 1.png'
 import { Button } from '../../components/Button'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { Layout } from '../../components/Layout/DashboardLayout'
 function Verification() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className='w-full h-screen flex items-center justify-center px-4'>
         <div className='verification border rounded-xl px-10 py-4 w-full max-w-2xl flex items-center justify-center flex-col gap-6'>
           <div className='w-full flex justify-center'>
@@ -49,6 +51,7 @@ function Verification() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   )
 }

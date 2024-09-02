@@ -145,6 +145,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 const data = [
   { name: "Jan", This_month: 1000 },
@@ -163,6 +164,7 @@ const data = [
 
 function Payments() {
   return (
+    <Layout active={'Payments'}>
     <div className="my-5 grid grid-cols-12 gap-5">
       <div className="col-span-12 lg:col-span-8">
         <div className="paymentHeading">
@@ -254,6 +256,7 @@ function Payments() {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }
 

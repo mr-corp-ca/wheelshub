@@ -4,10 +4,12 @@ import Setting from "./Setting";
 import VerificationinProcess from "./VerificationinProcess";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function Finance() {
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-8">
@@ -129,6 +131,7 @@ function Finance() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

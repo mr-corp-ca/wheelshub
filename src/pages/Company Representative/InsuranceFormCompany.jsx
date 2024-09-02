@@ -3,10 +3,12 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function InsuranceFormCompany() {
   const navigate = useNavigate();
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5 ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -121,7 +123,7 @@ function InsuranceFormCompany() {
               <div className="w-full text-center flex items-center justify-center">
                 <button
                   onClick={() => {
-                    navigate("/dashboard/uploaddocumentscompany");
+                    navigate("/representative/uploaddocumentscompany");
                   }}
                   className={
                     "h-[52px] flex justify-center hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-custom-blue text-lg rounded-xl px-[44px] py-[15.5px] font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
@@ -135,6 +137,7 @@ function InsuranceFormCompany() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

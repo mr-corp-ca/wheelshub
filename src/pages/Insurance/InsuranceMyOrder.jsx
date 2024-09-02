@@ -3,10 +3,12 @@ import React from "react";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function InsuranceMyOrder() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'My orders'}>
       <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
           <div className="col-span-12 lg:col-span-7">
@@ -38,7 +40,7 @@ function InsuranceMyOrder() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className=" hover:bg-custom-blue hover:text-white w-full h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
+                      <button onClick={() => { navigate("/insurance/insuranceform1") }} className=" hover:bg-custom-blue hover:text-white w-[150px] h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
                         Submit details
                       </button>
                     </div>
@@ -79,6 +81,7 @@ function InsuranceMyOrder() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

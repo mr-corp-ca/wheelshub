@@ -79,11 +79,13 @@ import tickImage from "../../assets/images/ticksign.png";
 import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from '../../components/Button';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Layout } from '../../components/Layout/DashboardLayout';
 function VerificationinProcess() {
  const navigate = useNavigate()
   return (
     <>
-      <div className='w-full flex items-center justify-center px-4 my-5'>
+    <Layout active={'Dashboard'}>
+      <div className='w-full flex items-center justify-center '>
         <div className='verificationProcess rounded-xl border p-6 sm:p-10 w-full max-w-4xl'>
           <div className='flex items-center justify-center flex-col gap-5'>
             <div>
@@ -152,6 +154,7 @@ function VerificationinProcess() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

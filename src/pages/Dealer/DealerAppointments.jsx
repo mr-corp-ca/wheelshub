@@ -3,6 +3,7 @@ import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function DealerAppointments() {
     const navigate = useNavigate()
@@ -17,7 +18,8 @@ const closeDialog = () => {
 };
   return (
     <>
-    <div className="p-4">
+    <Layout active={'Appointments'}>
+    <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-7">
             <div className="heading flex items-center justify-between mb-5">
@@ -60,7 +62,7 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/dealerdetailpage')}} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button onClick={()=>{navigate('/dealer/dealerdetailpage')}} className="w-full md:w-[150px] h-[44px] rounded-xl border border-gray-1 px-4 md:px-[25.5px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -91,7 +93,7 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/dealerhandoverdetails')}} className="w-full md:w-[156px] h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/dealer/dealerhandoverdetails')}} className="w-full md:w-[156px] h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
                       Verify now
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -137,6 +139,7 @@ const closeDialog = () => {
          
         </div>
       </div>
+      </Layout>
     </>
   )
 }

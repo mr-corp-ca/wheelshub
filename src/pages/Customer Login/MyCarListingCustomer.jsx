@@ -4,6 +4,7 @@ import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import bluetick from "../../assets/images/verified.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MyCarListingCustomer() {
   const navigate = useNavigate()
     const cars = [
@@ -28,6 +29,7 @@ function MyCarListingCustomer() {
     ]
   return (
     <>
+    <Layout active={'My Car listings'}>
       <div className="p-4">
         <div className="newRequests py-4 md:py-5">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
@@ -70,7 +72,7 @@ function MyCarListingCustomer() {
                     <p className={`text-xs font-normal font-Work-sans ${value.textColor}`}>{value.verification}</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate("/dashboard/mycarlistingdetails")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate("/customer/mycarlistingdetails")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       {value.buttonName}
                     </button>
                   </div>
@@ -79,6 +81,7 @@ function MyCarListingCustomer() {
             })}
         </div>
       </div>
+      </Layout>
     </>
   );
 }

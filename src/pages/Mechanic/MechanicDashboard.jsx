@@ -4,6 +4,7 @@ import photo from "../../assets/images/photo.png";
 import { useState } from "react";
 import ClaimNow from "../Mechanic/ClaimNow";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function MechanicDashboard() {
 
@@ -22,6 +23,7 @@ const [popup, setpopup] = useState(null)
 
   return (
     <>
+    <Layout active={'Dashboard'}>
     <div className=" my-5">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
           <div className="col-span-12 lg:col-span-8">
@@ -177,7 +179,7 @@ const [popup, setpopup] = useState(null)
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dashboard/mechanicverifynow')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/mechanic/mechanicverifynow')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
                         View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -188,6 +190,7 @@ const [popup, setpopup] = useState(null)
           </div>
         </div>
       </div>
+      </Layout>
     </>
   )
 }

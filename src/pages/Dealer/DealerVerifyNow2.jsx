@@ -5,6 +5,7 @@ import { Input } from "../../components/Input";
 import documentfile from "../../assets/images/document.png"
 import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function DealerVerifyNow2() {
    const navigate = useNavigate()
    const handleSubmit=(e)=>{
@@ -12,6 +13,7 @@ function DealerVerifyNow2() {
    }
   return (
     <>
+    <Layout active={'Dashboard'}>
      <div className=" p-5">
       <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
     </div>
@@ -78,7 +80,7 @@ function DealerVerifyNow2() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dashboard/dealerverify3')}}
+            onClick={()=>{navigate('/dealer/dealerverify3')}}
               className={
                 "w-[117px] text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }
@@ -91,6 +93,7 @@ function DealerVerifyNow2() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   );
 }

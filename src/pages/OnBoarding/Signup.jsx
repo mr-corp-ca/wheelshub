@@ -217,7 +217,7 @@ function Signup() {
                 </div>
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-2">
                   <h1 className="text-base font-normal font-inter text-gray-4">Already have an account?</h1>
-                  <span className="text-base font-normal font-inter text-custom-blue">Log in now</span>
+                  <span onClick={()=>{navigate('/login')}} className="text-base font-normal font-inter text-custom-blue cursor-pointer">Log in now</span>
                 </div>
               </form>
             </div>
