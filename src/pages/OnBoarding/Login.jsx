@@ -47,8 +47,8 @@ function Login() {
         } else if (loginType === "DEALER") {
           setUser({ isLoggedIn: true, role: "DEALER" });
           navigate('/dealer/dealer-dashboard')
-        } else if (loginType === "CUSTOMER") {
-          setUser({ isLoggedIn: true, role: "CUSTOMER" });
+        } else if (loginType === "INDIVIDUAL") {
+          setUser({ isLoggedIn: true, role: "INDIVIDUAL" });
           navigate('/customer/customer-dashboard')
         } else {
           alert("Enter login typeeeeeee");
@@ -83,7 +83,7 @@ function Login() {
             </div>
             <div className="flex flex-wrap items-center gap-4 my-7 ">
               {[
-                "Customer",
+                "Individual",
                 "Dealer",
                 "Mechanic",
                 "Insurance",

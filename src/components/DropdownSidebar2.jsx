@@ -798,7 +798,7 @@ export const DropdownSidebar2 = ({ active }) => {
       ? representativeSideBarData
       : user.role === "DEALER"
       ? dealerSideBarData
-      : user.role === "CUSTOMER"
+      : user.role === "INDIVIDUAL"
       ? customerSideBarData
       : "";
 

@@ -481,7 +481,7 @@ function App() {
     // CustomerLoginnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
     {
       path: "/customer",
-      element: <RequireAuth allowedRoles={"CUSTOMER"} />,
+      element: <RequireAuth allowedRoles={"INDIVIDUAL"} />,
       children: [
         {
           path: "customer-verification-page",
