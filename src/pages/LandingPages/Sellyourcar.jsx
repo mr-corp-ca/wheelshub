@@ -105,7 +105,7 @@ function Sellyourcar() {
 
   return (
     <>
-      <Navbar2 active={'SellYourCar_Landing_Page'}/>
+      <Navbar2 active={'Sell-A-Car'}/>
       <div className="mainpart">
         {/* <div className="firstpart h-fit bg-[#f3f3f3] py-44">
           <div className="w-[70%] mx-auto px-4 ">

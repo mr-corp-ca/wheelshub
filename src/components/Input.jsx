@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { EyeIcon } from '../assets/svgs/EyeIcon'
 
 export const Input = ({ label, value, onChange, placeholder, type , className}) => {
+
+    
     const [tooglePasswordInput, setTogglePasswordInput] = useState(false)
 
     return (

@@ -350,7 +350,7 @@ export default function AccordionUsage() {
   const navigate = useNavigate()
   return (
     <>
-      <Navbar2 active={'BuyACar_Landing_Page'}/>
+      <Navbar2 active={'Buy-A-Car'}/>
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">

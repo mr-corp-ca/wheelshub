@@ -78,7 +78,7 @@ function Login() {
           <div>
             <div className="text-center">
               <h1 className="text-[24px] lg:text-[28px] font-bold font-inter text-gray-1">
-                Log in to continue
+                Log In
               </h1>
             </div>
             <div className="flex flex-wrap items-center gap-4 my-7 ">
@@ -121,7 +121,7 @@ function Login() {
                       name="email"
                       id={"email"}
                       type={"email"}
-                      label={"Email"}
+                      label={"Email or Mobile Number"}
                       placeholder={"Input your Email here"}
                       className={"w-full sm:w-[350px]"}
                     />
@@ -141,7 +141,7 @@ function Login() {
                         id={"password"}
                         type={"password"}
                         label={"Password"}
-                        placeholder={"Input your password here"}
+                        placeholder={"Enter your password"}
                         className={" w-full sm:w-[350px]"}
                       />
                       <div className="flex items-center justify-between">
@@ -206,7 +206,7 @@ function Login() {
                     <span>
                       <img src={appleIcon} alt="Apple Icon" />
                     </span>
-                    Apple id
+                    Apple ID
                   </button>
                 </div>
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-2">

@@ -65,7 +65,7 @@ function Home() {
   }
   return (
     <>
-      <Navbar2 active={'Home_Landing_Page'}/>
+      <Navbar2 active={'Home-Page'}/>
       <div className=" relative ">
         <img
           src={backgroundimg}
@@ -193,8 +193,8 @@ function Home() {
               key={i}
               className="card border py-10 px-1 2xl:px-4 w-full flex items-center justify-center flex-col gap-5 rounded-xl"
             >
-              <div>
-                <span className="bg-custom-blue p-5">{value.icnos}</span>
+              <div className=" bg-custom-blue flex items-center justify-center p-4 rounded-2xl">
+                <span className="bg-custom-blue">{value.icnos}</span>
               </div>
               <div>
                 <h1 className="text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold font-inter text-black">

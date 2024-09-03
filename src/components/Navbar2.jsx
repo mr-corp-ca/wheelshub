@@ -63,42 +63,42 @@ function Navbar2({active}) {
     {
       name: 'Home',
       navigate: '/',
-      active: active === 'Home_Landing_Page' ? true : false ,
+      active: active === 'Home-Page' ? true : false ,
     },
     {
       name: 'Sell Your Car',
       navigate: '/sellyourcar',
-      active: active === 'SellYourCar_Landing_Page' ? true : false ,
+      active: active === 'Sell-A-Car' ? true : false ,
     },
     {
       name: 'Buy a Car',
       navigate: '/buyacar',
-      active: active === 'BuyACar_Landing_Page' ? true : false ,
+      active: active === 'Buy-A-Car' ? true : false ,
     },
     {
       name: 'Mechanic',
       navigate: '/mechanicpage',
-      active: active === 'Mechanic_Landing_Page' ? true : false ,
+      active: active === 'Mechanic-Page' ? true : false ,
     },
     {
       name: 'Dealer',
       navigate: '/dealerpage',
-      active: active === 'Dealer_Landing_Page' ? true : false ,
+      active: active === 'Dealer-Page' ? true : false ,
     },
     {
       name: 'Insurance',
       navigate: '/insurance-landing-page',
-      active: active === 'Insurance_Landing_Page' ? true : false ,
+      active: active === 'Insurance-Page' ? true : false ,
     },
     {
       name: 'Finances',
       navigate: '/finances',
-      active: active === 'Finance_Landing_Page' ? true : false ,
+      active: active === 'Finance-Page' ? true : false ,
     },
     {
       name: 'Contact us',
       navigate: '/contact-us',
-      active: active === 'Contact_Us' ? true : false ,
+      active: active === 'Contact-Us' ? true : false ,
     },
   ]
 
@@ -165,7 +165,9 @@ function Navbar2({active}) {
             }
 
           </div>
-          <div className='lg:hidden flex items-center'>
+
+
+          <div className='lg:hidden flex items-center '>
             <button onClick={toggleMenu}>
               <img src={menuIcon} alt='Menu Icon' />
             </button>

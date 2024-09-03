@@ -132,6 +132,10 @@ import { toast } from "react-toastify";
 
 function Signup() {
   const navigate = useNavigate()
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+  }
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
@@ -149,7 +153,7 @@ function Signup() {
           <div>
             <div className="text-center">
               <h1 className="text-[24px] lg:text-[28px] font-bold font-inter text-gray-1">
-                Sign up to continue
+                Sign Up
               </h1>
             </div>
             <div className="flex flex-wrap items-center gap-4 my-7 ">
@@ -165,13 +169,13 @@ function Signup() {
               ))}
             </div>
             <div>
-              <form className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="flex flex-col mt-5">
                   <div className="w-full">
-                    <Input label={"Full name"} placeholder={"Type here"} />
+                    <Input label={"Full Name"} placeholder={"Enter your full name"} />
                   </div>
                   <div className="w-full mt-5">
-                    <Input label={"Email ID"} placeholder={"Type here"} />
+                    <Input label={"Email ID"} placeholder={"Enter your email address"} />
                   </div>
                 </div>
                 <div className="flex flex-col">
@@ -179,7 +183,7 @@ function Signup() {
                     <Input
                       type={"password"}
                       label={"Password"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter your password"}
                     />
                   </div>
                 </div>
@@ -212,7 +216,7 @@ function Signup() {
                     <span>
                       <img src={appleIcon} alt="Apple Icon" />
                     </span>
-                    Apple id
+                    Apple ID
                   </button>
                 </div>
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-2">

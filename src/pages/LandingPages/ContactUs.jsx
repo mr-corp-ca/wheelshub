@@ -4,7 +4,7 @@ import Navbar2 from '../../components/Navbar2'
 function ContactUs() {
   return (
     <>
-    <Navbar2 active={'Contact_Us'}/>
+    <Navbar2 active={'Contact-Us'}/>
     <div>ContactUs</div>
     </>
   )

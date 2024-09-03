@@ -41,14 +41,14 @@ function MyCarListingDetails() {
   return (
     <>
     <Layout active={'My Car listings'}>
-      <div className="grid grid-cols-11 p-3">
-        <div className="flex  flex-col gap-4 col-span-7 lg:col-span-9">
+      <div className="flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex  flex-col">
           <div className="">
             <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">
              My car listings
             </h1>
           </div>
-          <div className="flex items-center flex-row gap-2 md:gap-x-2 ">
+          <div className="flex items-center flex-row gap-2 md:gap-x-2 pt-6">
             <svg
               width="8"
               height="14"
@@ -82,7 +82,7 @@ function MyCarListingDetails() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-12 px-3 gap-3 py-5">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 py-5">
         <div className="leftpart col-span-12  lg:col-span-6">
           <div className="img">
             <img src={audiimg} className="w-full" alt="" />

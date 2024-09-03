@@ -42,7 +42,7 @@ function CustomerDashboard() {
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0 flex flex-col gap-5">
-                    <button onClick={()=>{naivgate('/dashboard/myCarlistingcustomer')}} className=" w-[156px] h-[44px] rounded-lg bg-custom-blue text-white text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">View car</button>
+                    <button onClick={()=>{naivgate('/customer/customer-myCar-listing')}} className=" w-[156px] h-[44px] rounded-lg bg-custom-blue text-white text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">View car</button>
                     <button className=" w-[156px] h-[44px] rounded-lg border border-gray-1 text-gray-1 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">Remove</button>
                   </div>
                 </div>

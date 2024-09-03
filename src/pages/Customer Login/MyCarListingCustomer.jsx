@@ -30,7 +30,7 @@ function MyCarListingCustomer() {
   return (
     <>
     <Layout active={'My Car listings'}>
-      <div className="p-4">
+      <div className="">
         <div className="newRequests py-4 md:py-5">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
           My car listings
