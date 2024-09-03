@@ -30,22 +30,24 @@ import waveicon from "../../assets/images/Wave.png";
 import Navbar2 from "../../components/Navbar2";
 import bluetick from "../../assets/images/bluetickzigzag.png";
 import Banner from "../../components/Banner";
+import Svgs from '../../assets/svgs/index.js'
+
 function Home() {
   const cards = [
     {
-      icnos: displayicon1,
+      icnos: <Svgs.RegisterIcon/>,
       heading: "Register",
     },
     {
-      icnos: displayicon2,
+      icnos: <Svgs.SelectMechanicIcon/>,
       heading: "Select Mechanic",
     },
     {
-      icnos: displayicon3,
+      icnos: <Svgs.SelectDealerIcon/>,
       heading: "Select dealer",
     },
     {
-      icnos: displayicon4,
+      icnos: <Svgs.SellYourCarIcon/>,
       heading: "Sell your car",
     },
   ];
@@ -63,7 +65,7 @@ function Home() {
   }
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Home_Landing_Page'}/>
       <div className=" relative ">
         <img
           src={backgroundimg}
@@ -111,7 +113,7 @@ function Home() {
                     ? " rounded-tl-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r `}>
-            <img src={car1} alt="car1" />
+            <span><Svgs.SellCarIcon color={iconclick === 1 ? '#6f9cff' : '#333333'} /></span>
             Sell
           </button>
           <button onClick={() => {
@@ -121,7 +123,7 @@ function Home() {
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
-            <img src={car2} alt="car2" />
+            <Svgs.BuyACarIcon color={iconclick === 2 ? '#6f9cff' : '#333333'}/>
             Buy
           </button>
           <button onClick={() => {
@@ -131,7 +133,7 @@ function Home() {
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
-            <img src={car3} alt="car3" />
+            <Svgs.MechanicIcon color={iconclick === 3 ? '#6f9cff' : '#333333'}/>
             Mechanic
           </button>
           <button onClick={() => {
@@ -141,7 +143,7 @@ function Home() {
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
-            <img src={car4} alt="car4" />
+            <Svgs.DealerIcon color={iconclick === 4 ? '#6f9cff' : '#333333'}/>
             Dealer
           </button>
           <button  onClick={() => {
@@ -151,7 +153,7 @@ function Home() {
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r`}>
-            <img src={car5} alt="car5" />
+            <Svgs.InsuranceIcon color={iconclick === 5 ? '#6f9cff' : '#333333'}/>
             Insurance
           </button>
           <button  onClick={() => {
@@ -161,7 +163,7 @@ function Home() {
                     ? " md:rounded-tr-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
                     : ""
                 } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px]`}>
-            <img src={car6} alt="car6" />
+            <Svgs.FinanceIcon color={iconclick === 6 ? '#6f9cff' : '#333333'}/>
             Finance
           </button>
         </div>
@@ -192,11 +194,7 @@ function Home() {
               className="card border py-10 px-1 2xl:px-4 w-full flex items-center justify-center flex-col gap-5 rounded-xl"
             >
               <div>
-                <img
-                  src={value.icnos}
-                  alt=""
-                  className="p-4 rounded-xl bg-custom-blue"
-                />
+                <span className="bg-custom-blue p-5">{value.icnos}</span>
               </div>
               <div>
                 <h1 className="text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold font-inter text-black">
@@ -310,12 +308,12 @@ function Home() {
         <div className="my-10 backdrop-blur-3xl">
           <div className="flex flex-wrap items-center border border-b w-full md:w-fit rounded-t-xl">
             {[
-              { carname: "Sell", src: car1 },
-              { carname: "Buy", src: car2 },
-              { carname: "Mechanic", src: car3 },
-              { carname: "Dealer", src: car4 },
-              { carname: "Insurance", src: car5 },
-              { carname: "Finance", src: car6 },
+              { carname: "Sell", svgs: (<Svgs.SellCarIcon color={buttonClick === 0 ? '#6f9cff' : '#333333'}/>)},
+              { carname: "Buy",  svgs: (<Svgs.BuyACarIcon color={buttonClick === 1 ? '#6f9cff' : '#333333'}/>)},
+              { carname: "Mechanic", svgs: (<Svgs.MechanicIcon color={buttonClick === 2 ? '#6f9cff' : '#333333'}/>) },
+              { carname: "Dealer", svgs: (<Svgs.DealerIcon color={buttonClick === 3 ? '#6f9cff' : '#333333'}/>) },
+              { carname: "Insurance", svgs: (<Svgs.SellCarIcon color={buttonClick === 4 ? '#6f9cff' : '#333333'}/>) },
+              { carname: "Finance", svgs: (<Svgs.SellCarIcon color={buttonClick === 5 ? '#6f9cff' : '#333333'}/>) },
             ].map((car, index) => (
               <button
                 onClick={() => {
@@ -328,7 +326,7 @@ function Home() {
                     : ""
                 } flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[30px] md:py-[20px] border-r`}
               >
-                <img src={car.src} alt="" className="w-6 md:w-auto" />
+                <span>{car.svgs}</span>
                 {car.carname}
               </button>
             ))}

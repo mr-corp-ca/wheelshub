@@ -52,7 +52,7 @@ export default function FinanceLandingPage() {
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Finance_Landing_Page'}/>
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">

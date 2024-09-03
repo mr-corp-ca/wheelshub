@@ -55,7 +55,7 @@ export default function Mechanic() {
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Mechanic_Landing_Page'}/>
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[25%] lg:pl-10 p-4 lg:pt-10">

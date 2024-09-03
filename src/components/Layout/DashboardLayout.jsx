@@ -24,7 +24,7 @@ export const Layout = ({ active, children }) => {
     <div className="flex flex-col min-h-screen">
       {/* Top Navbar */}
       <div className="w-full flex flex-col lg:relative">
-        <Navbar2 />
+        <Navbar2 active={active}/>
       </div>
 
       <div className="xl:hidden w-full bg-white">

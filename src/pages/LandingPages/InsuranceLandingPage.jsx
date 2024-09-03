@@ -56,7 +56,7 @@ export default function InsuranceLandingPage() {
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Insurance_Landing_Page'}/>
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
         <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">

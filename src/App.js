@@ -123,6 +123,7 @@ import RepresentativeSettings from "./pages/Company Representative/Settings";
 import DealerSettings from "./pages/Dealer/Settings";
 import CustomerChats from "./pages/Customer Login/CustomerChats";
 import CustomerPayments from "./pages/Customer Login/CustomerPayments";
+import ContactUs from "./pages/LandingPages/ContactUs";
 
 // export const Layout = () => {
 //   const { pathname } = useLocation()
@@ -626,6 +627,10 @@ function App() {
     {
       path: "finances",
       element: <FinanceLandingPage />,
+    },
+    {
+      path: 'contact-us',
+      element: <ContactUs/>
     },
     {
       path: "buyacardetails",
