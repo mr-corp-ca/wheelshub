@@ -197,7 +197,7 @@ function Sellyourcar() {
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-xl my-14 py-10 px-5 border z-30 w-[90%] lg:max-w-[1200px] mx-auto -mt-32">
+        <div className="bg-white shadow-lg rounded-xl my-14 py-10 px-5 border z-30 w-[90%] lg:max-w-[1200px] mx-auto -mt-32">
           <div className="flex items-center justify-center">
             <h1 className="text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1">
               Where do you want to sell your car?

@@ -54,6 +54,8 @@ function Navbar2({active}) {
   const { pathname } = useLocation()
   console.log(pathname)
 
+  const {user} = useUserContext() 
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -101,6 +103,9 @@ function Navbar2({active}) {
       active: active === 'Contact-Us' ? true : false ,
     },
   ]
+  
+
+  const filterNavbarData = user.isLoggedIn ? navbarData.filter((item)=>item.name !== 'Home' ) : navbarData ;
 
   const hnadlePath =(path)=>{
     navigate(path)
@@ -110,19 +115,22 @@ function Navbar2({active}) {
     navigate(path)
   }
 
+  const handleClick=()=>{
+    user.isLoggedIn = false
+  }
 
-  const {user} = useUserContext()
+
   return (
     <>
       <nav className='border-b-2'>
         <div className='py-3 w-[90%] mx-auto flex items-center justify-between'>
           <Link to="/" className=' w-[70px] lg:w-[108px] h-[78px] flex items-center'>
-            <img src={wheeldeallogo} alt='WheelDeal Logo' className='object-cover' />
+            <img onClick={handleClick} src={wheeldeallogo} alt='WheelDeal Logo' className='object-cover' />
           </Link>
-          <div className='hidden lg:flex items-center gap-5'>
-            <ul className='flex items-center gap-4 xl:gap-5'>
-              {navbarData.map((value,index)=>(
-                <li key={index} onClick={()=>{hnadlePath(value.navigate)}} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${value.active === true ? 'text-custom-blue': ' text-gray-1'}`}>{value.name}</li>
+          <div className='hidden lg:flex items-center gap-4'>
+            <ul className='flex items-center gap-2 xl:gap-5'>
+              {filterNavbarData.map((value,index)=>(
+                <li key={index} onClick={()=>{hnadlePath(value.navigate)}} className={` text-xs xl:text-lg font-normal font-Work-sans cursor-pointer ${value.active === true ? 'text-custom-blue': ' text-gray-1'}`}>{value.name}</li>
               ))}
               </ul>
               {/* <li onClick={() => navigate("/sellyourcar")} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${pathname.includes("sellyourcar") ? "text-custom-blue" : " text-gray-1"}`}>Sell Your Car</li>
@@ -149,16 +157,16 @@ function Navbar2({active}) {
               :
               (
                 <>
-                <div className='flex flex-row gap-5 items-center justify-center'>
+                <div className='flex flex-row gap-[20px] items-center justify-center'>
                   <OutlineButton
                     onClick={() => navigate("/login")}
-                    className={"!text-base"}
+                    className={"!text-base h-[52px]"}
                     customPadding={" px-6 py-3 "}
                     title={"Log in"} />
                   <Button
                     onClick={() => navigate("/signup")}
                     title={"Create a account"}
-                    className={"!min-w-max !px-6 !py-4"} />
+                    className={"!min-w-max !px-6 !py-4 h-[52px]"} />
                 </div>
                 </>
               )
