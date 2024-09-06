@@ -127,7 +127,7 @@ function Home() {
               <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className=" px-2 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 lg:w-[80%]">
+              <p className=" px-2 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-[68%]">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
@@ -164,6 +164,7 @@ function Home() {
         </div>
       </div>
       <div className="w-[90%] mx-auto my-10 ">
+        <div className="">
         <div className="flex flex-wrap items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
           <button
             onClick={() => {
@@ -252,6 +253,7 @@ function Home() {
             Finance
           </button>
         </div>
+        </div>
         <div className="border rounded-xl rounded-tl-none py-10 shadow-2xl shadow-[#eef6fd] backdrop-blur-3xl">
           <div>
             <h1 className="text-[24px] md:text-[36px] font-semibold font-inter text-gray-1 text-center">
@@ -271,17 +273,17 @@ function Home() {
         </div>
       </div>
 
-      <div className="howitsworks w-[90%] mx-auto">
+      <div className="howitsworks w-[95%] md:w-[90%] mx-auto">
         <div className="flex items-center justify-center my-10">
           <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold font-inter text-black mt-10">
             How it Works
           </h1>
         </div>
-        <div className="flex flex-wrap items-center justify-center lg:justify-between gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-2">
           {cards.map((value, i) => (
             <div
               key={i}
-              className="card border py-[70px]  flex items-center justify-center flex-col gap-5 rounded-xl w-[380px] h-[432px] shadow-lg"
+              className="card border py-[70px]  flex items-center justify-center flex-col gap-5 rounded-xl min-w-[300px] h-[432px] shadow-lg"
             >
               <div className=" bg-custom-blue flex items-center justify-center p-4 rounded-2xl">
                 <span className="">{value.icnos}</span>
@@ -356,13 +358,13 @@ function Home() {
       </div>
 
       <div className="explore w-[90%] mx-auto">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center text-center">
           <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold font-inter text-black">
             Explore nearby location
           </h1>
         </div>
-        <div className="my-10 backdrop-blur-3xl">
-          <div className="flex flex-wrap items-center border border-b w-full md:w-fit rounded-t-xl">
+        <div className="my-16 backdrop-blur-3xl">
+          <div className="flex flex-wrap items-center justify-center md:justify-start w-full md:w-fit rounded-t-[24px]">
             {[
               {
                 carname: "Sell",
@@ -371,6 +373,9 @@ function Home() {
                     color={buttonClick === 0 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_radius: 'rounded-tl-[24px]',
+                border_r: 'border-r',
+                border_color: 'border-[#5db2fc]',
               },
               {
                 carname: "Buy",
@@ -379,6 +384,7 @@ function Home() {
                     color={buttonClick === 1 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_r: 'border-r',
               },
               {
                 carname: "Mechanic",
@@ -387,6 +393,7 @@ function Home() {
                     color={buttonClick === 2 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_r: 'border-r',
               },
               {
                 carname: "Dealer",
@@ -395,6 +402,7 @@ function Home() {
                     color={buttonClick === 3 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_r: 'border-r',
               },
               {
                 carname: "Insurance",
@@ -403,6 +411,7 @@ function Home() {
                     color={buttonClick === 4 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_r: 'border-r',
               },
               {
                 carname: "Finance",
@@ -411,6 +420,8 @@ function Home() {
                     color={buttonClick === 5 ? "#6f9cff" : "#333333"}
                   />
                 ),
+                border_radius: 'rounded-tr-[24px]',
+                border_color: 'border-[#5db2fc]',
               },
             ].map((car, index) => (
               <button
@@ -420,9 +431,9 @@ function Home() {
                 key={index}
                 className={`${
                   buttonClick === index
-                    ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue"
+                    ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue "
                     : ""
-                } flex items-center gap-2 text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[30px] md:py-[20px] border-r`}
+                } flex items-center justify-center gap-[10px] text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[20px] md:py-[30px] w-[200px] h-[84px] ${car.border_r} ${car.border_radius} border`}
               >
                 <span>{car.svgs}</span>
                 {car.carname}
@@ -433,7 +444,7 @@ function Home() {
       </div>
 
       <div className="cars w-[90%] mx-auto">
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
+        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
           {Array(4)
             .fill()
             .map((_, index) => {
@@ -449,45 +460,46 @@ function Home() {
                       className="w-full h-auto rounded-t-2xl"
                     />
                   </div>
-                  <div className="px-3">
-                    <h1 className="text-base md:text-lg font-semibold font-inter text-gray-1">
+                  <div className="px-3 flex items-center justify-between">
+                    <h1 className="text-base md:text-xl font-semibold font-inter text-gray-1">
                       Mercedes-Benz E 220 d
                     </h1>
+                    <span><Svgs.HeartIconBlue/></span>
                   </div>
                   <div className="flex items-center px-3 justify-between">
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
                       45000 KM
                     </h1>
                     <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
                       2018 Model
                     </h1>
                     <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
                       Automatic
                     </h1>
                   </div>
                   <div className="px-3">
-                    <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">
+                    <h1 className="text-lg md:text-[32px] font-bold font-inter text-gray-1">
                       $22,500
                     </h1>
                   </div>
                   <div className="flex items-center gap-2 px-3">
                     <div className="flex items-center gap-2">
-                      <img src={bluetick} alt="" />
-                      <p className="text-xs font-normal font-Work-sans text-gray-1">
+                      <span><Svgs.BlueTickIcon/></span>
+                      <p className="text-sm font-normal font-Work-sans text-gray-1">
                         Verified by Mechanic
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <img src={bluetick} alt="" />
-                      <p className="text-xs font-normal font-Work-sans  text-gray-1">
+                    <span><Svgs.BlueTickIcon/></span>
+                      <p className="text-sm font-normal font-Work-sans  text-gray-1">
                         Verified by Dealer
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate('/customer/mycarlistingdetails')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-3xl ">
                       View Details
                     </button>
                   </div>

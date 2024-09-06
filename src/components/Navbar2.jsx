@@ -116,7 +116,7 @@ function Navbar2({active}) {
   }
 
   const handleClick=()=>{
-    user.isLoggedIn = false
+    // user.isLoggedIn = false
   }
 
 
