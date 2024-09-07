@@ -77,7 +77,7 @@ function InsuranceForm1() {
 
               <div className="w-full text-center flex items-center justify-center">
                 <button
-                  onClick={() => { navigate("/insurance/insuranceform2") }}
+                  onClick={() => { navigate("/insurance/insurance-form2") }}
                   className={
                     " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                   }

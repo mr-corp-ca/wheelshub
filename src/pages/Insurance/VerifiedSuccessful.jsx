@@ -62,7 +62,7 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
                   </h1>
                 </div>
                 <div  className=" flex items-center justify-center">
-                  <button onClick={()=>{navigate('/dashboard/insurancemyorder')}} className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
+                  <button onClick={()=>{navigate('/dashboard/insurance-my-order')}} className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
                 </div>
               </div>
             </div>

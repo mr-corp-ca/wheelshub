@@ -4,7 +4,7 @@ import googleIcon from "../../assets/images/google.png";
 import appleIcon from "../../assets/images/apple (1).png";
 import arrow from "../../assets/images/Arrow 1.png";
 import checkboxICon from "../../assets/images/Checbox container.png";
-import carlogin from "../../assets/images/carlogin.png";
+// import carlogin from "../../assets/images/carlogin.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useLoginContext } from "../../Context/LoginContext";
@@ -13,6 +13,9 @@ import { Formik, useFormik } from "formik";
 import { signInSchema } from "../../schemas/index";
 import { useUserContext } from "../../Context/UserProvider";
 import { InputLogin } from "../../components/InputLogin";
+import loginimage from '../../assets/images/loginimage.png'
+import Svgs from '../../assets/svgs/index.js'
+
 
 const initialValues = {
   email: "",
@@ -59,19 +62,16 @@ function Login() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
-        <div className="col-span-1 lg:col-span-6">
-          <div className="relative">
+        <div className="col-span-1 lg:col-span-6 bg-[#f9f9f9] relative pt-[100px] md:pt-0 px-4">
+          <div>
+            <button onClick={()=>{navigate(-1)}} className=" z-10 absolute left-4 md:left-[54px] top-4 md:top-[67px] cursor-pointer w-[128px] h-[43px] text-base font-semibold font-inter text-gray-1 bg-white rounded-[12px]  border flex items-center justify-center gap-4"><Svgs.ArrowBack/> Go Back</button>
+          </div>
+          <div className="flex items-center justify-center h-full">
             <img
-              src={carlogin}
-              className="w-full h-full object-cover"
+              src={loginimage}
+              className=""
               alt="Car"
             />
-            <span
-              onClick={() => navigate(-1)}
-              className=" cursor-pointer text-base font-semibold font-inter text-white absolute flex items-center gap-3 top-10 left-10"
-            >
-              <img src={arrow} alt="Arrow" /> Go back
-            </span>
           </div>
         </div>
         <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[60%] py-10 lg:py-20 px-4 lg:px-0">

@@ -46,7 +46,7 @@ function RepresentativeDashboard() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate("/representative/insuranceformcompany")}}  className="w-[150px] h-[44px] hover:bg-custom-blue hover:text-white hover:border-none rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
+                      <button onClick={()=>{navigate("/representative/insurance-form-company")}}  className="w-[150px] h-[44px] hover:bg-custom-blue hover:text-white hover:border-none rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
                       Verify
                       </button>
                     </div>
@@ -76,7 +76,7 @@ function RepresentativeDashboard() {
                         <h1 className="text-sm lg:text-base font-medium font-Work-sans text-[#FFB543]">
                         Verification pending
                         </h1>
-                        <button onClick={()=>{navigate("/representative/insuranceformcompany")}} className=" hover:bg-custom-blue hover:text-white  w-fit border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
+                        <button onClick={()=>{navigate("/representative/insurance-form-company")}} className=" hover:bg-custom-blue hover:text-white  w-fit border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
                         Verify now
                         </button>
                       </div>
@@ -119,7 +119,7 @@ function RepresentativeDashboard() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate("/representative/insuranceformcompany")}} className="w-[150px] h-[44px] hover:bg-custom-blue hover:text-white hover:border-none rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
+                      <button onClick={()=>{navigate("/representative/insurance-form-company")}} className="w-[150px] h-[44px] hover:bg-custom-blue hover:text-white hover:border-none rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
                       Verify now
                       </button>
                     </div>

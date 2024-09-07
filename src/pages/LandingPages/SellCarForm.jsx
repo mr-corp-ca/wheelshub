@@ -5,9 +5,18 @@ import { Input } from '../../components/Input';
 import Navbar2 from '../../components/Navbar2';
 import { useNavigate } from 'react-router-dom';
 import Banner from '../../components/Banner';
+import Svgs from '../../assets/svgs/index.js'
+
 
 function SellCarForm() {
   const navigate = useNavigate()
+
+  const [phoneNumber, setPhoneNumber] = useState("+1 ");
+
+  const handleInputChange = (e) => {
+    setPhoneNumber( e.target.value );
+  };
+
 
   return (
     <>
@@ -20,15 +29,15 @@ function SellCarForm() {
             </h1>
             <div className='flex flex-col gap-4 my-10'>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Higher profits</h1>
+                <Svgs.GreenTickIcon/>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Better communication</h1>
               </div>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Easy process</h1>
+                <Svgs.GreenTickIcon/>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Timely updates</h1>
               </div>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
+                <Svgs.GreenTickIcon />
                 <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>100% Trusted</h1>
               </div>
             </div>
@@ -40,30 +49,30 @@ function SellCarForm() {
        
       </div>
       <div className='bg-white flex justify-center mx-5 lg:mx-0'>
-      <div className='details border bg-white rounded-xl w-full md:w-[80%] mx-auto py-10 px-5 md:px-32 -mt-32 mb-20'>
+      <div className='details border bg-white rounded-[16px] w-full md:w-[80%] mx-auto py-10 px-5 lg:px-32 -mt-32 mb-20'>
           <div className='flex items-center justify-center'>
             <h1 className='text-2xl md:text-3xl font-inter font-bold text-gray-800'>Enter personal details</h1>
           </div>
           <div className='mt-5'>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full">
-                <Input label="Full name" placeholder="Full name" />
+                <Input label="Full name" placeholder="Type here" />
               </div>
               <div className="w-full">
-                <Input label="Last name" placeholder="Last name" />
+                <Input label="Email" placeholder="Type here" />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 py-5">
               <div className="w-full">
-                <Input type="number" label="Phone Number" placeholder="+1" />
+                <Input type="tel"  value={phoneNumber} onChange={handleInputChange} label="Phone number" placeholder=" 000 000 0000" />
               </div>
               <div className="w-full">
-                <Input label="Email ID" placeholder="Email id" />
+                <Input label="City" placeholder="Type here" />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-              <div className="w-full">
-                <Input label="Street address" placeholder="Type address" />
+              <div className=" w-full md:w-1/2">
+                <Input label="Street address" placeholder="Type here" />
               </div>
             </div>
           </div>

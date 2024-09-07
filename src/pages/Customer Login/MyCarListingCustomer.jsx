@@ -72,7 +72,7 @@ function MyCarListingCustomer() {
                     <p className={`text-xs font-normal font-Work-sans ${value.textColor}`}>{value.verification}</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate("/customer/mycarlistingdetails")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate("/customer/mycar-listing-details")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       {value.buttonName}
                     </button>
                   </div>

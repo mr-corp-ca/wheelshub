@@ -125,6 +125,7 @@ import CustomerChats from "./pages/Customer Login/CustomerChats";
 import CustomerPayments from "./pages/Customer Login/CustomerPayments";
 import ContactUs from "./pages/LandingPages/ContactUs";
 
+
 // export const Layout = () => {
 //   const { pathname } = useLocation()
 
@@ -181,7 +182,7 @@ function App() {
           element: <Setting />,
         },
         {
-          path: "verificationprocess",
+          path: "verification-process",
           element: <VerificationinProcess />,
         },
         {
@@ -234,7 +235,7 @@ function App() {
           element: <Insurance />, //Dashboard
         },
         {
-          path: "insurancemyorder",
+          path: "insurance-my-order",
           element: <InsuranceMyOrder />,
         },
         {
@@ -242,11 +243,11 @@ function App() {
           element: <NewRequests />,
         },
         {
-          path: "insuranceform1",
+          path: "insurance-form1",
           element: <InsuranceForm1 />,
         },
         {
-          path: "insuranceform2",
+          path: "insurance-form2",
           element: <InsuranceForm2 />,
         },
         {
@@ -293,15 +294,15 @@ function App() {
           element: <MechanicDashboard />,  //Dashboard
         },
         {
-          path: "mechanicverifynow",
+          path: "mechanic-verify-now",
           element: <MechanicVerifyNow />,
         },
         {
-          path: "mechanicverifynow2",
+          path: "mechanic-verify-now2",
           element: <MechanicVerifyNow2 />,
         },
         {
-          path: "mechanicverifynow3",
+          path: "mechanic-verify-now3",
           element: <MechanicVerifyNow3 />,
         },
         {
@@ -349,15 +350,15 @@ function App() {
           element: <RepresentativeVerificationPage />,
         },
         {
-          path: "verificationprofile",
+          path: "verification-profile",
           element: <VerficationProfile />,
         },
         {
-          path: "uploaddocuments",
+          path: "upload-documents",
           element: <UploadDocuments />,
         },
         {
-          path: "verificationinprogress",
+          path: "verification-in-progress",
           element: <VerificationInProgress />,
         },
         {
@@ -373,19 +374,19 @@ function App() {
           element: <RepresentativeChats />,
         },
         {
-          path: "appointmentsdetails",
+          path: "appointments-details",
           element: <AppointmentsDetails />,
         },
         {
-          path: "dealerdetailscompany",
+          path: "dealer-details-company",
           element: <DealerDetailsCompany />,
         },
         {
-          path: "insuranceformcompany",
+          path: "insurance-form-company",
           element: <InsuranceFormCompany />,
         },
         {
-          path: "uploaddocumentscompany",
+          path: "upload-documents-company",
           element: <UploadDocumentsCompany />,
         },
         {
@@ -429,7 +430,7 @@ function App() {
           element: <DealerDashboard />,  //Dashboard
         },
         {
-          path: "dealerdetailpage",
+          path: "dealer-detail-page",
           element: <DealerDetailsPage />,
         },
         {
@@ -453,19 +454,19 @@ function App() {
           element: <DealerPayments />,
         },
         {
-          path: "dealerhandoverdetails",
+          path: "dealer-handover-details",
           element: <DealerHandoverDetails />,
         },
         {
-          path: "dealerverify",
+          path: "dealer-verify",
           element: <DealerVerifyNow />,
         },
         {
-          path: "dealerverify2",
+          path: "dealer-verify2",
           element: <DealerVerifyNow2 />,
         },
         {
-          path: "dealerverify3",
+          path: "dealer-verify3",
           element: <DealerVerifyNow3 />,
         },
         {
@@ -517,11 +518,11 @@ function App() {
           element: <CustomerPayments/>
         },
         {
-          path: "mycarlistingdetails",
+          path: "mycar-listing-details",
           element: <MyCarListingDetails />,
         },
         {
-          path: "claimnow",
+          path: "claim-now",
           element: <ClaimNow />,
         },
         {
@@ -529,11 +530,11 @@ function App() {
           element: <InsuranceLogin />,
         },
         {
-          path: "insurancedetails",
+          path: "insurance-details",
           element: <InsuranceDetails />,
         },
         {
-          path: "insuranceactivedetail",
+          path: "insurance-active-detail",
           element: <InsuranceActiveDetail />,
         },
         {
@@ -541,19 +542,19 @@ function App() {
           element: <Settings />,
         },
         {
-          path: "rescheduledialog",
+          path: "reschedule-dialog",
           element: <RescheduleDialog />,
         },
         {
-          path: "paymentprocessmycarlisting",
+          path: "payment-process-mycar-listing",
           element: <PaymentProcessMyCarListing />,
         },
         {
-          path: "mechanicverification",
+          path: "mechanic-verification",
           element: <MechanicVerification />,
         },
         {
-          path: "dealerverification",
+          path: "dealer-verification",
           element: <DealerVerification />,
         },
         {
@@ -577,7 +578,7 @@ function App() {
           element: <SellCarForm />, // Wheel Hub
         },
         {
-          path: "selcartopublic",
+          path: "sel-car-to-public",
           element: <Selcartopublic />, // Public Place
         },
         {

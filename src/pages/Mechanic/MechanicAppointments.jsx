@@ -39,7 +39,7 @@ function MechanicAppointments() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/mechanic/mechanicverifynow") }} className=" hover:text-white hover:bg-custom-blue hover:border-none w-full md:h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
+                      <button onClick={() => { navigate("/mechanic/mechanic-verify-now") }} className=" hover:text-white hover:bg-custom-blue hover:border-none w-full md:h-[44px] rounded-xl border px-2 md:px-5 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center">
                         Approve
                       </button>
                     </div>

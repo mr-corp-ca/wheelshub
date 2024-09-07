@@ -127,19 +127,19 @@ function Home() {
               <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className=" px-2 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-[68%]">
+              <p className=" px-2 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2  md:w-[68%]">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
                 and experience hassle-free transactions with verified dealers
                 and secure payments.
               </p>
-              <div className="flex items-center gap-5 px-20">
+              <div className="flex flex-wrap items-center gap-5 px-20">
                 <button
                   onClick={() => {
                     navigate("/sellyourcar");
                   }}
-                  className=" h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
+                  className=" w-[164px] h-[52px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
                 >
                   Sell now
                 </button>
@@ -147,7 +147,7 @@ function Home() {
                   onClick={() => {
                     navigate("/buyacar");
                   }}
-                  className=" h-[44px] rounded-lg border border-gray-1 text-gray-1 px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center"
+                  className=" w-[164px] h-[52px] rounded-lg border border-gray-1 text-gray-1 px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center"
                 >
                   Buy a car
                 </button>
@@ -317,7 +317,7 @@ function Home() {
               </h1>
             </div>
             {keyBenefits.map((value, index) => (
-              <div className="flex items-start my-[40px] gap-7" key={index}>
+              <div className="flex flex-col lg:flex-row items-start my-[40px] gap-7" key={index}>
                 <div className="bg-[#f4faff] shadow-2xl shadow-[#dee9f4]  p-[30px]  rounded-[24px] border border-gray-5 flex items-center justify-center">
                   <span className=" ">{value.icons}</span>
                 </div>
@@ -513,9 +513,9 @@ function Home() {
           </button>
         </div>
       </div>
-      <div className="testimonials bg-[#d2eaff] py-10">
-        <div className="text-center mb-10">
-          <h1 className="text-2xl lg:text-[54px] font-bold font-inter text-gray-1">
+      <div className="testimonials bg-gradient-to-r from-[#F2F8FD] to-[#D1EAFF] py-[80px] ">
+        <div className="text-center ">
+          <h1 className="text-2xl lg:text-[54px] font-bold font-inter text-gray-1 ">
             What people say about us?
           </h1>
         </div>
@@ -531,7 +531,7 @@ function Home() {
         >
           {[0, 1, 2].map((slideIndex) => (
             <SwiperSlide key={slideIndex}>
-              <div className="cards w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+              <div className="cards w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-[60px]">
                 {Array(3)
                   .fill()
                   .map((_, i) => (
@@ -567,11 +567,7 @@ function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="text-center py-10">
-          <button className="border text-custom-blue border-custom-blue rounded-xl w-[160px] px-[24px] py-[14px] text-base font-medium font-poppins hover:bg-custom-blue hover:text-white">
-            View all
-          </button>
-        </div>
+       
       </div>
       <div>
         <img src={waveicon} className="w-full" alt="" />

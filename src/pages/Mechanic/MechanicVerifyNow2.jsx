@@ -80,7 +80,7 @@ function MechanicVerifyNow2() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/mechanic/mechanicverifynow3')}}
+            onClick={()=>{navigate('/mechanic/mechanic-verify-now3')}}
               className={
                 "w-[117px] hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }

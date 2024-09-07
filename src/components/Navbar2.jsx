@@ -160,13 +160,13 @@ function Navbar2({active}) {
                 <div className='flex flex-row gap-[20px] items-center justify-center'>
                   <OutlineButton
                     onClick={() => navigate("/login")}
-                    className={"!text-base h-[52px]"}
+                    className={"!text-base h-[52px] shadow-2xl shadow-custom-blue"}
                     customPadding={" px-6 py-3 "}
                     title={"Log in"} />
                   <Button
                     onClick={() => navigate("/signup")}
                     title={"Create a account"}
-                    className={"!min-w-max !px-6 !py-4 h-[52px]"} />
+                    className={"!min-w-max !px-6 !py-4 h-[52px] shadow-3xl shadow-custom-blue"} />
                 </div>
                 </>
               )

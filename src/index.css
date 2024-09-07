@@ -16,3 +16,7 @@ body::-webkit-scrollbar {
     background: rgb(209,234,255);
     background: linear-gradient(110deg, rgba(209,234,255,1) 65%, rgba(242,248,253,1) 90%, rgba(255,255,255,0) 90%);
   }
+
+  .shadow-css{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 20px 0px;
+  }

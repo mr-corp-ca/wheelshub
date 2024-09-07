@@ -72,7 +72,7 @@ function DealerHandoverDetails() {
         <div>
           <button
             onClick={() => {
-              navigate("/dealer/dealerverify");
+              navigate("/dealer/dealer-verify");
             }}
             className="w-[142px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue"
           >

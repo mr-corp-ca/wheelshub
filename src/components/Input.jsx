@@ -37,8 +37,8 @@ export const Input = ({ label, value, onChange, placeholder, type , className}) 
                 :
                 <input
                     type={type}
-                    // value={}
-                    // onChange={}
+                    value={value}
+                    onChange={onChange}
                     className='border-gray-5 border p-2 rounded-lg font-poppins text-base placeholder:text-gray-4 outline-none focus:ring-2 ring-custom-blue caret-custom-blue'
                     placeholder={placeholder}
                 />

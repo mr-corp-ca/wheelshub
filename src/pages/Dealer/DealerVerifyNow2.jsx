@@ -80,7 +80,7 @@ function DealerVerifyNow2() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dealer/dealerverify3')}}
+            onClick={()=>{navigate('/dealer/dealer-verify3')}}
               className={
                 "w-[117px] text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }

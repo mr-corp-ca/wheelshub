@@ -129,6 +129,8 @@ import appleIcon from "../../assets/images/apple (1).png"
 import arrow from "../../assets/images/Arrow 1.png"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import signupimage from '../../assets/images/signupimage.png'
+import Svgs from '../../assets/svgs/index.js'
 
 function Signup() {
   const navigate = useNavigate()
@@ -139,14 +141,16 @@ function Signup() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
-        <div className="col-span-1 lg:col-span-6">
-          <div className="relative">
-            <img src={car} className="w-full h-full object-cover" alt="Car" />
-            <span
-              onClick={() => navigate(-1)}
-              className=" cursor-pointer text-base font-semibold font-inter text-white absolute flex items-center gap-3 top-10 left-10">
-              <img src={arrow} alt="Arrow" /> Go back
-            </span>
+        <div className="col-span-1 lg:col-span-6 bg-[#f9f9f9] relative pt-[100px] md:pt-0 px-4">
+        <div>
+            <button onClick={()=>{navigate(-1)}} className=" z-10 absolute left-4 md:left-[54px] top-4 md:top-[67px] cursor-pointer w-[128px] h-[43px] text-base font-semibold font-inter text-gray-1 bg-white rounded-[12px]  border flex items-center justify-center gap-4"><Svgs.ArrowBack/> Go Back</button>
+          </div>
+          <div className="flex items-center justify-center h-full">
+            <img
+              src={signupimage}
+              className=""
+              alt="Car"
+            />
           </div>
         </div>
         <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[60%] py-10 lg:py-20 px-4 lg:px-0">

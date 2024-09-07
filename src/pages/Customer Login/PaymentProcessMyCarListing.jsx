@@ -198,7 +198,7 @@ function PaymentProcessMyCarListing() {
                 Verifications
               </h1>
             </div>
-            <div onClick={()=>{navigate('/customer/mechanicverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/customer/mechanic-verification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>
@@ -214,7 +214,7 @@ function PaymentProcessMyCarListing() {
                 </p>
               </div>
             </div>
-            <div onClick={()=>{navigate('/customer/dealerverification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
+            <div onClick={()=>{navigate('/customer/dealer-verification')}} className=" cursor-pointer flex items-center gap-5 flex-wrap border-b border-dashed pb-2 my-5">
               <div>
                 <img src={mechanicMan} className="w-full" alt="" />
               </div>

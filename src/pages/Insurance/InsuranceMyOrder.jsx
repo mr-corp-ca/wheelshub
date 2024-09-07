@@ -40,7 +40,7 @@ function InsuranceMyOrder() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/insurance/insuranceform1") }} className=" hover:bg-custom-blue hover:text-white w-[150px] h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
+                      <button onClick={() => { navigate("/insurance/insurance-form1") }} className=" hover:bg-custom-blue hover:text-white w-[150px] h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
                         Submit details
                       </button>
                     </div>

@@ -179,7 +179,7 @@ const [popup, setpopup] = useState(null)
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/mechanic/mechanicverifynow')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/mechanic/mechanic-verify-now')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
                         View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}

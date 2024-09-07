@@ -77,7 +77,7 @@ function MyCarListingDetails() {
           </div>
         </div>
         <div>
-          <button onClick={()=>{navigate('/customer/paymentprocessmycarlisting')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
+          <button onClick={()=>{navigate('/customer/payment-process-mycar-listing')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
             Edit
           </button>
         </div>
@@ -138,13 +138,13 @@ function MyCarListingDetails() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/customer/mechanicverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/mechanic-verification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/customer/dealerverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/dealer-verification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>

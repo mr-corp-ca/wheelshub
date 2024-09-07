@@ -50,7 +50,7 @@ const closeDialog = () => {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/customer/insuranceactivedetail')}} className="w-[159px] h-[44px] rounded-xl border border-gray-1 px-4  py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
+                      <button onClick={()=>{navigate('/customer/insurance-active-detail')}} className="w-[159px] h-[44px] rounded-xl border border-gray-1 px-4  py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 flex items-center justify-center">
                       View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}
@@ -84,7 +84,7 @@ const closeDialog = () => {
                         Verification pending
                         </h1>
                         <div className=" flex items-center sm:items-start justify-center sm:justify-start">
-                        <button onClick={()=>{navigate('/customer/insurancedetails')}} className=" border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
+                        <button onClick={()=>{navigate('/customer/insurance-details')}} className=" border border-custom-blue rounded-xl px-[10px] py-[11.5px] text-custom-blue h-[44px] flex items-center justify-center mt-4 text-lg font-medium font-Work-sans">
                         Verify now
                         </button>
 

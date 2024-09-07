@@ -106,7 +106,7 @@ function Appointments() {
                         <div className="mt-4 md:mt-0">
                           <button
                             onClick={() => {
-                              navigate("/representative/appointmentsdetails");
+                              navigate("/representative/appointments-details");
                             }}
                             className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
@@ -239,7 +239,7 @@ function Appointments() {
                         <div className="mt-4 md:mt-0">
                           <button
                             onClick={() => {
-                              navigate("/representative/dealerdetailscompany");
+                              navigate("/representative/dealer-details-company");
                             }}
                             className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
@@ -372,7 +372,7 @@ function Appointments() {
                         <div className="mt-4 md:mt-0">
                           <button
                             onClick={() => {
-                              navigate("/representative/appointmentsdetails");
+                              navigate("/representative/appointments-details");
                             }}
                             className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
@@ -509,7 +509,7 @@ function Appointments() {
                         <div className="mt-4 md:mt-0">
                           <button
                             onClick={() => {
-                              navigate("/representative/appointmentsdetails");
+                              navigate("/representative/appointments-details");
                             }}
                             className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue hover:border-none w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center"
                           >
@@ -549,7 +549,7 @@ function Appointments() {
                             <div className="mt-4 flex items-center justify-center">
                               <button
                                 onClick={() => {
-                                  navigate("/representative/appointmentsdetails");
+                                  navigate("/representative/appointments-details");
                                 }}
                                 className=" hover:bg-custom-blue hover:text-white  w-[150px] h-[44px] rounded-xl border px-2 md:px-[12px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center"
                               >
