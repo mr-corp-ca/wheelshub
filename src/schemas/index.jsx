@@ -50,4 +50,26 @@ const signInSchema = yup.object().shape({
         .required('Please enter your password'),
 });
 
-export { signInSchema, signUpSchema };
+
+const sellCarForm = yup.object().shape({
+    name: yup
+    .string()
+    .min(2, 'Name must be at least 2 characters')
+    .max(25, 'Name cannot exceed 25 characters')
+    .required('Please enter your name'),
+    email: yup
+    .string()
+    .email('Invalid email format')
+    .required('Please enter your email'),
+    number: yup
+    .string()
+    .required('please enter your number'),
+    city: yup
+    .string()
+    .required('please enter your city'),
+    street_address: yup
+    .string()
+    .required('please enter your address')
+})
+
+export { sellCarForm, signInSchema, signUpSchema };

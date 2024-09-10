@@ -54,7 +54,7 @@ function Login() {
           setUser({ isLoggedIn: true, role: "INDIVIDUAL" });
           navigate('/customer/customer-dashboard')
         } else {
-          alert("Enter login typeeeeeee");
+          alert("Enter login type");
         }
       },
     });

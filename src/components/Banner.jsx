@@ -21,7 +21,7 @@ function Banner() {
   }
 
   const buyACarTab = () =>{
-    navigate('/buyacar')
+    navigate('/buy-a-car')
     handleScrollToTop()
   }
 
@@ -31,7 +31,7 @@ function Banner() {
   }
 
   const dealerTab = () =>{
-    navigate('/dealerpage')
+    navigate('/dealer-page')
     handleScrollToTop()
   }
   const InsuranceTab = () =>{

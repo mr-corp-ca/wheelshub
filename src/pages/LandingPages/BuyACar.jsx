@@ -694,7 +694,7 @@ export default function AccordionUsage() {
                       </div>
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-5">
-                      <button onClick={()=>{navigate('/buyacardetails')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                      <button onClick={()=>{navigate('/buy-a-car-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       View details
                       </button>
                     </div>

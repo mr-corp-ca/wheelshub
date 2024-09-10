@@ -74,17 +74,17 @@ function Navbar2({active}) {
     },
     {
       name: 'Buy a Car',
-      navigate: '/buyacar',
+      navigate: '/buy-a-car',
       active: active === 'Buy-A-Car' ? true : false ,
     },
     {
       name: 'Mechanic',
-      navigate: '/mechanicpage',
+      navigate: '/mechanic-page',
       active: active === 'Mechanic-Page' ? true : false ,
     },
     {
       name: 'Dealer',
-      navigate: '/dealerpage',
+      navigate: '/dealer-page',
       active: active === 'Dealer-Page' ? true : false ,
     },
     {

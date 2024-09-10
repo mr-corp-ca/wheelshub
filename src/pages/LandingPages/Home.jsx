@@ -145,7 +145,7 @@ function Home() {
                 </button>
                 <button
                   onClick={() => {
-                    navigate("/buyacar");
+                    navigate("/buy-a-car");
                   }}
                   className=" w-[164px] h-[52px] rounded-lg border border-gray-1 text-gray-1 px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center"
                 >
@@ -499,7 +499,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/customer/mycarlistingdetails')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-3xl ">
+                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-3xl ">
                       View Details
                     </button>
                   </div>

@@ -582,11 +582,11 @@ function App() {
           element: <Selcartopublic />, // Public Place
         },
         {
-          path: "findmechanic",
+          path: "find-mechanic",
           element: <SellCarFormFindMechanic />,
         },
         {
-          path: "findDealer",
+          path: "find-dealer",
           element: <SellCarFormFindDealer />,
         },
         {
@@ -594,15 +594,15 @@ function App() {
           element: <SellCarFormAppointmentTime />,
         },
         {
-          path: "dealerAppointmentForm",
+          path: "dealer-appointment-form",
           element: <SellCarFormAppointmentDealer />,
         },
         {
-          path: "appointmentPaymentProcess",
+          path: "appointment-payment-process",
           element: <SellCarFormAppointmentDealerPaymentProcess />,
         },
         {
-          path: "verificationProcess",
+          path: "verification-process",
           element: <SellCarFormVerificationProcess />,
         },
       ],
@@ -610,15 +610,15 @@ function App() {
 
 
     {
-      path: "buyacar",
+      path: "buy-a-car",
       element: <AccordionUsage />,
     },
     {
-      path: "mechanicpage",
+      path: "mechanic-page",
       element: <Mechanic />,
     },
     {
-      path: "dealerpage",
+      path: "dealer-page",
       element: <Dealer />,
     },
     {
@@ -634,7 +634,7 @@ function App() {
       element: <ContactUs/>
     },
     {
-      path: "buyacardetails",
+      path: "buy-a-car-details",
       element: <BuyACarDetails />,
     },
     {
@@ -642,7 +642,7 @@ function App() {
       element: <DealerDetails />,
     },
     {
-      path: "buyacardetailsdialog",
+      path: "buy-a-car-details-dialog",
       element: <BuyACarDetailsDialog />,
     },
 
@@ -651,7 +651,7 @@ function App() {
       element: <Info />,
     },
     {
-      path: "handoverappointment",
+      path: "handover-appointment",
       element: <HandoverAppointment />,
     },
 

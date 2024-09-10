@@ -188,7 +188,7 @@ function Sellyourcar() {
         <div className="bg-white shadow-lg rounded-[16px] my-14 py-10 px-5 border z-30 sm:w-[90%] lg:max-w-[1200px] mx-auto -mt-32">
           <div className="flex items-center justify-center">
             <h1 className="text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1">
-              Where do you want to sell your car?
+              Where do you want to sell your car??
             </h1>
           </div>
           <div className="py-10 flex flex-col md:flex-row items-center justify-center gap-16">
@@ -236,9 +236,9 @@ function Sellyourcar() {
                 </div>
               </div>
             </div>
-            <div onClick={() => {handleSelect("selcartopublic")}}
+            <div onClick={() => {handleSelect("sel-car-to-public")}}
               className={`${
-                borderColor === "selcartopublic"
+                borderColor === "sel-car-to-public"
                   ? "border-2  border-custom-blue"
                   : " border-2"
               } border rounded-[16px]  px-[65px] py-[18px] flex items-center justify-center flex-col gap-4 cursor-pointer w-[280px] h-[312px] shadow-css`}
@@ -246,8 +246,8 @@ function Sellyourcar() {
               <div className="flex items-center gap-4">
                 <input
                   type="radio"
-                  value={"selcartopublic"}
-                  checked={loginType === "selcartopublic"}
+                  value={"sel-car-to-public"}
+                  checked={loginType === "sel-car-to-public"}
                   onChange={(e) => {
                     setLoginType(e.target.value);
                   }}
@@ -287,6 +287,9 @@ function Sellyourcar() {
                   setIsLoggedIn(true);
                   setRole(loginType);
                   navigate(`/sellyourcar/${loginType}`);
+                  window.scrollTo({
+                    top: 0,
+                  });
                 }
               }}
               className="h-[52px] w-[129px] rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
