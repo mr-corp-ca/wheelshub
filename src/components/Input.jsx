@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { EyeIcon } from '../assets/svgs/EyeIcon'
 
-export const Input = ({ label, value, onChange, placeholder, type , className}) => {
+export const Input = ({ label, value, onChange, placeholder, type , className , ref}) => {
 
     
     const [tooglePasswordInput, setTogglePasswordInput] = useState(false)
@@ -15,12 +15,10 @@ export const Input = ({ label, value, onChange, placeholder, type , className}) 
 
             {type === "password" ?
                 <div
-                    className='border-gray-5 pr-2 border rounded-lg flex flex-row w-full justify-between items-center focus-within:ring-2 ring-custom-blue caret-custom-blue group '>
+                    className={` border-gray-5 pr-2 border rounded-lg flex flex-row w-full justify-between items-center focus-within:ring-2 ring-custom-blue caret-custom-blue group ${className}`}>
                     <input
                         type={tooglePasswordInput ? "text" : "password"}
-                        // value={}
-                        // onChange={}
-                        className=' p-2 w-full rounded-lg font-poppins text-base placeholder:text-gray-4 outline-none  '
+                        className=' p-2 w-full rounded-lg font-poppins text-base placeholder:text-gray-4 outline-none '
                         placeholder={placeholder}
                     />
                     <button
@@ -37,9 +35,10 @@ export const Input = ({ label, value, onChange, placeholder, type , className}) 
                 :
                 <input
                     type={type}
+                    ref={ref}
                     value={value}
                     onChange={onChange}
-                    className='border-gray-5 border p-2 rounded-lg font-poppins text-base placeholder:text-gray-4 outline-none focus:ring-2 ring-custom-blue caret-custom-blue'
+                    className={`border-gray-5 border p-2 rounded-lg font-poppins text-base placeholder:text-gray-4 outline-none focus:ring-2 ring-custom-blue caret-custom-blue ${className}`}
                     placeholder={placeholder}
                 />
             }

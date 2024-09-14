@@ -4,6 +4,9 @@ import paymentImg from "../../assets/images/paymentimg.png";
 import { useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
 import Navbar2 from "../../components/Navbar2";
+import Svgs from '../../assets/svgs/index'
+
+
 function SellCarFormAppointmentDealerPaymentProcess() {
   const navigate = useNavigate();
   return (
@@ -18,16 +21,16 @@ function SellCarFormAppointmentDealerPaymentProcess() {
             </h1>
             <div className='flex flex-col gap-4 mt-5 '>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Flexible timings</h1>
+                <Svgs.GreenTickIcon/>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Guaranteed Time Slot</h1>
               </div>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Minimized Wait Times</h1>
+              <Svgs.GreenTickIcon/>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Priority Service</h1>
               </div>
               <div className='flex items-center gap-5'>
-                <img src={greentick} alt="Green tick" />
-                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Personalized Service</h1>
+              <Svgs.GreenTickIcon/>
+                <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-800'>Commitment Assurance</h1>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ function Subscriptions() {
       <div className=" my-5">
         <div className="myorderheading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
-            My Order
+            My Orders
           </h1>
         </div>
         <div className="cards py-4 md:py-5 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
@@ -25,7 +25,7 @@ function Subscriptions() {
             { id: 2 , title: "Gold", price: "$100", color: "text-white", bgColor: "bg-custom-blue", textColor: "text-white" },
             { id: 3 , title: "Platinum", price: "$130", color: "text-custom-blue", bgColor: "bg-custom-blue", textColor: "text-custom-blue" }
           ].map((plan, index) => (
-            <div onClick={()=>{handleCardClick(index)}} key={index} className={` rounded-xl p-3 relative w-full max-w-[352px] ${cardbg === index ? 'bg-custom-blue text-white shadow-2xl shadow-custom-blue' : 'bg-white text-custom-blue border'}`}>
+            <div onClick={()=>{handleCardClick(index)}} key={index} className={` cursor-pointer rounded-xl p-3 relative w-full max-w-[352px] min-h-[431px] ${cardbg === index ? 'bg-custom-blue text-white shadow-2xl shadow-custom-blue' : 'bg-white text-custom-blue border'}`}>
               <div className="absolute top-0 right-0">
                 <img src={pattern} alt="Pattern" />
               </div>

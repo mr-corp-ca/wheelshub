@@ -42,10 +42,10 @@ function SellCarForm() {
   return (
     <>
       <Navbar2 />
-      <div className="firstpart bg-[#f3f3f3] h-fit py-32 ">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:w-[80%] mx-auto ">
-          <div className="md:col-span-6 mx-5 lg:mx-0">
-            <h1 className="text-[30px] lg:text-[48px] font-bold font-inter text-gray-800 ">
+      <div className="firstpart bg-[#f3f3f3] h-fit pb-32 md:py-32 ">
+        <div className="grid grid-cols-1 md:grid-cols-12   w-full xl:w-[1170px] mx-auto ">
+          <div className="md:col-span-6 mx-5 xl:mx-0">
+            <h1 className="text-[25px] lg:text-[48px] font-bold font-inter text-gray-800 pt-8">
               Enter Your Personal Information
             </h1>
             <div className="flex flex-col gap-4 my-10">
@@ -69,13 +69,13 @@ function SellCarForm() {
               </div>
             </div>
           </div>
-          <div className="hidden md:col-span-6 lg:flex items-center justify-center -mr-10">
+          <div className="hidden md:col-span-6 sm:flex items-center justify-center mr-5">
             <img src={mansmiling} alt="Man smiling" />
           </div>
         </div>
       </div>
-      <div className="bg-white flex justify-center mx-5 lg:mx-0">
-        <div className="details border bg-white rounded-[16px] w-full md:w-[80%] mx-auto py-10 px-5 lg:px-32 -mt-32 mb-20">
+      <div className="bg-white flex justify-center mx-2 xl:mx-0">
+        <div className="details border bg-white rounded-[16px] w-full xl:w-[1170px] mx-auto py-10 px-5 lg:px-32 -mt-32 mb-20">
           <div className="flex items-center justify-center">
             <h1 className="text-2xl md:text-3xl font-inter font-bold text-gray-800">
               Enter personal details

@@ -39,7 +39,7 @@ function SellCarFormAppointmentTime() {
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full xl:w-[1170px] mx-auto px-5 xl:px-0 lg:pt-20">
           <div className="md:col-span-9 ">
-            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 w-[90%]">
               Book a Convenient Time with Your Mechanic
             </h1>
             <div className="flex flex-col gap-4 mt-5 ">

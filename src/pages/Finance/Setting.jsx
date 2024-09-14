@@ -10,9 +10,9 @@ function Setting() {
     <>
     <Layout active={'Dashboard'}>
     <div className="w-full flex items-center justify-center">
-    <div className="w-full sm:w-[80%] border p-5 rounded-xl">
+    <div className="w-full max-w-[874px] min-h-[698px] border p-9 rounded-xl">
       <div className=" ">
-        <div className=" flex items-center justify-center flex-col gap-6">
+        <div className=" flex items-center justify-center flex-col gap-8">
           <h1 className="text-2xl font-semibold font-inter text-gray-1">
           Verify your profile
           </h1>
@@ -30,10 +30,10 @@ function Setting() {
           </div>
         </div>
       </div>
-      <div className="pt-3">
-        <form className="space-y-8">
+      <div className="mt-6">
+        <form className="">
           <div className="space-y-5">
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
               <div className="w-full">
                 <Input label={"Full name"} placeholder={"Full name"} />
               </div>
@@ -66,9 +66,9 @@ function Setting() {
             </div>
           </div>
 
-          <div className="w-full text-center flex items-center justify-center">
+          <div className="w-full text-center flex items-center justify-center mt-8">
             <button
-            onClick={()=>{navigate('/dashboard/verificationprocess')}}
+            
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }

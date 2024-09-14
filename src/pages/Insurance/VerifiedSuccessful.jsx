@@ -39,14 +39,6 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="">
         <div ref={popupRef}>
-          {/* <div>
-            <img
-              onClick={onClose}
-              src={crossicon}
-              className="bg-gray-300 rounded-full absolute right-2 cursor-pointer w-10"
-              alt=""
-            />
-          </div> */}
           <div className="flex justify-between md:mb-6"></div>
           <form onSubmit={handleSubmit}>
             <div className=" mx-auto p-10 bg-white shadow-lg rounded-xl border">
@@ -62,7 +54,7 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
                   </h1>
                 </div>
                 <div  className=" flex items-center justify-center">
-                  <button onClick={()=>{navigate('/dashboard/insurance-my-order')}} className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
+                  <button onClick={()=>{navigate('/insurance/insurance-my-order')}} className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
                 </div>
               </div>
             </div>

@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import greentick from "../../assets/images/tickofgreen.png";
-import hearticon from "../../assets/images/hearticon.png";
-import yellowstar from "../../assets/images/staryellow.png";
+import React, { useState, useEffect } from "react";
 import dealerimg from "../../assets/images/dealer.png"
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
-import blutick from '../../assets/images/bluetickzigzag.png'
 import Banner from "../../components/Banner";
 import dealerfamily from '../../assets/images/dealerfamily.png'
-import whitetick from '../../assets/images/whitetick.png'
 import Svgs from '../../assets/svgs/index.js'
+import Skeleton_Find_Mechanic from "../../components/Skeleton/Skeleton_Find_Mechanic.js";
 
 
 function SellCarFormFindDealer() {
@@ -55,10 +51,27 @@ function SellCarFormFindDealer() {
     }
   };
 
-  const handleHeart=(index)=>{
-    setHeart(!heart)
-    setHandleIndex(index)
-  }
+ 
+
+
+  const [selectedHearts, setSelectedHearts] = useState([]); // Array to track selected hearts
+
+  const handleHeart = (index) => {
+    setSelectedHearts((prevSelectedHearts) =>
+      prevSelectedHearts.includes(index)
+        ? prevSelectedHearts.filter((i) => i !== index) // Unselect the heart
+        : [...prevSelectedHearts, index] // Select the heart
+    );
+  };
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
       <Navbar2 />
@@ -112,54 +125,95 @@ function SellCarFormFindDealer() {
               Most viewed
             </button>
           </div>
-          <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-5">
-            {Array(6)
-              .fill()
-              .map((_, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`card border rounded-2xl flex flex-col gap-4 ${buttonClick === index ? 'border border-custom-blue shadow-css': ''}`}
-                  >
-                    <div>
-                      <img
-                        src={dealerfamily}
-                        alt="Car"
-                        className="w-full h-auto rounded-t-2xl"
-                      />
-                    </div>
-                    <div className="px-3 flex items-center justify-between">
-                      <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
-                        BL Car Mechanics
-                      </h1>
-                      <span className=" cursor-pointer" onClick={()=>{handleHeart(index)}}> {handleIndex === index ? <Svgs.HeartIconBlueFilled/>:<Svgs.HeartIconBlue/>}</span> 
-                    </div>
-                    <div className="flex items-center px-3 justify-between">
-                      <h1 className="text-base font-normal font-Work-sans text-custom-blue underline">
-                        7711 128 St, Surrey, BC V3W 4E6, Canada
-                      </h1>
-                    </div>
-                    <div className="px-3 flex items-center gap-3">
-                      <Svgs.YellowStar/>
-                      <h1 className="text-sm font-normal font-Work-sans text-gray-800">
-                        430 Reviews
-                      </h1>
-                    </div>
-                    <div className="flex items-center gap-2 px-3">
-                      <Svgs.BlueTickVerified/>
-                      <p className="text-sm font-normal font-Work-sans text-gray-800">
-                        Verified by Wheeldealhub
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center pb-4 md:pb-5">
-                      <button onClick={()=>{handleButtonClick(index)}} className={`h-[44px] md:h-[48px] ${buttonClick===index ? 'px-[30px]' : 'px-[24px]'} px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${buttonClick === index ? 'bg-custom-green': 'bg-custom-blue'}`}>
-                        {buttonClick === index ?  <span className="flex items-center justify-center gap-2"><Svgs.WhiteTickIcon/>Selected</span> : 'Call now - +650 334 4545'}
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-          </div>
+          {isLoading ? (
+            <>
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
+                {Array(6).fill().map(()=>(
+                  <Skeleton_Find_Mechanic />
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+           <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-5">
+      {Array(6)
+        .fill()
+        .map((_, index) => {
+          return (
+            <div
+              key={index}
+              className={`card border rounded-2xl flex flex-col gap-4 ${
+                buttonClick === index ? "border border-custom-blue shadow-css" : ""
+              }`}
+            >
+              <div>
+                <img
+                  src={dealerfamily}
+                  alt="Car"
+                  className="w-full h-auto rounded-t-2xl"
+                />
+              </div>
+              <div className="px-3 flex items-center justify-between">
+                <h1 className="text-base md:text-xl font-semibold font-inter text-gray-800">
+                  BL Car Mechanics
+                </h1>
+                <span
+                  className="cursor-pointer"
+                  onClick={() => {
+                    handleHeart(index);
+                  }}
+                >
+                  {selectedHearts.includes(index) ? (
+                    <Svgs.HeartIconBlueFilled />
+                  ) : (
+                    <Svgs.HeartIconBlue />
+                  )}
+                </span>
+              </div>
+              <div className="flex items-center px-3 justify-between">
+                <h1 className="text-base font-normal font-Work-sans text-custom-blue underline">
+                  7711 128 St, Surrey, BC V3W 4E6, Canada
+                </h1>
+              </div>
+              <div className="px-3 flex items-center gap-3">
+                <Svgs.YellowStar />
+                <h1 className="text-sm font-normal font-Work-sans text-gray-800">
+                  430 Reviews
+                </h1>
+              </div>
+              <div className="flex items-center gap-2 px-3">
+                <Svgs.BlueTickVerified />
+                <p className="text-sm font-normal font-Work-sans text-gray-800">
+                  Verified by Wheeldealhub
+                </p>
+              </div>
+              <div className="flex items-center justify-center pb-4 md:pb-5">
+                <button
+                  onClick={() => {
+                    handleButtonClick(index);
+                  }}
+                  className={`h-[44px] md:h-[48px] ${
+                    buttonClick === index ? "px-[30px]" : "px-[24px]"
+                  } px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${
+                    buttonClick === index ? "bg-custom-green" : "bg-custom-blue"
+                  }`}
+                >
+                  {buttonClick === index ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <Svgs.WhiteTickIcon />
+                      Selected
+                    </span>
+                  ) : (
+                    "Call now - +650 334 4545"
+                  )}
+                </button>
+              </div>
+            </div>
+          );
+        })}
+    </div>  
+            </>
+          )}
 
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800">

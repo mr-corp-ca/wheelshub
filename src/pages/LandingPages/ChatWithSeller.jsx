@@ -10,22 +10,42 @@ import graytick from "../../assets/images/graytick.png";
 import oneBlue from "../../assets/images/oneBlue.png";
 import today from "../../assets/images/today.png";
 import telegram from "../../assets/images/telegram.png";
-import { Layout } from "../../components/Layout/DashboardLayout";
+import { useEffect, useRef } from "react";
 import Svgs from '../../assets/svgs/index.js'
 
 
-function DealerChats() {
+function ChatWithSeller({onClose, show}) {
+
+    const popupRef = useRef();
+
+    const handleClickOutside = (event) => {
+        if (popupRef.current && !popupRef.current.contains(event.target)) {
+          onClose();
+        }
+      };
+    
+      useEffect(() => {
+        if (show) {
+          document.addEventListener("mousedown", handleClickOutside);
+        } else {
+          document.removeEventListener("mousedown", handleClickOutside);
+        }
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+        };
+      }, [show]);
+    
+      if (!show) return null;
   return (
     <>
-    <Layout active={'Chats'}>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div ref={popupRef} className="w-[90%] h-[90vh] overflow-y-auto scrollbar-none bg-white shadow-lg rounded-xl">
       <div className="chatsMainPart">
-        <div className="chatHeading">
-          <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Chats</h1>
-        </div>
-        <div className="ChatWholepart my-5">
+        <div className="ChatWholepart">
           <div className="rounded-xl border">
             <div className="upersection grid grid-cols-12">
-              <div className="leftuper p-3 flex justify-between col-span-12 md:col-span-3 items-center border-r border-b">
+              <div className="leftuper p-3 flex justify-between col-span-12 md:col-span-4 items-center border-r border-b">
                 <div className="flex items-center gap-3">
                   <div>
                     <img src={man4} alt="" />
@@ -36,10 +56,10 @@ function DealerChats() {
                   </div>
                 </div>
                 <div>
-                <Svgs.SearchIcon/>
+                  <Svgs.SearchIcon/>
                 </div>
               </div>
-              <div className="rightuper p-3 flex justify-between col-span-12 md:col-span-9 items-center border-b">
+              <div className="rightuper p-3 flex justify-between col-span-12 md:col-span-8 items-center border-b">
                 <div className="flex items-center gap-3">
                   <div>
                     <img src={man3} alt="" />
@@ -50,25 +70,25 @@ function DealerChats() {
                   </div>
                 </div>
                 <div>
-                <Svgs.VerticalDots3/>
+                  <Svgs.VerticalDots3/>
                 </div>
               </div>
-              <div className="leftdownsection col-span-12 md:col-span-3 border-r">
+              <div className="leftdownsection col-span-12 md:col-span-4 border-r">
                 <div className="text-lg font-medium font-public-sans text-gray-1 px-3 pt-5 pb-4">
                   <h1>Messages</h1>
                 </div>
-                <div className="leftdown p-3 flex justify-between items-center bg-[#f2f2f2] border-b">
-                  <div className="flex items-center gap-3">
+                <div className="leftdown p-3 flex justify-between items-center bg-[#f2f2f2] border-b w-full">
+                  <div className="flex items-center gap-3 w-full">
                     <div>
                       <img src={man4} alt="" />
                     </div>
-                    <div>
+                    <div className=" w-full">
                       <div>
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Jimmy</h1>
                       </div>
                       <div className="flex items-center justify-between gap-7">
                         <div className="flex items-center gap-2">
-                        <Svgs.GrayDoubleTick/>
+                          <Svgs.GrayDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
                         </div>
                         <div>
@@ -79,18 +99,18 @@ function DealerChats() {
                   </div>
                 </div>
                 <div className="leftdown p-3 flex justify-between items-center border-b">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 w-full">
                     <div>
                       <img src={man2} alt="" />
                     </div>
-                    <div>
-                      <div className="flex items-center justify-between">
+                    <div className=" w-full">
+                      <div className="flex items-center justify-between w-full">
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Nik Smith</h1>
                         <Svgs.OneIcon/>
                       </div>
                       <div className="flex items-center justify-between gap-7">
                         <div className="flex items-center gap-2">
-                        <Svgs.BlueDoubleTick/>
+                          <Svgs.BlueDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
                         </div>
                         <div>
@@ -101,9 +121,9 @@ function DealerChats() {
                   </div>
                 </div>
               </div>
-              <div className="rightdownsection col-span-12 md:col-span-9 p-4">
+              <div className="rightdownsection col-span-12 md:col-span-8 p-4">
                 <div className="flex items-center justify-center py-5">
-                <Svgs.TodayLineIcon/>
+                 <Svgs.TodayLineIcon/>
                 </div>
                 <div>
                   <div className="chat1right">
@@ -145,8 +165,8 @@ function DealerChats() {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-2xl border bg-[#f8f8f8] py-5 px-5 flex items-center justify-between h-[72px]">
-                  <input className="text-sm md:text-base font-normal font-poppins text-gray-4 bg-transparent w-full h-full border-none outline-none" placeholder="Write a message ..." type="text" />
+                <div className="rounded-xl border bg-[#f8f8f8] p-5 flex items-center justify-between">
+                  <input className="text-sm md:text-base font-normal font-poppins text-gray-4 bg-[#f8f8f8] w-full h-full border-none outline-none" placeholder="Write a message ..." type="text" />
                   <Svgs.SendIcon/>
                 </div>
               </div>
@@ -154,9 +174,10 @@ function DealerChats() {
           </div>
         </div>
       </div>
-      </Layout>
+      </div>
+      </div>
     </>
   );
 }
 
-export default DealerChats;
+export default ChatWithSeller;

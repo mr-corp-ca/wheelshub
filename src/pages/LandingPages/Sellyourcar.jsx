@@ -138,9 +138,9 @@ function Sellyourcar() {
          
         </div> */}
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
-          <div className=" items-center  grid lg:grid-cols-12">
-            <div className="w-full px-[24px] lg:px-0   flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative lg:left-[30px] xl:left-[70px] ">
-              <div className="lg:text-[48px] text-[25px] text-[#333333] lg:w-[821px] font-bold w-full">
+          <div className="lg:px-7 xl:px-0 items-center  grid lg:grid-cols-12 w-[95%] lg:w-[1170px]">
+            <div className=" flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative ">
+              <div className="sm:text-[48px] text-[20px] text-[#333333] lg:w-[800px] xl:w-[821px] font-bold w-full">
                 <h6>Sell Car instantly on Wheeldeal hub from Home</h6>
               </div>
               <div className="flex flex-col gap-[24px] ">
@@ -180,12 +180,12 @@ function Sellyourcar() {
             </div>
 
             {/* 2nd div from images */}
-            <div className="hidden lg:block col-span-4   relative xl:right-[50px] lg:right-[20px]">
+            <div className="hidden lg:block col-span-4   relative ">
               <img src={modeldesgin} alt="" />
             </div>
           </div>
         </div>
-        <div className="bg-white shadow-lg rounded-[16px] my-14 py-10 px-5 border z-30 sm:w-[90%] lg:max-w-[1200px] mx-auto -mt-32">
+        <div className="bg-white shadow-lg rounded-[16px] my-14 py-10 px-5 border z-30 w-[95%] lg:max-w-[1170px] mx-auto -mt-32">
           <div className="flex items-center justify-center">
             <h1 className="text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1">
               Where do you want to sell your car??

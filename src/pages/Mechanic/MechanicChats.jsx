@@ -11,6 +11,8 @@ import oneBlue from "../../assets/images/oneBlue.png";
 import today from "../../assets/images/today.png";
 import telegram from "../../assets/images/telegram.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index.js'
+
 
 function MechanicChats() {
   return (
@@ -34,7 +36,7 @@ function MechanicChats() {
                   </div>
                 </div>
                 <div>
-                  <img src={search} alt="" />
+                <Svgs.SearchIcon/>
                 </div>
               </div>
               <div className="rightuper p-3 flex justify-between col-span-12 md:col-span-9 items-center border-b">
@@ -48,7 +50,7 @@ function MechanicChats() {
                   </div>
                 </div>
                 <div>
-                  <img src={dots3} alt="" />
+                <Svgs.VerticalDots3/>
                 </div>
               </div>
               <div className="leftdownsection col-span-12 md:col-span-3 border-r">
@@ -66,7 +68,7 @@ function MechanicChats() {
                       </div>
                       <div className="flex items-center justify-between gap-7">
                         <div className="flex items-center gap-2">
-                          <img src={graytick} alt="" />
+                        <Svgs.GrayDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
                         </div>
                         <div>
@@ -84,11 +86,11 @@ function MechanicChats() {
                     <div>
                       <div className="flex items-center justify-between">
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Nik Smith</h1>
-                        <img src={oneBlue} alt="" />
+                        <Svgs.OneIcon/>
                       </div>
                       <div className="flex items-center justify-between gap-7">
                         <div className="flex items-center gap-2">
-                          <img src={bluetick} alt="" />
+                        <Svgs.BlueDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
                         </div>
                         <div>
@@ -101,7 +103,7 @@ function MechanicChats() {
               </div>
               <div className="rightdownsection col-span-12 md:col-span-9 p-4">
                 <div className="flex items-center justify-center py-5">
-                  <img src={today} alt="" />
+                <Svgs.TodayLineIcon/>
                 </div>
                 <div>
                   <div className="chat1right">
@@ -143,9 +145,9 @@ function MechanicChats() {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-xl border bg-[#f8f8f8] p-5 flex items-center justify-between">
-                  <input className="text-sm md:text-base font-normal font-poppins text-gray-4 bg-[#f8f8f8] w-full h-full border-none outline-none" placeholder="Write a message ..." type="text" />
-                  <img src={telegram} alt="" />
+                <div className="rounded-2xl border bg-[#f8f8f8] py-5 px-5 flex items-center justify-between h-[72px]">
+                  <input className="text-sm md:text-base font-normal font-poppins text-gray-4 bg-transparent w-full h-full border-none outline-none" placeholder="Write a message ..." type="text" />
+                  <Svgs.SendIcon/>
                 </div>
               </div>
             </div>
