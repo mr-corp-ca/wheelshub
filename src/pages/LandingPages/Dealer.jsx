@@ -163,7 +163,7 @@ export default function Mechanic() {
                 {/* Accordion Content */}
                 {openIndex && (
                   <div className={`pt-5 ${openIndex? 'transition-all duration-700 ease-in-out':'transition-all duration-700 ease-in-out'}`}>
-                    <Input placeholder={"Type Location"} />
+                    <Input placeholder={"Type Location"} className={'bg-[#fafafa] '}/>
                   </div>
                 )}
               </div>

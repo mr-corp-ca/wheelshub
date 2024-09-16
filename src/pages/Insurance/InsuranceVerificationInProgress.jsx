@@ -4,13 +4,29 @@ import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from '../../components/Button';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Layout } from '../../components/Layout/DashboardLayout';
-
+import { useEffect } from 'react';
+import { useNavigateContext } from '../../Context/NavigateContext';
 
 
 
 
 function InsuranceVerificationInProgress() {
  const navigate = useNavigate()
+
+
+ const { setIsRedirect, isRedirect} = useNavigateContext()
+
+
+ useEffect(()=>{
+  if(isRedirect){
+    const timerId = setTimeout(() => {
+      navigate('/insurance/insurance')
+      setIsRedirect(false)
+    }, 3000);
+
+    return ()=> clearTimeout(timerId)
+  }
+}, [isRedirect, navigate, setIsRedirect])
   return (
     <>
     <Layout active={'Dashboard'}>

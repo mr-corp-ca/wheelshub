@@ -41,7 +41,7 @@ function SellCarForm() {
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Sell-A-Car'}/>
       <div className="firstpart bg-[#f3f3f3] h-fit pb-32 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12   w-full xl:w-[1170px] mx-auto ">
           <div className="md:col-span-6 mx-5 xl:mx-0">
