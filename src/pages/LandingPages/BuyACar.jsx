@@ -64,7 +64,7 @@ export default function AccordionUsage() {
       <Navbar2 active={"Buy-A-Car"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
+        <div className="sidebar lg:w-[25%] p-4 lg:pl-10 lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <Svgs.Filter_Icon />

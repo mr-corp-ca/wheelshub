@@ -34,7 +34,7 @@ const navigate = useNavigate()
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Sell-A-Car'}/>
       <div className=" firstpart bg-[#f3f3f3] h-fit  py-16 sm:py-44">
       </div>
       <div className="  md:w-[80%] mx-auto  px-5 md:px-10 lg:pt-20 ">

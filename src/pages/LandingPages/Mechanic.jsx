@@ -158,7 +158,7 @@ export default function Mechanic() {
                 {/* Accordion Content */}
                 {openIndex && (
                   <div className={`pt-5 ${openIndex? 'transition-all duration-700 ease-in-out':'transition-all duration-700 ease-in-out'}`}>
-                    <Input placeholder={"Type Location"} />
+                    <Input placeholder={"Type Location"} className={'bg-[#fafafa] '}/>
                   </div>
                 )}
               </div>
@@ -258,7 +258,7 @@ export default function Mechanic() {
             </div>
             {isLoading? (
               <>
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 2xl:gap-x-[50px] 2xl:gap-y-6 mt-12">
               {Array(15).fill().map(()=>(
                 <Skeleton_Find_Mechanic/>
               ))}

@@ -35,7 +35,7 @@ function SellCarFormAppointmentTime() {
   }
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Sell-A-Car'}/>
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full xl:w-[1170px] mx-auto px-5 xl:px-0 lg:pt-20">
           <div className="md:col-span-9 ">
