@@ -424,7 +424,7 @@ export const DropdownSidebar2 = ({ active }) => {
           color={active === "My orders" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/insurance/insurancemyorder",
+      navigate: "/insurance/insurance-my-order",
       active: active === "My orders" ? true : false,
     },
     {

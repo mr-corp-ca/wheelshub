@@ -1,11 +1,23 @@
 import React from "react";
-
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
+import { useEffect , useState} from "react";
+
+
 function InsuranceMyOrder() {
   const navigate = useNavigate()
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
     <Layout active={'My orders'}>
@@ -17,7 +29,19 @@ function InsuranceMyOrder() {
                 My Order
               </h1>
             </div>
-            {Array(4)
+            {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(4)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -47,6 +71,10 @@ function InsuranceMyOrder() {
                   </div>
                 </div>
               ))}
+                </>
+              )}
+
+           
           </div>
           <div className="payments col-span-12 lg:col-span-5 ">
             <div className="flex items-center justify-start mb-10">

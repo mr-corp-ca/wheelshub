@@ -1,31 +1,7 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import audiimg from "../../assets/images/audi14.png";
-import next from "../../assets/images/nextIcon.png";
-import prev from "../../assets/images/prevIcon.png";
-import car11 from "../../assets/images/car11.png";
-import car12 from "../../assets/images/car12.png";
-import car13 from "../../assets/images/man13.png";
-import car14 from "../../assets/images/man14.png";
 import { useState } from "react";
-import processIcon from "../../assets/images/uit_process.png";
-import mechanicMan from "../../assets/images/mechanicMan.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import man1img from "../../assets/images/insuranceMan1.png";
-import man2img from "../../assets/images/insuranceMan2.png";
-import man3img from "../../assets/images/insuranceMan3.png";
-import maninsuit from "../../assets/images/mansuit.png";
-import greentick from "../../assets/images/greentick3.png";
-import goldstars from "../../assets/images/goldstars.png";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-import hearticon from "../../assets/images/hearticon.png";
-import grayDot from "../../assets/images/graydot.png";
-import blueicon from "../../assets/images/bluetick (2).png";
 import Navbar2 from "../../components/Navbar2";
 import ClaimNow from "./ClaimNow";
 import Banner from "../../components/Banner";
@@ -144,7 +120,7 @@ function BuyACarDetails() {
             <>
             {Array(1).fill().map(()=>(
               <>
-              <SkeletonBuyACarDetail/>
+              <SkeletonBuyACarDetail height={510}/>
               </>
             ))}
             </>
@@ -185,7 +161,7 @@ function BuyACarDetails() {
               </button>
             ))}
           </div>
-          <div className="carReview border rounded-xl p-5 h-fit my-5">
+          <div className="carReview border rounded-xl p-5 h-fit my-5 shadow-css">
             <div>
               <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
                 Car overview
@@ -264,7 +240,7 @@ function BuyACarDetails() {
                     Engine displacement
                   </h1>
                   <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-1">
-                    1248 CC
+                     CC
                   </h1>
                 </div>
                 <div className="flex items-center gap-5 justify-between">
@@ -278,7 +254,7 @@ function BuyACarDetails() {
               </div>
             </div>
           </div>
-          <div className="specification border rounded-xl p-5 h-fit my-8">
+          <div className="specification border rounded-xl p-5 h-fit my-8 shadow-css">
             <div>
               <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
                 Specification
@@ -353,15 +329,15 @@ function BuyACarDetails() {
             </div>
             <div className="my-5">
               <div className="flex items-center gap-4">
-                <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-2">
+                <h1 className="text-[9px] md:text-lg font-normal font-Work-sans text-gray-2">
                   45000 KM
                 </h1>
                 <Svgs.GrayDot />
-                <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-2">
+                <h1 className="text-[9px] md:text-lg font-normal font-Work-sans text-gray-2">
                   2018 Model
                 </h1>
                 <Svgs.GrayDot />
-                <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-2">
+                <h1 className="text-[9px] md:text-lg font-normal font-Work-sans text-gray-2">
                   Automatic
                 </h1>
               </div>
@@ -391,11 +367,11 @@ function BuyACarDetails() {
               </button>
             </div>
             <div>
-              <div className="flex items-center gap-3">
-                <h1 className="lg:text-lg font-medium font-Work-sans text-gray-1">
+              <div className="flex items-center gap-3 ">
+                <h1 className=" text-[9px] lg:text-lg font-medium font-Work-sans text-gray-1">
                   EMI starts from - $270/Month.
                 </h1>
-                <button className="lg:text-lg font-medium font-Work-sans text-custom-blue underline">
+                <button className=" text-[9px] lg:text-lg font-medium font-Work-sans text-custom-blue underline">
                   Check details
                 </button>
               </div>
@@ -420,14 +396,14 @@ function BuyACarDetails() {
               </div>
             </div>
           </div>
-          <div className="border rounded-xl p-5 my-5">
+          <div className="border rounded-xl p-5 my-5 shadow-css">
             <div>
               <h1 className="text-lg lg:text-[32px] font-bold font-inter text-gray-1">
                 EMI Calculator
               </h1>
             </div>
             <div className="my-10">
-              <h1 className="text-lg font-normal font-Work-sans text-gray-2">
+              <h1 className=" text-xs lg:text-lg font-normal font-Work-sans text-gray-2">
                 Avail upto 100% of the car value in finance at attractive
                 interest rates
               </h1>
@@ -492,7 +468,7 @@ function BuyACarDetails() {
                 Your monthly EMI
               </h1>
             </div>
-            <div className="flex items-center justify-center ml-20">
+            <div className="flex items-center justify-center ml-32 lg:ml-20">
               <h1 className="lg:text-2xl font-semibold font-inter text-custom-blue">
                 View breakup
               </h1>
@@ -503,10 +479,10 @@ function BuyACarDetails() {
               </h1>
             </div>
             <div className="flex items-center gap-3 my-5">
-              <h1 className="lg:text-lg font-medium font-Work-sans text-gray-1">
+              <h1 className=" text-[9px] lg:text-lg font-medium font-Work-sans text-gray-1">
                 EMI starts from - $270/Month.
               </h1>
-              <button className="lg:text-lg font-medium font-Work-sans text-custom-blue underline">
+              <button className=" text-[9px] lg:text-lg font-medium font-Work-sans text-custom-blue underline">
                 Check details
               </button>
             </div>
@@ -518,104 +494,6 @@ function BuyACarDetails() {
           </div>
         </div>
       </div>
-      {/* <div className="banner">
-        <img src={banner} className="w-full" alt="Banner" />
-      </div>
-
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className="w-[90vw] lg:w-[80vw] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
-            <div className="first w-full lg:w-[35%]">
-              <div>
-                <img src={quickBidLogo} alt="Quick Bid Logo" />
-              </div>
-              <div>
-                <p className="text-base lg:text-lg font-normal font-Work-sans text-gray-800 py-5 lg:py-10">
-                  But who has any right to find fault with a man who chooses to
-                  enjoy a pleasure that has no annoying consequences.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <img src={facebook} alt="Facebook" />
-                </div>
-                <div>
-                  <img src={twitter} alt="Twitter" />
-                </div>
-                <div>
-                  <img src={tiktok} alt="TikTok" />
-                </div>
-                <div>
-                  <img src={youtube} alt="YouTube" />
-                </div>
-              </div>
-            </div>
-            <div className="second w-full lg:w-[15%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Our Services
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3
-                  onClick={() => handleClick("home")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Home
-                </h3>
-                <h3
-                  onClick={() => bidsClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Bids
-                </h3>
-                <h3
-                  onClick={() => investmentClick()}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Investments
-                </h3>
-                <h3
-                  onClick={() => handleClick("about")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  About us
-                </h3>
-                <h3
-                  onClick={() => handleClick("home")}
-                  className="text-base lg:text-lg font-normal font-Work-sans cursor-pointer"
-                >
-                  Contact us
-                </h3>
-              </div>
-            </div>
-            <div className="third w-full lg:w-[35%]">
-              <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-800">
-                  Contact
-                </h1>
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  +012-334-5864
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  info.alva@example.com
-                </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
-                  2048 Wexford Way Wings SC 287290
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="companyName h-[100px] bg-[#4f4f4f] flex items-center justify-center">
-        <h1 className="text-white font-medium text-sm font-Work-sans">
-          © 2022 wheeldealhub. All Rights Reserved
-        </h1>
-      </div> */}
       <Banner />
     </>
   );

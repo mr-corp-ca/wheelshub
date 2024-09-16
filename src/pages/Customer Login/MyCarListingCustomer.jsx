@@ -44,11 +44,11 @@ function MyCarListingCustomer() {
                     </button>
                   </div>
         </div>
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {
             cars.map((value, index) => {
               return (
-                <div key={index} className="card border rounded-2xl flex flex-col gap-4 ">
+                <div key={index} className="card border rounded-2xl flex flex-col gap-4 shadow-css">
                   <div>
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>

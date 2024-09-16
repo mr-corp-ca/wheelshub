@@ -17,7 +17,8 @@ import StarImage from "../../assets/images/starGroup.png";
 import { useState } from 'react';
 import Banner from "../../components/Banner";
 import Svgs from '../../assets/svgs/index.js'
-
+import SkeletonBuyACarDetail from "../../components/Skeleton/SkeletonBuyACarDetail.js";
+import { useEffect } from "react";
 
 
 function DealerDetails() {
@@ -48,15 +49,35 @@ function DealerDetails() {
           : [...prevSelectedHearts, index] // Select the heart
     );
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
       <Navbar2 active={'Buy-A-Car'}/>
       <div className="grid grid-cols-1 lg:grid-cols-12 p-5 lg:p-10 gap-5 lg:gap-10">
+        {isLoading?(
+          <>
+          <div className="col-span-12 lg:col-span-6">
+          {Array(1).fill().map(()=>(
+            <>
+            <SkeletonBuyACarDetail height={510}/>
+            </>
+          ))}
+          </div>
+          </>
+        ):(
         <div className="col-span-12 lg:col-span-6">
           <img src={usedCarsImage} className="w-full" alt="Used Cars" />
         </div>
+        )}
         <div className="col-span-12 lg:col-span-6">
-          <div className="border rounded-xl p-5">
+          <div className="border rounded-xl p-5 shadow-css">
             <div className="flex items-center justify-between">
               <h1 className="text-2xl lg:text-[32px] font-bold font-inter text-gray-1">
                 Surrey car dealers
@@ -113,7 +134,7 @@ function DealerDetails() {
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-5 my-5 mx-5">
-        <div className="border shadow rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
+        <div className="border shadow-css rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
           <div>
             <Svgs.Phone_Call/>
           </div>
@@ -123,7 +144,7 @@ function DealerDetails() {
             </h1>
           </div>
         </div>
-        <div className="border shadow rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
+        <div className="border shadow-css rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
           <div>
             <Svgs.Location/>
           </div>
@@ -133,7 +154,7 @@ function DealerDetails() {
             </h1>
           </div>
         </div>
-        <div className="border shadow rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
+        <div className="border shadow-css rounded-xl px-10 py-5 w-full md:w-auto flex items-center justify-center flex-col gap-4 h-[128px]">
           <div>
             <Svgs.Mail/>
           </div>
@@ -240,8 +261,8 @@ function DealerDetails() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="text-center py-10">
-          <button className="border text-custom-blue border-custom-blue rounded-xl w-[160px] px-[24px] py-[14px] text-base font-medium font-poppins hover:bg-custom-blue hover:text-white">
+        <div className="text-center py-10 flex items-center justify-center">
+          <button className="border h-[52px] flex items-center justify-center text-gray-1 border-gray-1 rounded-xl w-[117px]  py-[15px] text-lg font-medium font-Work-sans hover:transition-all hover:scale-105 active:scale-95">
             View all
           </button>
         </div>

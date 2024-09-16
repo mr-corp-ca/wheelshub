@@ -239,7 +239,7 @@ export default function Mechanic() {
               </h1>
             </div>
 
-            <div className="flex items-center flex-wrap gap-5 pt-10 pb-5">
+            <div className="flex items-center flex-wrap gap-5 pt-10">
             {btnData.map((v, i) => (
               <button
                 key={i}
@@ -264,12 +264,12 @@ export default function Mechanic() {
               ))}
             </div>
             </>):(<>
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 2xl:gap-x-[50px] 2xl:gap-y-6 mt-12">
               {cardsData.map((value, index) => {
                 return (
                   <div
                     key={index}
-                    className="card border rounded-2xl flex flex-col gap-4"
+                    className="card border rounded-2xl flex flex-col gap-4 shadow-css"
                   >
                     <div
                       className={` h-[212px] rounded-t-2xl flex items-center justify-center ${value.background}`}

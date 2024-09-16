@@ -97,7 +97,7 @@ function MyCarListingDetails() {
           </div>
         </div>
         <div className="rightpart col-span-12 lg:col-span-6">
-          <div className="border rounded-xl p-5 ">
+          <div className="border rounded-xl p-5 shadow-css">
             <div>
               <h1 className=" text-[32px] font-bold font-inter text-gray-1">
                 Verifications

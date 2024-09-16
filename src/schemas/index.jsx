@@ -63,13 +63,13 @@ const sellCarForm = yup.object().shape({
     .required('Please enter your email'),
     number: yup
     .string()
-    .required('please enter your number'),
+    .required('Please enter your number'),
     city: yup
     .string()
-    .required('please enter your city'),
+    .required('Please enter your city'),
     street_address: yup
     .string()
-    .required('please enter your address')
+    .required('Please enter your address')
 })
 
 export { sellCarForm, signInSchema, signUpSchema };

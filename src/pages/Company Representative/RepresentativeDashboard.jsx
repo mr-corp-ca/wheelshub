@@ -1,12 +1,23 @@
 import React from "react";
-
+import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import manincar from "../../assets/images/manincar.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useState, useEffect } from "react";
+
 function RepresentativeDashboard() {
   const navigate = useNavigate()
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -21,7 +32,19 @@ function RepresentativeDashboard() {
                 View all
               </button>
             </div>
-            {Array(2)
+            {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(2)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -53,6 +76,9 @@ function RepresentativeDashboard() {
                   </div>
                 </div>
               ))}
+                </>
+              )}
+           
           </div>
           <div className="payments col-span-12 lg:col-span-5 ">
             <div className="flex items-center justify-start">
@@ -60,7 +86,19 @@ function RepresentativeDashboard() {
               Insurance policy verifications
               </h1>
             </div>
-            {Array(2)
+            {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(2)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -84,6 +122,9 @@ function RepresentativeDashboard() {
                   </div>
                 </div>
               ))}
+                </>
+              )}
+           
           </div>
           <div className="col-span-12 lg:col-span-7">
           <div className="heading flex items-center justify-between">

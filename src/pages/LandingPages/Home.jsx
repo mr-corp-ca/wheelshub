@@ -41,7 +41,7 @@ function Home() {
     {
       icnos: <Svgs.SellYourCarIcon />,
       heading: "Sell your car",
-      paragraph: "you can sell your car efficiently and profitably on WDH. ",
+      paragraph: "You can sell your car efficiently and profitably on WDH. ",
     },
   ];
 
@@ -122,24 +122,24 @@ function Home() {
           alt=""
         />
         <div className=" py-8">
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="md:w-[90%] text-center lg:text-left">
-              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
+          <div className="flex flex-col lg:flex-row items-center justify-center">
+            <div className=" w-full md:w-[90%] text-center lg:text-left">
+              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  lg:background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className=" px-2 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2  md:w-[68%]">
+              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  lg:w-[68%] ">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
                 and experience hassle-free transactions with verified dealers
                 and secure payments.
               </p>
-              <div className="flex flex-wrap items-center gap-5 px-20">
+              <div className="flex lg:justify-start justify-center items-center gap-5 px-2 lg:pl-20">
                 <button
                   onClick={() => {
                     navigate("/sellyourcar");
                   }}
-                  className=" w-[164px] h-[52px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
+                  className="  w-[164px] h-[52px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
                 >
                   Sell now
                 </button>
@@ -153,7 +153,7 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div className="lg:w-1/2 mt-8 lg:mt-10 mx-auto">
+            <div className="lg:w-1/2 mt-8 lg:mt-10 mx-auto lg:block hidden">
               <img
                 src={carImage}
                 alt="Car"
@@ -164,8 +164,8 @@ function Home() {
         </div>
       </div>
       <div className="w-[90%] mx-auto my-10 ">
-        <div className="">
-        <div className="flex flex-wrap items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
+        <div className="overflow-x-scroll scrollbar-none">
+        <div className="flex items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
           <button
             onClick={() => {
               handleClick(1);
@@ -255,7 +255,7 @@ function Home() {
         </div>
         </div>
         <div className="border rounded-xl rounded-tl-none py-10 shadow-2xl shadow-[#eef6fd] backdrop-blur-3xl">
-          <div>
+          <div className=" px-4">
             <h1 className="text-[24px] md:text-[36px] font-semibold font-inter text-gray-1 text-center">
               Sell Car instantly on Wheeldealhub from Home
             </h1>
@@ -318,7 +318,7 @@ function Home() {
             </div>
             {keyBenefits.map((value, index) => (
               <div className="flex flex-col lg:flex-row items-start my-[40px] gap-7" key={index}>
-                <div className="bg-[#f4faff] shadow-2xl shadow-[#dee9f4]  p-[30px]  rounded-[24px] border border-gray-5 flex items-center justify-center">
+                <div className="bg-[#f4faff] shadow-2xl shadow-[#53a6ee5d]  p-[30px]  rounded-[24px] border border-gray-5 flex items-center justify-center">
                   <span className=" ">{value.icons}</span>
                 </div>
                 <div>
@@ -363,8 +363,8 @@ function Home() {
             Explore nearby location
           </h1>
         </div>
-        <div className="my-16 backdrop-blur-3xl">
-          <div className="flex flex-wrap items-center justify-center md:justify-start w-full md:w-fit rounded-t-[24px]">
+        <div className="my-16 backdrop-blur-3xl overflow-x-scroll  scrollbar-none">
+          <div className="flex items-center justify-start w-full md:w-fit rounded-t-[24px] scrollbar-none min-w-[1350px]">
             {[
               {
                 carname: "Sell",
@@ -433,7 +433,7 @@ function Home() {
                   buttonClick === index
                     ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue "
                     : ""
-                } flex items-center justify-center gap-[10px] text-sm md:text-lg font-medium font-Work-sans px-4 py-3 md:px-[20px] md:py-[30px] w-[200px] h-[84px] ${car.border_r} ${car.border_radius} border`}
+                } flex items-center justify-center gap-[10px] text-sm md:text-lg font-medium font-Work-sans py-3 px-[20px] md:py-[30px] w-[200px] h-[84px] ${car.border_r} ${car.border_radius} border`}
               >
                 <span>{car.svgs}</span>
                 {car.carname}
@@ -499,7 +499,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-3xl ">
+                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-[#0086fb72] shadow-2xl ">
                       View Details
                     </button>
                   </div>

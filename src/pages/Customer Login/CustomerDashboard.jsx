@@ -55,7 +55,7 @@ function CustomerDashboard() {
           <div className='preference'>
             <h1 className='text-xl font-semibold font-inter text-gray-1'>My preferences</h1>
           </div>
-          <div className='border rounded-xl my-5 px-3'>
+          <div className='border rounded-xl my-5 px-3 shadow-css'>
             <div className='py-5'>
               <label htmlFor="carMake" className='block text-base font-medium font-inter text-gray-1'>Select car make</label>
               <select id="carMake" className='w-full px-4 py-3 rounded-xl border outline-none text-base font-medium font-inter text-gray-1 mt-2 bg-[#fafafa]'>
@@ -86,7 +86,7 @@ function CustomerDashboard() {
               <h1 className="lg:text-xl font-semibold font-inter text-[#161616]">Recent Orders</h1>
               <button className="text-base font-medium font-inter text-custom-blue">View all</button>
             </div>
-            <div className='border rounded-xl p-5 my-5'>
+            <div className='border rounded-xl p-5 my-5 shadow-css'>
               <div className='flex items-center gap-2 py-5'>
                 <img src={markIcon} alt="Icon" />
                 <h1 className='text-base font-semibold font-inter text-gray-1'>Car handover</h1>

@@ -5,6 +5,9 @@ import Banner from "../../components/Banner";
 import Svgs from '../../assets/svgs/index.js'
 import { useState } from "react";
 import { Input } from "../../components/Input";
+import { useEffect } from "react";
+import Skeleton_Find_Mechanic from "../../components/Skeleton/Skeleton_Find_Mechanic.js";
+
 
 export default function FinanceLandingPage() {
 
@@ -38,12 +41,21 @@ export default function FinanceLandingPage() {
     },
   ];
 
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
       <Navbar2 active={"Finance-Page"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[30%] p-4 lg:pl-16 lg:pt-10">
+        <div className="sidebar lg:w-[25%] p-4 lg:pl-10 lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
           <Svgs.Filter_Icon/>
@@ -56,7 +68,7 @@ export default function FinanceLandingPage() {
             <Input
               type="text"
               placeholder="Search here"
-              className="ml-2 w-full border-none focus:outline-none bg-gray-5"
+              className="w-full border focus:outline-none bg-[#fafafa]"
             />
           </div>
           <div className="mt-5">
@@ -110,7 +122,7 @@ export default function FinanceLandingPage() {
                 {/* Accordion Content */}
                 {openIndex && (
                   <div className={`pt-5 ${openIndex? 'transition-all duration-700 ease-in-out':'transition-all duration-700 ease-in-out'}`}>
-                    <Input placeholder={"Type Location"} />
+                    <Input placeholder={"Type Location"} className={'bg-[#fafafa]'}/>
                   </div>
                 )}
               </div>
@@ -208,6 +220,14 @@ export default function FinanceLandingPage() {
             ))}
             </div>
 
+            {isLoading? (
+              <>
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {Array(15).fill().map(()=>(
+                <Skeleton_Find_Mechanic/>
+              ))}
+            </div>
+            </>):(<>
             <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {Array(6)
                 .fill()
@@ -267,6 +287,7 @@ export default function FinanceLandingPage() {
                   );
                 })}
             </div>
+            </>)}
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
             <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800">

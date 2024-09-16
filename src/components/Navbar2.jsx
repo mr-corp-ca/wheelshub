@@ -160,13 +160,16 @@ function Navbar2({active}) {
                 <div className='flex flex-row gap-[20px] items-center justify-center'>
                   <OutlineButton
                     onClick={() => navigate("/login")}
-                    className={"!text-base h-[52px] shadow-2xl shadow-custom-blue"}
+                    className={"!text-base h-[52px] shadow-2xl shadow-[#0086fb48] font-medium "}
                     customPadding={" px-6 py-3 "}
-                    title={"Log in"} />
+                    title={"Log in"} 
+                    customfont={'font-Work-sans'}
+                    />
+                    
                   <Button
                     onClick={() => navigate("/signup")}
-                    title={"Create a account"}
-                    className={"!min-w-max !px-6 !py-4 h-[52px] shadow-3xl shadow-custom-blue"} />
+                    title={"Create an Account"}
+                    className={"!min-w-max !px-6 !py-4 h-[52px] shadow-3xl shadow-[#0086fb48] font-medium font-Work-sans"} />
                 </div>
                 </>
               )
@@ -175,14 +178,14 @@ function Navbar2({active}) {
           </div>
 
 
-          <div className='lg:hidden flex items-center '>
+          <div className='lg:hidden flex items-center'>
             <button onClick={toggleMenu}>
               <img src={menuIcon} alt='Menu Icon' />
             </button>
           </div>
         </div>
         {isOpen && (
-          <div className='lg:hidden'>
+          <div className='lg:hidden '>
             <ul className='flex flex-col items-center gap-5 py-2'>
             {navbarData.map((value,index)=>(
               <li key={index} onClick={() => handleNavigate(value.navigate)} className={`xl:text-lg font-normal font-Work-sans cursor-pointer ${value.active === true ? ' text-custom-blue' : ' text-gray-1'}`}>{value.name}</li>
@@ -200,16 +203,19 @@ function Navbar2({active}) {
                 </div>
               </div>
               )  : (
-                <div className='flex flex-row gap-5 items-center justify-center'>
+                <div className='flex flex-row gap-5 items-center justify-center my-4'>
                 <OutlineButton
                   onClick={() => navigate("/login")}
-                  className={"!text-base"}
+                  className={"!text-base font-medium h-[52px]"}
                   customPadding={" px-6 py-3 "}
-                  title={"Log in"} />
+                  title={"Log in"}
+                  customfont={'font-Work-sans'}
+                  />
+
                 <Button
                   onClick={() => navigate("/signup")}
-                  title={"Create a account"}
-                  className={"!min-w-max !px-6 !py-4"} />
+                  title={"Create an Account"}
+                  className={"!min-w-max !px-6 !py-4 font-Work-sans font-medium h-[52px]"} />
               </div>
               )
             }

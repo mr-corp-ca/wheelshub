@@ -42,7 +42,7 @@ function SellCarForm() {
   return (
     <>
       <Navbar2 />
-      <div className="firstpart bg-[#f3f3f3] h-fit pb-32 md:py-32 ">
+      <div className="firstpart bg-[#f3f3f3] h-fit pb-32 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12   w-full xl:w-[1170px] mx-auto ">
           <div className="md:col-span-6 mx-5 xl:mx-0">
             <h1 className="text-[25px] lg:text-[48px] font-bold font-inter text-gray-800 pt-8">
@@ -74,16 +74,16 @@ function SellCarForm() {
           </div>
         </div>
       </div>
-      <div className="bg-white flex justify-center mx-2 xl:mx-0">
-        <div className="details border bg-white rounded-[16px] w-full xl:w-[1170px] mx-auto py-10 px-5 lg:px-32 -mt-32 mb-20">
+      <div className="bg-white flex justify-center mx-2 xl:mx-0 ">
+        <div className="details border shadow-css bg-white rounded-[16px] w-full xl:w-[1170px] mx-auto py-10 px-5 lg:px-32 -mt-32 mb-20">
           <div className="flex items-center justify-center">
             <h1 className="text-2xl md:text-3xl font-inter font-bold text-gray-800">
               Enter personal details
             </h1>
           </div>
           <form onSubmit={handleSubmit}>
-            <div className="mt-5">
-              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
+            <div className="mt-9">
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                 <div className="w-full">
                   <InputLogin
                   error={errors.name && touched.name}
@@ -112,7 +112,7 @@ function SellCarForm() {
                     )}
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 py-5">
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 py-4">
                 <div className="w-full">
                   <InputLogin
                   error={errors.number && touched.email}

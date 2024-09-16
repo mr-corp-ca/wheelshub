@@ -54,7 +54,7 @@ function Login() {
           setUser({ isLoggedIn: true, role: "INDIVIDUAL" });
           navigate('/customer/customer-dashboard')
         } else {
-          alert("Enter login type");
+          toast.error('Enter login type')
         }
       },
     });
@@ -74,7 +74,7 @@ function Login() {
             />
           </div>
         </div>
-        <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[60%] py-10 lg:py-20 px-4 lg:px-0">
+        <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[60%] py-10 lg:py-[116px] px-4 lg:px-0">
           <div>
             <div className="text-center">
               <h1 className="text-[24px] lg:text-[28px] font-bold font-inter text-gray-1">
@@ -123,7 +123,7 @@ function Login() {
                       type={"email"}
                       label={"Email or Mobile Number"}
                       placeholder={"Input your Email here"}
-                      className={"w-full sm:w-[350px]"}
+                      className={"w-full sm:w-[350px] bg-transparent"}
                     />
                     {touched.email && errors.email && (
                       <small className=" text-custom-red">{errors.email}</small>
@@ -163,7 +163,7 @@ function Login() {
                       </div>
                       <div>
                         <h1 className=" text-base font-normal font-inter text-gray-2">
-                          Forgot passwod?
+                          Forgot password?
                         </h1>
                       </div>
                     </div>
@@ -190,12 +190,15 @@ function Login() {
                     Login
                   </button>
                 </div>
-                <div className="mt-10 mb-5 text-center">
+               
+               
+              </form>
+              <div className=" mb-5 text-center">
                   <button className="text-base font-normal font-inter text-gray-1">
                     Login using
                   </button>
                 </div>
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-4 pt-4 pb-9">
                   <button className="text-base font-semibold font-inter text-gray-1 border rounded-xl w-full lg:w-[128px] h-[44px] flex items-center justify-center gap-3">
                     <span>
                       <img src={googleIcon} alt="Google Icon" />
@@ -220,7 +223,6 @@ function Login() {
                     Sign up now
                   </span>
                 </div>
-              </form>
             </div>
           </div>
         </div>

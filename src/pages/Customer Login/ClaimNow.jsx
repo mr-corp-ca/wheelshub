@@ -7,6 +7,8 @@ import photo from "../../assets/images/photo.png";
 import crossicon from "../../assets/images/crossIcon.png";
 import greentickrounded from "../../assets/images/roundedGreentick.png"
 import { useNavigate } from "react-router-dom";
+import Svgs from '../../assets/svgs/index.js'
+
 function ClaimNow({ show, onClose, hidden, hide }) {
   const navigate = useNavigate()
   const handleSubmit = (e) => {
@@ -50,7 +52,7 @@ function ClaimNow({ show, onClose, hidden, hide }) {
   if (!show) return null;
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="">
+      <div className="mx-3 overflow-y-auto h-[90vh] lg:h-full md:flex items-center justify-center ">
         <div ref={popupRef}>
           {/* <div>
             <img
@@ -62,16 +64,17 @@ function ClaimNow({ show, onClose, hidden, hide }) {
           </div> */}
           <div className="flex justify-between md:mb-6"></div>
           <form onSubmit={handleSubmit}>
-            <div className=" mx-auto p-10 bg-white shadow-lg rounded-xl border">
+            <div className=" mx-auto p-5 md:p-10 bg-white shadow-lg rounded-xl border">
               <div className={`${hidden}`}>
-              <h2 className="text-[28px] text-center font-bold font-inter text-gray-1 mb-4">
+              <h2 className=" lg:text-[28px] text-center font-bold font-inter text-gray-1 mb-4">
                 Reschedule mechanic appointment
               </h2>
-              <div className="flex flex-wrap justify-center my-10">
+              <div className="flex items-center flex-wrap justify-center my-10">
+                 <span className=" border border-gray-2 rounded-lg py-1 mx-2"><Svgs.ArrowLeft/></span>
                 {days.map((day) => (
                   <button
                     key={day}
-                    className={`p-2 m-1 rounded ${
+                    className={`p-2 m-1 rounded text-xs lg:text-lg font-medium font-Work-sans  ${
                       selectedDay === day
                         ? "bg-blue-500 text-white"
                         : "bg-gray-200"
@@ -81,12 +84,14 @@ function ClaimNow({ show, onClose, hidden, hide }) {
                     {day}
                   </button>
                 ))}
+                 <span className=" border border-gray-2 rounded-lg py-1 mx-2"><Svgs.ArrowRight/></span>
+                 <span className="ml-3 border rounded-lg p-4"><Svgs.CalendarIcon/></span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
                 {times.map((time) => (
                   <button
                     key={time}
-                    className={`p-2 rounded ${
+                    className={`p-2 rounded text-xs lg:text-lg font-medium font-Work-sans ${
                       selectedTime === time
                         ? "bg-blue-500 text-white"
                         : "bg-gray-200"
@@ -106,7 +111,7 @@ function ClaimNow({ show, onClose, hidden, hide }) {
               <div className=" flex items-center justify-center py-5">
                 <button
                   onClick={onClose}
-                  className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
+                  className=" py-[15px] px-[44px] bg-blue-500 text-white rounded-lg text-xs lg:text-lg font-medium font-Work-sans"
                 >
                   Update appointment
                 </button>

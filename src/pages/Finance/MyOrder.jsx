@@ -4,9 +4,22 @@ import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useState, useEffect } from "react";
+import SkeletonBuyACar from "../../components/Skeleton/SkeletonBuyACar";
+import SkeletonFinanceMyOrder from "../../components/Skeleton/SkeletonFinanceMyOrder";
+
 
 function MyOrder() {
   const navigate = useNavigate()
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
     <Layout active={'My orders'}>
@@ -16,6 +29,16 @@ function MyOrder() {
             New requests
           </h1>
         </div>
+        {isLoading ? (
+          <>
+          <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {Array(4).fill().map(()=>(
+            <SkeletonFinanceMyOrder/>
+          ))}
+          </div>
+          </>
+        ):(
+          <>
         <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Array(4)
             .fill()
@@ -53,6 +76,8 @@ function MyOrder() {
               );
             })}
         </div>
+          </>
+        )}
       </div>
       </Layout>
     </>

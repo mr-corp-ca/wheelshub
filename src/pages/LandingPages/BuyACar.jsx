@@ -77,7 +77,7 @@ export default function AccordionUsage() {
             <Input
               type="text"
               placeholder="Search here"
-              className="w-full border rounded-2xl focus:outline-none bg-[#fafafa]"
+              className="w-full border rounded-2xl focus:outline-none bg-[#fafafa] "
             />
           </div>
 
@@ -501,7 +501,7 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {location && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type location"} />
+                    <Input placeholder={"Type location"} className={'bg-[#fafafa]'}/>
                   </div>
                 )}
               </div>
@@ -554,7 +554,7 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {bodytype && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Body Type"} />
+                    <Input placeholder={"Body Type"} className={'bg-[#fafafa]'}/>
                   </div>
                 )}
               </div>
@@ -607,7 +607,7 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {ownershio && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type here"} />
+                    <Input placeholder={"Type here"} className={'bg-[#fafafa]'} />
                   </div>
                 )}
               </div>
@@ -660,7 +660,7 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {color && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type here"} />
+                    <Input placeholder={"Type here"} className={'bg-[#fafafa]'}/>
                   </div>
                 )}
               </div>
@@ -675,7 +675,7 @@ export default function AccordionUsage() {
             </h1>
           </div>
 
-          <div className="flex items-center flex-wrap gap-5 pt-10 my-7">
+          <div className="flex items-center flex-wrap gap-5 md:pt-10 my-7">
             {btnData.map((v, i) => (
               <button
                 key={i}
@@ -705,7 +705,7 @@ export default function AccordionUsage() {
             </>
           ) : (
             <>
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6">
               {Array(30)
                 .fill()
                 .map((_, index) => {

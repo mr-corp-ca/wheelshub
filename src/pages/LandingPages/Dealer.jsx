@@ -109,7 +109,7 @@ export default function Mechanic() {
             <Input
               type="text"
               placeholder="Search here"
-              className="ml-2 w-full border-none focus:outline-none bg-gray-5"
+              className="w-full border focus:outline-none bg-[#fafafa]"
             />
           </div>
           <div className="mt-5">
