@@ -6,6 +6,7 @@ import man3img from "../../assets/images/insuranceMan3.png"
 import documentIcon from "../../assets/images/system-uicons_document.png"
 import { useState } from 'react'
 import VerifiedSuccessful from './VerifiedSuccessful'
+import { Layout } from '../../components/Layout/DashboardLayout'
 
 function AppointmentsDetails() {
   const [showPopup, setShowPopup] = useState(false);
@@ -21,6 +22,7 @@ function AppointmentsDetails() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Appointments'}>
       <div className="">
         <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Insurance</h1>
       </div>
@@ -180,6 +182,7 @@ function AppointmentsDetails() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   )
 }

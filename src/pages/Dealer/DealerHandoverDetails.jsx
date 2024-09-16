@@ -14,6 +14,7 @@ import man3img from "../../assets/images/insuranceMan3.png";
 import maninsuit from "../../assets/images/mansuit.png";
 import greentick from "../../assets/images/greentick3.png";
 import goldstars from "../../assets/images/goldstars.png";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function DealerHandoverDetails() {
   const review = [
     {
@@ -32,6 +33,7 @@ function DealerHandoverDetails() {
   const navigate = useNavigate();
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className="flex gap-4 flex-col md:flex-row items-start md:items-center justify-between py-5">
         <div className="flex flex-col gap-4 col-span-7 lg:col-span-11">
           <div className="">
@@ -70,7 +72,7 @@ function DealerHandoverDetails() {
         <div>
           <button
             onClick={() => {
-              navigate("/dashboard/dealerverify");
+              navigate("/dealer/dealer-verify");
             }}
             className="w-[142px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue"
           >
@@ -295,6 +297,7 @@ function DealerHandoverDetails() {
           })}
         </div>
       </div>
+      </Layout>
     </>
   );
 }

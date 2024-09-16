@@ -5,10 +5,12 @@ import { Input } from "../../components/Input";
 import documentfile from "../../assets/images/document.png"
 import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function UploadDocuments() {
    const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Dashboard'}>
     <div className=" flex px-10 py-5">
     <div className="w-full lg:w-[80%]  border p-5 py-16 rounded-xl">
       <div className=" ">
@@ -62,6 +64,7 @@ function UploadDocuments() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   );
 }

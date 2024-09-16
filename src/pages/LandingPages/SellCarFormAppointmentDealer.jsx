@@ -1,27 +1,12 @@
 import React, { useState } from "react";
-import mansmiling from "../../assets/images/mansmiling.png";
 import greentick from "../../assets/images/tickofgreen.png";
-import { Input } from "../../components/Input";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import waveicon from "../../assets/images/Wave.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
-import mechanicImage from "../../assets/images/themechanic.png";
-import carmechanic from "../../assets/images/carmechanic.png";
-import hearticon from "../../assets/images/hearticon.png";
-import yellowstar from "../../assets/images/staryellow.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import checkboxpng from "../../assets/images/Checbox container (1).png";
 import calenderImg from "../../assets/images/calender.png";
 import { useNavigate } from "react-router-dom";
 import Navbar2 from "../../components/Navbar2";
 import back from "../../assets/images/back.png";
 import forw from "../../assets/images/forw.png";
-import calen from "../../assets/images/calen.png";
 import Banner from "../../components/Banner";
+import Svgs from '../../assets/svgs/index.js'
 
 function SellCarFormAppointmentDealer() {
   const navigate = useNavigate();
@@ -55,6 +40,10 @@ function SellCarFormAppointmentDealer() {
     "5:00-6:00 PM",
   ];
 
+  const handleNavigationClick=()=>(
+    navigate("/sellyourcar/appointment-payment-process"),
+    window.scrollTo({top:0})
+  )
   return (
     <>
       <Navbar2 />
@@ -66,19 +55,19 @@ function SellCarFormAppointmentDealer() {
             </h1>
             <div className="flex flex-col gap-4 mt-5 ">
               <div className="flex items-center gap-5">
-                <img src={greentick} alt="Green tick" />
+                <Svgs.GreenTickIcon/>
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
                   Flexible timings
                 </h1>
               </div>
               <div className="flex items-center gap-5">
-                <img src={greentick} alt="Green tick" />
+                <Svgs.GreenTickIcon/>
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
                   Minimized Wait Times
                 </h1>
               </div>
               <div className="flex items-center gap-5">
-                <img src={greentick} alt="Green tick" />
+                <Svgs.GreenTickIcon/>
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
                   Personalized Service
                 </h1>
@@ -94,8 +83,8 @@ function SellCarFormAppointmentDealer() {
         <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
           <div className=" flex items-center justify-center">
             <div className="  rounded-xl ">
-              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5">
-                Reschedule mechanic appointment
+              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5 px-10">
+              Select mechanic appointment time
               </h2>
               <div className="flex items-center flex-wrap justify-center my-7">
                 <img src={back} alt="" className=" cursor-pointer" />
@@ -113,7 +102,7 @@ function SellCarFormAppointmentDealer() {
                   </button>
                 ))}
                 <img src={forw} alt="" className=" cursor-pointer" />
-                
+                <span className="border rounded-[8px] p-4 ml-6"><Svgs.CalendarIcon/></span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 my-7 ">
                 {times.map((time) => (
@@ -138,8 +127,8 @@ function SellCarFormAppointmentDealer() {
               </div>
               <div className=" flex items-center justify-center">
                 <button
-                  onClick={() =>
-                    navigate("/sellyourcar/appointmentPaymentProcess")
+                  onClick={
+                    handleNavigationClick
                   }
                   className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
                 >

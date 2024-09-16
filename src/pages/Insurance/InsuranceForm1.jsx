@@ -3,10 +3,15 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
+
+
+
 function InsuranceForm1() {
   const navigate = useNavigate()
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5 ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
       </div>
@@ -20,7 +25,7 @@ function InsuranceForm1() {
         </div>
       </div>
       <div className=" my-5">
-        <div className=" w-full lg:w-[90%] border p-5 rounded-xl">
+        <div className=" w-full lg:w-[90%] border py-16 rounded-2xl shadow-css">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">
@@ -28,15 +33,15 @@ function InsuranceForm1() {
               </h1>
             </div>
           </div>
-          <div className="pt-3">
-            <form className="space-y-8">
+          <div className="pt-12">
+            <form className="">
               <div className="space-y-5 lg:px-20">
-                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
+                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full">
-                    <Input label={"Insurance agent"} placeholder={"Type here"} />
+                    <Input label={"Insurance agent"} placeholder={"Type here"} className={'bg-[#fafafa]'}/>
                   </div>
                   <div className="w-full">
-                    <Input label={"Insurance price"} placeholder={"Type here"} />
+                    <Input label={"Insurance price"} placeholder={"Type here"}  className={'bg-[#fafafa]'}/>
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -45,34 +50,36 @@ function InsuranceForm1() {
                       type={"number"}
                       label={"Insurance start date"}
                       placeholder={"Type here"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                   <div className="w-full">
-                    <Input label={"Insurance end date"} placeholder={"Type here"} />
+                    <Input label={"Insurance end date"} placeholder={"Type here"} className={'bg-[#fafafa]'}/>
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full">
-                    <Input label={"Customer name"} placeholder={"Type here"} />
+                    <Input label={"Customer name"} placeholder={"Type here"} className={'bg-[#fafafa]'}/>
                   </div>
                   <div className="w-full">
                     <Input
                       label={"Representative name"}
                       placeholder={"Type here"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full lg:w-1/2">
-                    <Input label={"Coupon code"} placeholder={"Type here"} />
+                    <Input label={"Coupon code"} placeholder={"Type here"} className={'bg-[#fafafa]'}/>
                   </div>
 
                 </div>
               </div>
 
-              <div className="w-full text-center flex items-center justify-center">
+              <div className="w-full text-center flex items-center justify-center mt-12">
                 <button
-                  onClick={() => { navigate("/dashboard/insuranceform2") }}
+                  onClick={() => { navigate("/insurance/insurance-form2") }}
                   className={
                     " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                   }
@@ -85,6 +92,7 @@ function InsuranceForm1() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

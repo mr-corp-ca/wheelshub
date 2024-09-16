@@ -6,6 +6,7 @@ import Navbar2 from "../../components/Navbar2";
 import back from "../../assets/images/back.png";
 import forw from "../../assets/images/forw.png";
 import Banner from "../../components/Banner";
+import Svgs from '../../assets/svgs/index.js'
 
 function SellCarFormAppointmentTime() {
   const navigate = useNavigate();
@@ -25,13 +26,20 @@ function SellCarFormAppointmentTime() {
     "5:00-6:00 PM",
   ];
 
+  const handleClick=()=>{
+    navigate("/sellyourcar/find-dealer")
+    window.scrollTo({
+      top: 0,
+       // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling
+    });
+  }
   return (
     <>
       <Navbar2 />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full xl:w-[1170px] mx-auto px-5 xl:px-0 lg:pt-20">
           <div className="md:col-span-9 ">
-            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 w-[90%]">
               Book a Convenient Time with Your Mechanic
             </h1>
             <div className="flex flex-col gap-4 mt-5 ">
@@ -61,11 +69,11 @@ function SellCarFormAppointmentTime() {
         </div>
       </div>
       <div className="cardpart flex justify-center bg-white mx-5">
-        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 px-5 md:px-16">
+        <div className=" mb-16 -mt-16 w-full xl:w-[1170px] mx-auto bg-white border rounded-[16px] shadow py-10 px-5 md:px-16">
           <div className=" flex items-center justify-center">
             <div className="  rounded-xl ">
-              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5">
-                Reschedule mechanic appointment
+              <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5 px-8">
+              Select mechanic appointment time
               </h2>
               <div className="flex items-center flex-wrap justify-center my-7">
                 <img src={back} alt="" className=" cursor-pointer" />
@@ -83,7 +91,7 @@ function SellCarFormAppointmentTime() {
                   </button>
                 ))}
                 <img src={forw} alt="" className=" cursor-pointer" />
-                
+                <span className="border rounded-[8px] p-4 ml-6"><Svgs.CalendarIcon/></span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 my-7 ">
                 {times.map((time) => (
@@ -108,8 +116,8 @@ function SellCarFormAppointmentTime() {
               </div>
               <div className=" flex items-center justify-center">
                 <button
-                  onClick={() =>
-                    navigate("/sellyourcar/findDealer")
+                  onClick={
+                    handleClick
                   }
                   className="w-1/2 py-2 bg-blue-500 text-white rounded-lg"
                 >

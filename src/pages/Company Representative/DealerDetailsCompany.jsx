@@ -14,6 +14,7 @@ import maninsuit from "../../assets/images/mansuit.png"
 import greentick from "../../assets/images/greentick3.png"
 import VerifiedSuccessful from './VerifiedSuccessful'
 import { useState } from 'react'
+import { Layout } from '../../components/Layout/DashboardLayout'
 function DealerDetailsCompany() {
     const navigate = useNavigate()
 
@@ -28,6 +29,7 @@ function DealerDetailsCompany() {
     };
   return (
     <>
+    <Layout active={'Appointments'}>
      <div className="">
         <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Dashboard</h1>
       </div>
@@ -264,6 +266,7 @@ function DealerDetailsCompany() {
             </div>
           </div>
       </div>
+      </Layout>
     </>
   )
 }

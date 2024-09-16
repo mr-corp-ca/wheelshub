@@ -3,10 +3,12 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function InsuranceFormCompany() {
   const navigate = useNavigate();
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5 ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -40,7 +42,7 @@ function InsuranceFormCompany() {
         </div>
       </div>
       <div className=" my-5">
-        <div className=" w-full lg:w-[90%] border p-5 rounded-xl">
+        <div className=" w-full lg:w-[90%] border py-16 rounded-2xl bg-white shadow-css">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">
@@ -48,17 +50,18 @@ function InsuranceFormCompany() {
               </h1>
             </div>
           </div>
-          <div className="pt-3">
+          <div className="pt-12">
             <form className="space-y-8">
               <div className="space-y-5 lg:px-20">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full">
-                    <Input label={"Business name"} placeholder={"Type here"} />
+                    <Input label={"Business name"} placeholder={"Enter business name"} className={'bg-[#fafafa]'}/>
                   </div>
                   <div className="w-full">
                     <Input
                       label={"Business registration year "}
-                      placeholder={"Type here"}
+                      placeholder={"Enter registration year"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                 </div>
@@ -67,24 +70,27 @@ function InsuranceFormCompany() {
                     <Input
                       type={"number"}
                       label={"Business owner name"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter owner’s name"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                   <div className="w-full">
-                    <Input label={"Employees"} placeholder={"Type here"} />
+                    <Input label={"Employees"} placeholder={"Enter number of employees"} className={'bg-[#fafafa]'}/>
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                   <div className="w-full">
                     <Input
                       label={"Business contact number"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter contact number"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                   <div className="w-full">
                     <Input
                       label={"Official email id"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter official email"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                 </div>
@@ -92,13 +98,15 @@ function InsuranceFormCompany() {
                   <div className="w-full lg:w-1/2">
                     <Input
                       label={"Business address line 1"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter address line 1"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                   <div className="w-full lg:w-1/2">
                     <Input
                       label={"Business address line 2"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter address line 2 (optional)"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                 </div>
@@ -106,14 +114,20 @@ function InsuranceFormCompany() {
                   <div className="w-full lg:w-1/2">
                     <Input
                       label={"City"}
-                      placeholder={"Type here"}
+                      placeholder={"Enter city"}
+                      className={'bg-[#fafafa]'}
                     />
                   </div>
                   <div className="w-full lg:w-1/2">
-                    <Input
-                      label={"Province"}
-                      placeholder={"Type here"}
-                    />
+                  <label htmlFor="" className=" text-base font-medium font-inter text-gray-1">Province</label>
+                  <div className="flex items-center h-[44px] bg-[#fafafa] border rounded-lg mt-2 px-4">
+                  <select name="" id="" className="w-full  bg-transparent border-none outline-none text-base font-normal font-inter text-gray-1">
+                    <option value="">Select</option>
+                    <option value="">Punjab</option>
+                    <option value="">Sindh</option>
+                  </select>
+                  </div>
+                
                   </div>
                 </div>
               </div>
@@ -121,7 +135,7 @@ function InsuranceFormCompany() {
               <div className="w-full text-center flex items-center justify-center">
                 <button
                   onClick={() => {
-                    navigate("/dashboard/uploaddocumentscompany");
+                    navigate("/representative/upload-documents-company");
                   }}
                   className={
                     "h-[52px] flex justify-center hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-custom-blue text-lg rounded-xl px-[44px] py-[15.5px] font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
@@ -135,6 +149,7 @@ function InsuranceFormCompany() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

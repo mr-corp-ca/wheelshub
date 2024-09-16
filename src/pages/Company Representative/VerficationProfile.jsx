@@ -2,10 +2,12 @@ import React from "react";
 import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function VerficationProfile() {
   return (
     <>
+    <Layout active={'Dashboard'}>
     <div className=" flex items-center justify-center">
     <div className="w-[80%] border p-5 rounded-xl">
       <div className=" ">
@@ -88,6 +90,7 @@ function VerficationProfile() {
       </div>
       </div>
       </div>
+      </Layout>
     </>
   );
 }

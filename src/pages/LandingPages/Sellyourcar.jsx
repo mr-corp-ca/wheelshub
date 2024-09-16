@@ -43,31 +43,19 @@
 // export default Sellyourcar
 
 import React from "react";
-import manimage from "../../assets/images/manwithfinger.png";
-import yellowtick from "../../assets/images/yellowticke.png";
 import wheeldealimg from "../../assets/images/wheeldeal.png";
-import radio from "../../assets/images/Shape (1).png";
-import radio2 from "../../assets/images/Shape (2).png";
 import greenticke from "../../assets/images/greeticke.png";
 import teamicon from "../../assets/images/teamwork 1.png";
 import Navbar2 from "../../components/Navbar2";
-import { Button } from "../../components/Button";
 import { useNavigate } from "react-router-dom";
-import mansmiling from "../../assets/images/mansmiling.png";
 import greentick from "../../assets/images/tickofgreen.png";
-import { Input } from "@headlessui/react";
-import banner from "../../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../../assets/images/facebook.png";
-import tiktok from "../../assets/images/tiktok.png";
-import youtube from "../../assets/images/youtube.png";
-import twitter from "../../assets/images/twitter.png";
-import waveicon from "../../assets/images/Wave.png";
-import quickBidLogo from "../../assets/images/quickbider logo png 2.png";
 import { useState } from "react";
 import { useLoginContext } from "../../Context/LoginContext";
 import { useRoleContext } from "../../Context/RoleContext";
 import modeldesgin from "../../assets/images/manwithfinger.png";
 import Banner from "../../components/Banner";
+import Svgs from '../../assets/svgs/index.js'
+
 
 function Sellyourcar() {
   const navigate = useNavigate();
@@ -105,7 +93,7 @@ function Sellyourcar() {
 
   return (
     <>
-      <Navbar2 />
+      <Navbar2 active={'Sell-A-Car'} />
       <div className="mainpart">
         {/* <div className="firstpart h-fit bg-[#f3f3f3] py-44">
           <div className="w-[70%] mx-auto px-4 ">
@@ -150,18 +138,18 @@ function Sellyourcar() {
          
         </div> */}
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
-          <div className=" items-center  grid lg:grid-cols-12">
-            <div className=" font-Work-sans w-full px-[24px] lg:px-0   flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative lg:left-[30px] xl:left-[120px] ">
-              <div className="lg:text-[48px] text-[25px] text-[#333333] lg:w-[821px] font-bold w-full">
-                <h6 className="font-inter">Sell Car instantly on Wheeldeal hub from Home</h6>
+          <div className="lg:px-7 xl:px-0 items-center  grid lg:grid-cols-12 w-[95%] lg:w-[1170px]">
+            <div className=" flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative ">
+              <div className=" text-center md:text-start sm:text-[48px] text-[20px] text-[#333333] lg:w-[800px] xl:w-[821px] font-bold w-full font-inter">
+                <h6>Sell Car instantly on Wheeldeal hub from Home</h6>
               </div>
-              <div className="flex flex-col gap-[24px] ">
+              <div className="flex flex-col items-center md:items-start gap-[24px] ">
                 <div className="flex gap-[24px]">
                   <div>
-                    <img src={greentick} alt="" />
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
-                    <h6 className="lg:text-[18px] font-medium font-Work-sans">
+                    <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
                       Higher profits
                     </h6>
                   </div>
@@ -169,22 +157,22 @@ function Sellyourcar() {
 
                 <div className="flex gap-[24px]">
                   <div>
-                    <img src={greentick} alt="" />
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
-                    <h6 className="lg:text-[18px] font-medium">
-                      Higher profits
+                    <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
+                      Easy process
                     </h6>
                   </div>
                 </div>
 
                 <div className="flex gap-[24px]">
                   <div>
-                    <img src={greentick} alt="" />
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
-                    <h6 className="lg:text-[18px] font-medium">
-                      Higher profits
+                    <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
+                      100% Trusted
                     </h6>
                   </div>
                 </div>
@@ -192,26 +180,26 @@ function Sellyourcar() {
             </div>
 
             {/* 2nd div from images */}
-            <div className="hidden lg:block col-span-4   relative xl:right-[50px] lg:right-[20px]">
+            <div className="hidden lg:block col-span-4   relative ">
               <img src={modeldesgin} alt="" />
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-xl my-14 py-10 px-5 border z-30 w-[90%] lg:max-w-[1200px] mx-auto -mt-32">
-          <div className="flex items-center justify-center">
+        <div className="bg-white shadow-css rounded-[16px] my-14 py-10 px-5 border z-30 w-[95%] lg:max-w-[1170px] mx-auto -mt-32">
+          <div className="flex items-center justify-center text-center md:text-start">
             <h1 className="text-lg md:text-2xl lg:text-3xl font-semibold font-inter text-gray-1">
-              Where do you want to sell your car?
+              Where do you want to sell your car??
             </h1>
           </div>
-          <div className="py-10 flex flex-col md:flex-row items-center justify-center gap-10">
+          <div className="py-10 flex flex-col md:flex-row items-center justify-center gap-16">
             <div
               onClick={() => {
                 handleSelect("form");
               }}
               className={`${borderColor === "form"
-                ? "border-2  border-custom-blue"
-                : " border-2"
-                } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
+                  ? "border-2  border-custom-blue"
+                  : " border-2"
+                } border rounded-[16px] w-[280px] h-[312px] px-9 py-[18px] flex items-center justify-center flex-col gap-4 cursor-pointer shadow-css`}
             >
               <div className="flex items-center gap-4">
                 <input
@@ -230,33 +218,34 @@ function Sellyourcar() {
               </div>
               <div>
                 <img src={wheeldealimg} alt="" />
+
               </div>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4">
-                  <img src={greenticke} alt="" />
+                  <Svgs.GreenTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
                     High Returns
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
-                  <img src={greenticke} alt="" />
+                  <Svgs.GreenTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
                     Fast process
                   </h1>
                 </div>
               </div>
             </div>
-            <div onClick={() => { handleSelect("selcartopublic") }}
-              className={`${borderColor === "selcartopublic"
-                ? "border-2  border-custom-blue"
-                : " border-2"
-                } border rounded-xl w-full md:w-1/3 px-10 py-5 flex items-center justify-center flex-col gap-4`}
+            <div onClick={() => { handleSelect("sel-car-to-public") }}
+              className={`${borderColor === "sel-car-to-public"
+                  ? "border-2  border-custom-blue"
+                  : " border-2"
+                } border rounded-[16px]  px-[65px] py-[18px] flex items-center justify-center flex-col gap-4 cursor-pointer w-[280px] h-[312px] shadow-css`}
             >
               <div className="flex items-center gap-4">
                 <input
                   type="radio"
-                  value={"selcartopublic"}
-                  checked={loginType === "selcartopublic"}
+                  value={"sel-car-to-public"}
+                  checked={loginType === "sel-car-to-public"}
                   onChange={(e) => {
                     setLoginType(e.target.value);
                   }}
@@ -272,15 +261,15 @@ function Sellyourcar() {
               </div>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4 ">
-                  <img src={greenticke} alt="" />
+                  <Svgs.YellowTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
-                    High Returns
+                    Low returns
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
-                  <img src={greenticke} alt="" />
+                  <Svgs.YellowTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
-                    Fast process
+                    Slow process
                   </h1>
                 </div>
               </div>
@@ -296,6 +285,9 @@ function Sellyourcar() {
                   setIsLoggedIn(true);
                   setRole(loginType);
                   navigate(`/sellyourcar/${loginType}`);
+                  window.scrollTo({
+                    top: 0,
+                  });
                 }
               }}
               className="h-[52px] w-[129px] rounded-lg bg-custom-blue text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"

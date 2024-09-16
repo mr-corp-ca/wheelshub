@@ -5,6 +5,7 @@ import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { Layout } from "../../components/Layout/DashboardLayout";
 
 function Settings() {
   const tabs = [
@@ -35,8 +36,12 @@ function Settings() {
     </Switch>
   );
 
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+  }
   return (
     <>
+    <Layout active={'Setting'}>
     <div className=" m-5">
       <div className="  ">
         <h1 className=" text-2xl font-semibold font-inter text-gray-1">
@@ -88,7 +93,7 @@ function Settings() {
               <div>
                 <h1 className="font-medium text-base font-poppins">Personal details</h1>
               </div>
-              <form className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="space-y-5">
 
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
@@ -167,7 +172,7 @@ function Settings() {
               <div>
                 <h1 className="font-medium text-gray-1 text-base">Update pasword</h1>
               </div>
-              <form className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                   <div className="w-full">
                     <Input
@@ -196,7 +201,7 @@ function Settings() {
               <div>
                 <h1 className="font-medium text-gray-1 text-base">Bank details</h1>
               </div>
-              <form className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="space-y-4">
 
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
@@ -296,6 +301,7 @@ function Settings() {
         {activeTab === "Privacy policy" && <p>Privacy Policy</p>}
       </div>
       </div>
+      </Layout>
     </>
   );
 }

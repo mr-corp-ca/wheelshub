@@ -1,12 +1,26 @@
 import React from "react";
-
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
+import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
+import { useEffect , useState} from "react";
+
+
 function InsuranceMyOrder() {
   const navigate = useNavigate()
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
+    <Layout active={'My orders'}>
       <div className="">
         <div className="mainpart grid grid-cols-1 lg:grid-cols-12 gap-3">
           <div className="col-span-12 lg:col-span-7">
@@ -15,7 +29,19 @@ function InsuranceMyOrder() {
                 My Order
               </h1>
             </div>
-            {Array(4)
+            {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(4)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -38,13 +64,17 @@ function InsuranceMyOrder() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={() => { navigate("/dashboard/insuranceform1") }} className=" hover:bg-custom-blue hover:text-white w-full h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
+                      <button onClick={() => { navigate("/insurance/insurance-form1") }} className=" hover:bg-custom-blue hover:text-white w-[150px] h-[44px] rounded-xl border px-2 py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-custom-blue border-custom-blue flex items-center justify-center">
                         Submit details
                       </button>
                     </div>
                   </div>
                 </div>
               ))}
+                </>
+              )}
+
+           
           </div>
           <div className="payments col-span-12 lg:col-span-5 ">
             <div className="flex items-center justify-start mb-10">
@@ -79,6 +109,7 @@ function InsuranceMyOrder() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

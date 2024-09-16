@@ -1,11 +1,9 @@
 import React from 'react'
 import banner from "../assets/images/White and Black Modern Need Car Rent Banner (1) 1.png";
-import facebook from "../assets/images/facebook.png";
-import tiktok from "../assets/images/tiktok.png";
-import youtube from "../assets/images/youtube.png";
-import twitter from '../assets/images/twitter.png';
 import wheelDealLogo from '../assets/images/wheeldeallogo.png'
 import { useNavigate } from 'react-router-dom';
+import Svgs from '../assets/svgs/index.js'
+
 
 function Banner() {
   const navigate = useNavigate()
@@ -23,7 +21,7 @@ function Banner() {
   }
 
   const buyACarTab = () =>{
-    navigate('/buyacar')
+    navigate('/buy-a-car')
     handleScrollToTop()
   }
 
@@ -33,11 +31,11 @@ function Banner() {
   }
 
   const dealerTab = () =>{
-    navigate('/dealer')
+    navigate('/dealer-page')
     handleScrollToTop()
   }
   const InsuranceTab = () =>{
-    navigate('/insurance')
+    navigate('/insurance-landing-page')
     handleScrollToTop()
   }
   return (
@@ -59,18 +57,18 @@ function Banner() {
                   But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences
                 </p>
               </div>
-              <div className="flex gap-4">
+              <div className="flex items-center gap-4">
                 <div>
-                  <img src={facebook} alt="" />
+                  <Svgs.Facebook/>
                 </div>
                 <div>
-                  <img src={twitter} alt="" />
+                  <Svgs.Twitter/>
                 </div>
                 <div>
-                  <img src={tiktok} alt="" />
+                  <Svgs.TikTok/>
                 </div>
                 <div>
-                  <img src={youtube} alt="" />
+                  <Svgs.Youtube/>
                 </div>
               </div>
             </div>
@@ -107,19 +105,19 @@ function Banner() {
                 </h1>
               </div>
               <div className="flex flex-col gap-3 lg:gap-5 pt-3 lg:pt-5">
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
+                <h3 className=" cursor-pointer text-base lg:text-lg font-normal font-Work-sans">
                 Toyota Corolla
                 </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
+                <h3 className=" cursor-pointer text-base lg:text-lg font-normal font-Work-sans">
                 Toyota Noah
                 </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
+                <h3 className=" cursor-pointer text-base lg:text-lg font-normal font-Work-sans">
                 Toyota Allion
                 </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
+                <h3 className=" cursor-pointer text-base lg:text-lg font-normal font-Work-sans">
                 Toyota Premio
                 </h3>
-                <h3 className="text-base lg:text-lg font-normal font-Work-sans">
+                <h3 className=" cursor-pointer text-base lg:text-lg font-normal font-Work-sans">
                 Mitsubishi Pajero
                 </h3>
               </div>

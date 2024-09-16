@@ -10,6 +10,7 @@ import mechanicMan from "../../assets/images/mechanicMan.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import { useState } from "react";
 import ClaimNow from "./ClaimNow";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MyCarListingDetails() {
   const review = [
     {
@@ -39,14 +40,15 @@ function MyCarListingDetails() {
 
   return (
     <>
-      <div className="grid grid-cols-11 p-3">
-        <div className="flex  flex-col gap-4 col-span-7 lg:col-span-9">
+    <Layout active={'My Car listings'}>
+      <div className="flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex  flex-col">
           <div className="">
             <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">
              My car listings
             </h1>
           </div>
-          <div className="flex items-center flex-row gap-2 md:gap-x-2 ">
+          <div className="flex items-center flex-row gap-2 md:gap-x-2 pt-6">
             <svg
               width="8"
               height="14"
@@ -75,12 +77,12 @@ function MyCarListingDetails() {
           </div>
         </div>
         <div>
-          <button onClick={()=>{navigate('/dashboard/paymentprocessmycarlisting')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
+          <button onClick={()=>{navigate('/customer/payment-process-mycar-listing')}} className="w-[132px] h-[44px] flex items-center justify-center  rounded-xl bg-custom-blue text-white text-sm font-semibold font-inter shadow-2xl shadow-custom-blue">
             Edit
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-12 px-3 gap-3 py-5">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 py-5">
         <div className="leftpart col-span-12  lg:col-span-6">
           <div className="img">
             <img src={audiimg} className="w-full" alt="" />
@@ -95,7 +97,7 @@ function MyCarListingDetails() {
           </div>
         </div>
         <div className="rightpart col-span-12 lg:col-span-6">
-          <div className="border rounded-xl p-5 ">
+          <div className="border rounded-xl p-5 shadow-css">
             <div>
               <h1 className=" text-[32px] font-bold font-inter text-gray-1">
                 Verifications
@@ -136,13 +138,13 @@ function MyCarListingDetails() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/dashboard/mechanicverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/mechanic-verification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <img src={yellowTick} alt="" />
-                <p onClick={()=>{navigate('/dashboard/dealerverification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
+                <p onClick={()=>{navigate('/customer/dealer-verification')}} className="text-xs lg:text-lg font-medium font-Work-sans text-[#FFB543]">
                   Verification pending
                 </p>
               </div>
@@ -190,6 +192,7 @@ function MyCarListingDetails() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

@@ -5,6 +5,7 @@ import crossIcon from "../../assets/images/crossIcon.png"; // Assuming the close
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState } from "react";
 import Stars from "./Stars";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MechanicVerifyNow3() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -23,6 +24,7 @@ function MechanicVerifyNow3() {
 
   return (
     <>
+    <Layout active={'Dashboard'}>
       <div className=" my-5">
         <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
           Dashboard
@@ -188,6 +190,7 @@ function MechanicVerifyNow3() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

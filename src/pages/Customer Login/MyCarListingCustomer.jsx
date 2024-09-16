@@ -4,6 +4,7 @@ import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import bluetick from "../../assets/images/verified.png"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Layout } from "../../components/Layout/DashboardLayout";
 function MyCarListingCustomer() {
   const navigate = useNavigate()
     const cars = [
@@ -28,7 +29,8 @@ function MyCarListingCustomer() {
     ]
   return (
     <>
-      <div className="p-4">
+    <Layout active={'My Car listings'}>
+      <div className="">
         <div className="newRequests py-4 md:py-5">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
           My car listings
@@ -42,11 +44,11 @@ function MyCarListingCustomer() {
                     </button>
                   </div>
         </div>
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {
             cars.map((value, index) => {
               return (
-                <div key={index} className="card border rounded-2xl flex flex-col gap-4 ">
+                <div key={index} className="card border rounded-2xl flex flex-col gap-4 shadow-css">
                   <div>
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>
@@ -70,7 +72,7 @@ function MyCarListingCustomer() {
                     <p className={`text-xs font-normal font-Work-sans ${value.textColor}`}>{value.verification}</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate("/dashboard/mycarlistingdetails")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate("/customer/mycar-listing-details")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
                       {value.buttonName}
                     </button>
                   </div>
@@ -79,6 +81,7 @@ function MyCarListingCustomer() {
             })}
         </div>
       </div>
+      </Layout>
     </>
   );
 }

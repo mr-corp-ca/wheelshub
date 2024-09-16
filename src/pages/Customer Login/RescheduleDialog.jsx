@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Svgs from '../../assets/svgs/index.js'
 
 const RescheduleDialog = () => {
   const [selectedDay, setSelectedDay] = useState('Wed 17');
