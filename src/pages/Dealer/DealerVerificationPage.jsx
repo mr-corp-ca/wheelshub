@@ -26,7 +26,7 @@ function DealerVerificationPage() {
             </h6>
           </div>
           <div>
-            <Button onClick={()=>{navigate('/dealer/dealer-setting')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
+            <Button onClick={()=>{navigate('/dealer/verification-form')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
           </div>
         </div>
       </div>

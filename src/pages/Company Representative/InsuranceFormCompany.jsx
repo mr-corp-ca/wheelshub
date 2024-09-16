@@ -32,20 +32,20 @@ function InsuranceFormCompany() {
         <div className="flex flex-row font-poppins font-normal  text-base">
           <p
             onClick={() => navigate(-1)}
-            className="text-gray-1  hover:cursor-pointer hover:text-black"
+            className="text-gray-1  text-xs md:text-lg font-medium font-poppins  hover:cursor-pointer hover:text-black"
           >
             Car verification/
           </p>
-          <p className="font-semibold text-custom-blue">
+          <p className=" text-custom-blue text-xs md:text-lg font-semibold font-poppins">
             Mercedes-Benz E 220 D
           </p>
         </div>
       </div>
       <div className=" my-5">
-        <div className=" w-full lg:w-[90%] border py-16 rounded-2xl bg-white shadow-css">
+        <div className=" w-full lg:w-[90%] px-3 border py-16 rounded-2xl bg-white shadow-css">
           <div className=" ">
-            <div className=" flex items-center justify-center flex-col gap-6">
-              <h1 className="text-[28px] font-bold font-inter text-gray-1">
+            <div className=" flex items-center justify-center ">
+              <h1 className="text-lg md:text-[28px] font-bold font-inter text-gray-1">
                 Enter Business details
               </h1>
             </div>

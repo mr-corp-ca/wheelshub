@@ -3,8 +3,11 @@ import tickImage from "../../assets/images/ticksign.png";
 import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from '../../components/Button';
 import { Layout } from '../../components/Layout/DashboardLayout';
+import { useNavigate } from 'react-router-dom';
 
 function VerificationInProgress() {
+
+  const navigate = useNavigate()
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -37,8 +40,8 @@ function VerificationInProgress() {
             </div>
           </div>
           <div className='flex items-center justify-center py-3'>
-            <button className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[24px] py-[12px] border-gray-1 flex items-center justify-center'>
-              Need help
+            <button onClick={()=>{ setTimeout(()=>{navigate('/representative/representative-dashboard')},3000)}} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[20px] py-[12px] border-gray-1 flex items-center justify-center'>
+              Need help?
             </button>
           </div>
         </div>

@@ -88,7 +88,7 @@ function RepresentativeDashboard() {
             </div>
             {isLoading ? (
                 <>
-                  {Array(4)
+                  {Array(2)
                     .fill()
                     .map(() => (
                       <div className="py-4">
@@ -135,7 +135,19 @@ function RepresentativeDashboard() {
                 View all
               </button>
             </div>
-            {Array(2)
+            {isLoading ? (
+                <>
+                  {Array(2)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(2)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -167,6 +179,9 @@ function RepresentativeDashboard() {
                   </div>
                 </div>
               ))}
+                </>
+              )}
+           
           </div>
           <div className="payments col-span-12 lg:col-span-5 ">
             <div className="flex items-center justify-start">

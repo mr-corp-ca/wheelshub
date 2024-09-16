@@ -13,6 +13,10 @@ import { Layout } from "../../components/Layout/DashboardLayout";
 
 function DealerVerificationForm() {
   const navigate = useNavigate()
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+  }
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -38,7 +42,7 @@ function DealerVerificationForm() {
         </div>
       </div>
       <div className="pt-3">
-        <form className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full">
@@ -75,7 +79,7 @@ function DealerVerificationForm() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dealer/dealer-verification-in-progress')}}
+            onClick={()=>{navigate('/dealer/verification-in-progress')}}
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }

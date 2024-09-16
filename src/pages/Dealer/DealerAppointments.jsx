@@ -44,7 +44,7 @@ const closeDialog = () => {
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
-                  <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
+                  <div className="card1 border px-2 py-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
                     <div className="flex items-center gap-3">
                       <div>
                         <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
@@ -75,7 +75,7 @@ const closeDialog = () => {
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
-                  <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
+                  <div className="card1 border px-2 py-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
                     <div className="flex items-center gap-3">
                       <div>
                         <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />
@@ -114,7 +114,7 @@ const closeDialog = () => {
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
-                  <div className="card1 border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
+                  <div className="card1 border px-2 py-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
                     <div className="flex items-center gap-3">
                       <div>
                         <img src={audiCar} alt="Car" className="w-24 h-24 md:w-auto md:h-auto" />

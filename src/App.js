@@ -212,7 +212,7 @@ function App() {
       element: <RequireAuth allowedRoles={"INSURANCE"} />,
       children: [
         {
-          path: "insurance-verification",
+          path: "verification",
           element: <InsuranceVerification />,
         },
         {
@@ -220,7 +220,7 @@ function App() {
           element: <VerificationForm />,
         },
         {
-          path: "insurance-verification-in-progress",
+          path: "verification-in-progress",
           element: <InsuranceVerificationInProgress />,
         },
         {
@@ -271,15 +271,15 @@ function App() {
       element: <RequireAuth allowedRoles={"MECHANIC"} />,
       children: [
         {
-          path: "mechanic-verification",
+          path: "verification",
           element: <MechanicVerificationPage />,
         },
         {
-          path: "mechanic-verification-form",
+          path: "verification-form",
           element: <MechanicVerificationForm />,
         },
         {
-          path: "mechanic-verification-in-progress",
+          path: "verification-in-progress",
           element: <MechanicVerificationInProgress />,
         },
         {
@@ -339,7 +339,7 @@ function App() {
       element: <RequireAuth allowedRoles={"REPRESENTATIVE"} />,
       children: [
         {
-          path: "representative-verification",
+          path: "verification",
           element: <RepresentativeVerificationPage />,
         },
         {
@@ -407,15 +407,15 @@ function App() {
       element: <RequireAuth allowedRoles={"DEALER"} />,
       children: [
         {
-          path: "dealer-verification-page",
+          path: "verification",
           element: <DealerVerificationPage />,
         },
         {
-          path: "dealer-verification-form",
+          path: "verification-form",
           element: <DealerVerificationForm />,
         },
         {
-          path: "dealer-verification-in-progress",
+          path: "verification-in-progress",
           element: <DealerVerificationInProgress />,
         },
         {

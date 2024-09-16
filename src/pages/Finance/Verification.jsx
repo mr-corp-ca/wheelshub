@@ -6,7 +6,7 @@ import { Layout } from '../../components/Layout/DashboardLayout'
 
 
 function Verification() {
-  
+  const navigate = useNavigate()
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -21,7 +21,7 @@ function Verification() {
             </h6>
           </div>
           <div>
-            <Button title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
+            <Button onClick={()=>{navigate('/finance/setting')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
           </div>
         </div>
       </div>

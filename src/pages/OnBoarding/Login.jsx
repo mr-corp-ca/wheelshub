@@ -37,22 +37,39 @@ function Login() {
         // navigate('/dashboard');
         if (loginType === "FINANCE") {
           setUser({ isLoggedIn: true, role: "FINANCE" });
-          navigate("/finance/finance");
+          setTimeout(() => {
+            navigate("/finance/verification");
+          }, 1000);
         } else if (loginType === "INSURANCE") {
           setUser({ isLoggedIn: true, role: "INSURANCE" });
-          navigate("/insurance/insurance");
+          setTimeout(() => {
+            navigate("/insurance/verification");
+            
+          }, 1000);
         } else if (loginType === "MECHANIC") {
           setUser({ isLoggedIn: true, role: "MECHANIC" });
-          navigate('/mechanic/mechanic-dashboard')
+          setTimeout(() => {
+            navigate('/mechanic/verification')
+            
+          }, 1000);
         } else if (loginType === "COMPANY REPRESENTATIVE") {
           setUser({ isLoggedIn: true, role: "REPRESENTATIVE" });
-          navigate('/representative/representative-dashboard')
+          setTimeout(() => {
+            navigate('/representative/verification')
+            
+          }, 1000);
         } else if (loginType === "DEALER") {
           setUser({ isLoggedIn: true, role: "DEALER" });
-          navigate('/dealer/dealer-dashboard')
+          setTimeout(() => {
+            navigate('/dealer/verification')
+            
+          }, 1000);
         } else if (loginType === "INDIVIDUAL") {
           setUser({ isLoggedIn: true, role: "INDIVIDUAL" });
-          navigate('/customer/customer-dashboard')
+          setTimeout(() => {
+            navigate('/customer/customer-dashboard')
+            
+          }, 1000);
         } else {
           toast.error('Enter login type')
         }

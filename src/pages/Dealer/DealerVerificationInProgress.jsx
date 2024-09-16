@@ -77,8 +77,10 @@ function DealerVerificationInProgress() {
           </div>
 
           <div className='flex items-center justify-center py-3'>
-            <button onClick={()=>{navigate('/dealer/dealer-dashboard')}} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[24px] py-[12px] border-gray-1 flex items-center justify-center'>
-              Need help
+            <button onClick={()=>{setTimeout(() => {
+              navigate('/dealer/dealer-dashboard')
+            }, 3000) }} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[20px] py-[12px] border-gray-1 flex items-center justify-center'>
+              Need help?
             </button>
           </div>
         </div>

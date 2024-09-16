@@ -26,7 +26,7 @@ function InsuranceVerification() {
             </h6>
           </div>
           <div>
-            <Button onClick={()=>{navigate('/insurance/insurance-setting')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
+            <Button onClick={()=>{navigate('/insurance/verification-form')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
           </div>
         </div>
       </div>

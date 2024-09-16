@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
 import audiCar from "../../assets/images/audicar.png";
 import photo from "../../assets/images/photo.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useEffect} from "react";
+
 function Appointments() {
   const navigate = useNavigate();
 
@@ -12,6 +14,15 @@ function Appointments() {
   const hnadleClick = (item) => {
     setActiveTab(item);
   };
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
     <Layout active={'Appointments'}>
@@ -77,6 +88,18 @@ function Appointments() {
                     </button>
                   </div>
                 </div>
+                {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
                 {Array(4)
                   .fill()
                   .map((_, index) => (
@@ -116,6 +139,9 @@ function Appointments() {
                       </div>
                     </div>
                   ))}
+                </>
+              )}
+                
               </div>
               <div className="payments col-span-12 lg:col-span-5 ">
                 <div className="flex items-center justify-start ">
@@ -210,6 +236,18 @@ function Appointments() {
                     </button>
                   </div>
                 </div>
+                {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
                 {Array(4)
                   .fill()
                   .map((_, index) => (
@@ -249,6 +287,9 @@ function Appointments() {
                       </div>
                     </div>
                   ))}
+                </>
+              )}
+               
               </div>
               <div className="payments col-span-12 lg:col-span-5 ">
                 <div className="flex items-center justify-start ">
@@ -343,6 +384,18 @@ function Appointments() {
                     </button>
                   </div>
                 </div>
+                {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
                 {Array(4)
                   .fill()
                   .map((_, index) => (
@@ -382,6 +435,10 @@ function Appointments() {
                       </div>
                     </div>
                   ))}
+                </>
+              )}
+
+               
               </div>
               <div className="payments col-span-12 lg:col-span-5 ">
                 <div className="flex items-center justify-start ">
@@ -476,7 +533,19 @@ function Appointments() {
                     </button>
                   </div>
                 </div>
-                {Array(4)
+                {isLoading ? (
+                <>
+                  {Array(4)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+               {Array(4)
                   .fill()
                   .map((_, index) => (
                     <div key={index} className="card py-4">
@@ -519,6 +588,10 @@ function Appointments() {
                       </div>
                     </div>
                   ))}
+                </>
+              )}
+
+                
               </div>
               <div className="payments col-span-12 lg:col-span-5 ">
                 <div className="flex items-center justify-start ">

@@ -91,11 +91,11 @@ function UploadDocumentsCompany() {
           <div className="flex flex-row font-poppins font-normal  text-base">
             <p
               onClick={() => navigate(-1)}
-              className="text-gray-1  hover:cursor-pointer hover:text-black"
+              className="text-gray-1 text-xs md:text-lg font-medium font-poppins hover:cursor-pointer hover:text-black"
             >
               Car verification/
             </p>
-            <p className="font-semibold text-custom-blue">
+            <p className="font-semibold text-custom-blue text-xs md:text-lg  font-poppins">
               Mercedes-Benz E 220 D
             </p>
           </div>

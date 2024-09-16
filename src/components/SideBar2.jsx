@@ -22,7 +22,7 @@ export const SideBar2 = ({ active }) => {
           color={active === "Dashboard" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/finance/finance",
+      navigate: "/finance/verification",
       active: active === "Dashboard" ? true : false,
     },
     {
@@ -82,7 +82,7 @@ export const SideBar2 = ({ active }) => {
           color={active === "Dashboard" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/insurance/insurance",
+      navigate: "/insurance/verification",
       active: active === "Dashboard" ? true : false,
     },
     {
@@ -162,7 +162,7 @@ export const SideBar2 = ({ active }) => {
           color={active === "Dashboard" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/mechanic/mechanic-dashboard",
+      navigate: "/mechanic/verification",
       active: active === "Dashboard" ? true : false,
     },
     {
@@ -242,7 +242,7 @@ export const SideBar2 = ({ active }) => {
           color={active === "Dashboard" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/representative/representative-dashboard",
+      navigate: "/representative/verification",
       active: active === "Dashboard" ? true : false,
     },
     {
@@ -302,7 +302,7 @@ export const SideBar2 = ({ active }) => {
           color={active === "Dashboard" ? "#6F9CFF" : "#828282"}
         />
       ),
-      navigate: "/dealer/dealer-dashboard",
+      navigate: "/dealer/verification",
       active: active === "Dashboard" ? true : false,
     },
     {

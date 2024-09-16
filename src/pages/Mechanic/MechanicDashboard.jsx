@@ -29,7 +29,7 @@ const [popup, setpopup] = useState(null)
           <div className="col-span-12 lg:col-span-8">
             <div className="heading flex items-center justify-between mb-5">
               <h1 className="text-xl lg:text-2xl font-semibold font-inter text-[#161616]">
-              New verificaitons
+              New verifications
               </h1>
               <button className="text-base font-medium font-inter text-custom-blue">
                 View all

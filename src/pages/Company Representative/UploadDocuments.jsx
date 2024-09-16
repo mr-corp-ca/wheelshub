@@ -11,7 +11,7 @@ function UploadDocuments() {
   return (
     <>
     <Layout active={'Dashboard'}>
-    <div className=" flex px-10 py-5">
+    <div className=" flex items-center justify-center lg:px-10 py-5">
     <div className="w-full lg:w-[80%]  border p-5 py-16 rounded-xl">
       <div className=" ">
         <div className=" flex items-center justify-center flex-col gap-6">
@@ -20,7 +20,7 @@ function UploadDocuments() {
           </h1>
         </div>
       </div>
-      <div className="pt-3 w-[80%] mx-auto">
+      <div className="pt-3 w-full lg:w-[80%] mx-auto">
         <form className="space-y-8">
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
@@ -52,6 +52,7 @@ function UploadDocuments() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
+            onClick={()=>{navigate('/representative/verification-in-progress')}}
               className={
                 "text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }

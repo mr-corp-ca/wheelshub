@@ -72,7 +72,9 @@ function VerificationinProcess() {
           </div>
 
           <div className='flex items-center justify-center py-3'>
-            <button  className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[24px] py-[12px] border-gray-1 flex items-center justify-center'>
+            <button onClick={()=>{ setTimeout(() => {
+              navigate('/finance/finance')
+            }, 3000) }} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[20px] py-[12px] border-gray-1 flex items-center justify-center'>
               Need help?
             </button>
           </div>

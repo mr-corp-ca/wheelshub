@@ -75,7 +75,7 @@ function MechanicVerificationForm() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/dashboard/verificationprocess')}}
+            onClick={()=>{navigate('/mechanic/verification-in-progress')}}
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }
