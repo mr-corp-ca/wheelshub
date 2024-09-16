@@ -4,6 +4,7 @@ import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useNavigateContext } from "../../Context/NavigateContext";
 
 
 
@@ -13,6 +14,13 @@ import { Layout } from "../../components/Layout/DashboardLayout";
 
 function MechanicVerificationForm() {
   const navigate = useNavigate()
+
+  const { setIsRedirect} = useNavigateContext()
+
+  const handleClick=()=>{
+    navigate('/mechanic/verification-in-progress')
+    setIsRedirect(true)
+  }
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -75,7 +83,7 @@ function MechanicVerificationForm() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/mechanic/verification-in-progress')}}
+            onClick={handleClick}
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }

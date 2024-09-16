@@ -4,10 +4,29 @@ import manInCarImage from "../../assets/images/manincar.png";
 import { Button } from '../../components/Button';
 import { Layout } from '../../components/Layout/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
+import { useNavigateContext } from '../../Context/NavigateContext';
+import { useEffect } from 'react';
+
 
 function VerificationInProgress() {
 
   const navigate = useNavigate()
+
+  const { setIsRedirect, isRedirect} = useNavigateContext()
+
+
+ useEffect(()=>{
+  if(isRedirect){
+    const timerId = setTimeout(() => {
+      navigate('/mechanic/mechanic-dashboard')
+      setIsRedirect(false)
+    }, 3000);
+
+    return ()=> clearTimeout(timerId)
+  }
+}, [isRedirect, navigate, setIsRedirect])
+
+
   return (
     <>
     <Layout active={'Dashboard'}>

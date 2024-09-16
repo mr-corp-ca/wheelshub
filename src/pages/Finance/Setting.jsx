@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import IMAGES from "../../assets/IMAGES";
 import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useNavigateContext } from "../../Context/NavigateContext";
 function Setting() {
   const navigate = useNavigate()
-
+  
   const handleSubmit=(e)=>{
     e.preventDefault()
   }
+  const { setIsRedirect} = useNavigateContext()
+  
+  const handleClick=()=>{
+    navigate('/finance/verification-process')
+    setIsRedirect(true)
+  }
+   
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -72,7 +80,7 @@ function Setting() {
 
           <div className="w-full text-center flex items-center justify-center mt-8">
             <button
-            onClick={()=>{navigate('/finance/verification-process')}}
+            onClick={handleClick}
               className={
                 "w-[190px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }

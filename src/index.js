@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { ContextLayout } from "./Context/ContextLayout";
 import { UserProvider } from "./Context/UserProvider";
+import { NavigateContextProvider } from "./Context/NavigateContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,10 +17,12 @@ root.render(
     <ContextLayout>
       <UserProvider>
         <LoginContextProvider>
+          <NavigateContextProvider>
           <RoleContextProvider>
             <ToastContainer />
             <App />
           </RoleContextProvider>
+          </NavigateContextProvider>
         </LoginContextProvider>
       </UserProvider>
     </ContextLayout>

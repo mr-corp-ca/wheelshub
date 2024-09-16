@@ -6,8 +6,18 @@ import documentfile from "../../assets/images/document.png"
 import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useNavigateContext } from "../../Context/NavigateContext";
+
+
 function UploadDocuments() {
    const navigate = useNavigate()
+
+   const { setIsRedirect} = useNavigateContext()
+
+   const handleClick=()=>{
+    navigate('/representative/verification-in-progress')
+     setIsRedirect(true)
+   }
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -52,7 +62,7 @@ function UploadDocuments() {
 
           <div className="w-full text-center flex items-center justify-center">
             <button
-            onClick={()=>{navigate('/representative/verification-in-progress')}}
+            onClick={handleClick}
               className={
                 "text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
               }
