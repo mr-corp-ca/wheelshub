@@ -123,11 +123,11 @@ function Home() {
         />
         <div className=" py-8">
           <div className="flex flex-col lg:flex-row items-center justify-center">
-            <div className=" w-full md:w-[90%] text-center lg:text-left">
-              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  lg:background-rgb">
+            <div className=" w-full md:w-[60%]   text-center lg:text-left">
+              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  lg:bg-gradient-to-r from-[#D1EAFF] to-[#F2F8FD]">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  lg:w-[68%] ">
+              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  lg:w-[100%] ">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
@@ -165,94 +165,88 @@ function Home() {
       </div>
       <div className="w-[90%] mx-auto my-10 ">
         <div className="overflow-x-scroll scrollbar-none">
-        <div className="flex items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
-          <button
-            onClick={() => {
-              handleClick(1);
-            }}
-            className={`${
-              iconclick === 1
+          <div className="flex items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
+            <button
+              onClick={() => {
+                handleClick(1);
+              }}
+              className={`${iconclick === 1
                 ? " rounded-tl-xl bg-gradient-to-tr from-[#dbeeff] to-[#f3f9ff] text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-x-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
-          >
-            <span>
-              <Svgs.SellCarIcon
-                color={iconclick === 1 ? "#6f9cff" : "#333333"}
+                } w-[200px] flex items-center gap-x-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            >
+              <span>
+                <Svgs.SellCarIcon
+                  color={iconclick === 1 ? "#6f9cff" : "#333333"}
+                />
+              </span>
+              Sell
+            </button>
+            <button
+              onClick={() => {
+                handleClick(2);
+              }}
+              className={`${iconclick === 2
+                ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
+                : ""
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            >
+              <Svgs.BuyACarIcon color={iconclick === 2 ? "#6f9cff" : "#333333"} />
+              Buy
+            </button>
+            <button
+              onClick={() => {
+                handleClick(3);
+              }}
+              className={`${iconclick === 3
+                ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
+                : ""
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            >
+              <Svgs.MechanicIcon
+                color={iconclick === 3 ? "#6f9cff" : "#333333"}
               />
-            </span>
-            Sell
-          </button>
-          <button
-            onClick={() => {
-              handleClick(2);
-            }}
-            className={`${
-              iconclick === 2
+              Mechanic
+            </button>
+            <button
+              onClick={() => {
+                handleClick(4);
+              }}
+              className={`${iconclick === 4
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
-          >
-            <Svgs.BuyACarIcon color={iconclick === 2 ? "#6f9cff" : "#333333"} />
-            Buy
-          </button>
-          <button
-            onClick={() => {
-              handleClick(3);
-            }}
-            className={`${
-              iconclick === 3
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            >
+              <Svgs.DealerIcon color={iconclick === 4 ? "#6f9cff" : "#333333"} />
+              Dealer
+            </button>
+            <button
+              onClick={() => {
+                handleClick(5);
+              }}
+              className={`${iconclick === 5
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
-          >
-            <Svgs.MechanicIcon
-              color={iconclick === 3 ? "#6f9cff" : "#333333"}
-            />
-            Mechanic
-          </button>
-          <button
-            onClick={() => {
-              handleClick(4);
-            }}
-            className={`${
-              iconclick === 4
-                ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
-                : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
-          >
-            <Svgs.DealerIcon color={iconclick === 4 ? "#6f9cff" : "#333333"} />
-            Dealer
-          </button>
-          <button
-            onClick={() => {
-              handleClick(5);
-            }}
-            className={`${
-              iconclick === 5
-                ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
-                : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
-          >
-            <Svgs.InsuranceIcon
-              color={iconclick === 5 ? "#6f9cff" : "#333333"}
-            />
-            Insurance
-          </button>
-          <button
-            onClick={() => {
-              handleClick(6);
-            }}
-            className={`${
-              iconclick === 6
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            >
+              <Svgs.InsuranceIcon
+                color={iconclick === 5 ? "#6f9cff" : "#333333"}
+              />
+              Insurance
+            </button>
+            <button
+              onClick={() => {
+                handleClick(6);
+              }}
+              className={`${iconclick === 6
                 ? " md:rounded-tr-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] h-[84px]`}
-          >
-            <Svgs.FinanceIcon color={iconclick === 6 ? "#6f9cff" : "#333333"} />
-            Finance
-          </button>
-        </div>
+                } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] h-[84px]`}
+            >
+              <Svgs.FinanceIcon color={iconclick === 6 ? "#6f9cff" : "#333333"} />
+              Finance
+            </button>
+          </div>
         </div>
         <div className="border rounded-xl rounded-tl-none py-10 shadow-2xl shadow-[#eef6fd] backdrop-blur-3xl">
           <div className=" px-4">
@@ -429,11 +423,10 @@ function Home() {
                   handleButtonClick(index);
                 }}
                 key={index}
-                className={`${
-                  buttonClick === index
-                    ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue "
-                    : ""
-                } flex items-center justify-center gap-[10px] text-sm md:text-lg font-medium font-Work-sans py-3 px-[20px] md:py-[30px] w-[200px] h-[84px] ${car.border_r} ${car.border_radius} border`}
+                className={`${buttonClick === index
+                  ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue "
+                  : ""
+                  } flex items-center justify-center gap-[10px] text-sm md:text-lg font-medium font-Work-sans py-3 px-[20px] md:py-[30px] w-[200px] h-[84px] ${car.border_r} ${car.border_radius} border`}
               >
                 <span>{car.svgs}</span>
                 {car.carname}
@@ -464,7 +457,7 @@ function Home() {
                     <h1 className="text-base md:text-xl font-semibold font-inter text-gray-1">
                       Mercedes-Benz E 220 d
                     </h1>
-                    <span><Svgs.HeartIconBlue/></span>
+                    <span><Svgs.HeartIconBlue /></span>
                   </div>
                   <div className="flex items-center px-3 justify-between">
                     <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
@@ -486,20 +479,20 @@ function Home() {
                   </div>
                   <div className="flex items-center gap-2 px-3">
                     <div className="flex items-center gap-2">
-                      <span><Svgs.BlueTickIcon/></span>
+                      <span><Svgs.BlueTickIcon /></span>
                       <p className="text-sm font-normal font-Work-sans text-gray-1">
                         Verified by Mechanic
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
-                    <span><Svgs.BlueTickIcon/></span>
+                      <span><Svgs.BlueTickIcon /></span>
                       <p className="text-sm font-normal font-Work-sans  text-gray-1">
                         Verified by Dealer
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-[#0086fb72] shadow-2xl ">
+                    <button onClick={() => { navigate('/customer/mycar-listing-details') }} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-[#0086fb72] shadow-2xl ">
                       View Details
                     </button>
                   </div>
@@ -567,7 +560,7 @@ function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-       
+
       </div>
       <div>
         <img src={waveicon} className="w-full" alt="" />
