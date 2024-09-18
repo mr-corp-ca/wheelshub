@@ -23,7 +23,7 @@ export const InputLogin = ({ label, placeholder, value, type, onChange, classNam
             placeholder={placeholder}
             className={` outline-none max-w-full w-full bg-transparent  caret-custom-blue group ${className} `}
           />
-          {type === 'password' && <span onClick={() => { setShow(!show) }} className=' cursor-pointer'>{show === true ? <Svgs.PasswordShow /> : <Svgs.PasswordHide />}</span>
+          {type === 'password' && <span onClick={() => { setShow(!show) }} className=' cursor-pointer'>{show === true ? <Svgs.PasswordHideIcon /> :  <Svgs.PasswordShowIcon />}</span>
           }
         </div>
       </div>

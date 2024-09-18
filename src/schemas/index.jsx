@@ -27,7 +27,7 @@ const signUpSchema = yup.object().shape({
         .required('Please enter your name'),
     email: yup
         .string()
-        .email('Invalid email format')
+        .email('Enter a valid email')
         .required('Please enter your email'),
     password: yup
         .string()
@@ -42,12 +42,12 @@ const signUpSchema = yup.object().shape({
 const signInSchema = yup.object().shape({
     email: yup
         .string()
-        .email('Invalid email format')
-        .required('Please enter your email'),
+        .email('Enter a valid email')
+        .required('Required'),
     password: yup
         .string()
         .min(6, 'Password must be at least 6 characters')
-        .required('Please enter your password'),
+        .required('Required'),
 });
 
 

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import car from "../../assets/images/carSignup.png";
 import googleIcon from "../../assets/images/google.png";
 import appleIcon from "../../assets/images/apple (1).png";
-import arrow from "../../assets/images/Arrow 1.png";
-import checkboxICon from "../../assets/images/Checbox container.png";
-// import carlogin from "../../assets/images/carlogin.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useLoginContext } from "../../Context/LoginContext";
@@ -83,7 +80,7 @@ function Login() {
           <div>
             <button onClick={()=>{navigate(-1)}} className=" z-10 absolute left-4 md:left-[54px] top-4 md:top-[67px] cursor-pointer w-[128px] h-[43px] text-base font-semibold font-inter text-gray-1 bg-white rounded-[12px]  border flex items-center justify-center gap-4"><Svgs.ArrowBack/> Go Back</button>
           </div>
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full md:-mt-32 lg:-mt-10">
             <img
               src={loginimage}
               className=""
@@ -91,7 +88,7 @@ function Login() {
             />
           </div>
         </div>
-        <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[60%] py-10 lg:py-[116px] px-4 lg:px-0">
+        <div className="col-span-1 lg:col-span-6 mx-auto w-full lg:w-[80%] xl:w-[70%] py-10 lg:py-[116px] px-4 lg:px-0">
           <div>
             <div className="text-center">
               <h1 className="text-[24px] lg:text-[28px] font-bold font-inter text-gray-1">
@@ -143,7 +140,7 @@ function Login() {
                       className={"w-full sm:w-[350px] bg-transparent"}
                     />
                     {touched.email && errors.email && (
-                      <small className=" text-custom-red">{errors.email}</small>
+                      <small className=" text-custom-red font-poppins font-medium">{errors.email}</small>
                     )}
                   </div>
                   <div className="w-full mt-5">
@@ -164,7 +161,7 @@ function Login() {
                       <div className="flex items-center justify-between">
                         <div>
                           {touched.password && errors.password && (
-                            <small className=" text-custom-red">
+                            <small className=" text-custom-red font-poppins font-medium">
                               {errors.password}
                             </small>
                           )}
