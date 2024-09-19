@@ -117,6 +117,8 @@ import DealerSettings from "./pages/Dealer/Settings";
 import CustomerChats from "./pages/Customer Login/CustomerChats";
 import CustomerPayments from "./pages/Customer Login/CustomerPayments";
 import ContactUs from "./pages/LandingPages/ContactUs";
+import ForgotPassword from "./pages/OnBoarding/ForgotPassword";
+import CreateNewPassword from "./pages/OnBoarding/CreateNewPassword";
 
 
 // export const Layout = () => {
@@ -159,6 +161,14 @@ function App() {
     {
       path: "/signup",
       element: <SignUp />,
+    },
+    {
+      path: '/forgot-password',
+      element: <ForgotPassword/>
+    },
+    {
+      path: '/create-new-password',
+      element: <CreateNewPassword/>
     },
 
     // Financeeeeeeeeeeeeeeeeeeee

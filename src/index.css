@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 }
 
 input:-webkit-autofill {
-  background-color: white !important; /* Set to your preferred color */
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important; /* Ensure background color stays */
+  -webkit-box-shadow: 0 0 0px 1000px #f9f9f9 inset !important; /* Match the input background */
+  background-color: #f9f9f9 !important; /* Match the background with the input's natural background color */
+  color: inherit !important; /* Ensure the text color remains consistent */
 }

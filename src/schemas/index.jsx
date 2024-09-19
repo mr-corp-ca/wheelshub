@@ -49,6 +49,24 @@ const signInSchema = yup.object().shape({
         .min(6, 'Password must be at least 6 characters')
         .required('Required'),
 });
+const ForgotPasswordSchema = yup.object().shape({
+    email: yup
+        .string()
+        .required('Required'),
+    password: yup
+        .string()
+        .required('Required'),
+});
+
+
+const CreateNewPasswordSchema = yup.object().shape({
+    password: yup
+        .string()
+        .required('Required'),
+    confirm_password: yup
+        .string()
+        .required('Required'),
+});
 
 
 const sellCarForm = yup.object().shape({
@@ -72,4 +90,4 @@ const sellCarForm = yup.object().shape({
     .required('Please enter your address')
 })
 
-export { sellCarForm, signInSchema, signUpSchema };
+export { CreateNewPasswordSchema,  sellCarForm, signInSchema, signUpSchema, ForgotPasswordSchema };

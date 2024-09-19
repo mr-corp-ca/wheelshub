@@ -104,7 +104,7 @@ function Login() {
                 "Company Representative",
                 "Finance",
               ].map((type, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={index} className="flex items-center gap-2 cursor-pointer">
                   <input
                     value={type}
                     checked={loginType === type.toUpperCase()}
@@ -112,7 +112,7 @@ function Login() {
                       setLoginType(e.target.value.toUpperCase());
                     }}
                     name="accounttype"
-                    className="h-5 w-5"
+                    className="h-5 w-5 cursor-pointer"
                     type="radio"
                   />{" "}
                   {}
@@ -137,7 +137,7 @@ function Login() {
                       type={"email"}
                       label={"Email or Mobile Number"}
                       placeholder={"Input your Email here"}
-                      className={"w-full sm:w-[350px] bg-transparent"}
+                      className={"w-full sm:w-[350px]"}
                     />
                     {touched.email && errors.email && (
                       <small className=" text-custom-red font-poppins font-medium">{errors.email}</small>
@@ -176,7 +176,7 @@ function Login() {
                         </span>
                       </div>
                       <div>
-                        <h1 className=" text-base font-normal font-inter text-gray-2">
+                        <h1 onClick={()=>{navigate('/forgot-password')}} className=" cursor-pointer text-base font-normal font-inter text-gray-2">
                           Forgot password?
                         </h1>
                       </div>
