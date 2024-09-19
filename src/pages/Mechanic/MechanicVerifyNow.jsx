@@ -46,7 +46,7 @@ function MechanicVerifyNow() {
         </div>
       </div>
       <div className=" my-5">
-        <div className=" w-full lg:w-[90%] border p-5 rounded-xl">
+        <div className=" w-full lg:w-[90%] border shadow-css py-[64px] rounded-xl">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">

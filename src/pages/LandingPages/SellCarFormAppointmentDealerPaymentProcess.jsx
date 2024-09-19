@@ -39,8 +39,8 @@ function SellCarFormAppointmentDealerPaymentProcess() {
           </div>
         </div>
       </div>
-      <div className="cardpart flex justify-center bg-white mx-5">
-        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white border rounded-xl py-10 md:px-16">
+      <div className="cardpart flex justify-center bg-white mx-5 ">
+        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white shadow-css border rounded-xl py-10 md:px-16">
         <div className="payment">
             <div className="rounded-xl">
               <div className="flex items-center justify-center">

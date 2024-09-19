@@ -115,7 +115,7 @@ function Insurance() {
                   Payments
                 </h1>
               </div>
-              <div className="border rounded-xl p-4 md:p-5 my-5">
+              <div className="border rounded-xl p-4 md:p-5 my-5 shadow-css">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10">
                   <div className="flex flex-col items-center md:items-start justify-center md:justify-start gap-3">
                     <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-1">

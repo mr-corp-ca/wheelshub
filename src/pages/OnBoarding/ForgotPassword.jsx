@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ForgotPasswordSchema, signInSchema } from "../../schemas/index";
 import { InputLogin } from "../../components/InputLogin";
-import Svgs from '../../assets/svgs/index.js';
-import ForgotPasswordimage from '../../assets/images/forgotpassword.png';
+import Svgs from "../../assets/svgs/index.js";
+import ForgotPasswordimage from "../../assets/images/forgotpassword.png";
 
 const initialValues = {
   email: "",
@@ -16,7 +16,7 @@ function ForgotPassword() {
 
   const handleSubmit = (values) => {
     console.log(values);
-    navigate('/create-new-password')
+    navigate("/create-new-password");
   };
 
   return (
@@ -25,7 +25,9 @@ function ForgotPassword() {
         <div className="col-span-1 lg:col-span-6 bg-[#f9f9f9] relative pt-[100px] md:pt-0 px-4">
           <div>
             <button
-              onClick={() => { navigate(-1); }}
+              onClick={() => {
+                navigate(-1);
+              }}
               className="z-10 absolute left-4 md:left-[54px] top-4 md:top-[67px] cursor-pointer w-[128px] h-[43px] text-base font-semibold font-inter text-gray-1 bg-white rounded-[12px] border flex items-center justify-center gap-4"
             >
               <Svgs.ArrowBack /> Go Back
@@ -50,9 +52,17 @@ function ForgotPassword() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={ForgotPasswordSchema}
+                validateOnChange={true} // Disable validation on change
+                validateOnBlur={false} // Disable validation on blur
                 onSubmit={handleSubmit}
               >
-                {({ touched, errors, handleChange, setFieldTouched, values }) => (
+                {({
+                  touched,
+                  errors,
+                  handleChange,
+                  setFieldTouched,
+                  values,
+                }) => (
                   <Form>
                     <div className="flex flex-col mt-9">
                       {/* EMAIL FIELD */}
@@ -68,7 +78,7 @@ function ForgotPassword() {
                           value={values.email}
                           onChange={(e) => {
                             handleChange(e);
-                            setFieldTouched('email', true, false); // Mark field as touched after typing
+                            setFieldTouched("email", true, false); // Mark field as touched after typing
                           }}
                           error={touched.email && errors.email}
                         />
@@ -92,7 +102,7 @@ function ForgotPassword() {
                           value={values.password}
                           onChange={(e) => {
                             handleChange(e);
-                            setFieldTouched('password', true, false); // Mark field as touched after typing
+                            setFieldTouched("password", true, false); // Mark field as touched after typing
                           }}
                           error={touched.password && errors.password}
                         />

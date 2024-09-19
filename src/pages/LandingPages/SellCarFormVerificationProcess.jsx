@@ -38,8 +38,8 @@ const navigate = useNavigate()
       <div className=" firstpart bg-[#f3f3f3] h-fit  py-16 sm:py-44">
       </div>
       <div className="  md:w-[80%] mx-auto  px-5 md:px-10 lg:pt-20 ">
-        <div className=" bg-white ">
-        <div className=" -mt-[30%] 2xl:-mt-[20%] rounded-xl shadow-2xl mb-10 px-2 lg:px-10 py-8">
+        <div className="  rounded-2xl bg-white  ">
+        <div className=" -mt-[30%] 2xl:-mt-[20%] rounded-xl border shadow-2xl mb-10 px-2 lg:px-10 py-8">
           <div className="flex items-center justify-center flex-col gap-5 px-5 md:px-10">
             <div>
               <img src={greentickicon} alt="" className="max-w-full h-auto" />

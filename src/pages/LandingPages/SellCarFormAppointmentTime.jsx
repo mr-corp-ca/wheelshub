@@ -69,7 +69,7 @@ function SellCarFormAppointmentTime() {
         </div>
       </div>
       <div className="cardpart flex justify-center bg-white mx-5">
-        <div className=" mb-16 -mt-16 w-full xl:w-[1170px] mx-auto bg-white border rounded-[16px] shadow py-10 px-5 md:px-16">
+        <div className=" mb-16 -mt-16 w-full xl:w-[1170px] mx-auto bg-white border shadow-css rounded-[16px] py-10 px-5 md:px-16">
           <div className=" flex items-center justify-center">
             <div className="  rounded-xl ">
               <h2 className=" text-lg lg:text-[28px] text-center font-bold font-inter text-gray-1 my-5 px-8">

@@ -21,7 +21,7 @@ function MechanicNewRequests() {
             .fill()
             .map((_, index) => {
               return (
-                <div key={index} className="card border rounded-2xl flex flex-col gap-4">
+                <div key={index} className="card border shadow-css rounded-2xl flex flex-col gap-4">
                   <div>
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>

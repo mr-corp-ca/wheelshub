@@ -44,7 +44,7 @@ function MyOrder() {
             .fill()
             .map((_, index) => {
               return (
-                <div key={index} className="card border rounded-2xl flex flex-col gap-4">
+                <div key={index} className="card border rounded-2xl flex flex-col gap-4  shadow-css">
                   <div>
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>

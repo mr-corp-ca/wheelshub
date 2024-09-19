@@ -39,7 +39,7 @@ function AppointmentsDetails() {
       <div className=''>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-5'>
           <div className='col-span-1 lg:col-span-7'>
-            <div className='border rounded-xl p-5 h-fit'>
+            <div className='border shadow-css rounded-xl p-5 h-fit'>
               <div>
                 <h1 className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Insurance details</h1>
               </div>
@@ -75,13 +75,13 @@ function AppointmentsDetails() {
               </div>
             </div>
 
-            <div className='border rounded-xl p-5 col-span-1 lg:col-span-5 my-7'>
+            <div className='border shadow-css rounded-xl p-5 col-span-1 lg:col-span-5 my-7'>
               <div>
                 <h1 className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Documents</h1>
               </div>
               <div className='pt-10 flex flex-col md:flex-row items-center gap-6 flex-wrap'>
                 <div className='flex flex-col items-center gap-2'>
-                  <div className='border rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
+                  <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
                     <img src={documentIcon} alt="" />
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
@@ -90,7 +90,7 @@ function AppointmentsDetails() {
                   </div>
                 </div>
                 <div className='flex flex-col items-center gap-2'>
-                  <div className='border rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
+                  <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
                     <img src={documentIcon} alt="" />
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
@@ -99,7 +99,7 @@ function AppointmentsDetails() {
                   </div>
                 </div>
                 <div className='flex flex-col items-center gap-2'>
-                  <div className='border rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
+                  <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
                     <img src={documentIcon} alt="" />
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
@@ -109,7 +109,7 @@ function AppointmentsDetails() {
                 </div>
               </div>
             </div>
-            <div className='border rounded-xl p-5 bg-[#f0f4fe]'>
+            <div className='border shadow-css rounded-xl p-5 bg-[#f0f4fe]'>
               <div className='w-full md:w-[50%] flex items-center flex-col justify-center mx-auto gap-5'>
                 <div>
                   <h1 className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Verify now</h1>
@@ -127,7 +127,7 @@ function AppointmentsDetails() {
             </div>
           </div>
 
-          <div className='border rounded-xl p-5 py-10 col-span-1 lg:col-span-5'>
+          <div className='border shadow-css rounded-xl p-5 py-10 col-span-1 lg:col-span-5'>
             <div>
               <h1 className='text-xl md:text-[32px] font-bold font-inter text-gray-1'>Insurance details</h1>
             </div>

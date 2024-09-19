@@ -33,7 +33,7 @@ function MechanicPayments() {
             Payments
           </h1>
         </div>
-        <div className="graphPart border shadow p-5 lg:p-10 mt-5 rounded-xl">
+        <div className="graphPart border shadow-css p-5 lg:p-10 mt-5 rounded-xl">
           <div className="graph">
             <ResponsiveContainer width="100%" height={200}>
               <LineChart data={data}>
@@ -90,7 +90,7 @@ function MechanicPayments() {
             View all
           </button>
         </div>
-        <div className="rounded-xl border p-5">
+        <div className="rounded-xl shadow-css border p-5">
           {Array(5)
             .fill()
             .map((_, i) => {

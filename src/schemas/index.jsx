@@ -52,6 +52,7 @@ const signInSchema = yup.object().shape({
 const ForgotPasswordSchema = yup.object().shape({
     email: yup
         .string()
+        .email('Enter a valid email')
         .required('Required'),
     password: yup
         .string()

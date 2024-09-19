@@ -55,7 +55,7 @@ function DealerDetailsCompany() {
                 <img src={car11} alt="" />
                 <img src={next} alt="" />
             </div>
-            <div className='carReview border rounded-xl p-5 h-fit'>
+            <div className='carReview border shadow-css rounded-xl p-5 h-fit'>
               <div>
                 <h1 className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Car overview</h1>
               </div>
@@ -106,7 +106,7 @@ function DealerDetailsCompany() {
                 </div>
               </div>
             </div>
-            <div className='specification border rounded-xl p-5 h-fit my-8'>
+            <div className='specification border shadow-css rounded-xl p-5 h-fit my-8'>
               <div>
                 <h1 className='text-xl md:text-2xl font-semibold font-inter text-gray-1'>Specification</h1>
               </div>
@@ -139,7 +139,7 @@ function DealerDetailsCompany() {
                 </div>
               </div>
             </div>
-            <div className='completehandover border rounded-xl p-5 bg-[#f0f4fe]'>
+            <div className='completehandover border shadow-css rounded-xl p-5 bg-[#f0f4fe]'>
               <div className='w-full md:w-[50%] flex items-center flex-col justify-center mx-auto gap-5'>
                 <div>
                   <h1 className='  text-xl md:text-2xl font-semibold font-inter text-gray-1'>Complete handover</h1>
@@ -156,7 +156,7 @@ function DealerDetailsCompany() {
               </div>
             </div>
         </div>
-        <div className='rightpart border rounded-xl p-5 py-10 col-span-6 lg:col-span-6'>
+        <div className='rightpart border shadow-css rounded-xl p-5 py-10 col-span-6 lg:col-span-6'>
             <div>
               <h1 className='text-2xl md:text-[32px] font-bold font-inter text-gray-1'>Handover details</h1>
             </div>
