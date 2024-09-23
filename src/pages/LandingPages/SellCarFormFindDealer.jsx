@@ -78,7 +78,7 @@ function SellCarFormFindDealer() {
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12  w-full 2xl:w-[1440px] mx-auto px-5 md:px-[135px] lg:pt-32">
           <div className="md:col-span-8 ">
-            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+            <h1 className="text-[20px]  xl:text-[48px] font-bold font-inter text-gray-800 ">
             Pick a Dealer for Professional
             Car Verification
             </h1>
@@ -110,7 +110,7 @@ function SellCarFormFindDealer() {
       </div>
 
       <div className="cardpart flex justify-center bg-white ">
-        <div className=" mb-20 -mt-32 w-full xl:w-[90%] 2xl:w-[1440px] mx-auto bg-white shadow-lg border rounded-xl py-10 px-5 md:px-16">
+        <div className=" mb-20 -mt-32 w-full md:w-[95%] 2xl:w-[1440px] mx-auto bg-white shadow-lg border rounded-xl py-10 px-5 xl:px-16">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
             <h1>Select Dealer to check the car</h1>
           </div>

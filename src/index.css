@@ -29,3 +29,5 @@ input:-webkit-autofill {
   background-color: #f9f9f9 !important; /* Match the background with the input's natural background color */
   color: inherit !important; /* Ensure the text color remains consistent */
 }
+
+

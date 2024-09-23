@@ -63,10 +63,10 @@ function SellCarFormFindMechanic() {
   return (
     <>
       <Navbar2 active={'Sell-A-Car'}/>
-      <div className="firstpart bg-[#f3f3f3] h-fit py-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[80%] mx-auto px-5 md:px-10 lg:pt-32">
+      <div className="firstpart bg-[#f3f3f3] h-fit py-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full 2xl:max-w-[1440px] mx-auto px-5 md:px-[135px]">
           <div className="md:col-span-9 ">
-            <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 ">
+            <h1 className="text-[20px]  xl:text-[48px] font-bold font-inter text-gray-800 ">
               Select a Certified Mechanic for a Thorough Check-Up
             </h1>
             <div className="flex flex-col gap-4 mt-5 ">
@@ -95,9 +95,9 @@ function SellCarFormFindMechanic() {
           </div>
         </div>
       </div>
-      <div className="cardpart flex justify-center bg-white ">
-        <div className=" mb-20 lg:-mt-10 w-full md:w-[90%] mx-auto bg-white border rounded-[16px] shadow-md py-10 px-5 md:px-16">
-          <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
+      <div className="cardpart flex justify-center bg-white">
+        <div className=" mb-20 -mt-16 lg:-mt-32 w-full md:w-[90%] 2xl:max-w-[1440px] mx-auto bg-white border rounded-[16px] shadow-md py-10 px-5 md:px-16">
+          <div className="flex text-center items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
             <h1>Select mechanic to check the car</h1>
           </div>
           <div className="flex flex-wrap items-center gap-5 pt-10 pb-5">
@@ -219,7 +219,7 @@ function SellCarFormFindMechanic() {
                 type="checkbox"
                 className="h-4 w-4"
               />
-              <p className="text-lg font-normal font-inter text-gray-800">
+              <p className=" text-xs md:text-lg font-normal font-inter text-gray-800">
                 I agree to pay the mechanic fee of $250 after successful
                 verification
               </p>

@@ -33,20 +33,20 @@ function MechanicVerifyNow() {
             fill="black"
           />
         </svg>
-        <div className="flex flex-row font-poppins font-normal  text-base">
+        <div className="flex flex-row font-poppins text-xs lg:text-lg">
           <p
             onClick={() => navigate(-1)}
-            className="text-gray-1  hover:cursor-pointer hover:text-black"
+            className="text-gray-1  hover:cursor-pointer hover:text-black font-medium "
           >
             Car verification/
           </p>
-          <p className="font-semibold text-custom-blue">
+          <p className=" text-custom-blue font-semibold">
             Mercedes-Benz E 220 D
           </p>
         </div>
       </div>
       <div className=" my-5">
-        <div className=" w-full lg:w-[90%] border shadow-css py-[64px] rounded-xl">
+        <div className=" w-full lg:w-[90%] border shadow-css py-[64px] rounded-xl px-3 lg:px-0">
           <div className=" ">
             <div className=" flex items-center justify-center flex-col gap-6">
               <h1 className="text-[28px] font-bold font-inter text-gray-1">

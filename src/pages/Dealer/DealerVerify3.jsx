@@ -23,12 +23,12 @@ function DealerVerifyNow3() {
   return (
     <>
     <Layout active={'Dashboard'}>
-      <div className="p-4 md:p-10">
-        <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
+      <div className="my-5">
+        <h1 className="text-2xl font-semibold font-inter text-gray-1">
           Dashboard
         </h1>
       </div>
-      <div className="flex flex-row items-center gap-x-2 px-4 md:px-10">
+      <div className="flex flex-row items-center gap-x-2">
         <svg
           width="8"
           height="14"
@@ -43,10 +43,10 @@ function DealerVerifyNow3() {
             fill="black"
           />
         </svg>
-        <div className="flex flex-row font-poppins font-normal text-sm md:text-base">
+        <div className="flex flex-row font-poppins text-xs lg:text-lg">
           <p
             onClick={() => navigate(-1)}
-            className="text-gray-1 hover:cursor-pointer hover:text-black"
+            className="text-gray-1 hover:cursor-pointer hover:text-black font-medium"
           >
             Car verification/
           </p>
@@ -55,8 +55,8 @@ function DealerVerifyNow3() {
           </p>
         </div>
       </div>
-      <div className="flex px-4 md:px-10 py-5">
-        <div className="w-full lg:w-[90%] border p-5 py-8 md:py-16 rounded-xl">
+      <div className="flex my-5">
+        <div className="w-full lg:w-[90%] border lg:px-0 px-3 py-8 md:py-16 rounded-xl">
           <div className="flex items-center justify-center flex-col gap-6">
             <h1 className="text-lg md:text-[28px] font-bold font-inter text-gray-1">
               Car condition review

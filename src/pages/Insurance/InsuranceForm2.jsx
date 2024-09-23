@@ -73,7 +73,7 @@ function InsuranceForm2() {
     <>
       <Layout active={"Dashboard"}>
         <div className=" my-5">
-          <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">
+          <h1 className="text-2xl font-semibold font-inter text-gray-1">
             Dashboard
           </h1>
         </div>
@@ -92,10 +92,10 @@ function InsuranceForm2() {
               fill="black"
             />
           </svg>
-          <div className="flex flex-row font-poppins font-normal  text-base">
+          <div className="flex flex-row font-poppins text-xs lg:text-lg">
             <p
               onClick={() => navigate(-1)}
-              className="text-gray-1  hover:cursor-pointer hover:text-black"
+              className="text-gray-1 font-medium hover:cursor-pointer hover:text-black"
             >
               Car verification/
             </p>
@@ -105,7 +105,7 @@ function InsuranceForm2() {
           </div>
         </div>
         <div className=" flex my-5">
-          <div className="w-full max-w-[1170px]  border p-5 py-16 rounded-2xl bg-white shadow-css">
+          <div className="w-full max-w-[1170px]  border px-3 lg:px-0 py-8 lg:py-16 rounded-2xl bg-white shadow-css">
             <div className=" ">
               <div className=" flex items-center justify-center flex-col gap-6">
                 <h1 className="lg:text-[28px] font-bold font-inter text-gray-1">

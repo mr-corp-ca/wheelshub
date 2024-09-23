@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import greentick from "../../assets/images/tickofgreen.png";
 import paymentImg from "../../assets/images/paymentimg.png";
 import { useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
@@ -13,7 +12,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
     <>
     <Navbar2 active={'Sell-A-Car'}/>
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
-      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[90%] mx-auto px-5 md:px-10 lg:pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-12 gap-10  w-full md:max-w-[1170px] mx-auto px-5 md:px-10 lg:pt-20'>
           <div className='md:col-span-9 '>
             <h1 className='text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 '>
             Confirm Your Mechanic and Dealer
@@ -40,7 +39,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
         </div>
       </div>
       <div className="cardpart flex justify-center bg-white mx-5 ">
-        <div className=" mb-16 -mt-16 w-full md:w-[90%] mx-auto bg-white shadow-css border rounded-xl py-10 md:px-16">
+        <div className=" mb-16 -mt-16 w-full  md:max-w-[1170px] mx-auto bg-white shadow-css border rounded-xl py-10 lg:px-16">
         <div className="payment">
             <div className="rounded-xl">
               <div className="flex items-center justify-center">
@@ -49,35 +48,35 @@ function SellCarFormAppointmentDealerPaymentProcess() {
                 </h1>
               </div>
               <div className="flex flex-col md:flex-row items-center justify-between gap-10 my-10">
-                <div className="left w-full md:w-[50%]">
+                <div className="left w-full lg:w-[50%]">
                   <div className="voucher border-b md:border-b-0 md:border-r p-5">
                     <div className="flex items-center justify-between my-5">
-                      <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-600">
+                      <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-600">
                         Mechanic appointment fee
                       </h1>
-                      <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                      <h1 className="text-xs md:text-lg font-medium font-Work-sans text-gray-800">
                         $50.00
                       </h1>
                     </div>
                     <div className="flex items-center justify-between my-5 border-b pb-4">
-                      <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-600">
+                      <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-600">
                         Dealer appointment fee
                       </h1>
-                      <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                      <h1 className="text-xs md:text-lg font-medium font-Work-sans text-gray-800">
                         $50.00
                       </h1>
                     </div>
                     <div className="flex items-center justify-between my-7">
-                      <h1 className="text-base md:text-lg font-normal font-Work-sans text-gray-600">
+                      <h1 className="text-xs md:text-lg font-normal font-Work-sans text-gray-600">
                         Total amount to pay
                       </h1>
-                      <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-800">
+                      <h1 className="text-xs md:text-lg font-medium font-Work-sans text-gray-800">
                         $100.00
                       </h1>
                     </div>
                   </div>
                 </div>
-                <div className="right w-full md:w-[50%]">
+                <div className="right w-full lg:w-[50%]">
                   <div className="voucher p-5">
                     <div>
                       <label

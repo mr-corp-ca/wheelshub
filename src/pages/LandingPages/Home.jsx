@@ -174,7 +174,7 @@ function Home() {
               iconclick === 1
                 ? " rounded-tl-xl bg-gradient-to-tr from-[#dbeeff] to-[#f3f9ff] text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-x-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-x-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
           >
             <span>
               <Svgs.SellCarIcon
@@ -191,7 +191,7 @@ function Home() {
               iconclick === 2
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
           >
             <Svgs.BuyACarIcon color={iconclick === 2 ? "#6f9cff" : "#333333"} />
             Buy
@@ -204,7 +204,7 @@ function Home() {
               iconclick === 3
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
           >
             <Svgs.MechanicIcon
               color={iconclick === 3 ? "#6f9cff" : "#333333"}
@@ -219,7 +219,7 @@ function Home() {
               iconclick === 4
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
           >
             <Svgs.DealerIcon color={iconclick === 4 ? "#6f9cff" : "#333333"} />
             Dealer
@@ -232,7 +232,7 @@ function Home() {
               iconclick === 5
                 ? " bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] border-r h-[84px]`}
           >
             <Svgs.InsuranceIcon
               color={iconclick === 5 ? "#6f9cff" : "#333333"}
@@ -247,7 +247,7 @@ function Home() {
               iconclick === 6
                 ? " md:rounded-tr-xl bg-gradient-to-tr from-[#e5f2fe] to-white text-custom-blue h-[84px]"
                 : ""
-            } w-[200px] flex items-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] h-[84px]`}
+            } w-[200px] flex items-center justify-center gap-2 text-lg font-medium font-Work-sans px-[15px] md:px-[30px] py-[10px] md:py-[20px] h-[84px]`}
           >
             <Svgs.FinanceIcon color={iconclick === 6 ? "#6f9cff" : "#333333"} />
             Finance
