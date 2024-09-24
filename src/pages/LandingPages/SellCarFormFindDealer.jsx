@@ -226,7 +226,7 @@ function SellCarFormFindDealer() {
              checked={isChecked}
              onChange={handleCheckboxChange}
             type="checkbox" className="h-4 w-4" />
-            <p className="text-lg font-normal font-inter text-gray-800">
+            <p className=" text-xs md:text-lg font-normal font-inter text-gray-800">
             I agree to pay the Dealer fee of $250 after successfull verification
             </p>
           </div>

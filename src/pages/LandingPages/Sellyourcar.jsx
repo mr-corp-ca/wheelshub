@@ -9,10 +9,12 @@ import { useRoleContext } from "../../Context/RoleContext";
 import modeldesgin from "../../assets/images/manwithfinger.png";
 import Banner from "../../components/Banner";
 import Svgs from '../../assets/svgs/index.js'
+import { useSellACarContext } from "../../Context/SellACarContext.jsx";
 
 
 function Sellyourcar() {
 
+  const {setSelectSell} = useSellACarContext()
 
   const navigate = useNavigate();
 
@@ -27,8 +29,13 @@ function Sellyourcar() {
   const handleSelect = (id) => {
     setLoginType(id);
     setBorderColor(id);
+    
   };
 
+ const handleChange =(e)=>{
+  setLoginType(e.target.value);
+  setSelectSell(e.target.value)
+ }
   return (
     <>
       <Navbar2 active={'Sell-A-Car'}/>
@@ -103,9 +110,9 @@ function Sellyourcar() {
                   type="radio"
                   value={"form"}
                   checked={loginType === "form"}
-                  onChange={(e) => {
-                    setLoginType(e.target.value);
-                  }}
+                  onChange={
+                    handleChange
+                  }
                   name="same"
                   className=" h-5 w-5"
                 />

@@ -4,12 +4,13 @@ import greentickicon from "../../assets/images/greentickicon.png";
 import Navbar2 from "../../components/Navbar2";
 import { Navigate, useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
+import { useSellACarContext } from "../../Context/SellACarContext";
 
 function SellCarFormVerificationProcess() {
   const navigate = useNavigate();
+  const {selectSell} = useSellACarContext()
 
-
-
+  console.log('sellcarvalue..........', selectSell)
 
   return (
     <>
@@ -26,6 +27,7 @@ function SellCarFormVerificationProcess() {
                 <h1 className="text-2xl sm:text-[36px] font-semibold font-inter text-gray-800 text-center">
                   Payment successful!
                 </h1>
+                
                 <p className="my-5 text-base text-center md:text-start font-normal font-plus-jakarta-sans text-gray-600">
                   Payment of $100 is successfully paid to Wheeldealhub
                 </p>

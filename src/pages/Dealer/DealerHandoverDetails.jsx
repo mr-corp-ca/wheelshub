@@ -1,20 +1,20 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import audiimg from "../../assets/images/audi14.png";
-import next from "../../assets/images/nextIcon.png";
-import prev from "../../assets/images/prevIcon.png";
-import car11 from "../../assets/images/car11.png";
-import car12 from "../../assets/images/car12.png";
-import car13 from "../../assets/images/man13.png";
-import car14 from "../../assets/images/man14.png";
 import mechanicMan from "../../assets/images/mechanicMan.png";
-import man1img from "../../assets/images/insuranceMan1.png";
-import man2img from "../../assets/images/insuranceMan2.png";
-import man3img from "../../assets/images/insuranceMan3.png";
-import maninsuit from "../../assets/images/mansuit.png";
 import greentick from "../../assets/images/greentick3.png";
 import goldstars from "../../assets/images/goldstars.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useEffect, useState } from "react";
+import carimage1 from '../../assets/images/carimage1.png'
+import carimage2 from '../../assets/images/carimage2.png'
+import carimage3 from '../../assets/images/carimage3.png'
+import carimage4 from '../../assets/images/carimage4.png'
+import carimage5 from '../../assets/images/carimage5.png'
+import Svgs from '../../assets/svgs/index.js'
+
+
+
 function DealerHandoverDetails() {
   const review = [
     {
@@ -31,13 +31,62 @@ function DealerHandoverDetails() {
     },
   ];
   const navigate = useNavigate();
+
+  const images = [
+    audiimg, // Replace with actual image URLs
+    carimage1,
+    carimage2,
+    carimage3,
+    carimage4,
+    carimage5,
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
+  const [visibleImagesCount, setVisibleImagesCount] = useState(4);
+
+  useEffect(() => {
+    const updateVisibleImagesCount = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 640) {
+        setVisibleImagesCount(1); // 1 image for small screens
+      } else if (screenWidth < 1024) {
+        setVisibleImagesCount(2); // 2 images for medium screens
+      } else {
+        setVisibleImagesCount(4); // 4 images for large screens
+      }
+    };
+
+    updateVisibleImagesCount(); // Run on initial load
+    window.addEventListener("resize", updateVisibleImagesCount); // Run on window resize
+
+    return () => window.removeEventListener("resize", updateVisibleImagesCount);
+  }, []);
+
+  // Handle clicking on a thumbnail image
+  const handleThumbnailClick = (index) => {
+    setCurrentImageIndex(index);
+  };
+
+  // Handle left arrow click to shift visible images
+  const handleLeftArrowClick = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  // Handle right arrow click to shift visible images
+  const handleRightArrowClick = () => {
+    if (startIndex + visibleImagesCount < images.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
   return (
     <>
     <Layout active={'Dashboard'}>
       <div className="flex gap-4 flex-col md:flex-row items-start md:items-center justify-between py-5">
         <div className="flex flex-col gap-4 col-span-7 lg:col-span-11">
           <div className="">
-            <h1 className="text-base md:text-2xl font-semibold font-inter text-gray-1">
+            <h1 className="text-2xl font-semibold font-inter text-gray-1">
               Dashboard
             </h1>
           </div>
@@ -56,14 +105,14 @@ function DealerHandoverDetails() {
                 fill="black"
               />
             </svg>
-            <div className="flex flex-col md:flex-row font-poppins font-normal text-base">
+            <div className="flex font-poppins text-xs lg:text-lg">
               <p
                 onClick={() => navigate(-1)}
-                className="text-gray-1 text-sm lg:text-base hover:cursor-pointer hover:text-black"
+                className="text-gray-1 font-medium hover:cursor-pointer hover:text-black"
               >
                Car verification/
               </p>
-              <p className=" text-sm lg:text-base font-semibold text-custom-blue">
+              <p className=" font-semibold text-custom-blue">
                 Mercedes-Benz E 220 D
               </p>
             </div>
@@ -81,7 +130,7 @@ function DealerHandoverDetails() {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <div className="leftpart col-span-7">
+        <div className="leftpart col-span-12 lg:col-span-7">
           <div className="border rounded-xl p-5 flex items-center gap-5 flex-wrap">
             <div>
               <img src={mechanicMan} className="w-full" alt="" />
@@ -91,7 +140,7 @@ function DealerHandoverDetails() {
                 Mechanic appointment
               </h1>
               <div className="flex items-center gap-2 pt-2">
-                <img src={greentick} alt="" />
+                <Svgs.GreenTickVerified/>
                 <h1 className=" text-lg font-medium font-Work-sans text-[#38A242]">
                   Verified by Mechanic
                 </h1>
@@ -106,16 +155,41 @@ function DealerHandoverDetails() {
           </div>
 
           <div className="img pt-5">
-            <img src={audiimg} className="w-full" alt="" />
-          </div>
-          <div className="images flex items-center justify-between py-5">
-            <img src={prev} alt="" />
-            <img src={car14} alt="" className="hidden md:inline-block" />
-            <img src={car12} alt="" className="hidden md:inline-block" />
-            <img src={car12} alt="" className="hidden md:inline-block" />
-            <img src={car11} alt="" />
-            <img src={next} alt="" />
-          </div>
+              <img
+                src={images[currentImageIndex]}
+                className="w-fit 2xl:h-[372px] rounded-2xl"
+                alt=""
+              />
+            </div>
+            <div className="images flex items-center justify-center gap-x-4 2xl:gap-x-7 py-5">
+              <span
+                onClick={handleLeftArrowClick}
+                className=" cursor-pointer border border-gray-1 h-[34px] w-[28px] flex items-center justify-center rounded-lg"
+              >
+                <Svgs.ArrowLeft />
+              </span>
+              {images
+                .slice(startIndex, startIndex + visibleImagesCount)
+                .map((image, index) => (
+                  <img
+                    key={index + startIndex} // Unique key per image
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    onClick={() => handleThumbnailClick(index + startIndex)}
+                    className={`w-[110px] h-[110px] rounded-lg cursor-pointer transition-opacity ${
+                      index + startIndex === currentImageIndex
+                        ? "opacity-100 border-2 border-blue-500"
+                        : "opacity-50 hover:opacity-100"
+                    }`}
+                  />
+                ))}
+              <span
+                onClick={handleRightArrowClick}
+                className=" cursor-pointer border border-gray-1 h-[34px] w-[28px] flex items-center justify-center rounded-lg"
+              >
+                <Svgs.ArrowRight />
+              </span>
+            </div>
           <div className="carReview border rounded-xl p-5 h-fit">
             <div>
               <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">
@@ -263,7 +337,7 @@ function DealerHandoverDetails() {
             </div>
           </div>
         </div>
-        <div className="rightpart col-span-6 lg:col-span-5">
+        <div className="rightpart col-span-12 lg:col-span-5">
           {review.map((value, i) => {
             return (
               <>
@@ -274,15 +348,19 @@ function DealerHandoverDetails() {
                         {value.name}
                       </h1>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1 lg:gap-3">
                       <h1 className=" text-sm font-normal font-Work-sans text-gray-1">
                         5 Stars
                       </h1>
-                      <img src={goldstars} alt="" />
+                      <Svgs.YellowStar/>
+                      <Svgs.YellowStar/>
+                      <Svgs.YellowStar/>
+                      <Svgs.YellowStar/>
+                      <Svgs.YellowStar/>
                     </div>
                   </div>
                   <div className="reviewWrite border rounded-xl p-5 my-5">
-                    <p className=" text-lg font-normal font-Work-sans text-gray-1">
+                    <p className=" text-sm md:text-lg font-normal font-Work-sans text-gray-1">
                       Under the hood, the engine performs exceptionally well. It
                       offers a smooth and powerful ride, with quick acceleration
                       and impressive fuel efficiency. The engine runs quietly,

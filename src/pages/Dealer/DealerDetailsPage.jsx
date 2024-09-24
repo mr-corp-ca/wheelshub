@@ -1,12 +1,6 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import audiimg from "../../assets/images/audi14.png"
-import next from "../../assets/images/nextIcon.png"
-import prev from "../../assets/images/prevIcon.png"
-import car11 from "../../assets/images/car11.png"
-import car12 from "../../assets/images/car12.png"
-import car13 from "../../assets/images/man13.png"
-import car14 from "../../assets/images/man14.png"
 import man1img from "../../assets/images/insuranceMan1.png"
 import man2img from "../../assets/images/insuranceMan2.png"
 import man3img from "../../assets/images/insuranceMan3.png"
@@ -15,6 +9,15 @@ import greentick from "../../assets/images/greentick3.png"
 import VerifiedSuccessful from './VerifiedSuccessful'
 import { useState } from 'react'
 import { Layout } from '../../components/Layout/DashboardLayout'
+import { useEffect } from "react";
+import carimage1 from '../../assets/images/carimage1.png'
+import carimage2 from '../../assets/images/carimage2.png'
+import carimage3 from '../../assets/images/carimage3.png'
+import carimage4 from '../../assets/images/carimage4.png'
+import carimage5 from '../../assets/images/carimage5.png'
+import Svgs from '../../assets/svgs/index.js'
+
+
 function DealerDetailsPage() {
     const navigate = useNavigate()
 
@@ -26,6 +29,56 @@ function DealerDetailsPage() {
   
     const handleClosePopup = () => {
       setShowPopup(false);
+    };
+
+
+    const images = [
+      audiimg, // Replace with actual image URLs
+      carimage1,
+      carimage2,
+      carimage3,
+      carimage4,
+      carimage5,
+    ];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [startIndex, setStartIndex] = useState(0);
+    const [visibleImagesCount, setVisibleImagesCount] = useState(4);
+  
+    useEffect(() => {
+      const updateVisibleImagesCount = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 640) {
+          setVisibleImagesCount(1); // 1 image for small screens
+        } else if (screenWidth < 1024) {
+          setVisibleImagesCount(2); // 2 images for medium screens
+        } else {
+          setVisibleImagesCount(4); // 4 images for large screens
+        }
+      };
+  
+      updateVisibleImagesCount(); // Run on initial load
+      window.addEventListener("resize", updateVisibleImagesCount); // Run on window resize
+  
+      return () => window.removeEventListener("resize", updateVisibleImagesCount);
+    }, []);
+  
+    // Handle clicking on a thumbnail image
+    const handleThumbnailClick = (index) => {
+      setCurrentImageIndex(index);
+    };
+  
+    // Handle left arrow click to shift visible images
+    const handleLeftArrowClick = () => {
+      if (startIndex > 0) {
+        setStartIndex(startIndex - 1);
+      }
+    };
+  
+    // Handle right arrow click to shift visible images
+    const handleRightArrowClick = () => {
+      if (startIndex + visibleImagesCount < images.length) {
+        setStartIndex(startIndex + 1);
+      }
     };
   return (
     <>
@@ -44,16 +97,41 @@ function DealerDetailsPage() {
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-12  gap-6 my-10'>
         <div className='leftpart col-span-6'>
-            <div className='img'>
-                <img src={audiimg} className='w-full' alt="" />
+        <div className="img">
+              <img
+                src={images[currentImageIndex]}
+                className="w-fit 2xl:h-[372px] rounded-2xl"
+                alt=""
+              />
             </div>
-            <div className='images flex items-center justify-between py-5'>
-                <img src={prev} alt="" />
-                <img src={car14} alt="" className='hidden md:inline-block' />
-                <img src={car12} alt="" className='hidden md:inline-block' />
-                <img src={car12} alt="" className='hidden md:inline-block' />
-                <img src={car11} alt="" />
-                <img src={next} alt="" />
+            <div className="images flex items-center justify-center gap-x-1 2xl:gap-x-7 py-5">
+              <span
+                onClick={handleLeftArrowClick}
+                className=" cursor-pointer border border-gray-1 h-[34px] w-[28px] flex items-center justify-center rounded-lg"
+              >
+                <Svgs.ArrowLeft />
+              </span>
+              {images
+                .slice(startIndex, startIndex + visibleImagesCount)
+                .map((image, index) => (
+                  <img
+                    key={index + startIndex} // Unique key per image
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    onClick={() => handleThumbnailClick(index + startIndex)}
+                    className={`w-[110px] h-[110px] rounded-lg cursor-pointer transition-opacity ${
+                      index + startIndex === currentImageIndex
+                        ? "opacity-100 border-2 border-blue-500"
+                        : "opacity-50 hover:opacity-100"
+                    }`}
+                  />
+                ))}
+              <span
+                onClick={handleRightArrowClick}
+                className=" cursor-pointer border border-gray-1 h-[34px] w-[28px] flex items-center justify-center rounded-lg"
+              >
+                <Svgs.ArrowRight />
+              </span>
             </div>
             <div className='carReview border rounded-xl p-5 h-fit'>
               <div>
@@ -252,12 +330,12 @@ function DealerDetailsPage() {
             </div>
             <div className='flex items-center gap-3 py-4'>
                 <div className='flex items-center gap-2'>
-                    <img src={greentick} alt="" />
-                    <h1 className=' text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Mechanic</h1>
+                    <Svgs.GreenTickVerified/>
+                    <h1 className=' text-[10px] lg:text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Mechanic</h1>
                 </div>
                 <div className='flex items-center gap-2'>
-                    <img src={greentick} alt="" />
-                    <h1 className=' text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Dealer</h1>
+                <Svgs.GreenTickVerified/>
+                    <h1 className=' text-[10px] lg:text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Dealer</h1>
                 </div>
             </div>
             <div className=' flex items-center justify-center pt-5'>

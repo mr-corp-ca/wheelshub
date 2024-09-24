@@ -101,8 +101,8 @@ function Login() {
                 "Dealer",
                 "Mechanic",
                 "Insurance",
-                "Company Representative",
                 "Finance",
+                "Company Representative",
               ].map((type, index) => (
                 <div key={index} className="flex items-center gap-2 cursor-pointer">
                   <input

@@ -3,10 +3,10 @@ import { createContext, useContext, useState } from "react";
 const SellACarContext = createContext();
 
 export const SellACarContextProvider = ({ children }) => {
-  const [selectSale, setSelectSale] = useState("");
+  const [selectSale, setSelectSale] = useState('');
 
   return (
-    <SellACarContext.Provider value={{ selectSale, setSelectSale }}>
+    <SellACarContext.Provider value={{ selectSale , setSelectSale }}>
       {children}
     </SellACarContext.Provider>
   );
