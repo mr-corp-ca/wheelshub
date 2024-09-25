@@ -102,9 +102,9 @@ function Navbar2({ active }) {
     },
   ];
 
-  const filterNavbarData = user.isLoggedIn
-    ? navbarData.filter((item) => item.name !== "Home")
-    : navbarData;
+  // const filterNavbarData = user.isLoggedIn
+  //   ? navbarData.filter((item) => item.name !== "Home")
+  //   : navbarData;
 
   const hnadlePath = (path) => {
     navigate(path);
@@ -135,7 +135,7 @@ function Navbar2({ active }) {
           </Link>
           <div className="hidden lg:flex items-center gap-4">
             <ul className="flex items-center gap-2 xl:gap-5">
-              {filterNavbarData.map((value, index) => (
+              {navbarData.map((value, index) => (
                 <li
                   key={index}
                   onClick={() => {

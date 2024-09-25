@@ -476,7 +476,7 @@ export const SideBar2 = ({ active }) => {
 
 
   return (
-    <div className="flex flex-col  bg-white py-8  border-r-2 w-full h-full items-center ">
+    <div className="flex flex-col  bg-white border-r-2 w-full h-full items-center ">
       <div className="w-full flex flex-col">
         {sideBarData.map(
           (value, index) => (

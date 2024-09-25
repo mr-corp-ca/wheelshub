@@ -63,12 +63,11 @@ export default function InsuranceLandingPage() {
             </h1>
           </div>
           {/* Search bar */}
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mt-5 bg-[#fafafa]">
-            <input
-              type="text"
-              placeholder="Search here"
-              className="ml-2 w-full border-none focus:outline-none bg-transparent"
-            />
+          <div className="mt-5">
+          <div className=" border flex items-center gap-x-2 h-[45px] rounded-lg bg-[#fafafa] px-4 py-3">
+              <Svgs.Search/>
+              <input type="text" placeholder="Search here" className=" text-base font-normal font-inter text-gray-4 h-full w-full flex bg-transparent flex-1 border-none outline-none"/>
+            </div>
           </div>
           <div className="mt-5">
             {/* Accordion */}
@@ -211,7 +210,7 @@ export default function InsuranceLandingPage() {
                   }}
                   className={`${
                     btnActive === i
-                      ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                      ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                       : "bg-white text-gray-1"
                   } rounded-lg border  px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center`}
                 >

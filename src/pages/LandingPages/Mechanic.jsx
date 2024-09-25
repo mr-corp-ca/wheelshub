@@ -102,11 +102,10 @@ export default function Mechanic({selectSell}) {
           </div>
           {/* Search bar */}
           <div className="mt-5">
-            <Input
-              type="text"
-              placeholder="Search here"
-              className="w-full border focus:outline-none bg-[#fafafa]"
-            />
+          <div className=" border flex items-center gap-x-2 h-[45px] rounded-lg bg-[#fafafa] px-4 py-3">
+              <Svgs.Search/>
+              <input type="text" placeholder="Search here" className=" text-base font-normal font-inter text-gray-4 h-full w-full flex bg-transparent flex-1 border-none outline-none"/>
+            </div>
           </div>
           <div className="mt-5">
             <div className=" border rounded-[16px]">
@@ -271,7 +270,7 @@ export default function Mechanic({selectSell}) {
                   }}
                   className={`${
                     btnActive === i
-                      ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                      ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                       : "bg-white text-gray-1 border border-gray-2"
                   } rounded-lg   px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center`}
                 >
