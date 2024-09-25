@@ -7,18 +7,10 @@ import ClaimNow from "./ClaimNow";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
 import { useEffect } from "react";
+import Svgs from '../../assets/svgs/index.js'
+
 
 function Insurance() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const showDialog = () => {
-    setIsVisible(true);
-  };
-
-  const closeDialog = () => {
-    setIsVisible(false);
-  };
-
   const [showPopup, setShowPopup] = useState(false);
   const [popup, setpopup] = useState(null);
   const handleShowPopup = (index) => {
@@ -131,14 +123,11 @@ function Insurance() {
                     </button>
                   </div>
                 </div>
+                {Array(4).fill().map(()=>(
                 <div className="photo">
                   <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                     <div className="flex items-center gap-2">
-                      <img
-                        src={photo}
-                        alt=""
-                        className="w-10 h-10 md:w-auto md:h-auto"
-                      />
+                    <span className=" h-[48px] w-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                       <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                         Car Insurance
                       </span>
@@ -150,44 +139,7 @@ function Insurance() {
                     </div>
                   </div>
                 </div>
-                <div className="photo">
-                  <div className="photodown flex items-center justify-between border-b border-dashed py-3">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={photo}
-                        alt=""
-                        className="w-10 h-10 md:w-auto md:h-auto"
-                      />
-                      <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
-                        Car Insurance
-                      </span>
-                    </div>
-                    <div>
-                      <h1 className="font-poppins text-sm md:text-base font-normal text-custom-blue">
-                        +$250
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-                <div className="photo">
-                  <div className="photodown flex items-center justify-between border-b border-dashed py-3">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={photo}
-                        alt=""
-                        className="w-10 h-10 md:w-auto md:h-auto"
-                      />
-                      <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
-                        Car Insurance
-                      </span>
-                    </div>
-                    <div>
-                      <h1 className="font-poppins text-sm md:text-base font-normal text-custom-blue">
-                        +$250
-                      </h1>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ function Chats() {
                       <div>
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Jimmy</h1>
                       </div>
-                      <div className="flex items-center justify-between gap-7">
+                      <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Svgs.GrayDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked...</h1>

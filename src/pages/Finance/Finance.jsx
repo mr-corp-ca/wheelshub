@@ -7,6 +7,7 @@ import photo from "../../assets/images/photo.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import { useEffect, useState } from "react";
 import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
+import Svgs from '../../assets/svgs/index.js'
 
 function Finance() {
 
@@ -99,7 +100,7 @@ function Finance() {
               <div className="photo">
               <div className="photodown flex items-center justify-between py-2 border-b-2 border-dashed">
                   <div className="flex items-center gap-2">
-                    <img src={photo} alt="" className="w-10 h-10 md:w-auto md:h-auto" />
+                   <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Subscription
                     </span>
@@ -112,8 +113,8 @@ function Finance() {
                 </div>
                 <div className="photodown flex items-center justify-between py-2 border-b-2 border-dashed">
                   <div className="flex items-center gap-2">
-                    <img src={photo} alt="" className="w-10 h-10 md:w-auto md:h-auto" />
-                    <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
+                  <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Subscription
                     </span>
                   </div>
@@ -125,8 +126,8 @@ function Finance() {
                 </div>
                 <div className="photodown flex items-center justify-between py-2 border-b-2 border-dashed">
                   <div className="flex items-center gap-2">
-                    <img src={photo} alt="" className="w-10 h-10 md:w-auto md:h-auto" />
-                    <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
+                  <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Subscription
                     </span>
                   </div>
@@ -138,8 +139,8 @@ function Finance() {
                 </div>
                 <div className="photodown flex items-center justify-between py-2 border-b-2 border-dashed">
                   <div className="flex items-center gap-2">
-                    <img src={photo} alt="" className="w-10 h-10 md:w-auto md:h-auto" />
-                    <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
+                  <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Subscription
                     </span>
                   </div>

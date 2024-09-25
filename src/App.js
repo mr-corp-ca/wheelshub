@@ -119,7 +119,6 @@ import CustomerPayments from "./pages/Customer Login/CustomerPayments";
 import ContactUs from "./pages/LandingPages/ContactUs";
 import ForgotPassword from "./pages/OnBoarding/ForgotPassword";
 import CreateNewPassword from "./pages/OnBoarding/CreateNewPassword";
-import ParentSellCar from "./pages/LandingPages/ParentSellCar";
 
 // export const Layout = () => {
 //   const { pathname } = useLocation()

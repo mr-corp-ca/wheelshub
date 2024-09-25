@@ -3,6 +3,7 @@ import greenTick from "../../assets/images/greenTick.png";
 import pattern from "../../assets/images/Pattern.png";
 import mailGift from "../../assets/images/mailGift.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index.js'
 
 function Subscriptions() {
   const [cardbg, setCardbg] = useState(1)
@@ -25,9 +26,9 @@ function Subscriptions() {
             { id: 2 , title: "Gold", price: "$100", color: "text-white", bgColor: "bg-custom-blue", textColor: "text-white" },
             { id: 3 , title: "Platinum", price: "$130", color: "text-custom-blue", bgColor: "bg-custom-blue", textColor: "text-custom-blue" }
           ].map((plan, index) => (
-            <div onClick={()=>{handleCardClick(index)}} key={index} className={` cursor-pointer rounded-xl p-3 relative w-full max-w-[352px] min-h-[431px] ${cardbg === index ? 'bg-custom-blue text-white shadow-2xl shadow-custom-blue' : 'bg-white text-custom-blue border'}`}>
+            <div onClick={()=>{handleCardClick(index)}} key={index} className={` cursor-pointer rounded-[24px] p-3 relative w-full max-w-[352px] min-h-[431px] ${cardbg === index ? 'bg-custom-blue text-white shadow-2xl shadow-custom-blue' : 'bg-white text-custom-blue border'}`}>
               <div className="absolute top-0 right-0">
-                <img src={pattern} alt="Pattern" />
+                <Svgs.CurvedPattern color={cardbg === index ? '#fff' : '#333333'}/>
               </div>
               <div className="uperheadings flex flex-col gap-3">
                 <div>
@@ -40,7 +41,7 @@ function Subscriptions() {
               <div className="lowerheading pt-10">
                 {["25 contacts per month", "More business", "2 minimum appointments", "2 minimum Handovers"].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-2 py-2">
-                    <img src={greenTick} alt="Tick" />
+                    <Svgs.GreenTickCircleIcon/>
                     <h1 className={`text-base font-medium font-Work-sans`}>{feature}</h1>
                   </div>
                 ))}

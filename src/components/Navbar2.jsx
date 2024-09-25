@@ -51,7 +51,6 @@ function Navbar2({ active }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const { user } = useUserContext();
 

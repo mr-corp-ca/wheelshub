@@ -25,7 +25,7 @@ function InsuranceChats() {
         <div className="ChatWholepart my-5">
           <div className="rounded-xl border">
             <div className="upersection grid grid-cols-12">
-              <div className="leftuper p-3 flex justify-between col-span-12 md:col-span-3 items-center border-r border-b">
+              <div className="leftuper p-3 flex justify-between col-span-12 md:col-span-4 items-center border-r border-b">
                 <div className="flex items-center gap-3">
                   <div>
                     <img src={man4} alt="" />
@@ -39,7 +39,7 @@ function InsuranceChats() {
                 <Svgs.SearchIcon/>
                 </div>
               </div>
-              <div className="rightuper p-3 flex justify-between col-span-12 md:col-span-9 items-center border-b">
+              <div className="rightuper p-3 flex justify-between col-span-12 md:col-span-8 items-center border-b">
                 <div className="flex items-center gap-3">
                   <div>
                     <img src={man3} alt="" />
@@ -53,20 +53,20 @@ function InsuranceChats() {
                 <Svgs.VerticalDots3/>
                 </div>
               </div>
-              <div className="leftdownsection col-span-12 md:col-span-3 border-r">
+              <div className="leftdownsection col-span-12 md:col-span-4 border-r">
                 <div className="text-lg font-medium font-public-sans text-gray-1 px-3 pt-5 pb-4">
                   <h1>Messages</h1>
                 </div>
                 <div className="leftdown p-3 flex justify-between items-center bg-[#f2f2f2] border-b">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 w-full">
                     <div>
                       <img src={man4} alt="" />
                     </div>
-                    <div>
+                    <div className=" w-full">
                       <div>
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Jimmy</h1>
                       </div>
-                      <div className="flex items-center justify-between gap-7">
+                      <div className="flex items-center justify-between w-full ">
                         <div className="flex items-center gap-2">
                         <Svgs.GrayDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
@@ -79,16 +79,16 @@ function InsuranceChats() {
                   </div>
                 </div>
                 <div className="leftdown p-3 flex justify-between items-center border-b">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 w-full">
                     <div>
                       <img src={man2} alt="" />
                     </div>
-                    <div>
+                    <div className=" w-full">
                       <div className="flex items-center justify-between">
                         <h1 className="text-sm md:text-base font-medium font-poppins text-gray-1">Nik Smith</h1>
                         <Svgs.OneIcon/>
                       </div>
-                      <div className="flex items-center justify-between gap-7">
+                      <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                         <Svgs.BlueDoubleTick/>
                           <h1 className="text-xs md:text-base font-normal font-public-sans text-gray-2">Hey! I just checked your...</h1>
@@ -101,7 +101,7 @@ function InsuranceChats() {
                   </div>
                 </div>
               </div>
-              <div className="rightdownsection col-span-12 md:col-span-9 p-4">
+              <div className="rightdownsection col-span-12 md:col-span-8 p-4">
                 <div className="flex items-center justify-center py-5">
                 <Svgs.TodayLineIcon/>
                 </div>

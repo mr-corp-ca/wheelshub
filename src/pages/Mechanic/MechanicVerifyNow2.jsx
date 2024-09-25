@@ -6,6 +6,8 @@ import documentfile from "../../assets/images/document.png";
 import gallery from "../../assets/images/gallery.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index.js'
+
 function MechanicVerifyNow2() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -65,19 +67,11 @@ function MechanicVerifyNow2() {
                         placeholder={"Upload"}
                         className={"relative"}
                       />
-                      <img
-                        src={documentfile}
-                        className=" absolute top-10 right-2"
-                        alt=""
-                      />
+                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
                     </div>
                     <div className="w-full relative">
                       <Input label={"RTO"} placeholder={"Upload"} />
-                      <img
-                        src={documentfile}
-                        className=" absolute top-10 right-2"
-                        alt=""
-                      />
+                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -87,19 +81,11 @@ function MechanicVerifyNow2() {
                         label={"Service records"}
                         placeholder={"Upload"}
                       />
-                      <img
-                        src={documentfile}
-                        className=" absolute top-10 right-2"
-                        alt=""
-                      />
+                     <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
                     </div>
                     <div className="w-full relative">
                       <Input label={"Insurance copy"} placeholder={"Upload"} />
-                      <img
-                        src={documentfile}
-                        className=" absolute top-10 right-2"
-                        alt=""
-                      />
+                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
                     </div>
                   </div>
                   <div>

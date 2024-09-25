@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import wheeldealimg from "../../assets/images/wheeldeal.png";
 import teamicon from "../../assets/images/teamwork 1.png";
 import Navbar2 from "../../components/Navbar2";
@@ -8,48 +8,54 @@ import { useLoginContext } from "../../Context/LoginContext";
 import { useRoleContext } from "../../Context/RoleContext";
 import modeldesgin from "../../assets/images/manwithfinger.png";
 import Banner from "../../components/Banner";
-import Svgs from '../../assets/svgs/index.js'
+import Svgs from "../../assets/svgs/index.js";
 import { useSellACarContext } from "../../Context/SellACarContext.jsx";
 
+function Sellyourcar({setSelectSell, selectSell}) {
 
-function Sellyourcar() {
-
-  const {setSelectSell} = useSellACarContext()
+  const {setSelectSale} = useSellACarContext()
 
   const navigate = useNavigate();
-
 
   const [loginType, setLoginType] = useState("");
   const { isLoggedIn, setIsLoggedIn } = useLoginContext();
   const { setRole } = useRoleContext();
-  // console.log(loginType);
+
+
 
   const [borderColor, setBorderColor] = useState("");
 
+  const saleRef = useRef()
   const handleSelect = (id) => {
     setLoginType(id);
     setBorderColor(id);
-    
+    saleRef.current = id
+    // setSelectSale(saleRef.current)
+     if (setSelectSell) { // Ensure setSelectSell is passed
+      setSelectSell(saleRef.current);
+    } else {
+      console.error("setSelectSell is not defined");
+    }
   };
 
- const handleChange =(e)=>{
-  setLoginType(e.target.value);
-  setSelectSell(e.target.value)
- }
+  const handleChange = (e) => {
+    setLoginType(e.target.value);
+  };
   return (
     <>
-      <Navbar2 active={'Sell-A-Car'}/>
+      <Navbar2 active={"Sell-A-Car"} />
       <div className="mainpart">
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
           <div className="lg:px-7 xl:px-0 items-center  grid lg:grid-cols-12 w-[95%] lg:w-[1170px]">
             <div className=" flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative ">
               <div className="px-2 text-center md:text-start sm:text-[48px] text-[20px] text-[#333333] lg:w-[800px] xl:w-[821px] font-bold w-full font-inter">
                 <h6>Sell Car instantly on Wheeldeal hub from Home</h6>
+                {selectSell}
               </div>
               <div className="flex flex-col items-center md:items-start gap-[24px] ">
                 <div className="flex gap-[24px]">
                   <div>
-                    <Svgs.GreenTickIcon/>
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
                     <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
@@ -60,22 +66,22 @@ function Sellyourcar() {
 
                 <div className="flex gap-[24px]">
                   <div>
-                    <Svgs.GreenTickIcon/>
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
                     <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
-                    Easy process
+                      Easy process
                     </h6>
                   </div>
                 </div>
 
                 <div className="flex gap-[24px]">
                   <div>
-                    <Svgs.GreenTickIcon/>
+                    <Svgs.GreenTickIcon />
                   </div>
                   <div>
                     <h6 className="lg:text-[18px] font-medium font-Work-sans text-gray-1">
-                    100% Trusted
+                      100% Trusted
                     </h6>
                   </div>
                 </div>
@@ -110,9 +116,7 @@ function Sellyourcar() {
                   type="radio"
                   value={"form"}
                   checked={loginType === "form"}
-                  onChange={
-                    handleChange
-                  }
+                  onChange={handleChange}
                   name="same"
                   className=" h-5 w-5"
                 />
@@ -122,24 +126,26 @@ function Sellyourcar() {
               </div>
               <div>
                 <img src={wheeldealimg} alt="" />
-                
               </div>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4">
-                  <Svgs.GreenTickIcon/>
+                  <Svgs.GreenTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
                     High Returns
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Svgs.GreenTickIcon/>
+                  <Svgs.GreenTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
                     Fast process
                   </h1>
                 </div>
               </div>
             </div>
-            <div onClick={() => {handleSelect("sel-car-to-public")}}
+            <div
+              onClick={() => {
+                handleSelect("sel-car-to-public");
+              }}
               className={`${
                 borderColor === "sel-car-to-public"
                   ? "border-2  border-custom-blue"
@@ -166,15 +172,15 @@ function Sellyourcar() {
               </div>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4 ">
-                  <Svgs.YellowTickIcon/>
+                  <Svgs.YellowTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
-                  Low returns
+                    Low returns
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Svgs.YellowTickIcon/>
+                  <Svgs.YellowTickIcon />
                   <h1 className="text-sm md:text-base font-medium font-Work-sans text-gray-1">
-                  Slow process
+                    Slow process
                   </h1>
                 </div>
               </div>

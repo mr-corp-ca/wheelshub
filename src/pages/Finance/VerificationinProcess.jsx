@@ -6,6 +6,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { Layout } from '../../components/Layout/DashboardLayout';
 import { useEffect, useState } from 'react';
 import { useNavigateContext } from '../../Context/NavigateContext';
+import Svgs from '../../assets/svgs/index.js'
+
 
 function VerificationinProcess() {
  const navigate = useNavigate()
@@ -30,7 +32,7 @@ function VerificationinProcess() {
         <div className='verificationProcess rounded-xl border p-6 sm:p-10 w-full max-w-4xl'>
           <div className='flex items-center justify-center flex-col gap-5'>
             <div>
-              <img src={tickImage} alt="" className='max-w-full h-auto' />
+              <Svgs.YellowTickBigIcon/>
             </div>
             <div>
               <h1 className='text-2xl sm:text-[36px] font-semibold font-inter text-gray-1 text-center'>

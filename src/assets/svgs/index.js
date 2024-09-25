@@ -568,7 +568,7 @@ const ArrowBack=()=>(
 
 const YellowStar=()=>(
     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_106_2609)">
+<g clipPath="url(#clip0_106_2609)">
 <path d="M17.9531 7.40472C17.8352 7.04024 17.512 6.78137 17.1295 6.7469L11.9342 6.27516L9.87984 1.46674C9.72836 1.11434 9.38339 0.88623 9.00009 0.88623C8.61679 0.88623 8.27182 1.11434 8.12034 1.46756L6.06598 6.27516L0.869862 6.7469C0.488078 6.78219 0.165621 7.04024 0.0471028 7.40472C-0.0714152 7.7692 0.0380389 8.16898 0.326849 8.42098L4.25388 11.865L3.09589 16.966C3.01115 17.341 3.15672 17.7287 3.46792 17.9537C3.63519 18.0745 3.83089 18.136 4.02824 18.136C4.19839 18.136 4.36717 18.0902 4.51865 17.9995L9.00009 15.3211L13.4799 17.9995C13.8077 18.1967 14.2209 18.1787 14.5314 17.9537C14.8428 17.728 14.9882 17.3402 14.9035 16.966L13.7455 11.865L17.6725 8.42167C17.9613 8.16898 18.0716 7.76989 17.9531 7.40472Z" fill="#FFB543"/>
 </g>
 <defs>
@@ -870,5 +870,82 @@ const GreenTickVerified=()=>(
 )
 
 
+const DownloadDocumentIcon =()=>(
+    <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.64342 13H13.2148M4.64342 16.4286H16.6434M4.64342 19.8571H9.78627M21.7863 21.5714V9.57143L13.2148 1H4.64342C3.7341 1 2.86203 1.36122 2.21905 2.00421C1.57607 2.64719 1.21484 3.51926 1.21484 4.42857V21.5714C1.21484 22.4807 1.57607 23.3528 2.21905 23.9958C2.86203 24.6388 3.7341 25 4.64342 25H18.3577C19.267 25 20.1391 24.6388 20.7821 23.9958C21.425 23.3528 21.7863 22.4807 21.7863 21.5714Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.2148 1V6.14286C13.2148 7.05217 13.5761 7.92424 14.219 8.56722C14.862 9.2102 15.7341 9.57143 16.6434 9.57143H21.7863" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
 
-export default {GreenTickVerified, ProgressIcon,YellowTickVerified,PasswordHideIcon, PasswordShowIcon, DocumentUpload,GalleryIcon, Filter_Icon,Car_Rental, Life_Insurance, Rating, Location,Mail, Phone_Call,TodayLineIcon,VerticalDots3,SearchIcon,SearchIcon,GrayDoubleTick,BlueDoubleTick,OneIcon,SendIcon,CrossIcon, ImageGalleryIcon, ArrowRight, ArrowLeft, GrayDot, HeartIconBlueFilled, CalendarIcon, WhiteTickIcon, BlueTickVerified, YellowStar, ArrowBack, YellowTickIcon, GreenTickIcon, Facebook, Twitter, TikTok, Youtube, BlueTickIcon, HeartIconBlue, CarSold, MechanicCarIcon, InsuranceDoneIcon, CarLoanIcon, LifeAndInsuranceIcon ,VerifiedDealer, VerifiedMechanicIcon, HigherProfit, SellYourCarIcon, SelectDealerIcon, SelectMechanicIcon, RegisterIcon, FinanceIcon, InsuranceIcon, DealerIcon, MechanicIcon, BuyACarIcon, SellCarIcon, InsuranceLifeIcon, MyCarListing, AppointmentIcon, PaymentIcon, ChatIcon, Logout, PasswordHide, PasswordShow, DashboardIcon, AuctionIcon, MyBidsIcon, InvestmentsIcon, AdsIcon, ClaimIcon, WalletIcon, SupportIcon, SettingsIcon, LogoutIcon, MyOrders, NewRequests, Subscriptions, Insurance }
+
+const GrayDotIcon=()=>(
+    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4.5" r="4" fill="#828282"/>
+</svg>
+)
+
+const IdIcon=()=>(
+    <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M239.2 76.7005C237.999 75.35 236.35 74.45 234.55 74.15L212.499 71.1505L190.45 68H22.5C16.3505 68 10.6505 70.5495 6.6 74.6C2.5495 78.6505 0 84.3505 0 90.5V225.5C0 231.65 2.5495 237.349 6.6 241.4C10.6505 245.451 16.3505 248 22.5 248H218.5C224.65 248 230.349 245.451 234.4 241.4C238.451 237.349 241 231.65 241 225.5V81.6495C241 79.7005 240.25 78.0495 239.2 76.7005Z" fill="#E5E5E5"/>
+<path d="M241 81.6495V225.5C241 231.65 238.45 237.349 234.4 241.4C230.349 245.451 224.649 248 218.5 248H121V68H190.45L212.499 71.1505L234.55 74.15C236.35 74.4505 237.999 75.3505 239.2 76.7005C240.25 78.0495 241 79.7005 241 81.6495Z" fill="#C8C6CD"/>
+<path d="M82.5 150.5C82.5 162.951 72.4505 173 60 173C47.5495 173 37.5 162.951 37.5 150.5C37.5 138.05 47.5495 128 60 128C72.4505 128 82.5 138.05 82.5 150.5Z" fill="#21AAF7"/>
+<path d="M90 203V210.5C90 214.701 86.7005 218 82.5 218H37.5C33.2995 218 30 214.701 30 210.5V204.65C30 189.8 40.2 175.851 54.8995 173.451C56.7005 173.15 58.35 173 60 173C76.4995 173 90 186.5 90 203Z" fill="#21AAF7"/>
+<path d="M173.5 158C177.642 158 181 154.642 181 150.5C181 146.358 177.642 143 173.5 143C169.358 143 166 146.358 166 150.5C166 154.642 169.358 158 173.5 158Z" fill="#8B8892"/>
+<path d="M203.5 158C207.642 158 211 154.642 211 150.5C211 146.358 207.642 143 203.5 143C199.358 143 196 146.358 196 150.5C196 154.642 199.358 158 203.5 158Z" fill="#8B8892"/>
+<path d="M143.5 158C147.642 158 151 154.642 151 150.5C151 146.358 147.642 143 143.5 143C139.358 143 136 146.358 136 150.5C136 154.642 139.358 158 143.5 158Z" fill="#8B8892"/>
+<path d="M203.5 188H143.5C139.354 188 136 184.646 136 180.5C136 176.354 139.354 173 143.5 173H203.5C207.646 173 211 176.354 211 180.5C211 184.646 207.646 188 203.5 188Z" fill="#8B8892"/>
+<path d="M211 210.5C211 214.646 207.646 218 203.5 218H143.5C139.354 218 136 214.646 136 210.5C136 206.354 139.354 203 143.5 203H203.5C207.646 203 211 206.354 211 210.5Z" fill="#8B8892"/>
+<path d="M196 8C162.849 8 136 34.8495 136 68C136 101.15 162.849 128 196 128C229.15 128 256 101.15 256 68C256 34.8495 229.15 8 196 8Z" fill="#32D736"/>
+<path d="M256 68C256 101.15 229.151 128 196 128V8C229.151 8 256 34.8495 256 68Z" fill="#10BB67"/>
+<path d="M82.5 150.5C82.5 162.951 72.4505 173 60 173V128C72.4505 128 82.5 138.05 82.5 150.5Z" fill="#1689FC"/>
+<path d="M90 203V210.5C90 214.701 86.7005 218 82.5 218H60V173C76.4995 173 90 186.5 90 203Z" fill="#1689FC"/>
+<path d="M223.749 58.2495L195.999 86L193.749 88.2495C192.399 89.75 190.449 90.5 188.499 90.5C186.549 90.5 184.6 89.75 183.25 88.2495L168.25 73.2495C165.25 70.3995 165.25 65.6005 168.25 62.75C171.1 59.75 175.899 59.75 178.749 62.75L188.499 72.3495L195.999 64.8495L213.25 47.75C216.1 44.75 220.899 44.75 223.749 47.75C226.749 50.6005 226.749 55.3995 223.749 58.2495Z" fill="#B7E0F6"/>
+<path d="M223.749 58.2495L196 86V64.8495L213.251 47.75C216.101 44.75 220.899 44.75 223.75 47.75C226.75 50.6005 226.75 55.3995 223.749 58.2495Z" fill="#A4D9F5"/>
+</svg>
+)
+
+const YellowTickBigIcon=()=>(
+    <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.1" cx="110" cy="110" r="110" fill="#FFB543"/>
+<circle opacity="0.3" cx="110" cy="110" r="55" fill="#FFB543"/>
+<g clip-path="url(#clip0_254_2147)">
+<path d="M110 134C103.635 134 97.5303 131.471 93.0294 126.971C88.5286 122.47 86 116.365 86 110C86 103.635 88.5286 97.5303 93.0294 93.0294C97.5303 88.5286 103.635 86 110 86C116.365 86 122.47 88.5286 126.971 93.0294C131.471 97.5303 134 103.635 134 110C134 116.365 131.471 122.47 126.971 126.971C122.47 131.471 116.365 134 110 134ZM105.2 122L126.8 101.6L123.2 98L105.2 114.8L96.8 106.4L93.2 110L105.2 122Z" fill="#FFB543"/>
+</g>
+<defs>
+<clipPath id="clip0_254_2147">
+<rect width="48" height="48" fill="white" transform="translate(86 86)"/>
+</clipPath>
+</defs>
+</svg>
+)
+
+const ImageSmallIcon=()=>(
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.58078 19.0112L2.56078 19.0312C2.29078 18.4413 2.12078 17.7713 2.05078 17.0312C2.12078 17.7613 2.31078 18.4212 2.58078 19.0112Z" fill="#333333"/>
+<path d="M9.00109 10.3811C10.3155 10.3811 11.3811 9.31553 11.3811 8.00109C11.3811 6.68666 10.3155 5.62109 9.00109 5.62109C7.68666 5.62109 6.62109 6.68666 6.62109 8.00109C6.62109 9.31553 7.68666 10.3811 9.00109 10.3811Z" fill="#333333"/>
+<path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.19C2 17.28 2.19 18.23 2.56 19.03C3.42 20.93 5.26 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V13.9V7.81C22 4.17 19.83 2 16.19 2ZM20.37 12.5C19.59 11.83 18.33 11.83 17.55 12.5L13.39 16.07C12.61 16.74 11.35 16.74 10.57 16.07L10.23 15.79C9.52 15.17 8.39 15.11 7.59 15.65L3.85 18.16C3.63 17.6 3.5 16.95 3.5 16.19V7.81C3.5 4.99 4.99 3.5 7.81 3.5H16.19C19.01 3.5 20.5 4.99 20.5 7.81V12.61L20.37 12.5Z" fill="#333333"/>
+</svg>
+)
+
+const GreenTickCircleIcon=()=>(
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="12" fill="#38A242"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3137 8L10.2426 15.0711L6 10.8284" fill="#38A242"/>
+<path d="M17.3137 8L10.2426 15.0711L6 10.8284" stroke="#FEFEFE" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+)
+
+const CurvedPattern=({color})=>(
+    <svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5197 11.2463C10.174 7.52474 10 3.7734 10 0H0L0.00882372 1.52988C0.0558712 5.60666 0.29096 9.65999 0.711711 13.6811L10.6574 12.6404L10.5197 11.2463ZM103.261 48.075C85.9658 38.4358 75 20.1864 75 0H65L65.004 0.722071C65.2653 24.5268 78.4331 45.9715 99.013 57.1515L103.787 48.3644L103.261 48.075ZM12.5024 24.5098C20.6964 64.0023 48.4493 96.7791 85.7569 111.583L86.8903 112.026L83.2969 121.358C42.6675 105.713 12.2935 70.4872 2.98651 27.8361L2.71094 26.5413L12.5024 24.5098ZM103.492 117.064C111.746 118.925 120.223 119.913 128.825 119.995L129.999 120.001V130.001C120.659 130.001 111.444 129.015 102.463 127.078L101.293 126.82L103.492 117.064ZM129.24 85.9972C104.124 85.7783 80.8366 74.7378 64.7553 56.0293L57.1719 62.5478L57.7181 63.1777C75.823 83.8787 101.934 96.0005 130.001 96.0005V86.0005L129.24 85.9972ZM114.503 52.7891C119.214 54.1694 124.115 54.9153 129.116 54.9939L129.999 55.0008V65.0008C124.036 65.0008 118.176 64.1965 112.536 62.6267L111.691 62.3855L114.503 52.7891ZM44 0C44 15.3109 48.0024 30.0247 55.4914 42.9777L55.9034 43.6825L47.294 48.7696C38.7824 34.3647 34.1583 17.9576 34.004 0.88372L34 0H44Z" fill={color || '#333333'} fill-opacity="0.1"/>
+</svg>
+)
+
+const GreenTickSuccessful=()=>(
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="38" height="38" rx="19" fill="#5DC161"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7203 23.0455L11.4531 18.692L10 20.1641L15.7203 26L28 13.472L26.5571 12L15.7203 23.0455Z" fill="white"/>
+</svg>
+)
+
+export default {GreenTickSuccessful, CurvedPattern, GreenTickCircleIcon, ImageSmallIcon, YellowTickBigIcon, IdIcon, GrayDotIcon, DownloadDocumentIcon, GreenTickVerified, ProgressIcon,YellowTickVerified,PasswordHideIcon, PasswordShowIcon, DocumentUpload,GalleryIcon, Filter_Icon,Car_Rental, Life_Insurance, Rating, Location,Mail, Phone_Call,TodayLineIcon,VerticalDots3,SearchIcon,SearchIcon,GrayDoubleTick,BlueDoubleTick,OneIcon,SendIcon,CrossIcon, ImageGalleryIcon, ArrowRight, ArrowLeft, GrayDot, HeartIconBlueFilled, CalendarIcon, WhiteTickIcon, BlueTickVerified, YellowStar, ArrowBack, YellowTickIcon, GreenTickIcon, Facebook, Twitter, TikTok, Youtube, BlueTickIcon, HeartIconBlue, CarSold, MechanicCarIcon, InsuranceDoneIcon, CarLoanIcon, LifeAndInsuranceIcon ,VerifiedDealer, VerifiedMechanicIcon, HigherProfit, SellYourCarIcon, SelectDealerIcon, SelectMechanicIcon, RegisterIcon, FinanceIcon, InsuranceIcon, DealerIcon, MechanicIcon, BuyACarIcon, SellCarIcon, InsuranceLifeIcon, MyCarListing, AppointmentIcon, PaymentIcon, ChatIcon, Logout, PasswordHide, PasswordShow, DashboardIcon, AuctionIcon, MyBidsIcon, InvestmentsIcon, AdsIcon, ClaimIcon, WalletIcon, SupportIcon, SettingsIcon, LogoutIcon, MyOrders, NewRequests, Subscriptions, Insurance }

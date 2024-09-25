@@ -5,6 +5,7 @@ import { useState } from "react";
 import ClaimNow from "../Mechanic/ClaimNow";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index'
 
 function MechanicDashboard() {
 
@@ -92,11 +93,7 @@ const [popup, setpopup] = useState(null)
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -111,11 +108,7 @@ const [popup, setpopup] = useState(null)
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -130,11 +123,8 @@ const [popup, setpopup] = useState(null)
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className="w-[48px] h-[48px] border rounded-full flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
+
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>

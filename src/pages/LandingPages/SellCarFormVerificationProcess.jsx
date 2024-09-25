@@ -6,12 +6,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
 import { useSellACarContext } from "../../Context/SellACarContext";
 
-function SellCarFormVerificationProcess() {
+
+
+function SellCarFormVerificationProcess({selectSell}) {
   const navigate = useNavigate();
-  const {selectSell} = useSellACarContext()
-
-  console.log('sellcarvalue..........', selectSell)
-
+  const {selectSale} = useSellACarContext()
+  console.log('hellooooooooo select',  selectSale)
+  console.log('hellooooooooo select22222',  selectSell)
   return (
     <>
       <Navbar2 active={"Sell-A-Car"} />
@@ -27,7 +28,7 @@ function SellCarFormVerificationProcess() {
                 <h1 className="text-2xl sm:text-[36px] font-semibold font-inter text-gray-800 text-center">
                   Payment successful!
                 </h1>
-                
+                <h1>{selectSell}</h1>
                 <p className="my-5 text-base text-center md:text-start font-normal font-plus-jakarta-sans text-gray-600">
                   Payment of $100 is successfully paid to Wheeldealhub
                 </p>

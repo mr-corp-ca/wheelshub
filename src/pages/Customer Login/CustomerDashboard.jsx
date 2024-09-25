@@ -27,9 +27,9 @@ function CustomerDashboard() {
             {Array(3).fill().map((_, index) => (
               <div key={index} className="card py-4">
                 <div className="border p-4 md:p-5 rounded-xl flex flex-col md:flex-row justify-between items-center">
-                  <div className="flex flex-col md:flex-row items-center gap-3">
+                  <div className="flex flex-col sm:flex-row items-center gap-3">
                     <img src={audiCar} alt="Car" className="" />
-                    <div className='flex flex-col gap-3'>
+                    <div className='flex flex-col text-center sm:text-start gap-3'>
                       <h1 className="text-base lg:text-lg font-semibold font-inter text-gray-1">Mercedes-Benz E 220 d</h1>
                       <div className="flex flex-wrap items-center gap-2">
                         <h1 className="text-xs lg:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
@@ -123,7 +123,7 @@ function CustomerDashboard() {
                 </div>
               </div>
               <div className='flex items-center justify-center mt-5'>
-                <button className="w-full md:w-[156px] h-[52px] rounded-lg border border-gray-1 text-gray-1 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">View details</button>
+                <button className="w-[156px] h-[52px] rounded-lg border border-gray-1 text-gray-1 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center">View details</button>
               </div>
             </div>
           </div>

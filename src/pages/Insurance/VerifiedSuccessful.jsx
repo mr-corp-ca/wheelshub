@@ -1,14 +1,11 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-import gallery from "../../assets/images/gallery.png";
-import photo from "../../assets/images/photo.png";
-import crossicon from "../../assets/images/crossIcon.png";
-import greentickrounded from "../../assets/images/roundedGreentick.png"
+import greentickrounded from "../../assets/images/roundedGreentick.png";
 import { useNavigate } from "react-router-dom";
+import Svgs from "../../assets/svgs/index.js";
+
 function VerifiedSuccessful({ show, onClose, hidden }) {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -41,30 +38,28 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
         <div ref={popupRef}>
           <div className="flex justify-between md:mb-6"></div>
           <form onSubmit={handleSubmit}>
-            <div className=" mx-auto p-10 bg-white shadow-lg rounded-xl border">
-            
-              <div className="flex flex-col gap-3">
+            <div className=" mx-auto bg-white px-12 py-5 shadow-lg rounded-xl border">
+              <div className="flex flex-col gap-5">
                 <div className="img flex items-center justify-center">
-                  <img src={greentickrounded} alt="" />
+                  <Svgs.GreenTickSuccessful/>
                 </div>
                 <div className=" flex items-center justify-center text-center">
-                  <h1 className=" w-[60%] text-base font-medium font-poppins text-gray-1">
-                  Verified
-                  successfully
+                  <h1 className=" w-[90%] text-base font-medium font-poppins text-gray-1">
+                    Documents submitted successfully
                   </h1>
                 </div>
-                <div  className=" flex items-center justify-center">
-                  <button onClick={()=>{navigate('/insurance/insurance-my-order')}} className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue px-[16px] py-[12px] w-full rounded-xl text-white">Close</button>
+                <div className=" flex items-center justify-center">
+                  <button
+                    onClick={() => {
+                      navigate("/insurance/insurance-my-order");
+                    }}
+                    className="  hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue text-sm font-semibold font-inter bg-custom-blue w-[190px] h-[48px] flex items-center justify-center rounded-xl text-white"
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
             </div>
-            {/* <div className="py-6 text-center">
-              <Button
-                onClick={onClose}
-                title="Submit claim"
-                className="text-base font-medium"
-              />
-            </div> */}
           </form>
         </div>
       </div>
