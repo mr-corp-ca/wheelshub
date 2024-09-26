@@ -81,7 +81,7 @@ function DealerVerifyNow3() {
                       <div className="pt-1">
                         <textarea
                           id="engine1"
-                          className="border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
+                          className=" resize-none border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
                           rows={5}
                           placeholder="Type here"
                         ></textarea>
@@ -101,7 +101,7 @@ function DealerVerifyNow3() {
                       <div className="pt-1">
                         <textarea
                           id="engine2"
-                          className="border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
+                          className=" resize-none border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
                           rows={5}
                           placeholder="Type here"
                         ></textarea>
@@ -123,7 +123,7 @@ function DealerVerifyNow3() {
                       <div className="pt-1">
                         <textarea
                           id="engine3"
-                          className="border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
+                          className=" resize-none border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
                           rows={5}
                           placeholder="Type here"
                         ></textarea>
@@ -143,7 +143,7 @@ function DealerVerifyNow3() {
                       <div className="pt-1">
                         <textarea
                           id="engine4"
-                          className="border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
+                          className=" resize-none border outline-none rounded-xl p-3 bg-[#fafafa] w-full"
                           rows={5}
                           placeholder="Type here"
                         ></textarea>
@@ -155,7 +155,7 @@ function DealerVerifyNow3() {
               <div className="w-full text-center flex items-center justify-center">
                 <button
                   onClick={handleShowPopup}
-                  className="w-[224px] text-sm rounded-lg px-2 py-3 font-inter font-semibold bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                  className="w-[224px] text-sm rounded-lg px-2 py-3 font-inter font-semibold bg-custom-blue text-white shadow-2xl shadow-blue-300"
                   title="Mark as verified"
                 >
                   Mark as verified

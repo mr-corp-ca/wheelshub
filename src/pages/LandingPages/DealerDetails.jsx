@@ -1,18 +1,11 @@
 import React from "react";
 import usedCarsImage from "../../assets/images/usedcarsimages.png";
-import contact from "../../assets/images/contact.png";
-import maps from "../../assets/images/maps.png";
-import gmail from "../../assets/images/gmail.png";
 import Navbar2 from "../../components/Navbar2";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
-import manImage from "../../assets/images/man.png";
-import trophyImage from "../../assets/images/trophyy.png";
-import progressImage from "../../assets/images/progress.png";
-import savemoneyImage from "../../assets/images/save-money.png";
 import StarImage from "../../assets/images/starGroup.png";
 import { useState } from 'react';
 import Banner from "../../components/Banner";
@@ -22,22 +15,8 @@ import { useEffect } from "react";
 
 
 function DealerDetails() {
-  const [tabActive, setTabActive] = useState("home");
-  const handleClick = (item) => {
 
-    setTabActive(item);
-  };
 
-  const bidsClick = () => {
-
-    handleClick("bids")
-
-  }
-  const investmentClick = () => {
-
-    handleClick("investments");
-
-  }
 
   const [selectedHearts, setSelectedHearts] = useState([]); // Array to track selected hearts
 
@@ -126,7 +105,7 @@ function DealerDetails() {
               </div>
             </div>
             <div className="flex items-center my-5 mt-10">
-              <button className="h-[44px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+              <button className="h-[44px] md:h-[52px] px-[24px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300">
                 Call now - +650 334 4545
               </button>
             </div>

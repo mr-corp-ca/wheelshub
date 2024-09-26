@@ -6,6 +6,8 @@ import manincar from "../../assets/images/manincar.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import { useState, useEffect } from "react";
+import Svgs from '../../assets/svgs/index'
+
 
 function RepresentativeDashboard() {
   const navigate = useNavigate()
@@ -208,11 +210,7 @@ function RepresentativeDashboard() {
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                    <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -227,11 +225,7 @@ function RepresentativeDashboard() {
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -246,11 +240,7 @@ function RepresentativeDashboard() {
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>

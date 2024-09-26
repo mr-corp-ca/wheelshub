@@ -7,7 +7,7 @@ import gallery from "../../assets/images/gallery.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import { useNavigateContext } from "../../Context/NavigateContext";
-
+import Svgs from '../../assets/svgs/index.js'
 
 function UploadDocuments() {
    const navigate = useNavigate()
@@ -36,11 +36,11 @@ function UploadDocuments() {
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full relative">
                 <Input label={"Identity proof"} placeholder={"Full name"} className={"relative"}/>
-                <img src={documentfile} className=" absolute top-10 right-2" alt="" />
+                <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
               </div>
               <div className="w-full relative">
                 <Input label={"SIN number"} placeholder={"Last name"} />
-                <img src={documentfile} className=" absolute top-10 right-2" alt="" />
+                <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -50,11 +50,11 @@ function UploadDocuments() {
                   label={"Recent education certificate"}
                   placeholder={"+1"}
                 />
-                <img src={documentfile} className=" absolute top-10 right-2" alt="" />
+                <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
               </div>
               <div className="w-full relative">
                 <Input label={"Experience letter"} placeholder={"Email id"} />
-                <img src={documentfile} className=" absolute top-10 right-2" alt="" />
+                <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
               </div>
             </div>
            

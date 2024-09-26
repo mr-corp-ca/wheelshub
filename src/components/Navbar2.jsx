@@ -46,6 +46,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import menuIcon from "../assets/images/Frame.png";
 import { useUserContext } from "../Context/UserProvider";
 // import menuIcon from '../assets/images/menuIcon.png'; // Add a menu icon
+import Svgs from '../assets/svgs/index'
 
 function Navbar2({ active }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -152,7 +153,7 @@ function Navbar2({ active }) {
             {user.isLoggedIn ? (
               <>
                 <div className=" flex items-center justify-center">
-                  <img src={bellIcon} alt="Bell Icon" />
+                 <span className=" cursor-pointer"><Svgs.NotificationIcon/></span> 
                 </div>
                 <div>
                   <img
@@ -213,7 +214,7 @@ function Navbar2({ active }) {
             {user.isLoggedIn ? (
               <div className="flex items-center justify-center my-4 gap-5">
                 <div>
-                  <img src={bellIcon} alt="Bell Icon" />
+                 <span className=" cursor-pointer"><Svgs.NotificationIcon/></span> 
                 </div>
                 <div>
                   <img

@@ -44,7 +44,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "mechanic"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -56,7 +56,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "dealer"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -68,7 +68,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "handover"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -80,7 +80,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "insurance"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -131,7 +131,7 @@ function Appointments() {
                             onClick={() => {
                               navigate("/representative/appointments-details");
                             }}
-                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
+                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-blue-300 w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
                             Verify
                           </button>
@@ -192,7 +192,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "mechanic"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -204,7 +204,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "dealer"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -216,7 +216,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "handover"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -228,7 +228,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "insurance"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -279,7 +279,7 @@ function Appointments() {
                             onClick={() => {
                               navigate("/representative/dealer-details-company");
                             }}
-                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
+                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-blue-300 w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
                             Verify
                           </button>
@@ -340,7 +340,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "mechanic"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -352,7 +352,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "dealer"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -364,7 +364,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "handover"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -376,7 +376,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "insurance"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -427,7 +427,7 @@ function Appointments() {
                             onClick={() => {
                               navigate("/representative/appointments-details");
                             }}
-                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
+                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-blue-300 w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-[#6f9cff] border-[#6f9cff] flex items-center justify-center"
                           >
                             Verify
                           </button>
@@ -489,7 +489,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "mechanic"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -501,7 +501,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "dealer"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -513,7 +513,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "handover"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -525,7 +525,7 @@ function Appointments() {
                       }}
                       className={` rounded-xl text-lg font-medium font-Work-sans px-[16px] py-[10px] ${
                         activeTab === "insurance"
-                          ? "bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                          ? "bg-custom-blue text-white shadow-2xl shadow-blue-300"
                           : " bg-white text-gray-1 border border-gray-1"
                       }`}
                     >
@@ -580,7 +580,7 @@ function Appointments() {
                             onClick={() => {
                               navigate("/representative/appointments-details");
                             }}
-                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-custom-blue hover:border-none w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center"
+                            className=" hover:bg-custom-blue hover:text-white hover:shadow-2xl hover:shadow-blue-300 hover:border-none w-[150px] h-[44px] rounded-lg border px-2 md:px-[26px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans text-gray-1 border-gray-1 flex items-center justify-center"
                           >
                             Review
                           </button>

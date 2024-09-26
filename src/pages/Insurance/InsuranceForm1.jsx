@@ -81,7 +81,7 @@ function InsuranceForm1() {
                 <button
                   onClick={() => { navigate("/insurance/insurance-form2") }}
                   className={
-                    " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
+                    " hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-[129px] text-lg rounded-xl px-2 py-3 font-Work-sans font-medium self-center items-center bg-custom-blue text-white shadow-2xl shadow-blue-300" 
                   }
                   title={""}
                 >

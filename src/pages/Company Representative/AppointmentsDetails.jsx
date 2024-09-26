@@ -7,6 +7,8 @@ import documentIcon from "../../assets/images/system-uicons_document.png"
 import { useState } from 'react'
 import VerifiedSuccessful from './VerifiedSuccessful'
 import { Layout } from '../../components/Layout/DashboardLayout'
+import Svgs from '../../assets/svgs/index'
+
 
 function AppointmentsDetails() {
   const [showPopup, setShowPopup] = useState(false);
@@ -82,7 +84,7 @@ function AppointmentsDetails() {
               <div className='pt-10 flex flex-col md:flex-row items-center gap-6 flex-wrap'>
                 <div className='flex flex-col items-center gap-2'>
                   <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
-                    <img src={documentIcon} alt="" />
+                    <Svgs.DownloadDocumentIcon/>
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
                   <div>
@@ -91,7 +93,7 @@ function AppointmentsDetails() {
                 </div>
                 <div className='flex flex-col items-center gap-2'>
                   <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
-                    <img src={documentIcon} alt="" />
+                  <Svgs.DownloadDocumentIcon/>
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
                   <div>
@@ -100,7 +102,7 @@ function AppointmentsDetails() {
                 </div>
                 <div className='flex flex-col items-center gap-2'>
                   <div className='border shadow-css rounded-xl w-fit p-5 flex items-center justify-center flex-col gap-5 shadow-sm'>
-                    <img src={documentIcon} alt="" />
+                  <Svgs.DownloadDocumentIcon/>
                     <button className='px-5 py-2 border border-gray-1 rounded-xl text-base font-medium font-Work-sans text-gray-1 hover:bg-custom-blue hover:text-white hover:border-none'>Download</button>
                   </div>
                   <div>

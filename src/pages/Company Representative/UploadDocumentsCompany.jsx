@@ -1,9 +1,4 @@
 import React from "react";
-import IMAGES from "../../assets/IMAGES";
-import { OutlineButton } from "../../components/OutlineButton";
-import { Input } from "../../components/Input";
-import documentfile from "../../assets/images/document.png";
-import gallery from "../../assets/images/gallery.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import FormVerified from "./FormVerified";

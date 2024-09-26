@@ -133,7 +133,7 @@ function SellCarFormAppointmentDealerPaymentProcess() {
               <div className="flex items-center justify-center pb-4 md:pb-5">
                 <button
                   onClick={() => navigate("/sellyourcar/verification-process")}
-                  className="h-[44px] md:h-[52px] px-[24px] md:px-[44px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
+                  className="h-[44px] md:h-[52px] px-[24px] md:px-[44px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300"
                 >
                   Proceed to pay
                 </button>

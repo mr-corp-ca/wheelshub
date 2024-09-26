@@ -18,7 +18,7 @@ function InsuranceChats() {
   return (
     <>
     <Layout active={'Chats'}>
-      <div className="chatsMainPart">
+      <div className="chatsMainPart max-w-[1260px]">
         <div className="chatHeading">
           <h1 className="text-xl md:text-2xl font-semibold font-inter text-gray-1">Chats</h1>
         </div>

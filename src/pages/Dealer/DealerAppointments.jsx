@@ -1,6 +1,5 @@
 import React from "react";
 import audiCar from "../../assets/images/audicar.png";
-import photo from "../../assets/images/photo.png";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
@@ -29,7 +28,7 @@ const closeDialog = () => {
             </div>
             <div className="flex items-center gap-5">
             <div className="mt-4 md:mt-0">
-                      <button  className=" h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button  className=" h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-blue-300">
                       Verification appointments
                       </button>
                     </div>

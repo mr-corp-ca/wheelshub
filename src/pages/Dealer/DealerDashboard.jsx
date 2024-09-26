@@ -5,6 +5,8 @@ import { useState } from "react";
 import ClaimNow from "../Insurance/ClaimNow";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index'
+
 
 function DealerDashboard() {
 
@@ -101,11 +103,7 @@ const [showPopup, setShowPopup] = useState(false);
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -120,11 +118,7 @@ const [showPopup, setShowPopup] = useState(false);
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                   <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -139,11 +133,7 @@ const [showPopup, setShowPopup] = useState(false);
               <div className="photo">
               <div className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span>
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
@@ -188,7 +178,7 @@ const [showPopup, setShowPopup] = useState(false);
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button onClick={()=>{navigate('/dealer/dealer-handover-details')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
+                      <button onClick={()=>{navigate('/dealer/dealer-handover-details')}} className=" hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-full h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-blue-300">
                         View details
                       </button>
                       {/* {isVisible && <Employees onClose={() => setIsVisible(false)} />} */}

@@ -182,7 +182,7 @@ function SellCarFormFindMechanic() {
                             }}
                             className={`h-[44px] md:h-[48px] ${
                               buttonClick === index ? "px-[30px]" : "px-[24px]"
-                            } px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue ${
+                            } px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300 ${
                               buttonClick === index
                                 ? "bg-custom-green"
                                 : "bg-custom-blue"
@@ -227,7 +227,7 @@ function SellCarFormFindMechanic() {
             <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
               <button
                 type="submit"
-                className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue"
+                className="w-[129px] h-[52px] px-[44px] py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300"
               >
                 Next
               </button>

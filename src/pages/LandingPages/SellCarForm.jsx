@@ -161,7 +161,7 @@ function SellCarForm() {
             <div className="flex items-center justify-center pt-10 pb-5">
               <button
                 type={'submit'}
-                className="h-11 w-32 rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
+                className="h-11 w-32 rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-blue-300"
               >
                 Next
               </button>

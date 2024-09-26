@@ -139,7 +139,7 @@ function Home() {
                   onClick={() => {
                     navigate("/sellyourcar");
                   }}
-                  className="  w-[164px] h-[52px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
+                  className="  w-[164px] h-[52px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-blue-300"
                 >
                   Sell now
                 </button>
@@ -265,7 +265,7 @@ function Home() {
               onClick={() => {
                 navigate("/sellyourcar");
               }}
-              className="h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue"
+              className="h-[44px] rounded-lg bg-custom-blue text-white px-4 md:px-[24px] py-2 md:py-[11.5px] text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-blue-300"
             >
               Sell now
             </button>
@@ -461,45 +461,45 @@ function Home() {
                     />
                   </div>
                   <div className="px-3 flex items-center justify-between">
-                    <h1 className="text-base md:text-xl font-semibold font-inter text-gray-1">
+                    <h1 className="text-base md:text-xl lg:text-base 2xl:text-xl font-semibold font-inter text-gray-1">
                       Mercedes-Benz E 220 d
                     </h1>
                     <span><Svgs.HeartIconBlue/></span>
                   </div>
                   <div className="flex items-center px-3 justify-between">
-                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
+                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
                       45000 KM
                     </h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
                       2018 Model
                     </h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-base font-normal font-Work-sans text-gray-2">
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
                       Automatic
                     </h1>
                   </div>
                   <div className="px-3">
-                    <h1 className="text-lg md:text-[32px] font-bold font-inter text-gray-1">
+                    <h1 className="text-lg md:text-[32px] lg:text-xl 2xl:text-[32px] font-bold font-inter text-gray-1">
                       $22,500
                     </h1>
                   </div>
                   <div className="flex items-center gap-2 px-3">
                     <div className="flex items-center gap-2">
                       <span><Svgs.BlueTickIcon/></span>
-                      <p className="text-sm font-normal font-Work-sans text-gray-1">
+                      <p className="text-sm lg:text-[10px]  font-normal font-Work-sans text-gray-1">
                         Verified by Mechanic
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                     <span><Svgs.BlueTickIcon/></span>
-                      <p className="text-sm font-normal font-Work-sans  text-gray-1">
+                      <p className="text-sm lg:text-[10px]  font-normal font-Work-sans  text-gray-1">
                         Verified by Dealer
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-[#0086fb72] shadow-2xl ">
+                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl ">
                       View Details
                     </button>
                   </div>

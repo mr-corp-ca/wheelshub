@@ -196,7 +196,7 @@ function SellCarFormAppointmentTime() {
               <div className="mt-9 text-center flex items-center justify-center">
                 <button
                   onClick={handleClick}
-                  className="w-[129px] h-[52px] flex items-center justify-center bg-blue-500 text-white rounded-md hover:bg-blue-600 text-lg font-medium font-Work-sans"
+                  className="w-[129px] h-[52px] flex items-center justify-center bg-custom-blue text-white rounded-md hover:bg-blue-600 text-lg font-medium font-Work-sans shadow-2xl shadow-blue-300"
                 >
                   Next
                 </button>

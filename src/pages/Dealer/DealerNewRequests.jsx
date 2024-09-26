@@ -4,6 +4,8 @@ import grayDot from "../../assets/images/graydot.png";
 import yellowTick from "../../assets/images/yellowTick.png";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index'
+
 
 function DealerNewRequests() {
   const navigate = useNavigate()
@@ -26,22 +28,22 @@ function DealerNewRequests() {
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>
                   <div className="px-3">
-                    <h1 className="text-base md:text-lg font-semibold font-inter text-gray-1">
+                    <h1 className="text-base md:text-lg lg:text-base 2xl:text-lg font-semibold font-inter text-gray-1">
                       Mercedes-Benz E 220 d
                     </h1>
                   </div>
                   <div className="flex items-center px-3 justify-between">
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">Automatic</h1>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">Automatic</h1>
                   </div>
                   <div className="px-3">
-                    <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
+                    <h1 className="text-lg md:text-2xl lg:text-lg 2xl:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
                   </div>
                   <div className="flex items-center gap-2 px-3">
-                    <img src={yellowTick} alt="" />
+                    <Svgs.YellowTickVerified/>
                     <p className="text-xs font-normal font-Work-sans text-[#FFB543]">Verification pending</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">

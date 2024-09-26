@@ -91,7 +91,7 @@ function ClaimNow({ show, onClose, hidden }) {
                     <button
                     onClick={onClose}
                       type="button"
-                      className=" hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-sm lg:text-lg font-worksans rounded-xl text-white flex items-center justify-center"
+                      className=" hover:bg-white hover:border hover:border-custom-blue hover:text-custom-blue w-full md:w-[218px] h-[52px] px-4 py-3 bg-custom-blue font-medium text-sm lg:text-lg font-worksans rounded-xl text-white flex items-center justify-center shadow-2xl shadow-blue-300"
                     >
                       Approve Request
                     </button>

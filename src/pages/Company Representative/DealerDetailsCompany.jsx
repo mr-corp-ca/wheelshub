@@ -228,11 +228,11 @@ function DealerDetailsCompany() {
             </div>
             <div className='flex flex-col md:flex-row items-start  md:items-center gap-3 py-4'>
                 <div className='flex items-center gap-2'>
-                    <img src={greentick} alt="" />
+                    <Svgs.GreenTickVerified/>
                     <h1 className=' text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Mechanic</h1>
                 </div>
                 <div className='flex items-center gap-2'>
-                    <img src={greentick} alt="" />
+                <Svgs.GreenTickVerified/>
                     <h1 className=' text-lg font-medium font-Work-sans text-[#38A242]'>Verified by Dealer</h1>
                 </div>
             </div>

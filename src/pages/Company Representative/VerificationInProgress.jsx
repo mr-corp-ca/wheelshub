@@ -6,7 +6,7 @@ import { Layout } from '../../components/Layout/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
 import { useNavigateContext } from '../../Context/NavigateContext';
 import { useEffect } from 'react';
-
+import Svgs from '../../assets/svgs/index'
 
 function VerificationInProgress() {
 
@@ -32,9 +32,9 @@ function VerificationInProgress() {
     <Layout active={'Dashboard'}>
       <div className='w-full flex items-center justify-center px-4 my-5'>
         <div className='verificationProcess rounded-xl border p-6 sm:p-10 w-full max-w-4xl'>
-          <div className='flex items-center justify-center flex-col gap-5'>
+          <div className='flex items-center justify-center flex-col gap-8'>
             <div>
-              <img src={tickImage} alt="" className='max-w-full h-auto' />
+              <Svgs.YellowTickBigIcon/>
             </div>
             <div>
               <h1 className='text-2xl sm:text-[36px] font-semibold font-inter text-gray-1 text-center'>
@@ -44,21 +44,17 @@ function VerificationInProgress() {
             <div className='w-full sm:w-[90%]'>
               <ul className='list-decimal pl-5 sm:pl-10'>
                 <li className='font-normal text-sm sm:text-base font-plus-jakarta-sans text-gray-4'>
-                  Our team will review your submitted Finance license and business details.<br />
-                  This process may take up to 48 hours.
+                Your verification request has been submitted. Our team will review your details
+                and documents. This process may ta  ke up to 48 hours.
                 </li>
                 <li className='font-normal text-sm sm:text-base font-plus-jakarta-sans text-gray-4'>
-                  A WheelDealHub company representative will visit your business address to verify your Business.
-                  This step ensures the authenticity and reliability of our Finance network.
+                You will receive an email notification once the verification is complete.
                 </li>
-                <li className='font-normal text-sm sm:text-base font-plus-jakarta-sans text-gray-4'>
-                  Once verified, you will receive an approval notification via email, allowing you<br />
-                  to access all Finance functionalities.
-                </li>
+               
               </ul>
             </div>
           </div>
-          <div className='flex items-center justify-center py-3'>
+          <div className='flex items-center justify-center pt-8'>
             <button onClick={()=>{ setTimeout(()=>{navigate('/representative/representative-dashboard')},3000)}} className='text-sm rounded-xl border text-gray-1 font-inter font-semibold w-[123px] h-[48px] px-[20px] py-[12px] border-gray-1 flex items-center justify-center'>
               Need help?
             </button>

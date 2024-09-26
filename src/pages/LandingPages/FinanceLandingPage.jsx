@@ -71,8 +71,14 @@ export default function FinanceLandingPage() {
             </div>
           </div>
           <div className="mt-5">
-            <div className=" border rounded-[16px]">
-              <div className={`p-4 ${openIndex? 'transition-all duration-700 ease-in-out': 'transition-all duration-700 ease-in-out'}`}>
+            <div className=" border rounded-[16px] p-4">
+              <div
+                className={` border-b border-dashed pb-5 ${
+                  openIndex
+                    ? "transition-all duration-700 ease-in-out"
+                    : "transition-all duration-700 ease-in-out"
+                }`}
+              >
                 {/* Accordion Header */}
                 <button
                   onClick={() => {
@@ -120,12 +126,21 @@ export default function FinanceLandingPage() {
 
                 {/* Accordion Content */}
                 {openIndex && (
-                  <div className={`pt-5 ${openIndex? 'transition-all duration-700 ease-in-out':'transition-all duration-700 ease-in-out'}`}>
-                    <Input placeholder={"Type Location"} className={'bg-[#fafafa]'}/>
+                  <div
+                    className={`pt-5 ${
+                      openIndex
+                        ? "transition-all duration-700 ease-in-out"
+                        : "transition-all duration-700 ease-in-out"
+                    }`}
+                  >
+                    <Input
+                      placeholder={"Type Location"}
+                      className={"bg-[#fafafa] "}
+                    />
                   </div>
                 )}
               </div>
-              <div className="p-4">
+              <div className="pt-8">
                 {/* Accordion Header */}
                 <button
                   onClick={() => {
@@ -174,18 +189,24 @@ export default function FinanceLandingPage() {
                 {/* Accordion Content */}
                 {popularity && (
                   <div className="pt-5">
-                   <div className="flex items-center gap-4 my-4">
-                    <input type="checkbox" className=" w-5 h-5" checked/>
-                    <p className=" text-lg font-normal font-Work-sans text-gray-1">All</p>
-                   </div>
-                   <div className="flex items-center gap-4 my-4">
-                    <input type="checkbox" className=" w-5 h-5"/>
-                    <p className=" text-lg font-normal font-Work-sans text-gray-1">Most popular</p>
-                   </div>
-                   <div className="flex items-center gap-4 my-4">
-                    <input type="checkbox" className=" w-5 h-5"/>
-                    <p className=" text-lg font-normal font-Work-sans text-gray-1">Verified</p>
-                   </div>
+                    <div className="flex items-center gap-4 my-4">
+                      <input type="checkbox" className=" w-5 h-5" checked />
+                      <p className=" text-lg font-normal font-Work-sans text-gray-1">
+                        All
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-4 my-4">
+                      <input type="checkbox" className=" w-5 h-5" />
+                      <p className=" text-lg font-normal font-Work-sans text-gray-1">
+                        Most popular
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-4 my-4">
+                      <input type="checkbox" className=" w-5 h-5" />
+                      <p className=" text-lg font-normal font-Work-sans text-gray-1">
+                        Verified
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
@@ -278,7 +299,7 @@ export default function FinanceLandingPage() {
                         </p>
                       </div>
                       <div className="flex items-center justify-center pb-4 md:pb-5 mx-5">
-                        <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+                        <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300">
                           Call now - +650 334 4545
                         </button>
                       </div>

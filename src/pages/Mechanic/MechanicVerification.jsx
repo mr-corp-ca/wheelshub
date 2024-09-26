@@ -26,7 +26,7 @@ function MechanicVerificationPage() {
             </h6>
           </div>
           <div>
-            <Button onClick={()=>{navigate('/mechanic/verification-form')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-custom-blue"} />
+            <Button onClick={()=>{navigate('/mechanic/verification-form')}} title={"Verify now"} className={"font-Work-sans text-base sm:text-lg font-medium shadow-2xl shadow-blue-300"} />
           </div>
         </div>
       </div>

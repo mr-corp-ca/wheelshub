@@ -1,21 +1,69 @@
 import React from "react";
-import IMAGES from "../../assets/IMAGES";
-import { OutlineButton } from "../../components/OutlineButton";
-import { Input } from "../../components/Input";
-import documentfile from "../../assets/images/document.png";
-import gallery from "../../assets/images/gallery.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index.js'
+import { useState, useRef } from "react";
+import VerifiedSuccessful from "./VerifiedSuccessful.jsx";
+
 
 function MechanicVerifyNow2() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
+  // Refs for each file input
+  // Refs for each file input
+  const registrationInputRef = useRef(null);
+  const agreementInputRef = useRef(null);
+  const businessInsuranceInputRef = useRef(null);
+  const anotherDocInputRef = useRef(null);
+
+  // States for each document's file name
+  const [registration, setRegistration] = useState("Upload Registration");
+  const [agreement, setAgreement] = useState("Upload Agreement");
+  const [businessInsurance, setBusinessInsurance] = useState(
+    "Upload Business Insurance"
+  );
+  const [anotherDoc, setAnotherDoc] = useState("Upload owner statement");
+
+  // Functions to handle clicks and file selection for each document
+  const handleClick = (ref) => {
+    ref.current.click();
+  };
+
+  const handleFileChange = (e, setFile) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFile(file.name);
+    }
+  };
+
+  const [imagePreviews, setImagePreviews] = useState(Array(10).fill(null));
+
+  // Function to handle image change for a specific input field
+  const handleImageChange = (e, index) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      const updatedPreviews = [...imagePreviews];
+      updatedPreviews[index] = imageUrl; // Update the specific image preview
+      setImagePreviews(updatedPreviews); // Update the state
+    }
+  };
   return (
     <>
-      <Layout active={"Dashboard"}>
+       <Layout active={"Dashboard"}>
         <div className=" my-5">
           <h1 className=" lg:text-2xl font-semibold font-inter text-gray-1">
             Dashboard
@@ -36,24 +84,24 @@ function MechanicVerifyNow2() {
               fill="black"
             />
           </svg>
-          <div className="flex flex-row font-poppins text-xs lg:text-lg">
+          <div className="flex flex-row font-poppins font-normal  text-base">
             <p
               onClick={() => navigate(-1)}
-              className="text-gray-1  hover:cursor-pointer hover:text-black font-medium"
+              className="text-gray-1 text-xs md:text-lg font-medium font-poppins hover:cursor-pointer hover:text-black"
             >
               Car verification/
             </p>
-            <p className=" text-custom-blue font-semibold">
+            <p className="font-semibold text-custom-blue text-xs md:text-lg  font-poppins">
               Mercedes-Benz E 220 D
             </p>
           </div>
         </div>
         <div className=" flex my-5">
-          <div className="w-full lg:w-[90%]  border shadow-css px-3 lg:px-0 py-16 rounded-2xl">
+          <div className="w-full lg:w-[90%]  border p-5 py-16 rounded-2xl bg-white shadow-css">
             <div className=" ">
               <div className=" flex items-center justify-center flex-col gap-6">
                 <h1 className="lg:text-[28px] font-bold font-inter text-gray-1">
-                  Upload car documents & Images
+                Upload car documents & Images
                 </h1>
               </div>
             </div>
@@ -62,30 +110,123 @@ function MechanicVerifyNow2() {
                 <div className="space-y-5">
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
                     <div className="w-full relative">
-                      <Input
-                        label={"Car Registration"}
-                        placeholder={"Upload"}
-                        className={"relative"}
-                      />
-                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
+                      <div className="flex flex-col">
+                        <label className="text-base font-medium font-inter text-gray-1">
+                        Car Registration
+                        </label>
+                        <div
+                          className="flex items-center justify-between h-[44px] px-4 py-3 border border-gray-300 rounded-lg cursor-pointer bg-[#fafafa] mt-2"
+                          onClick={() => handleClick(registrationInputRef)}
+                        >
+                          <span
+                            className={`text-gray-500 ${
+                              registration !== "Upload Registration"
+                                ? "text-black"
+                                : ""
+                            }`}
+                          >
+                            {registration}
+                          </span>
+                          <Svgs.DocumentUpload />
+                        </div>
+                        <input
+                          type="file"
+                          ref={registrationInputRef}
+                          className="hidden"
+                          onChange={(e) => handleFileChange(e, setRegistration)}
+                        />
+                      </div>
                     </div>
                     <div className="w-full relative">
-                      <Input label={"RTO"} placeholder={"Upload"} />
-                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
+                      {/* Agreement Document Upload */}
+                      <div className="flex flex-col">
+                        <label className="text-base font-medium font-inter text-gray-1">
+                        RTO
+                        </label>
+                        <div
+                          className="flex items-center justify-between h-[44px] px-4 py-3 border border-gray-300 rounded-lg cursor-pointer bg-[#fafafa] mt-2"
+                          onClick={() => handleClick(agreementInputRef)}
+                        >
+                          <span
+                            className={`text-gray-500 ${
+                              agreement !== "Upload Agreement"
+                                ? "text-black"
+                                : ""
+                            }`}
+                          >
+                            {agreement}
+                          </span>
+                          <Svgs.DocumentUpload />
+                        </div>
+                        <input
+                          type="file"
+                          ref={agreementInputRef}
+                          className="hidden"
+                          onChange={(e) => handleFileChange(e, setAgreement)}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full relative">
-                      <Input
-                        type={"number"}
-                        label={"Service records"}
-                        placeholder={"Upload"}
-                      />
-                     <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
+                      {/* Business Insurance Document Upload */}
+                      <div className="flex flex-col">
+                        <label className="text-base font-medium font-inter text-gray-1">
+                        Service records
+                        </label>
+                        <div
+                          className="flex items-center justify-between h-[44px] px-4 py-3 border border-gray-300 rounded-lg cursor-pointer bg-[#fafafa] mt-2"
+                          onClick={() => handleClick(businessInsuranceInputRef)}
+                        >
+                          <span
+                            className={`text-gray-500 ${
+                              businessInsurance !== "Upload Business Insurance"
+                                ? "text-black"
+                                : ""
+                            }`}
+                          >
+                            {businessInsurance}
+                          </span>
+                          <Svgs.DocumentUpload />
+                        </div>
+                        <input
+                          type="file"
+                          ref={businessInsuranceInputRef}
+                          className="hidden"
+                          onChange={(e) =>
+                            handleFileChange(e, setBusinessInsurance)
+                          }
+                        />
+                      </div>
                     </div>
                     <div className="w-full relative">
-                      <Input label={"Insurance copy"} placeholder={"Upload"} />
-                      <span className=" absolute top-11 right-3"><Svgs.DocumentUpload/></span>
+                      {/* Another Document Upload */}
+                      <div className="flex flex-col">
+                        <label className="text-base font-medium font-inter text-gray-1">
+                        Insurance copy
+                        </label>
+                        <div
+                          className="h-[44px] px-4 py-3 flex items-center justify-between  border border-gray-300 rounded-lg cursor-pointer bg-[#fafafa] mt-2"
+                          onClick={() => handleClick(anotherDocInputRef)}
+                        >
+                          <span
+                            className={`text-gray-500 ${
+                              anotherDoc !== "Upload Another Document"
+                                ? "text-black"
+                                : ""
+                            }`}
+                          >
+                            {anotherDoc}
+                          </span>
+                          <Svgs.DocumentUpload />
+                        </div>
+                        <input
+                          type="file"
+                          ref={anotherDocInputRef}
+                          className="hidden"
+                          onChange={(e) => handleFileChange(e, setAnotherDoc)}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -96,36 +237,57 @@ function MechanicVerifyNow2() {
                       Upload vehicle images
                     </label>
                     <div className="my-5 grid lg:grid-cols-10 md:grid-cols-8 sm:grid-cols-6 grid-cols-3 gap-2">
-                      {Array(10)
-                        .fill()
-                        .map(() => {
-                          return (
-                            <>
-                              <img
-                                src={gallery}
-                                alt=""
-                                className="p-4 border border-dashed rounded-lg w-fit"
-                              />
-                            </>
-                          );
-                        })}
+                    {imagePreviews.map((preview, index) => (
+                    <div key={index}>
+                      {/* Clickable field to open file selector */}
+                      <div
+                        className="w-16 h-16 border rounded-[8px] border-dashed border-gray-300 flex items-center justify-center cursor-pointer"
+                        onClick={() =>
+                          document.getElementById(`fileInput-${index}`).click()
+                        }
+                      >
+                        {/* Display the image preview if available; otherwise, show the placeholder */}
+                        {preview ? (
+                          <img
+                            src={preview}
+                            alt={`Preview ${index + 1}`}
+                            className="w-full h-full object-cover rounded-[8px]"
+                          />
+                        ) : (
+                         <Svgs.GalleryIcon/>
+                        )}
+                      </div>
+
+                      {/* Hidden input for file upload */}
+                      <input
+                        id={`fileInput-${index}`}
+                        type="file"
+                        className="hidden"
+                        accept="image/*"
+                        onChange={(e) => handleImageChange(e, index)}
+                      />
+                    </div>
+                  ))}
                     </div>
                   </div>
                 </div>
 
                 <div className="w-full text-center flex items-center justify-center">
                   <button
-                    onClick={() => {
-                      navigate("/mechanic/mechanic-verify-now3");
-                    }}
+                    onClick={()=>{navigate('/mechanic/mechanic-verify-now3')}}
                     className={
-                      "w-[117px] hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none text-sm rounded-lg px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white shadow-2xl shadow-custom-blue"
+                      "h-[52px] flex justify-center hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-blue-300 text-lg rounded-xl px-[44px] py-[15.5px] font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                     }
                     title={""}
                   >
                     Next
                   </button>
                 </div>
+
+               
+                  {/* Map over the array to generate 10 image upload fields */}
+                
+            
               </form>
             </div>
           </div>

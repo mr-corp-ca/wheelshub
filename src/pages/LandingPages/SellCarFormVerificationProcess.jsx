@@ -175,7 +175,7 @@ function SellCarFormVerificationProcess({selectSell}) {
                   onClick={() => {
                     navigate("/");
                   }}
-                  className="text-lg rounded-xl font-Work-sans font-medium w-[123px] h-[48px] px-[24px] py-[12px] bg-custom-blue text-white flex items-center justify-center"
+                  className="text-lg rounded-xl font-Work-sans font-medium w-[123px] h-[48px] px-[24px] py-[12px] bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300"
                 >
                   Close
                 </button>

@@ -114,9 +114,9 @@ export default function Mechanic() {
             </div>
           </div>
           <div className="mt-5">
-            <div className=" border rounded-[16px]">
+            <div className=" border rounded-[16px] p-4">
               <div
-                className={`p-4 ${
+                className={` border-b border-dashed pb-5 ${
                   openIndex
                     ? "transition-all duration-700 ease-in-out"
                     : "transition-all duration-700 ease-in-out"
@@ -183,13 +183,13 @@ export default function Mechanic() {
                   </div>
                 )}
               </div>
-              <div className="p-4">
+              <div className="pt-8">
                 {/* Accordion Header */}
                 <button
                   onClick={() => {
                     setPopularity(!popularity);
                   }}
-                  className="flex items-center justify-between w-full focus:outline-none transition-all duration-300 ease-in-out"
+                  className=" outline-none flex items-center justify-between w-full focus:outline-none transition-all duration-300 ease-in-out"
                 >
                   <h2 className="text-2xl font-semibold font-inter text-gray-1">
                     Popularity
@@ -342,7 +342,7 @@ export default function Mechanic() {
                           </p>
                         </div>
                         <div className="flex items-center justify-center pb-4 md:pb-5 mx-5">
-                          <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-custom-blue">
+                          <button className="h-[44px] md:h-[48px] px-[10px] py-[12px] md:py-[15.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-2xl shadow-blue-300">
                             Call now - +650 334 4545
                           </button>
                         </div>

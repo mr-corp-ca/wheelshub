@@ -47,7 +47,7 @@ function NewRequests() {
                     <p className="text-xs font-normal font-Work-sans text-[#FFB543]">Verification pending</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/insurance/insurance-chat')}} className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate('/insurance/insurance-chat')}} className="w-full max-w-[132px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl">
                       Chat now
                     </button>
                   </div>

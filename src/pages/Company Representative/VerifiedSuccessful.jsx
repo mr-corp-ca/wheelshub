@@ -2,6 +2,8 @@ import React from "react";
 import {useEffect, useRef } from "react";
 import greentickrounded from "../../assets/images/roundedGreentick.png";
 import { useNavigate } from "react-router-dom";
+import Svgs from '../../assets/svgs/index'
+
 function VerifiedSuccessful({ show, onClose}) {
   const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ function VerifiedSuccessful({ show, onClose}) {
         <div ref={popupRef} className=" mx-auto p-10 bg-white shadow-lg rounded-xl border">
           <div className="flex flex-col gap-3">
             <div className="img flex items-center justify-center">
-              <img src={greentickrounded} alt="" />
+              <Svgs.GreenTickSuccessful/>
             </div>
             <div className=" flex items-center justify-center text-center">
               <h1 className=" w-[60%] text-base font-medium font-poppins text-gray-1">

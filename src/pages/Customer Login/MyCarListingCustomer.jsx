@@ -5,24 +5,26 @@ import yellowTick from "../../assets/images/yellowTick.png";
 import bluetick from "../../assets/images/verified.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index'
+
 function MyCarListingCustomer() {
   const navigate = useNavigate()
     const cars = [
         {
             buttonName: "View details",
-            tickIcon: yellowTick,
+            tickIcon: <Svgs.YellowTickVerified/>,
             verification: "Verification pending",
             textColor : "text-[#FFB543]"
         },
         {
             buttonName: "Handover the car",
-            tickIcon: bluetick,
+            tickIcon: <Svgs.BlueTickVerified/>,
             verification: "Verified",
             textColor: "text-custom-blue"
         },
         {
             buttonName: "View details",
-            tickIcon: yellowTick,
+            tickIcon: <Svgs.YellowTickVerified/>,
             verification: "Verification pending",
             textColor : "text-[#FFB543]"
         }
@@ -36,7 +38,7 @@ function MyCarListingCustomer() {
           My car listings
           </h1>
           <div className="flex flex-wrap items-center gap-5 my-5">
-                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl">
                     Wheeldealhub
                     </button>
                     <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg border border-gray-1 text-sm md:text-lg font-medium font-Work-sans bg-white text-gray-1 flex items-center justify-center">
@@ -53,26 +55,26 @@ function MyCarListingCustomer() {
                     <img src={audi2} alt="Car" className="w-full h-auto rounded-t-2xl" />
                   </div>
                   <div className="px-3">
-                    <h1 className="text-base md:text-lg font-semibold font-inter text-gray-1">
+                    <h1 className="text-base md:text-lg lg:text-base 2xl:text-lg font-semibold font-inter text-gray-1">
                       Mercedes-Benz E 220 d
                     </h1>
                   </div>
                   <div className="flex items-center px-3 justify-between">
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
-                    <img src={grayDot} alt="" />
-                    <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">Automatic</h1>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">45000 KM</h1>
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">2018 Model</h1>
+                    <Svgs.GrayDot/>
+                    <h1 className="text-xs md:text-sm lg:text-xs 2xl:text-sm font-normal font-Work-sans text-gray-2">Automatic</h1>
                   </div>
                   <div className="px-3">
-                    <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
+                    <h1 className="text-lg md:text-2xl lg:text-lg 2xl:text-2xl font-bold font-inter text-gray-1">$22,500</h1>
                   </div>
                   <div className="flex items-center gap-2 px-3">
-                    <img src={value.tickIcon} alt="" />
+                    <span>{value.tickIcon}</span>
                     <p className={`text-xs font-normal font-Work-sans ${value.textColor}`}>{value.verification}</p>
                   </div>
                   <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate("/customer/mycar-listing-details")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-custom-blue shadow-2xl">
+                    <button onClick={()=>{navigate("/customer/mycar-listing-details")}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl">
                       {value.buttonName}
                     </button>
                   </div>

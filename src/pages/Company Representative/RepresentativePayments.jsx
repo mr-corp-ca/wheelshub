@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import Svgs from '../../assets/svgs/index'
 
 const data = [
   { name: "Jan", This_month: 1000 },
@@ -65,7 +66,7 @@ function RepresentativePayments() {
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between pt-10 gap-4 lg:gap-0">
             <div className="flex items-center gap-3">
-              <img src={photo} alt="" />
+            <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
               <div>
                 <h1 className="text-base font-normal font-poppins text-[#000000]">
                   3433566544564
@@ -97,11 +98,7 @@ function RepresentativePayments() {
               return (
                 <div key={i} className="photodown flex items-center justify-between border-b border-dashed py-3">
                   <div className="flex items-center gap-2">
-                    <img
-                      src={photo}
-                      alt=""
-                      className="w-10 h-10 md:w-auto md:h-auto"
-                    />
+                  <span className=" rounded-full border h-[48px] w-[48px] flex items-center justify-center"><Svgs.ImageSmallIcon/></span> 
                     <span className="text-sm md:text-base font-normal font-poppins text-gray-1">
                       Car Insurance
                     </span>
