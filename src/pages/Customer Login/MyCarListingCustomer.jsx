@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import audi2 from "../../assets/images/audi2.png";
-import grayDot from "../../assets/images/graydot.png";
-import yellowTick from "../../assets/images/yellowTick.png";
-import bluetick from "../../assets/images/verified.png"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index'
 
 function MyCarListingCustomer() {
   const navigate = useNavigate()
+
+  const [isActive, setIsActive] = useState('1')
+
+  const handleActive=(val)=>{
+    setIsActive(val)
+  }
     const cars = [
         {
             buttonName: "View details",
@@ -38,10 +41,10 @@ function MyCarListingCustomer() {
           My car listings
           </h1>
           <div className="flex flex-wrap items-center gap-5 my-5">
-                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl">
+                    <button onClick={()=>{handleActive('1')}} className={`${isActive === '1' ? ' bg-custom-blue text-white shadow-blue-300 shadow-2xl' : ' bg-white border border-gray-1 text-gray-1'} h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center `}>
                     Wheeldealhub
                     </button>
-                    <button className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg border border-gray-1 text-sm md:text-lg font-medium font-Work-sans bg-white text-gray-1 flex items-center justify-center">
+                    <button onClick={()=>{handleActive('2')}} className={`${isActive === '2' ? ' bg-custom-blue text-white shadow-blue-300 shadow-2xl' : ' bg-white border border-gray-1 text-gray-1'} h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center`}>
                     Direct selling
                     </button>
                   </div>

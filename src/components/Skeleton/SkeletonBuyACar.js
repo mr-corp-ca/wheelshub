@@ -8,7 +8,7 @@ function SkeletonBuyACar() {
     <>
     <div className="flex flex-col border rounded-2xl">
       <div className=" rounded-2xl">
-        <Skeleton className=" rounded-2xl" height={212} />
+        <Skeleton className=" rounded-2xl" height={212}/>
       </div>
       <div className="mt-3 flex flex-col gap-y-5 px-3">
         <Skeleton width={200}/>
@@ -21,7 +21,6 @@ function SkeletonBuyACar() {
         <div className='flex items-center justify-between'>
         <Skeleton width={130} />
         <Skeleton width={130} />
-
         </div>
       </div>
       <div className="flex items-center justify-center rounded-2xl my-5">

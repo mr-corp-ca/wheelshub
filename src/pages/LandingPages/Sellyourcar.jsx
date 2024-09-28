@@ -48,7 +48,7 @@ function Sellyourcar({setSelectSell, selectSell}) {
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
           <div className="lg:px-7 xl:px-0 items-center  grid lg:grid-cols-12 w-[95%] lg:w-[1170px]">
             <div className=" flex flex-col  lg:gap-[48px] gap-[25px] lg:col-span-8 bottom-[20px] relative ">
-              <div className="px-2 text-center md:text-start sm:text-[48px] text-[20px] text-[#333333] lg:w-[800px] xl:w-[821px] font-bold w-full font-inter">
+              <div className="px-2 text-center md:text-start sm:text-[48px] text-[20px] text-[#333333] lg:w-[800px] xl:w-[860px] font-bold w-full font-inter">
                 <h6>Sell Car instantly on Wheeldeal hub from Home</h6>
                 {selectSell}
               </div>

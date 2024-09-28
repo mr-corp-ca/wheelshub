@@ -92,7 +92,7 @@ function DealerVerifyNow() {
             <button
             onClick={()=>{navigate("/dealer/dealer-verify2")}}
               className={
-                "w-[129px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
+                " hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none w-[129px] text-sm rounded-xl px-2 py-3 font-inter font-semibold self-center items-center bg-custom-blue text-white"
               }
               title={""}
             >

@@ -1,14 +1,21 @@
 import React from "react";
 import audi2 from "../../assets/images/audi2.png";
-import grayDot from "../../assets/images/graydot.png";
-import yellowTick from "../../assets/images/yellowTick.png";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index'
-
+import SkeletonBuyACar from "../../components/Skeleton/SkeletonBuyACar.js";
+import { useState, useEffect } from "react";
 
 function DealerNewRequests() {
   const navigate = useNavigate()
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
     <Layout active={'New Requests'}>
@@ -18,7 +25,20 @@ function DealerNewRequests() {
             New requests
           </h1>
         </div>
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        {isLoading ? (
+            <>
+              <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {Array(4)
+                  .fill()
+                  .map((_, i) => (
+                    <SkeletonBuyACar key={i}/>
+                  ))}
+              </div>
+            </>
+          ) : (
+            <>
+           <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Array(4)
             .fill()
             .map((_, index) => {
@@ -55,6 +75,11 @@ function DealerNewRequests() {
               );
             })}
         </div>
+            </>
+          )}
+
+
+        
       </div>
       </Layout>
     </>

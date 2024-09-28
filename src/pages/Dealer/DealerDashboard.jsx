@@ -1,36 +1,40 @@
 import React from "react";
 import audiCar from "../../assets/images/audicar.png";
-import photo from "../../assets/images/photo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ClaimNow from "../Insurance/ClaimNow";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index'
+import SkeletonFinanceNewCarListing from "../../components/Skeleton/SkeletonFinanceNewCarListing";
 
 
 function DealerDashboard() {
 
   const navigate = useNavigate()
 
-    const [isVisible, setIsVisible] = useState(false);
-
-const showDialog = () => {
-  setIsVisible(true);
-};
-
-const closeDialog = () => {
-  setIsVisible(false);
-};
 
 const [showPopup, setShowPopup] = useState(false);
 
-  const handleShowPopup = () => {
-    setShowPopup(true);
-  };
+ 
 
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading2, setIsLoading2] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading2(false);
+    }, 2000);
+  }, []);
 
   return (
     <>
@@ -46,7 +50,19 @@ const [showPopup, setShowPopup] = useState(false);
                 View all
               </button>
             </div>
-            {Array(2)
+            {isLoading ? (
+                <>
+                  {Array(2)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                  {Array(2)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -77,6 +93,9 @@ const [showPopup, setShowPopup] = useState(false);
                   </div>
                 </div>
               ))}
+                </>
+              )}
+           
           </div>
           <div className="payments col-span-12 lg:col-span-4 ">
             <div className="flex items-center justify-start mb-10">
@@ -156,7 +175,19 @@ const [showPopup, setShowPopup] = useState(false);
                 View all
               </button>
             </div>
-            {Array(2)
+            {isLoading2 ? (
+                <>
+                  {Array(2)
+                    .fill()
+                    .map(() => (
+                      <div className="py-4">
+                        <SkeletonFinanceNewCarListing />
+                      </div>
+                    ))}
+                </>
+              ) : (
+                <>
+                 {Array(2)
               .fill()
               .map((_, index) => (
                 <div key={index} className="card py-4">
@@ -186,6 +217,9 @@ const [showPopup, setShowPopup] = useState(false);
                   </div>
                 </div>
               ))}
+                </>
+              )}
+            
           </div>
         </div>
       </div>

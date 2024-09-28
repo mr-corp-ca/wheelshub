@@ -17,6 +17,8 @@ import bluetick from "../../assets/images/bluetickzigzag.png";
 import Banner from "../../components/Banner";
 import Svgs from "../../assets/svgs/index.js";
 import { useNavigate } from "react-router-dom";
+import audhihome from '../../assets/images/audihome.png'
+
 
 function Home() {
   const cards = [
@@ -112,6 +114,18 @@ function Home() {
   };
 
   const navigate = useNavigate();
+
+
+  const [selectedHearts, setSelectedHearts] = useState([]); // Array to track selected hearts
+
+  const handleHeart = (index) => {
+    setSelectedHearts(
+      (prevSelectedHearts) =>
+        prevSelectedHearts.includes(index)
+          ? prevSelectedHearts.filter((i) => i !== index) // Unselect the heart
+          : [...prevSelectedHearts, index] // Select the heart
+    );
+  };
   return (
     <>
       <Navbar2 active={"Home-Page"} />
@@ -124,10 +138,10 @@ function Home() {
         <div className=" py-8">
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <div className=" w-full md:w-[90%] text-center lg:text-left">
-              <h1 className="text-[32px] font-inter lg:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
+              <h1 className="text-[32px] font-inter md:text-[50px] 2xl:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  lg:w-[68%] ">
+              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  2xl:w-[68%] ">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
@@ -153,7 +167,7 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div className="lg:w-1/2 mt-8 lg:mt-10 mx-auto lg:block hidden">
+            <div className=" w-[80%] 2xl:w-full mt-8 lg:mt-10 mx-auto lg:block hidden">
               <img
                 src={carImage}
                 alt="Car"
@@ -443,70 +457,86 @@ function Home() {
         </div>
       </div>
 
-      <div className="cars w-[90%] mx-auto">
-        <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
-          {Array(4)
-            .fill()
-            .map((_, index) => {
-              return (
-                <div
-                  key={index}
-                  className="card border rounded-2xl flex flex-col gap-4"
-                >
-                  <div>
-                    <img
-                      src={audi2}
-                      alt="Car"
-                      className="w-full h-auto rounded-t-2xl"
-                    />
-                  </div>
-                  <div className="px-3 flex items-center justify-between">
-                    <h1 className="text-base md:text-xl lg:text-base 2xl:text-xl font-semibold font-inter text-gray-1">
-                      Mercedes-Benz E 220 d
-                    </h1>
-                    <span><Svgs.HeartIconBlue/></span>
-                  </div>
-                  <div className="flex items-center px-3 justify-between">
-                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
-                      45000 KM
-                    </h1>
-                    <Svgs.GrayDot/>
-                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
-                      2018 Model
-                    </h1>
-                    <Svgs.GrayDot/>
-                    <h1 className="text-xs md:text-base lg:text-sm 2xl:text-base font-normal font-Work-sans text-gray-2">
-                      Automatic
-                    </h1>
-                  </div>
-                  <div className="px-3">
-                    <h1 className="text-lg md:text-[32px] lg:text-xl 2xl:text-[32px] font-bold font-inter text-gray-1">
-                      $22,500
-                    </h1>
-                  </div>
-                  <div className="flex items-center gap-2 px-3">
-                    <div className="flex items-center gap-2">
-                      <span><Svgs.BlueTickIcon/></span>
-                      <p className="text-sm lg:text-[10px]  font-normal font-Work-sans text-gray-1">
-                        Verified by Mechanic
-                      </p>
+      <div className="cars w-[90%] md:max-w-[1440px] xl:px-[144px] mx-auto">
+      <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6">
+              {Array(3)
+                .fill()
+                .map((_, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="card border rounded-2xl flex flex-col gap-4"
+                    >
+                      <div>
+                        <img
+                          src={audhihome}
+                          alt="Car"
+                          className="w-full h-auto rounded-t-2xl"
+                        />
+                      </div>
+                      <div className="px-3 flex items-center justify-between">
+                        <h1 className="text-sm xl:text-lg font-semibold font-inter text-gray-1">
+                          Mercedes-Benz E 220 d
+                        </h1>
+                        <span
+                          className="cursor-pointer"
+                          onClick={() => {
+                            handleHeart(index);
+                          }}
+                        >
+                          {selectedHearts.includes(index) ? (
+                            <Svgs.HeartIconBlueFilled />
+                          ) : (
+                            <Svgs.HeartIconBlue />
+                          )}
+                        </span>
+                      </div>
+                      <div className="flex items-center px-3 justify-between">
+                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                          45000 KM
+                        </h1>
+                        <Svgs.GrayDot />
+                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                          2018 Model
+                        </h1>
+                        <Svgs.GrayDot />
+                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                          Automatic
+                        </h1>
+                      </div>
+                      <div className="px-3">
+                        <h1 className="text-lg xl:text-2xl font-bold font-inter text-gray-1">
+                          $22,500
+                        </h1>
+                      </div>
+                      <div className="flex items-center justify-between px-3">
+                        <div className="flex items-center gap-1">
+                          <Svgs.BlueTickVerified />
+                          <p className="text-xs 2xl:text-sm font-normal font-Work-sans text-gray-1">
+                            Verified by Mechanic
+                          </p>
+                        </div>
+                        <div className=" flex items-center gap-1">
+                          <Svgs.BlueTickVerified />
+                          <p className="text-xs 2xl:text-sm font-normal font-Work-sans text-gray-1">
+                            Verified by Dealer
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-center pb-4 md:pb-5">
+                        <button
+                          onClick={() => {
+                            navigate("");
+                          }}
+                          className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl"
+                        >
+                          View details
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                    <span><Svgs.BlueTickIcon/></span>
-                      <p className="text-sm lg:text-[10px]  font-normal font-Work-sans  text-gray-1">
-                        Verified by Dealer
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center pb-4 md:pb-5">
-                    <button onClick={()=>{navigate('/customer/mycar-listing-details')}} className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl ">
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-        </div>
+                  );
+                })}
+            </div>
         <div className="text-center py-10">
           <button className="border text-custom-blue border-custom-blue rounded-xl w-[160px] px-[24px] py-[14px] text-base font-medium font-poppins hover:bg-custom-blue hover:text-white">
             View all

@@ -56,8 +56,8 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
                   <img src={greentickrounded} alt="" />
                 </div>
                 <div className=" flex items-center justify-center text-center">
-                  <h1 className=" w-[60%] text-base font-medium font-poppins text-gray-1">
-                  Verified
+                  <h1 className=" w-[80%] text-base font-medium font-poppins text-gray-1">
+                  Car Verified
                   successfully
                   </h1>
                 </div>
@@ -66,13 +66,6 @@ function VerifiedSuccessful({ show, onClose, hidden }) {
                 </div>
               </div>
             </div>
-            {/* <div className="py-6 text-center">
-              <Button
-                onClick={onClose}
-                title="Submit claim"
-                className="text-base font-medium"
-              />
-            </div> */}
           </form>
         </div>
       </div>
