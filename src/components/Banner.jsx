@@ -74,7 +74,7 @@ function Banner() {
             </div>
             <div className="second   ">
               <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
+                <h1 className="text-xl xl:text-2xl font-semibold font-inter text-gray-1">
                   Our Services
                 </h1>
               </div>
@@ -100,7 +100,7 @@ function Banner() {
             </div>
             <div className="third  ">
               <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
+                <h1 className="text-xl xl:text-2xl font-semibold font-inter text-gray-1">
                 Vehicle Model
                 </h1>
               </div>
@@ -124,7 +124,7 @@ function Banner() {
             </div>
             <div className="fourth ">
               <div>
-                <h1 className="text-xl lg:text-2xl font-semibold font-inter text-gray-1">
+                <h1 className="text-xl xl:text-2xl font-semibold font-inter text-gray-1">
                 Contact
                 </h1>
               </div>

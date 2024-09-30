@@ -98,7 +98,7 @@ export default function Mechanic() {
       <Navbar2 active={"Dealer-Page"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[25%] p-4 lg:pl-10 lg:pt-10">
+        <div className="sidebar xl:w-[25%] p-4 2xl:pl-[140px] lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <Svgs.Filter_Icon />
@@ -284,7 +284,7 @@ export default function Mechanic() {
             </div>
             {isLoading ? (
               <>
-                <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="cardpart grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 2xl:gap-x-[50px] 2xl:gap-y-6 mt-12 max-w-[1180px]">
                   {Array(15)
                     .fill()
                     .map(() => (
@@ -294,7 +294,7 @@ export default function Mechanic() {
               </>
             ) : (
               <>
-                <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="cardpart grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 2xl:gap-x-[50px] 2xl:gap-y-6 mt-12 max-w-[1180px]">
                   {cardsData.map((value, index) => {
                     return (
                       <div

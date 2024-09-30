@@ -138,10 +138,10 @@ function Home() {
         <div className=" py-8">
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <div className=" w-full md:w-[90%] text-center lg:text-left">
-              <h1 className="text-[32px] font-inter md:text-[50px] 2xl:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
+              <h1 className="text-[32px] font-inter xl:text-[50px] 2xl:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className="px-5 md:px-20 text-sm md:text-base lg:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  2xl:w-[68%] ">
+              <p className="px-5 md:px-20 text-sm xl:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  2xl:w-[68%] ">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today

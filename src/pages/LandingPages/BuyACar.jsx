@@ -64,7 +64,7 @@ export default function AccordionUsage() {
       <Navbar2 active={"Buy-A-Car"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
-        <div className="sidebar lg:w-[25%] p-4 lg:pl-10 lg:pt-10">
+        <div className="sidebar xl:w-[25%] p-4 2xl:pl-[140px] lg:pt-10">
           {/* Filter Heading */}
           <div className="flex items-center gap-4">
             <Svgs.Filter_Icon />
@@ -667,7 +667,7 @@ export default function AccordionUsage() {
           </div>
         </div>
         {/* content of cards */}
-        <div className="p-4 lg:w-3/4">
+        <div className="p-2 2xl:p-4 lg:w-3/4">
           <div className="newRequests my-6">
             <h1 className="text-xl lg:text-[32px] font-bold font-inter text-gray-1">
               Cars nearby your location
@@ -694,7 +694,7 @@ export default function AccordionUsage() {
 
           {isLoading ? (
             <>
-              <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 max-w-[1112px]">
                 {Array(30)
                   .fill()
                   .map((_, i) => (
@@ -704,7 +704,7 @@ export default function AccordionUsage() {
             </>
           ) : (
             <>
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6">
+            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 max-w-[1112px]">
               {Array(30)
                 .fill()
                 .map((_, index) => {
@@ -755,16 +755,16 @@ export default function AccordionUsage() {
                           $22,500
                         </h1>
                       </div>
-                      <div className="flex items-center gap-2 px-3">
+                      <div className="flex items-center 2xl:gap-3 gap-2 px-2 xl:px-1 xl:gap-1 2xl:px-3">
                         <div className="flex items-center gap-1">
                           <Svgs.BlueTickVerified />
-                          <p className="text-xs font-normal font-Work-sans text-gray-1">
+                          <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
                             Verified by Mechanic
                           </p>
                         </div>
                         <div className=" flex items-center gap-1">
                           <Svgs.BlueTickVerified />
-                          <p className="text-xs font-normal font-Work-sans text-gray-1">
+                          <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
                             Verified by Dealer
                           </p>
                         </div>
