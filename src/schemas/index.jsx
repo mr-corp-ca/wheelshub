@@ -6,9 +6,6 @@
 //     password: yup.string().min(6).required('please enter your password'),
 //     confirm_password:yup.string().required('confirm password').oneOf([yup.ref('password'), null], 'Password must match')
 // })
-
-
-
 // const signInSchema = yup.object({
 //     email: yup.string().email().required('Please enter your email'),
 //     password: yup.string().min(6).required('please enter your password'),
@@ -16,79 +13,80 @@
 
 // export {signInSchema, signUpSchema}
 
-
-import * as yup from 'yup';
+import * as yup from "yup";
 
 const signUpSchema = yup.object().shape({
-    name: yup
-        .string()
-        .min(2, 'Name must be at least 2 characters')
-        .max(25, 'Name cannot exceed 25 characters')
-        .required('Please enter your name'),
-    email: yup
-        .string()
-        .email('Enter a valid email')
-        .required('Please enter your email'),
-    password: yup
-        .string()
-        .min(6, 'Password must be at least 6 characters')
-        .required('Please enter your password'),
-    confirm_password: yup
-        .string()
-        .oneOf([yup.ref('password'), null], 'Passwords must match')
-        .required('Please confirm your password'),
+  name: yup
+    .string()
+    .min(2, "Name must be at least 2 characters")
+    .max(25, "Name cannot exceed 25 characters")
+    .required("Please enter your name"),
+  email: yup
+    .string()
+    .email("Enter a valid email")
+    .required("Please enter your email"),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Please enter your password"),
+  confirm_password: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Passwords must match")
+    .required("Please confirm your password"),
 });
 
 const signInSchema = yup.object().shape({
-    email: yup
-        .string()
-        .email('Enter a valid email')
-        .required('Required'),
-    password: yup
-        .string()
-        .min(6, 'Password must be at least 6 characters')
-        .required('Required'),
+  email: yup.string().email("Enter a valid email").required("Required"),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Required"),
 });
 const ForgotPasswordSchema = yup.object().shape({
-    email: yup
-        .string()
-        .email('Enter a valid email')
-        .required('Required'),
-    password: yup
-        .string()
-        .required('Required'),
+  email: yup.string().email("Enter a valid email").required("Required"),
+  password: yup.string().required("Required"),
 });
-
 
 const CreateNewPasswordSchema = yup.object().shape({
-    password: yup
-        .string()
-        .required('Required'),
-    confirm_password: yup
-        .string()
-        .required('Required'),
+  password: yup.string().required("Required"),
+  confirm_password: yup.string().required("Required"),
 });
 
-
 const sellCarForm = yup.object().shape({
-    name: yup
+  name: yup
     .string()
-    .min(2, 'Name must be at least 2 characters')
-    .max(25, 'Name cannot exceed 25 characters')
-    .required('Please enter your name'),
-    email: yup
+    .min(2, "Name must be at least 2 characters")
+    .max(25, "Name cannot exceed 25 characters")
+    .required("Please enter your name"),
+  email: yup
     .string()
-    .email('Invalid email format')
-    .required('Please enter your email'),
-    number: yup
-    .string()
-    .required('Please enter your number'),
-    city: yup
-    .string()
-    .required('Please enter your city'),
-    street_address: yup
-    .string()
-    .required('Please enter your address')
+    .email("Invalid email format")
+    .required("Please enter your email"),
+  number: yup.string().required("Please enter your number"),
+  city: yup.string().required("Please enter your city"),
+  street_address: yup.string().required("Please enter your address"),
+});
+
+const SellCarToPublicSchema = yup.object().shape({
+  carmake: yup.string().required("Required"),
+  model: yup.string().required("Required"),
+  manufacturing: yup.string().required("Required"),
+  kmsDriven: yup.string().required("Required"),
+  Vid: yup.string().required("Required"),
+  trnasmission: yup.string().required("Required"),
+});
+
+const insuranceForm1Schema = yup.object().shape({
+  insuranceAgent: yup.string().required('Required'),
+  insurancePrice: yup.string().required('Required'),
 })
 
-export { CreateNewPasswordSchema,  sellCarForm, signInSchema, signUpSchema, ForgotPasswordSchema };
+export {
+  insuranceForm1Schema,
+  SellCarToPublicSchema,
+  CreateNewPasswordSchema,
+  sellCarForm,
+  signInSchema,
+  signUpSchema,
+  ForgotPasswordSchema,
+};

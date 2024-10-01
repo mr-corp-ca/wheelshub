@@ -7,13 +7,32 @@ import "swiper/css/pagination";
 import { Navigate, useNavigate } from "react-router-dom";
 import Banner from "../../components/Banner";
 import Svgs from "../../assets/svgs/index";
+import { Formik, useFormik } from "formik";
+import { SellCarToPublicSchema, signInSchema } from "../../schemas/index";
+
+const initialValues = {
+  carmake: "",
+  model: "",
+  manufacturing: "",
+  kmsDriven: "",
+  Vid: "",
+  trnasmission: "",
+};
 
 const Selcartopublic = () => {
   const navigate = useNavigate();
-  
+
+  const { values, errors, handleBlur, handleChange, handleSubmit, touched } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: SellCarToPublicSchema,
+      onSubmit: (values) => {
+        
+      },
+    });
   return (
     <>
-      <Navbar2 active={'Sell-A-Car'}/>
+      <Navbar2 active={"Sell-A-Car"} />
       <div>
         {/* for first main div */}
 
@@ -76,19 +95,25 @@ const Selcartopublic = () => {
             {/* for car details code div */}
             {/* start */}
             {/* 1st */}
+            <form onSubmit={handleSubmit}>
             <div className="   lg:flex flex-wrap justify-center gap-[62px] w-full ">
               {/* 1st */}
               <div>
                 <h6 className="text-[#333333] text-[16px] font-inter font-medium ">
                   Select car make
                 </h6>
-
+                
                 <div
                   className="mt-2 cursor-pointer lg:w-[400px]  w-full flex  justify-between h-[44px] bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
                   <select
-                    id="cars"
+                    error={errors.carmake && touched.carmake}
+                    value={values.carmake}
+                    onChange={handleChange}
+                    handleBlur={handleBlur}
+                    name="carmake"
+                    id={"carmake"}
                     class=" text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full  bg-[#FAFAFA] outline-none cursor-pointer"
                   >
                     <option value="volvo">Volvo</option>
@@ -97,6 +122,11 @@ const Selcartopublic = () => {
                     <option value="audi">Audi</option>
                   </select>
                 </div>
+                {touched.carmake && errors.carmake && (
+                  <small className=" text-custom-red font-poppins font-medium">
+                    {errors.carmake}
+                  </small>
+                )}
               </div>
               {/* 2nd */}
               <div className="mt-5 lg:mt-0">
@@ -108,16 +138,14 @@ const Selcartopublic = () => {
                   className="mt-2 cursor-pointer lg:w-[400px]  w-full flex justify-between h-[44px] bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
-                 
-                    <select
-                      id="cars"
-                      class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full  bg-[#FAFAFA] outline-none"
-                    >
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                    </select>
-                  
+                  <select
+                    id="cars"
+                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full  bg-[#FAFAFA] outline-none"
+                  >
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -133,16 +161,14 @@ const Selcartopublic = () => {
                   className="mt-2 cursor-pointer lg:w-[400px] w-full flex  justify-between h-[44px] bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
-                 
-                    <select
-                      id="cars"
-                      class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                    >
-                      <option value="2005">2005</option>
-                      <option value="2010">2010</option>
-                      <option value="2015">2015</option>
-                    </select>
-                  
+                  <select
+                    id="cars"
+                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
+                  >
+                    <option value="2005">2005</option>
+                    <option value="2010">2010</option>
+                    <option value="2015">2015</option>
+                  </select>
                 </div>
               </div>
               {/* 2nd */}
@@ -155,16 +181,14 @@ const Selcartopublic = () => {
                   className="mt-2 cursor-pointer lg:w-[400px] w-full flex  justify-between h-[44px] bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
-                  
-                    <select
-                      id="cars"
-                      class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                    >
-                      <option value="50000">50000</option>
-                      <option value="18500">18500</option>
-                      <option value="9000">9000</option>
-                    </select>
-                 
+                  <select
+                    id="cars"
+                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
+                  >
+                    <option value="50000">50000</option>
+                    <option value="18500">18500</option>
+                    <option value="9000">9000</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -181,16 +205,14 @@ const Selcartopublic = () => {
                   className="mt-2 cursor-pointer lg:w-[400px]  flex  justify-between h-[44px] bg-[#FAFAFA]
                                            border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
-                  
-                    <select
-                      id="cars"
-                      class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                    >
-                      <option value="Honda">Honda</option>
-                      <option value="Toyota">Toyota</option>
-                      <option value="BMW">BWM</option>
-                    </select>
-               
+                  <select
+                    id="cars"
+                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
+                  >
+                    <option value="Honda">Honda</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="BMW">BWM</option>
+                  </select>
                 </div>
               </div>
               {/* 2nd */}
@@ -203,16 +225,14 @@ const Selcartopublic = () => {
                   className="mt-2 cursor-pointer lg:w-[400px]  flex  justify-between  h-[44px] bg-[#FAFAFA]
                                      border rounded-lg py-[12.5px]  items-center px-[16px]"
                 >
-                 
-                    <select
-                      id="cars"
-                      class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full bg-[#FAFAFA] outline-none"
-                    >
-                      <option value="Cvt">Cvt</option>
-                      <option value="Auto">Auto</option>
-                      <option value="Manual">Manual</option>
-                    </select>
-                
+                  <select
+                    id="cars"
+                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full bg-[#FAFAFA] outline-none"
+                  >
+                    <option value="Cvt">Cvt</option>
+                    <option value="Auto">Auto</option>
+                    <option value="Manual">Manual</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -238,10 +258,12 @@ const Selcartopublic = () => {
                   Upload vehicle images
                 </h6>
                 <div className=" flex flex-wrap gap-[16px] mt-4">
-                    {Array(11).fill().map(()=>(
-                    <span className=" border border-dashed rounded-lg p-4">
-                 <Svgs.GalleryIcon/>
-                    </span>
+                  {Array(11)
+                    .fill()
+                    .map(() => (
+                      <span className=" border border-dashed rounded-lg p-4">
+                        <Svgs.GalleryIcon />
+                      </span>
                     ))}
                 </div>
               </div>
@@ -251,7 +273,8 @@ const Selcartopublic = () => {
             {/* for button send request */}
             <div className=" flex justify-center  py-12">
               <button
-                onClick={() => navigate("/sellyourcar/find-mechanic")}
+                type={'submit'}
+                onClick={()=>{navigate("/sellyourcar/find-mechanic")}}
                 className=" w-[129px] h-[52px] py-[15.5px] px-[44px]
                  
                   text-[white] shadow-2xl shadow-blue-300 text-[18px] font-medium font-Work-sans bg-[#6F9CFF] border rounded-lg  items-center flex justify-center"
@@ -259,8 +282,9 @@ const Selcartopublic = () => {
                 Next
               </button>
             </div>
+            </form>
           </div>
-          </div>
+        </div>
       </div>
       <Banner />
     </>

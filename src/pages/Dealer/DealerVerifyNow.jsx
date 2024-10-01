@@ -4,12 +4,30 @@ import { OutlineButton } from "../../components/OutlineButton";
 import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import CustomSelect from "../../components/CustomSelect";
 function DealerVerifyNow() {
     const navigate = useNavigate()
 
     const handlesubmit=(e)=>{
       e.preventDefault();
     }
+
+    const seatOptions = [
+      { value: "5", label: "5" },
+      { value: "4", label: "4" },
+      { value: "2", label: "2" },
+    ];
+
+    const registrationOptions=[
+      {value: 'Select', label: 'Select'},
+      {value: '2023', label: '2023'},
+      {value: '2024', label: '2024'},
+    ]
+
+    const fuelTypeOptions=[
+      {value: 'Petrol', label: 'Petrol'},
+      {value: 'Diesel', label: 'Diesel'},
+    ]
   return (
     <>
     <Layout active={'Dashboard'}>
@@ -26,7 +44,7 @@ function DealerVerifyNow() {
                     </div>
       </div>
     <div className="my-5">
-    <div className=" w-full lg:w-[90%] border rounded-2xl py-8 lg:py-16 px-3 lg:px-0">
+    <div className=" w-full lg:w-[90%] border rounded-2xl py-8 lg:py-16 px-3 lg:px-0 shadow-css">
       <div className=" ">
         <div className=" flex items-center justify-center flex-col gap-6">
           <h1 className="text-[28px] font-bold font-inter text-gray-1">
@@ -39,19 +57,15 @@ function DealerVerifyNow() {
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full">
-                <Input label={"Registration year"} placeholder={"Select"} />
+                <CustomSelect label={'Registration year'} options={registrationOptions}/>
               </div>
               <div className="w-full">
-                <Input label={"Insruance"} placeholder={"Select"} />
+                <CustomSelect label={'Insurance'} options={registrationOptions}/>
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input
-                  type={"number"}
-                  label={"Fuel type"}
-                  placeholder={"Select"}
-                />
+                <CustomSelect label={'Fuel type'} options={fuelTypeOptions}/>
               </div>
               <div className="w-full">
                 <Input label={"RTO"} placeholder={"Type here"} />
@@ -62,10 +76,7 @@ function DealerVerifyNow() {
                 <Input label={"KMs driven"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
-                <Input
-                  label={"Seats"}
-                  placeholder={"5"}
-                />
+                <CustomSelect label={'Seats'} options={seatOptions}/>
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">

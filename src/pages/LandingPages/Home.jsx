@@ -287,17 +287,17 @@ function Home() {
         </div>
       </div>
 
-      <div className="howitsworks w-[95%] md:w-[90%] mx-auto">
+      <div className="howitsworks w-[90%] mx-auto lg:w-[65%] xl:w-[90%] 2xl:w-[70%] ">
         <div className="flex items-center justify-center my-10">
           <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold font-inter text-black mt-10">
             How it Works
           </h1>
         </div>
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-[53px] ">
           {cards.map((value, i) => (
             <div
               key={i}
-              className="card border py-[70px]  flex items-center justify-center flex-col gap-5 rounded-xl min-w-[300px] h-[432px] shadow-lg"
+              className="card border py-[70px]  flex items-center justify-center flex-col gap-5 rounded-xl max-w-[320px] mx-auto h-[432px] shadow-lg"
             >
               <div className=" bg-custom-blue flex items-center justify-center p-4 rounded-2xl">
                 <span className="">{value.icnos}</span>

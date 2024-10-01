@@ -14,6 +14,10 @@ import { useEffect } from "react";
 import Skeleton_Find_Mechanic from "../../components/Skeleton/Skeleton_Find_Mechanic.js";
 import { useSellACarContext } from "../../Context/SellACarContext.jsx";
 
+
+
+
+
 export default function Mechanic({selectSell}) {
 
   const {selectSale} = useSellACarContext()
