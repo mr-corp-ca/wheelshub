@@ -77,11 +77,50 @@ const SellCarToPublicSchema = yup.object().shape({
 });
 
 const insuranceForm1Schema = yup.object().shape({
-  insuranceAgent: yup.string().required('Required'),
-  insurancePrice: yup.string().required('Required'),
+  insuranceAgent: yup.string().required("Required"),
+  insurancePrice: yup.string().required("Required"),
+  insuranceStartDate: yup.string().required("Required"),
+  insuranceEndDate: yup.string().required('Required'),
+  customerName: yup.string().required('Required'),
+  represnetativeName: yup.string().required('Required'),
+  couponCode: yup.string().required('Required'),
+
+});
+
+const insuranceForm2Schema = yup.object().shape({
+  insuranceRegistrationForm: yup.string().required('Required'),
+  billReciept: yup.string().required('Required')
 })
 
+const mechanicCarDetailsSchema = yup.object().shape({
+  registrationYear: yup.number()
+    .required("Registration year is required")
+    .min(1900, "Year must be after 1900")
+    .max(new Date().getFullYear(), `Year must be at most ${new Date().getFullYear()}`),
+  fuelType: yup.string().required("Fuel type is required"),
+  insurance: yup.string().required("Insurance is required"),
+  rto: yup.string().required("RTO is required"),
+  seats: yup.number()
+    .required("Seats number is required")
+    .min(2, "Seats must be at least 2")
+    .max(8, "Seats must be less than or equal to 8"),
+  engineDisplacement: yup.number()
+    .required("Engine displacement is required")
+    .min(500, "Engine displacement must be at least 500cc"),
+  ownership: yup.string().required("Ownership status is required"),
+  transmission: yup.string().required("Transmission type is required"),
+  kmsDriven: yup.number()
+    .required("Kilometers driven is required")
+    .min(0, "KMs driven cannot be negative"),
+  yearOfManufacturing: yup.number()
+    .required("Year of manufacturing is required")
+    .min(1900, "Year must be after 1900")
+    .max(new Date().getFullYear(), `Year must be at most ${new Date().getFullYear()}`),
+});
+
 export {
+  mechanicCarDetailsSchema,
+  insuranceForm2Schema,
   insuranceForm1Schema,
   SellCarToPublicSchema,
   CreateNewPasswordSchema,

@@ -31,7 +31,7 @@ function InsuranceForm1() {
     });
   return (
     <>
-    <div className=" max-w-[1920px] mx-auto">
+    
       <Layout active={"Dashboard"}>
         <div className=" my-5 ">
           <h1 className=" text-2xl font-semibold font-inter text-gray-1">
@@ -119,44 +119,103 @@ function InsuranceForm1() {
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full">
-                      <Input
+                      <InputLogin
+                      error={errors.insuranceStartDate && touched.insuranceStartDate}
+                      value={values.insuranceStartDate}
+                      onChange={handleChange}
+                      handleBlur={handleBlur}
+                      name="insuranceStartDate"
+                      id={"insuranceStartDate"}
                         type={"number"}
                         label={"Insurance start date"}
                         placeholder={"Type here"}
                         className={"bg-[#fafafa]"}
                       />
+                      {touched.insuranceStartDate && errors.insuranceStartDate && (
+                  <small className=" text-custom-red font-poppins font-medium">
+                    {errors.insuranceStartDate}
+                  </small>
+                       )}
                     </div>
                     <div className="w-full">
-                      <Input
+                      <InputLogin
+                      error={errors.insuranceEndDate && touched.insuranceEndDate}
+                      value={values.insuranceEndDate}
+                      onChange={handleChange}
+                      handleBlur={handleBlur}
+                      name='insuranceEndDate'
+                      id={'insuranceEndDate'}
+                      type={'text'}
                         label={"Insurance end date"}
                         placeholder={"Type here"}
                         className={"bg-[#fafafa]"}
                       />
+                      {touched.insuranceEndDate && errors.insuranceEndDate && (
+                        <small className=" text-custom-red font-poppins font-medium">
+                          {errors.insuranceEndDate}
+                        </small>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full">
-                      <Input
+                      <InputLogin
+                      error={errors.customerName && touched.customerName}
+                      value={values.customerName}
+                      onChange={handleChange}
+                      handleBlur={handleBlur}
+                      name='customerName'
+                      id={'customerName'}
+                      type={'text'}
                         label={"Customer name"}
                         placeholder={"Type here"}
                         className={"bg-[#fafafa]"}
                       />
+                      {touched.customerName && errors.customerName && (
+                        <small className=" text-custom-red font-poppins font-medium">
+                          {errors.customerName}
+                        </small>
+                      )}
                     </div>
                     <div className="w-full">
-                      <Input
+                      <InputLogin
+                      error={errors.represnetativeName && touched.represnetativeName}
+                      value={values.represnetativeName}
+                      onChange={handleChange}
+                      handleBlur={handleBlur}
+                      name='represnetativeName'
+                      id={'represnetativeName'}
+                      type={'text'}
                         label={"Representative name"}
                         placeholder={"Type here"}
                         className={"bg-[#fafafa]"}
                       />
+                      {touched.represnetativeName && errors.represnetativeName && (
+                        <small className=" text-custom-red font-poppins font-medium">
+                          {errors.represnetativeName}
+                        </small>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full lg:w-1/2">
-                      <Input
+                      <InputLogin
+                      error={errors.couponCode && touched.couponCode}
+                      value={values.couponCode}
+                      onChange={handleChange}
+                      handleBlur={handleBlur}
+                      name={'couponCode'}
+                      id={'couponCode'}
+                      type={'text'}
                         label={"Coupon code"}
                         placeholder={"Type here"}
                         className={"bg-[#fafafa]"}
                       />
+                       {touched.couponCode && errors.couponCode && (
+                        <small className=" text-custom-red font-poppins font-medium">
+                          {errors.couponCode}
+                        </small>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -177,7 +236,7 @@ function InsuranceForm1() {
           </div>
         </div>
       </Layout>
-      </div>
+     
     </>
   );
 }

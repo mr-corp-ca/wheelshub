@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Svgs from '../assets/svgs/index.js'
 
-export const InputLogin = ({ label, placeholder, value, type, onChange, className, error, onKeyPress, id }) => {
+export const InputLogin = ({ label, placeholder, value, type, onChange, className, error, onKeyPress, id , name }) => {
 
 
 
@@ -18,6 +18,7 @@ export const InputLogin = ({ label, placeholder, value, type, onChange, classNam
           <input
             value={value}
             onChange={onChange}
+            name={name}
             id={id}
             type={`${type === 'password' && show === true ? 'password' : 'text'}`}
             placeholder={placeholder}

@@ -1,17 +1,29 @@
 import React from "react";
-import IMAGES from "../../assets/IMAGES";
-import { OutlineButton } from "../../components/OutlineButton";
-import { Input } from "../../components/Input";
-import documentfile from "../../assets/images/document.png";
 import { Navigate, useNavigate } from "react-router-dom";
-import ClaimNow from "../Customer Login/ClaimNow";
 import VerifiedSuccessful from "./VerifiedSuccessful";
 import { useState, useRef } from "react";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from "../../assets/svgs/index.js";
+import { insuranceForm2Schema } from "../../schemas/index.jsx";
+import { Formik, useFormik } from "formik";
+import { insuranceForm1Schema } from "../../schemas/index";
+
+const initialValues = {
+  insuranceRegistrationForm: "",
+  billReciept: "",
+};
 
 function InsuranceForm2() {
   const [showPopup, setShowPopup] = useState(false);
+
+  const { values, errors, handleBlur, handleChange, handleSubmit, touched } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: insuranceForm2Schema,
+      onSubmit: (values) => {
+        // navigate("/insurance/insurance-form2");
+      },
+    });
 
   const handleShowPopup = () => {
     setShowPopup(true);
@@ -28,10 +40,6 @@ function InsuranceForm2() {
 
   // }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   const registrationInputRef = useRef(null);
   const agreementInputRef = useRef(null);
   const businessInsuranceInputRef = useRef(null);
@@ -40,9 +48,7 @@ function InsuranceForm2() {
   // States for each document's file name
   const [registration, setRegistration] = useState("Upload");
   const [agreement, setAgreement] = useState("Upload");
-  const [businessInsurance, setBusinessInsurance] = useState(
-    "Upload"
-  );
+  const [businessInsurance, setBusinessInsurance] = useState("Upload");
   const [anotherDoc, setAnotherDoc] = useState("Upload");
 
   // Functions to handle clicks and file selection for each document
@@ -69,6 +75,7 @@ function InsuranceForm2() {
       setImagePreviews(updatedPreviews); // Update the state
     }
   };
+
   return (
     <>
       <Layout active={"Dashboard"}>
@@ -138,11 +145,25 @@ function InsuranceForm2() {
                           <Svgs.DocumentUpload />
                         </div>
                         <input
+                          error={
+                            errors.insuranceRegistrationForm &&
+                            touched.insuranceRegistrationForm
+                          }
+                          value={values.insuranceRegistrationForm}
+                          handleBlur={handleBlur}
+                          name="insuranceRegistrationForm"
+                          id={"insuranceRegistrationForm"}
+                          label={"Insurance agent"}
                           type="file"
                           ref={registrationInputRef}
                           className="hidden"
                           onChange={(e) => handleFileChange(e, setRegistration)}
                         />
+                        {touched.insuranceRegistrationForm && errors.insuranceRegistrationForm && (
+                          <small className=" text-custom-red font-poppins font-medium">
+                            {errors.insuranceRegistrationForm}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="w-full relative">
@@ -242,6 +263,7 @@ function InsuranceForm2() {
                 <div className="w-full text-center flex items-center justify-center">
                   <button
                     onClick={handleShowPopup}
+                    type={"submit"}
                     className={
                       "h-[52px] flex justify-center hover:bg-white hover:text-custom-blue hover:border hover:border-custom-blue hover:shadow-none shadow-2xl shadow-blue-300 text-lg rounded-xl px-[44px] py-[15.5px] font-Work-sans font-medium self-center items-center bg-custom-blue text-white"
                     }
