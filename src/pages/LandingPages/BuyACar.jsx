@@ -59,6 +59,12 @@ export default function AccordionUsage() {
       setIsLoading(false);
     }, 2000);
   }, []);
+
+  const [itemsToShow, setItemsToShow] = useState(6); // State for visible items
+  const allItems = Array(100).fill(); // Array representing all available items
+  const loadMoreItems = () => {
+    setItemsToShow((prev) => prev + 6); // Increment the number of visible items by 6
+  };
   return (
     <>
       <Navbar2 active={"Buy-A-Car"} />
@@ -75,8 +81,12 @@ export default function AccordionUsage() {
           {/* Search bar */}
           <div className="mt-5">
             <div className=" border flex items-center gap-x-2 h-[45px] rounded-lg bg-[#fafafa] px-4 py-3">
-              <Svgs.Search/>
-              <input type="text" placeholder="Search here" className=" text-base font-normal font-inter text-gray-4 h-full w-full flex bg-transparent flex-1 border-none outline-none"/>
+              <Svgs.Search />
+              <input
+                type="text"
+                placeholder="Search here"
+                className=" text-base font-normal font-inter text-gray-4 h-full w-full flex bg-transparent flex-1 border-none outline-none"
+              />
             </div>
           </div>
 
@@ -500,7 +510,10 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {location && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type location"} className={'bg-[#fafafa]'}/>
+                    <Input
+                      placeholder={"Type location"}
+                      className={"bg-[#fafafa]"}
+                    />
                   </div>
                 )}
               </div>
@@ -553,7 +566,10 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {bodytype && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Body Type"} className={'bg-[#fafafa]'}/>
+                    <Input
+                      placeholder={"Body Type"}
+                      className={"bg-[#fafafa]"}
+                    />
                   </div>
                 )}
               </div>
@@ -606,7 +622,10 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {ownershio && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type here"} className={'bg-[#fafafa]'} />
+                    <Input
+                      placeholder={"Type here"}
+                      className={"bg-[#fafafa]"}
+                    />
                   </div>
                 )}
               </div>
@@ -659,7 +678,10 @@ export default function AccordionUsage() {
                 {/* Accordion Content */}
                 {color && (
                   <div className={`pt-5`}>
-                    <Input placeholder={"Type here"} className={'bg-[#fafafa]'}/>
+                    <Input
+                      placeholder={"Type here"}
+                      className={"bg-[#fafafa]"}
+                    />
                   </div>
                 )}
               </div>
@@ -698,93 +720,101 @@ export default function AccordionUsage() {
                 {Array(30)
                   .fill()
                   .map((_, i) => (
-                    <SkeletonBuyACar key={i}/>
+                    <SkeletonBuyACar key={i} />
                   ))}
               </div>
             </>
           ) : (
             <>
-            <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 max-w-[1112px]">
-              {Array(30)
-                .fill()
-                .map((_, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="card border rounded-2xl flex flex-col gap-4"
-                    >
-                      <div>
-                        <img
-                          src={audi2}
-                          alt="Car"
-                          className="w-full h-auto rounded-t-2xl"
-                        />
-                      </div>
-                      <div className="px-3 flex items-center justify-between">
-                        <h1 className="text-base md:text-lg font-semibold font-inter text-gray-1">
-                          Mercedes-Benz E 220 d
-                        </h1>
-                        <span
-                          className="cursor-pointer"
-                          onClick={() => {
-                            handleHeart(index);
-                          }}
-                        >
-                          {selectedHearts.includes(index) ? (
-                            <Svgs.HeartIconBlueFilled />
-                          ) : (
-                            <Svgs.HeartIconBlue />
-                          )}
-                        </span>
-                      </div>
-                      <div className="flex items-center px-3 justify-between">
-                        <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
-                          45000 KM
-                        </h1>
-                        <Svgs.GrayDot />
-                        <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
-                          2018 Model
-                        </h1>
-                        <Svgs.GrayDot />
-                        <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
-                          Automatic
-                        </h1>
-                      </div>
-                      <div className="px-3">
-                        <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">
-                          $22,500
-                        </h1>
-                      </div>
-                      <div className="flex items-center 2xl:gap-3 gap-2 px-2 xl:px-1 xl:gap-1 2xl:px-3">
-                        <div className="flex items-center gap-1">
-                          <Svgs.BlueTickVerified />
-                          <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
-                            Verified by Mechanic
-                          </p>
+              <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 max-w-[1112px]">
+              {allItems.slice(0, itemsToShow).map((_, index) => (
+                      <div
+                        key={index}
+                        className="card border rounded-2xl flex flex-col gap-4"
+                      >
+                        <div>
+                          <img
+                            src={audi2}
+                            alt="Car"
+                            className="w-full h-auto rounded-t-2xl"
+                          />
                         </div>
-                        <div className=" flex items-center gap-1">
-                          <Svgs.BlueTickVerified />
-                          <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
-                            Verified by Dealer
-                          </p>
+                        <div className="px-3 flex items-center justify-between">
+                          <h1 className="text-base md:text-lg font-semibold font-inter text-gray-1">
+                            Mercedes-Benz E 220 d
+                          </h1>
+                          <span
+                            className="cursor-pointer"
+                            onClick={() => {
+                              handleHeart(index);
+                            }}
+                          >
+                            {selectedHearts.includes(index) ? (
+                              <Svgs.HeartIconBlueFilled />
+                            ) : (
+                              <Svgs.HeartIconBlue />
+                            )}
+                          </span>
+                        </div>
+                        <div className="flex items-center px-3 justify-between">
+                          <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                            45000 KM
+                          </h1>
+                          <Svgs.GrayDot />
+                          <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                            2018 Model
+                          </h1>
+                          <Svgs.GrayDot />
+                          <h1 className="text-xs md:text-sm font-normal font-Work-sans text-gray-2">
+                            Automatic
+                          </h1>
+                        </div>
+                        <div className="px-3">
+                          <h1 className="text-lg md:text-2xl font-bold font-inter text-gray-1">
+                            $22,500
+                          </h1>
+                        </div>
+                        <div className="flex items-center 2xl:gap-3 gap-2 px-2 xl:px-1 xl:gap-1 2xl:px-3">
+                          <div className="flex items-center gap-1">
+                            <Svgs.BlueTickVerified />
+                            <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
+                              Verified by Mechanic
+                            </p>
+                          </div>
+                          <div className=" flex items-center gap-1">
+                            <Svgs.BlueTickVerified />
+                            <p className="text-xs xl:text-sm font-normal font-Work-sans text-gray-1">
+                              Verified by Dealer
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-center pb-4 md:pb-5">
+                          <button
+                            onClick={() => {
+                              navigate("/buy-a-car-details");
+                            }}
+                            className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl"
+                          >
+                            View details
+                          </button>
                         </div>
                       </div>
-                      <div className="flex items-center justify-center pb-4 md:pb-5">
-                        <button
-                          onClick={() => {
-                            navigate("/buy-a-car-details");
-                          }}
-                          className=" h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans bg-custom-blue text-white flex items-center justify-center shadow-blue-300 shadow-2xl"
-                        >
-                          View details
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
-            </div>
+                    ))}
+              </div>
             </>
           )}
+          <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
+          {itemsToShow < allItems.length && (
+            <button
+              onClick={loadMoreItems}
+              className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800
+  transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-100 focus:outline-none 
+  animate-fadeIn"
+            >
+              Load more
+            </button>
+          )}
+          </div>
         </div>
       </div>
       <Banner />

@@ -186,7 +186,7 @@ function DealerDetails() {
           </div>
         </div>
       </div>
-      <div className="testimonials bg-[#d2eaff] py-10">
+      <div className="testimonials bg-white py-10">
         <div className="text-center mb-10">
           <h1 className="text-2xl lg:text-[54px] font-bold font-inter text-gray-1">
             What people say about us?
@@ -208,7 +208,7 @@ function DealerDetails() {
                 {Array(3)
                   .fill()
                   .map((_, i) => (
-                    <div key={i} className="bg-white rounded-xl shadow-md p-7">
+                    <div key={i} className="bg-white rounded-2xl border shadow-css p-7">
                       <div className="flex flex-wrap items-center gap-5">
                         <div>
                           <div className="w-[64px] h-[64px] rounded-full bg-[#cecece]"></div>

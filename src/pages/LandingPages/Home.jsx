@@ -141,7 +141,7 @@ function Home() {
               <h1 className="text-[32px] font-inter xl:text-[50px] 2xl:text-[72px] font-bold text-gray-1 px-2 md:px-20  mt-20  background-rgb">
                 Sell Your Car Easily and Profitably
               </h1>
-              <p className="px-5 md:px-20 text-sm xl:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  2xl:w-[68%] ">
+              <p className="px-5 md:px-20 text-sm xl:text-lg my-10 font-normal font-Work-sans text-gray-2 w-full  ">
                 Sell your car easily and profitably with Wheeldealhub. Whether
                 you want to sell directly to buyers or to our trusted dealers,
                 we guarantee a smooth process and the best prices. Start today
@@ -179,7 +179,7 @@ function Home() {
       </div>
       <div className="w-[90%] mx-auto my-10 ">
         <div className="overflow-x-scroll scrollbar-none">
-        <div className="flex items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl shadow-2xl shadow-[#eef6fd] ">
+        <div className="flex items-center border border-b-0 w-fit rounded-t-xl backdrop-blur-3xl  ">
           <button
             onClick={() => {
               handleClick(1);
@@ -458,14 +458,14 @@ function Home() {
       </div>
 
       <div className="cars w-[90%] md:max-w-[1440px] xl:px-[144px] mx-auto">
-      <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6">
+      <div className="cardpart grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-9 gap-y-6">
               {Array(3)
                 .fill()
                 .map((_, index) => {
                   return (
                     <div
                       key={index}
-                      className="card border rounded-2xl flex flex-col gap-4"
+                      className="card border rounded-2xl flex flex-col gap-4 max-w-[360px]"
                     >
                       <div>
                         <img
@@ -491,16 +491,16 @@ function Home() {
                           )}
                         </span>
                       </div>
-                      <div className="flex items-center px-3 justify-between">
-                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                      <div className="flex items-center xl:justify-between 2xl:justify-start  px-3 gap-3 lg:gap-x-3 xl:gap-x-1 2xl:gap-x-3">
+                        <h1 className="text-[12px] xl:text-sm font-normal font-Work-sans text-gray-2">
                           45000 KM
                         </h1>
                         <Svgs.GrayDot />
-                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                        <h1 className="text-[12px] xl:text-sm font-normal font-Work-sans text-gray-2">
                           2018 Model
                         </h1>
                         <Svgs.GrayDot />
-                        <h1 className="text-[10px] xl:text-sm font-normal font-Work-sans text-gray-2">
+                        <h1 className="text-[12px] xl:text-sm font-normal font-Work-sans text-gray-2">
                           Automatic
                         </h1>
                       </div>
@@ -509,16 +509,16 @@ function Home() {
                           $22,500
                         </h1>
                       </div>
-                      <div className="flex items-center justify-between px-3">
+                      <div className="flex items-center  px-1 md:px-3 gap-3">
                         <div className="flex items-center gap-1">
                           <Svgs.BlueTickVerified />
-                          <p className="text-xs 2xl:text-sm font-normal font-Work-sans text-gray-1">
+                          <p className="text-[11px] lg:text-[10px] 2xl:text-sm font-normal font-Work-sans text-gray-1">
                             Verified by Mechanic
                           </p>
                         </div>
                         <div className=" flex items-center gap-1">
                           <Svgs.BlueTickVerified />
-                          <p className="text-xs 2xl:text-sm font-normal font-Work-sans text-gray-1">
+                          <p className="text-[11px] lg:text-[10px] 2xl:text-sm font-normal font-Work-sans text-gray-1">
                             Verified by Dealer
                           </p>
                         </div>
@@ -543,9 +543,10 @@ function Home() {
           </button>
         </div>
       </div>
-      <div className="testimonials bg-gradient-to-r from-[#F2F8FD] to-[#D1EAFF] py-[80px] ">
-        <div className="text-center ">
-          <h1 className="text-2xl lg:text-[54px] font-bold font-inter text-gray-1 ">
+      <div className="testimonials bg-gradient-to-r from-[#F2F8FD] to-[#D1EAFF] py-[80px]">
+      {/* px-[10px] md:px-[25px] lg:px-[50px] xl:px-[60px] 2xl:px-[240px] */}
+        <div className="text-center px-3">
+          <h1 className="text-2xl lg:text-[64px] font-bold font-inter text-gray-1 ">
             What people say about us?
           </h1>
         </div>
@@ -561,18 +562,18 @@ function Home() {
         >
           {[0, 1, 2].map((slideIndex) => (
             <SwiperSlide key={slideIndex}>
-              <div className="cards w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-[60px]">
+              <div className="cards max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-[60px] px-4">
                 {Array(3)
                   .fill()
                   .map((_, i) => (
-                    <div key={i} className="bg-white rounded-xl shadow-md p-7">
+                    <div key={i} className="bg-white rounded-xl shadow-css p-7 2xl:pt-[50px] 2xl:pr-[41px] 2xl:pb-[64px] 2xl:pl-[41px] max-w-[470px]">
                       <div className="flex flex-wrap items-center gap-5">
                         <div>
                           <div className="w-[64px] h-[64px] rounded-full bg-[#cecece]"></div>
                         </div>
                         <div className="flex flex-col gap-1">
                           <div>
-                            <h1 className="text-xl font-semibold font-inter text-gray-1">
+                            <h1 className="text-2xl font-semibold font-inter text-gray-1">
                               Sandra T. Robinson
                             </h1>
                           </div>
@@ -585,7 +586,7 @@ function Home() {
                         </div>
                       </div>
                       <div>
-                        <p className="text-base font-normal font-Work-sans text-gray-2 pt-5">
+                        <p className=" lg:text-lg font-normal font-Work-sans text-gray-2 pt-5">
                           And equal blame belongs to those who fail in their
                           duty through weakness of will, which is the same as
                           saying through shrinking from toil and pain.

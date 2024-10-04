@@ -49,6 +49,12 @@ export default function InsuranceLandingPage() {
       setIsLoading(false);
     }, 2000);
   }, []);
+
+  const [itemsToShow, setItemsToShow] = useState(6); // State for visible items
+  const insurance = Array(100).fill()
+  const loadMoreItems = () => {
+    setItemsToShow((prev) => prev + 6); // Increment the number of visible items by 6
+  };
   return (
     <>
       <Navbar2 active={"Insurance-Page"} />
@@ -248,10 +254,7 @@ export default function InsuranceLandingPage() {
             </div>
             </>):(<>
             <div className="cardpart grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 2xl:gap-x-[50px] 2xl:gap-y-6 mt-12 max-w-[1180px]">
-              {Array(6)
-                .fill()
-                .map((_, index) => {
-                  return (
+            {insurance.slice(0, itemsToShow).map((_, index) => (
                     <div
                       // onClick={() => navigate("/details")}
                       key={index}
@@ -300,15 +303,21 @@ export default function InsuranceLandingPage() {
                         </button>
                       </div>
                     </div>
-                  );
-                })}
+            ))}
             </div>
             </>)}
           </div>
           <div className="flex items-center justify-center my-10 pb-4 md:pb-5">
-            <button className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800">
+          {itemsToShow < insurance.length && (
+            <button
+              onClick={loadMoreItems}
+              className="h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center border border-gray-300 text-gray-800
+  transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-100 focus:outline-none 
+  animate-fadeIn"
+            >
               Load more
             </button>
+          )}
           </div>
         </div>
       </div>

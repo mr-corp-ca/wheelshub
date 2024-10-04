@@ -89,7 +89,9 @@ const insuranceForm1Schema = yup.object().shape({
 
 const insuranceForm2Schema = yup.object().shape({
   insuranceRegistrationForm: yup.string().required('Required'),
-  billReciept: yup.string().required('Required')
+  billReciept: yup.string().required('Required'),
+  // businessInsurance: yup.string().required('Required'),
+  // anotherDoc: yup.string().required('Required'),
 })
 
 const mechanicCarDetailsSchema = yup.object().shape({
