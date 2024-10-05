@@ -39,7 +39,7 @@ function DealerNewRequests() {
             </>
           ) : (
             <>
-              <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[1260px]">
                 {Array(4)
                   .fill()
                   .map((_, index) => {
