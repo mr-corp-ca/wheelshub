@@ -40,13 +40,13 @@ function Banner() {
   }
   return (
    <>
-    <div className="banner ">
+    <div className="banner lg:max-w-[1920px] mx-auto">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 
 
-      <div className="footer py-10 bg-[#e0e0e0]">
-        <div className=" w-full lg:w-[90%] mx-auto">
+      <div className="footer py-10 bg-[#e0e0e0] max-w-[1920px] mx-auto">
+        <div className=" w-full md:w-[95%]  lg:max-w-[1344px] mx-auto">
           <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0 px-5 lg:px-0">
             <div className="first w-full lg:w-[31%] ">
               <div>

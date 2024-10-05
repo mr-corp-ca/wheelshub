@@ -9,15 +9,43 @@ import Banner from "../../components/Banner";
 import Svgs from "../../assets/svgs/index";
 import { Formik, useFormik } from "formik";
 import { SellCarToPublicSchema, signInSchema } from "../../schemas/index";
+import { InputLogin } from "../../components/InputLogin";
+import CustomSelect from "../../components/CustomSelect";
+import { useState } from "react";
 
 const initialValues = {
   carmake: "",
   model: "",
   manufacturing: "",
   kmsDriven: "",
-  Vid: "",
+  vid: "",
   trnasmission: "",
 };
+
+const carmake = [
+  {value: 'volvo' , label: 'volvo'},
+  {value: 'saab' , label: 'saab'},
+  {value: 'mercedes' , label: 'mercedes'},
+  {value: 'audi' , label: 'audi'},
+]
+const model = [
+  {value: '2020' , label: '2020'},
+  {value: '2021' , label: '2021'},
+  {value: '2022' , label: '2022'},
+  {value: '2023' , label: '2023'},
+]
+const manufacturing = [
+  {value: '2016' , label: '2016'},
+  {value: '2017' , label: '2017'},
+  {value: '2018' , label: '2018'},
+  {value: '2019' , label: '2019'},
+]
+const trnasmission = [
+  {value: 'Manual' , label: 'Manual'},
+  {value: 'Auto' , label: 'Auto'},
+]
+
+
 
 const Selcartopublic = () => {
   const navigate = useNavigate();
@@ -27,9 +55,24 @@ const Selcartopublic = () => {
       initialValues: initialValues,
       validationSchema: SellCarToPublicSchema,
       onSubmit: (values) => {
-        
+        navigate("/sellyourcar/find-mechanic");
       },
     });
+
+
+    const [imagePreviews, setImagePreviews] = useState(Array(11).fill(null));
+ 
+   // Function to handle image change for a specific input field
+   const handleImageChange = (e, index) => {
+     const file = e.target.files[0];
+     if (file) {
+       const imageUrl = URL.createObjectURL(file);
+       const updatedPreviews = [...imagePreviews];
+       updatedPreviews[index] = imageUrl; // Update the specific image preview
+       setImagePreviews(updatedPreviews); // Update the state
+     }
+   };
+
   return (
     <>
       <Navbar2 active={"Sell-A-Car"} />
@@ -87,201 +130,195 @@ const Selcartopublic = () => {
         </div>
         {/* for 2nd main div */}
         <div className=" mx-4 lg:mx-14">
-          <div className=" px-4 border rounded-2xl bg-white max-w-[1170px]   mx-auto -mt-16 md:-mt-32 mb-16 md:mb-32 ">
+          <div className=" px-4 md:px-[40px] lg:px-[80px] xl:px-[154px] border rounded-2xl bg-white max-w-[1170px] shadow-css mx-auto -mt-16 md:-mt-32 mb-16 md:mb-32 ">
             <div className="font-bold lg:text-[28px] font-inter text-[20px] flex justify-center py-[50px] px-5 lg:[px-0] text-gray-1">
               <h6>Enter car details</h6>
             </div>
-
-            {/* for car details code div */}
-            {/* start */}
-            {/* 1st */}
             <form onSubmit={handleSubmit}>
-            <div className="   lg:flex flex-wrap justify-center gap-[62px] w-full ">
-              {/* 1st */}
-              <div>
-                <h6 className="text-[#333333] text-[16px] font-inter font-medium ">
-                  Select car make
-                </h6>
-                
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px]  w-full flex  justify-between h-[44px] bg-[#FAFAFA]
-                                           border rounded-lg py-[12.5px]  items-center px-[16px]"
-                >
-                  <select
+              <div className="flex flex-wrap sm:flex-nowrap justify-center gap-x-5 lg:gap-x-[62px] w-full ">
+                {/* 1st */}
+                <div className=" w-full">
+                  <CustomSelect
                     error={errors.carmake && touched.carmake}
                     value={values.carmake}
                     onChange={handleChange}
-                    handleBlur={handleBlur}
+                    onBlur={handleBlur}
                     name="carmake"
                     id={"carmake"}
-                    class=" text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full  bg-[#FAFAFA] outline-none cursor-pointer"
-                  >
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                  </select>
-                </div>
-                {touched.carmake && errors.carmake && (
-                  <small className=" text-custom-red font-poppins font-medium">
-                    {errors.carmake}
-                  </small>
-                )}
-              </div>
-              {/* 2nd */}
-              <div className="mt-5 lg:mt-0">
-                <h6 className="text-[#333333] text-[16px] font-medium font-inter">
-                  Model
-                </h6>
+                    label={"Select car make"}
+                    options={carmake}
+                  />
 
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px]  w-full flex justify-between h-[44px] bg-[#FAFAFA]
-                                     border rounded-lg py-[12.5px]  items-center px-[16px]"
+                  {touched.carmake && errors.carmake && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.carmake}
+                    </small>
+                  )}
+                </div>
+                {/* 2nd */}
+                <div className=" w-full">
+                  <CustomSelect
+                    error={errors.model && touched.model}
+                    value={values.model}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="model"
+                    id={"model"}
+                    label={"Model"}
+                    options={model}
+                  />
+                  {touched.model && errors.model && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.model}
+                    </small>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap sm:flex-nowrap justify-center gap-x-5 lg:gap-x-[62px] w-full mt-5">
+                <div className=" w-full">
+                  <CustomSelect
+                    error={errors.manufacturing && touched.manufacturing}
+                    value={values.manufacturing}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="manufacturing"
+                    id={"manufacturing"}
+                    label={"Manufacturing year"}
+                    options={manufacturing}
+                  />
+                  {touched.manufacturing && errors.manufacturing && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.manufacturing}
+                    </small>
+                  )}
+                </div>
+
+                <div className=" w-full">
+                  <InputLogin
+                    error={errors.kmsDriven && touched.kmsDriven}
+                    value={values.kmsDriven}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="kmsDriven"
+                    id={"kmsDriven"}
+                    label={"Kms Driven"}
+                    placeholder={'Type here'}
+                  />
+                  {touched.kmsDriven && errors.kmsDriven && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.kmsDriven}
+                    </small>
+                  )}
+                </div>
+              </div>
+              <div className=" flex flex-wrap sm:flex-nowrap justify-center gap-x-5 lg:gap-x-[62px] w-full mt-5">
+                <div className=" w-full">
+                  <InputLogin
+                    error={errors.vid && touched.vid}
+                    value={values.vid}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="vid"
+                    id={"vid"}
+                    label={"VID(vehicle identification number)"}
+                    placeholder={'Type here'}
+                  />
+                  {touched.vid && errors.vid && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.vid}
+                    </small>
+                  )}
+                </div>
+
+                <div className=" w-full">
+                  <CustomSelect
+                    error={errors.trnasmission && touched.trnasmission}
+                    value={values.trnasmission}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="trnasmission"
+                    id={"trnasmission"}
+                    label={"Transmission"}
+                    options={trnasmission}
+                  />
+                  {touched.trnasmission && errors.trnasmission && (
+                    <small className="text-custom-red font-poppins font-medium">
+                      {errors.trnasmission}
+                    </small>
+                  )}
+                </div>
+              </div>
+
+              <div className="   lg:flex flex-col mt-[36px] max-w-[864px] mx-auto">
+                <label
+                  htmlFor=""
+                  className=" text-base font-medium font-inter text-gray-1"
                 >
-                  <select
-                    id="cars"
-                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full  bg-[#FAFAFA] outline-none"
-                  >
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                  </select>
+                  Notes
+                </label>
+                <textarea
+                  name=""
+                  id=""
+                  className="border rounded-lg resize-none w-full h-[130px] outline-none p-4 bg-[#FAFAFA] mt-2"
+                ></textarea>
+              </div>
+
+              {/* images div      */}
+              <div className="  flex  mt-[36px] max-w-[864px] mx-auto">
+                <div>
+                  <h6 className=" font-medium text-[16px] text-[#333333] font-inter">
+                    Upload vehicle images
+                  </h6>
+                  <div className=" flex flex-wrap gap-[15px] mt-4">
+                  {imagePreviews.map((preview, index) => (
+                    <div key={index}>
+                      {/* Clickable field to open file selector */}
+                      <div
+                        className="w-16 h-16 border rounded-[8px] border-dashed border-gray-300 flex items-center justify-center cursor-pointer"
+                        onClick={() =>
+                          document.getElementById(`fileInput-${index}`).click()
+                        }
+                      >
+                        {/* Display the image preview if available; otherwise, show the placeholder */}
+                        {preview ? (
+                          <img
+                            src={preview}
+                            alt={`Preview ${index + 1}`}
+                            className="w-full h-full object-cover rounded-[8px]"
+                          />
+                        ) : (
+                         <Svgs.GalleryIcon/>
+                        )}
+                      </div>
+
+                      {/* Hidden input for file upload */}
+                      <input
+                        id={`fileInput-${index}`}
+                        type="file"
+                        className="hidden"
+                        accept="image/*"
+                        onChange={(e) => handleImageChange(e, index)}
+                      />
+                    </div>
+                  ))}
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* 2nd */}
-            <div className="   lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full">
-              {/* 1st */}
-              <div>
-                <h6 className="text-[#333333] text-[16px] font-medium font-inter">
-                  Manufacturing year
-                </h6>
+              {/* end */}
 
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px] w-full flex  justify-between h-[44px] bg-[#FAFAFA]
-                                           border rounded-lg py-[12.5px]  items-center px-[16px]"
-                >
-                  <select
-                    id="cars"
-                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                  >
-                    <option value="2005">2005</option>
-                    <option value="2010">2010</option>
-                    <option value="2015">2015</option>
-                  </select>
-                </div>
-              </div>
-              {/* 2nd */}
-              <div className="mt-5 lg:mt-0">
-                <h6 className="text-[#333333] text-[16px] font-medium font-inter">
-                  Kms Driven
-                </h6>
-
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px] w-full flex  justify-between h-[44px] bg-[#FAFAFA]
-                                     border rounded-lg py-[12.5px]  items-center px-[16px]"
-                >
-                  <select
-                    id="cars"
-                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                  >
-                    <option value="50000">50000</option>
-                    <option value="18500">18500</option>
-                    <option value="9000">9000</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            {/* 3rd */}
-            <div className="  lg:flex flex-wrap justify-center gap-[62px] mt-[20px] w-full">
-              {/* 1st */}
-              <div>
-                <h6 className="text-[#333333] lg:text-[16px] font-medium font-inter">
-                  VID(vehicle identification number)
-                </h6>
-
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px]  flex  justify-between h-[44px] bg-[#FAFAFA]
-                                           border rounded-lg py-[12.5px]  items-center px-[16px]"
-                >
-                  <select
-                    id="cars"
-                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px]  w-full bg-[#FAFAFA] outline-none"
-                  >
-                    <option value="Honda">Honda</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="BMW">BWM</option>
-                  </select>
-                </div>
-              </div>
-              {/* 2nd */}
-              <div className="mt-5 lg:mt-0">
-                <h6 className="text-[#333333] text-[16px] font-medium font-inter">
-                  Transmission
-                </h6>
-
-                <div
-                  className="mt-2 cursor-pointer lg:w-[400px]  flex  justify-between  h-[44px] bg-[#FAFAFA]
-                                     border rounded-lg py-[12.5px]  items-center px-[16px]"
-                >
-                  <select
-                    id="cars"
-                    class=" cursor-pointer text-base font-medium font-inter text-gray-1 rounded-lg lg:w-[360px] w-full bg-[#FAFAFA] outline-none"
-                  >
-                    <option value="Cvt">Cvt</option>
-                    <option value="Auto">Auto</option>
-                    <option value="Manual">Manual</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="   lg:flex flex-col mt-[36px] max-w-[864px] mx-auto">
-              <label
-                htmlFor=""
-                className=" text-base font-medium font-inter text-gray-1"
-              >
-                Notes
-              </label>
-              <textarea
-                name=""
-                id=""
-                className="border rounded-lg resize-none w-full h-[130px] outline-none p-4 bg-[#FAFAFA] mt-2"
-              ></textarea>
-            </div>
-
-            {/* images div      */}
-            <div className="  flex  mt-[36px] max-w-[864px] mx-auto">
-              <div>
-                <h6 className=" font-medium text-[16px] text-[#333333] font-inter">
-                  Upload vehicle images
-                </h6>
-                <div className=" flex flex-wrap gap-[16px] mt-4">
-                  {Array(11)
-                    .fill()
-                    .map(() => (
-                      <span className=" border border-dashed rounded-lg p-4">
-                        <Svgs.GalleryIcon />
-                      </span>
-                    ))}
-                </div>
-              </div>
-            </div>
-            {/* end */}
-
-            {/* for button send request */}
-            <div className=" flex justify-center  py-12">
-              <button
-                type={'submit'}
-                onClick={()=>{navigate("/sellyourcar/find-mechanic")}}
-                className=" w-[129px] h-[52px] py-[15.5px] px-[44px]
+              {/* for button send request */}
+              <div className=" flex justify-center  py-12">
+                <button
+                  type={"submit"}
+                  onClick={() => {}}
+                  className=" w-[129px] h-[52px] py-[15.5px] px-[44px]
                  
                   text-[white] shadow-2xl shadow-blue-300 text-[18px] font-medium font-Work-sans bg-[#6F9CFF] border rounded-lg  items-center flex justify-center"
-              >
-                Next
-              </button>
-            </div>
+                >
+                  Next
+                </button>
+              </div>
             </form>
           </div>
         </div>

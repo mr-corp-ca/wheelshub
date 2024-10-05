@@ -5,13 +5,11 @@ import { Input } from "../../components/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import CustomSelect from "../../components/CustomSelect";
+import { InputLogin } from "../../components/InputLogin";
 function DealerVerifyNow() {
     const navigate = useNavigate()
 
-    const handlesubmit=(e)=>{
-      e.preventDefault();
-    }
-
+    
     const seatOptions = [
       { value: "5", label: "5" },
       { value: "4", label: "4" },
@@ -53,7 +51,7 @@ function DealerVerifyNow() {
         </div>
       </div>
       <div className="pt-3 w-full lg:w-[80%] mx-auto">
-        <form onSubmit={handlesubmit} className="space-y-8">
+        <form  className="space-y-8">
           <div className="space-y-5">
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-3">
               <div className="w-full">
@@ -68,12 +66,12 @@ function DealerVerifyNow() {
                 <CustomSelect label={'Fuel type'} options={fuelTypeOptions}/>
               </div>
               <div className="w-full">
-                <Input label={"RTO"} placeholder={"Type here"} />
+                <InputLogin label={"RTO"} placeholder={"Type here"} />
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"KMs driven"} placeholder={"Type here"} />
+                <InputLogin label={"KMs driven"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
                 <CustomSelect label={'Seats'} options={seatOptions}/>
@@ -81,19 +79,19 @@ function DealerVerifyNow() {
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"Ownership"} placeholder={"Type here"} />
+                <InputLogin label={"Ownership"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
-                <Input label={"Engine displacement"} placeholder={"Type here"} />
+                <InputLogin label={"Engine displacement"} placeholder={"Type here"} />
               </div>
               
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div className="w-full">
-                <Input label={"Transmission"} placeholder={"Type here"} />
+                <InputLogin label={"Transmission"} placeholder={"Type here"} />
               </div>
               <div className="w-full">
-                <Input label={"Year of manufacturing"} placeholder={"Type here"} />
+                <InputLogin label={"Year of manufacturing"} placeholder={"Type here"} />
               </div>
               
             </div>

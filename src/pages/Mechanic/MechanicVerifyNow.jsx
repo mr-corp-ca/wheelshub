@@ -15,7 +15,7 @@ const initialValues = {
   fuelType: "",
   insurance: "",
   rto: "",
-  seats: 5,
+  seats: '',
   engineDisplacement: "",
   ownership: "",
   transmission: "",
@@ -26,19 +26,20 @@ function MechanicVerifyNow() {
   const navigate = useNavigate();
 
   const registrationYear = [
-    { value: "Select", label: "Select" },
     { value: 2023, label: 2023 },
     { value: 2024, label: 2024 },
   ];
 
   const insurance = [
-    { value: "Select", label: "Select" },
     { value: "Comprehensive", label: "Comprehensive" },
     { value: "Third-Party", label: "Third-Party" },
   ];
+  const transmission = [
+    { value: "Manual", label: "Manual" },
+    { value: "Auto", label: "Auto" },
+  ];
 
   const fuelType = [
-    { value: "Select", label: "Select" },
     { value: "Diesel", label: "Diesel" },
     { value: "Petrol", label: "Petrol" },
   ];
@@ -156,12 +157,12 @@ function MechanicVerifyNow() {
                       <CustomSelect
                         error={touched.fuelType && errors.fuelType}
                         id={"fuelType"}
-                        name={"fuelType"}
+                        name="fuelType"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.fuelType}
                         label={"Fuel type"}
                         options={fuelType}
+                        value={values.fuelType}
                       />
                       {touched.fuelType && errors.fuelType ? (
                         <div className="text-red-500 text-sm">
@@ -208,11 +209,11 @@ function MechanicVerifyNow() {
                     <div className="w-full">
                       <CustomSelect
                         error={touched.seats && errors.seats}
-                        id={"seats"}
-                        name={"seats"}
+                        value={values.seats}
+                        id="seats"
+                        name="seats"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.seats}
                         options={seats}
                         label={"Seats"}
                       />
@@ -225,51 +226,86 @@ function MechanicVerifyNow() {
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full">
-                      <label
-                        htmlFor=""
-                        className=" text-base font-medium font-inter text-gray-1"
-                      >
-                        Owner ship
-                      </label>
-                      <input
+                      <InputLogin
+                        error={touched.ownership && errors.ownership}
+                        value={values.ownership}
+                        id="ownership"
+                        name="ownership"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         type="text"
                         placeholder="Type here"
-                        className=" px-[16px] py-[12.5px] rounded-lg bg-[#fafafa] w-full outline-none border focus-within:ring-2 ring-custom-blue caret-custom-blue my-2"
+                        label={"Owner ship"}
                       />
+                      {touched.ownership && errors.ownership ? (
+                        <div className="text-red-500 text-sm">
+                          {errors.ownership}
+                        </div>
+                      ) : null}
                     </div>
                     <div className="w-full">
-                      <label
-                        htmlFor=""
-                        className=" text-base font-medium font-inter text-gray-1"
-                      >
-                        Engine displacement
-                      </label>
-                      <input
+                      <InputLogin
+                        error={
+                          touched.engineDisplacement &&
+                          errors.engineDisplacement
+                        }
+                        value={values.engineDisplacement}
+                        id="engineDisplacement"
+                        name="engineDisplacement"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         type="text"
                         placeholder="Type here"
-                        className=" px-[16px] py-[12.5px] rounded-lg bg-[#fafafa] w-full outline-none border focus-within:ring-2 ring-custom-blue caret-custom-blue my-2"
+                        label={"Engine Displacement"}
                       />
+                      {touched.engineDisplacement &&
+                      errors.engineDisplacement ? (
+                        <div className="text-red-500 text-sm">
+                          {errors.engineDisplacement}
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div className="w-full">
                       <CustomSelect
+                        error={touched.transmission && errors.transmission}
+                        value={values.transmission}
+                        id="transmission"
+                        name="transmission"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        placeholder="Type here"
                         label={"Transmission"}
-                        options={insurance}
+                        options={transmission}
                       />
+                      {touched.transmission && errors.transmission ? (
+                        <div className="text-red-500 text-sm">
+                          {errors.transmission}
+                        </div>
+                      ) : null}
                     </div>
                     <div className="w-full">
-                      <label
-                        htmlFor=""
-                        className=" text-base font-medium font-inter text-gray-1"
-                      >
-                        Year of manufacturing
-                      </label>
-                      <input
-                        type="text"
+                      <InputLogin
+                        error={
+                          touched.yearOfManufacturing &&
+                          errors.yearOfManufacturing
+                        }
+                        value={values.yearOfManufacturing}
+                        id="yearOfManufacturing"
+                        name="yearOfManufacturing"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         placeholder="Type here"
-                        className=" px-[16px] py-[12.5px] rounded-lg bg-[#fafafa] w-full outline-none border focus-within:ring-2 ring-custom-blue caret-custom-blue my-2"
+                        label={"Year of manufacturing"}
+                        type="text"
                       />
+                      {touched.yearOfManufacturing &&
+                      errors.yearOfManufacturing ? (
+                        <div className="text-red-500 text-sm">
+                          {errors.yearOfManufacturing}
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>

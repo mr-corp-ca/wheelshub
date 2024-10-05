@@ -730,7 +730,7 @@ export default function AccordionUsage() {
               {allItems.slice(0, itemsToShow).map((_, index) => (
                       <div
                         key={index}
-                        className="card border rounded-2xl flex flex-col gap-4"
+                        className="card border rounded-2xl flex flex-col gap-4 max-w-[360px]"
                       >
                         <div>
                           <img
