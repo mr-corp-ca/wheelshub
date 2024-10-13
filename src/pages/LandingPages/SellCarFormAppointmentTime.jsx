@@ -76,7 +76,7 @@ function SellCarFormAppointmentTime() {
       <Navbar2 active={"Sell-A-Car"} />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full xl:w-[1170px] mx-auto px-5 xl:px-0 lg:pt-20">
-          <div className="md:col-span-9 ">
+          <div className="md:col-span-8 ">
             <h1 className="text-[20px]  lg:text-[48px] font-bold font-inter text-gray-800 w-[90%]">
               Book a Convenient Time with Your Mechanic
             </h1>
@@ -101,8 +101,8 @@ function SellCarFormAppointmentTime() {
               </div>
             </div>
           </div>
-          <div className="hidden md:col-span-3 md:flex items-center justify-center ">
-            <img src={calenderImg} alt="Man smiling" />
+          <div className="hidden md:col-span-4 md:flex items-center justify-center ">
+            <img src={calenderImg} alt="Man smiling" className=""/>
           </div>
         </div>
       </div>
