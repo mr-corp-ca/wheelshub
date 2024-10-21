@@ -43,6 +43,7 @@ function Sellyourcar({setSelectSell, selectSell}) {
   };
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Sell-A-Car"} />
       <div className="mainpart">
         <div className=" py-32  bg-[#F3F3F3]   flex justify-center">
@@ -208,6 +209,7 @@ function Sellyourcar({setSelectSell, selectSell}) {
           </div>
         </div>
         <Banner />
+      </div>
       </div>
     </>
   );

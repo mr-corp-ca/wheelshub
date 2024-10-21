@@ -65,6 +65,7 @@ function SellCarFormFindMechanic() {
   };
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Sell-A-Car"} />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full 2xl:max-w-[1440px] mx-auto px-5 md:px-[135px]">
@@ -244,6 +245,7 @@ function SellCarFormFindMechanic() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

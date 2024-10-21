@@ -76,6 +76,7 @@ function SellCarFormFindDealer() {
   }, []);
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Sell-A-Car"} />
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12  w-full 2xl:w-[1440px] mx-auto px-5 md:px-[135px] lg:pt-32">
@@ -109,7 +110,6 @@ function SellCarFormFindDealer() {
           </div>
         </div>
       </div>
-
       <div className="cardpart flex justify-center bg-white ">
         <div className=" mb-20 -mt-32 w-full md:w-[95%] 2xl:w-[1440px] mx-auto bg-white shadow-css border rounded-xl py-10 px-5 xl:px-16">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
@@ -252,6 +252,7 @@ function SellCarFormFindDealer() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

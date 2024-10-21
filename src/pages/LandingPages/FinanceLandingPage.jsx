@@ -58,6 +58,7 @@ export default function FinanceLandingPage() {
   };
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Finance-Page"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
@@ -326,6 +327,7 @@ export default function FinanceLandingPage() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

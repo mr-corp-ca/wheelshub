@@ -75,6 +75,7 @@ const Selcartopublic = () => {
 
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Sell-A-Car"} />
       <div>
         {/* for first main div */}
@@ -324,6 +325,7 @@ const Selcartopublic = () => {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 };

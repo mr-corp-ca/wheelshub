@@ -15,6 +15,7 @@ function SellCarFormVerificationProcess({selectSell}) {
   console.log('hellooooooooo select22222',  selectSell)
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Sell-A-Car"} />
       <div className=" firstpart bg-[#f3f3f3] h-fit  py-16 sm:py-44"></div>
       <div className="   max-w-[1170px] mx-auto  px-5 md:px-10 lg:pt-20 ">
@@ -185,6 +186,7 @@ function SellCarFormVerificationProcess({selectSell}) {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

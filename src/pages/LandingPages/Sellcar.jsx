@@ -12,7 +12,7 @@ import wheeldeallogo from '../../assets/images/3 3 (4).png'
 
 const Sellcar = () => {
   return (
-    <div className=''>
+    <div className=" max-w-[1920px] mx-auto">
         {/* first main div inside of  2 */}
         <div className='h-fit py-44  bg-[#F3F3F3]   flex justify-center'>
             <div className=' items-center  grid lg:grid-cols-12'>

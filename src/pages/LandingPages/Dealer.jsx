@@ -100,6 +100,7 @@ export default function Mechanic() {
   };
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Dealer-Page"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
@@ -371,6 +372,7 @@ export default function Mechanic() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

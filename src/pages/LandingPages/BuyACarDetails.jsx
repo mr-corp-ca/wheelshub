@@ -113,6 +113,7 @@ function BuyACarDetails() {
   }, []);
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={'Buy-A-Car'}/>
       <div className="grid grid-cols-1 lg:grid-cols-12 w-[90%] mx-auto gap-6 2xl:gap-[64px] mt-10">
         <div className="leftpart col-span-12 lg:col-span-7">
@@ -495,6 +496,7 @@ function BuyACarDetails() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

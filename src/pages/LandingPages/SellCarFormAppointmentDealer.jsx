@@ -71,6 +71,7 @@ function SellCarFormAppointmentDealer() {
   )
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={'Sell-A-Car'}/>
       <div className="firstpart bg-[#f3f3f3] h-fit py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10  w-full xl:max-w-[1170px] mx-auto px-5 md:px-10 lg:pt-20">
@@ -204,6 +205,7 @@ function SellCarFormAppointmentDealer() {
         </div>
       </div>
       <Banner/>
+    </div>
     </>
   );
 }

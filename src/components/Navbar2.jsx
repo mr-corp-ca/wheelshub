@@ -121,8 +121,8 @@ function Navbar2({ active }) {
 
   return (
     <>
-      <nav className="border-b-2">
-        <div className="py-3 w-[90%] mx-auto flex items-center justify-between">
+      <nav className="border-b-2 ">
+        <div className="py-3 w-[90%]  mx-auto flex items-center justify-between">
           <Link
             to="/"
             className=" w-[70px] lg:w-[108px] h-[78px] flex items-center"

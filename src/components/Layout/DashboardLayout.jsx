@@ -21,7 +21,7 @@ export const Layout = ({ active, children }) => {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto w-full">
       {/* Top Navbar */}
       <div className="w-full flex flex-col lg:relative">
         <Navbar2 active={active}/>

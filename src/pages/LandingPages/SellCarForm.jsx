@@ -41,6 +41,7 @@ function SellCarForm() {
 
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={'Sell-A-Car'}/>
       <div className="firstpart bg-[#f3f3f3] h-fit pb-32 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12   w-full xl:w-[1170px] mx-auto ">
@@ -170,6 +171,7 @@ function SellCarForm() {
         </div>
       </div>
       <Banner />
+    </div>
     </>
   );
 }

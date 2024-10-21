@@ -487,7 +487,7 @@ export const SideBar2 = ({ active }) => {
               }}
               className={`${
                 value.active === true ? " bg-[#f0f4fe] border-r-2 border-custom-blue" : "bg-white"
-              } py-[28px] pl-[32px] flex items-center flex-row space-x-6 w-full cursor-pointer`}
+              } hover:bg-[#f0f4fe58] py-[28px] pl-[32px] flex items-center flex-row space-x-6 w-full cursor-pointer`}
             >
               <p>{value.icon}</p>
               <p

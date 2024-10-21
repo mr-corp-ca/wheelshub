@@ -38,6 +38,7 @@ function DealerDetails() {
   }, []);
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={'Buy-A-Car'}/>
       <div className="grid grid-cols-1 lg:grid-cols-12 p-5 lg:p-10 gap-5 lg:gap-10">
         {isLoading?(
@@ -247,6 +248,7 @@ function DealerDetails() {
         </div>
       </div>
       <Banner/>
+    </div>
     </>
   );
 }

@@ -67,6 +67,7 @@ export default function AccordionUsage() {
   };
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
       <Navbar2 active={"Buy-A-Car"} />
       <div className="  flex flex-col lg:flex-row">
         {/* sidebar */}
@@ -818,6 +819,7 @@ export default function AccordionUsage() {
         </div>
       </div>
       <Banner />
+      </div>
     </>
   );
 }

@@ -128,6 +128,7 @@ function Home() {
   };
   return (
     <>
+    <div className=" max-w-[1920px] w-full mx-auto">
       <Navbar2 active={"Home-Page"} />
       <div className=" relative ">
         <img
@@ -605,6 +606,7 @@ function Home() {
       </div>
       <div>
         <Banner />
+      </div>
       </div>
     </>
   );

@@ -40,7 +40,7 @@ function Banner() {
   }
   return (
    <>
-    <div className="banner lg:max-w-[1920px] mx-auto">
+    <div className="banner max-w-[1920px] mx-auto">
         <img src={banner} className=" w-[100vw]" alt="" />
       </div>
 

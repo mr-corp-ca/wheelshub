@@ -1,0 +1,59 @@
+{
+    "carListings": [
+      {
+        "id": 1,
+        "carName": "Mercedes-Benz E 220 d",
+        "image": "audiCar.png",
+        "date": "12th July 2024 11:00 - 12:00 PM",
+        "winner": "Sean Wills"
+      },
+      {
+        "id": 2,
+        "carName": "BMW X5",
+        "image": "audiCar.png",
+        "date": "15th August 2024 1:00 - 2:00 PM",
+        "winner": "Alex Smith"
+      },
+      {
+        "id": 3,
+        "carName": "Audi Q7",
+        "image": "audiCar.png",
+        "date": "20th September 2024 9:00 - 10:00 AM",
+        "winner": "Emily Johnson"
+      },
+      {
+        "id": 4,
+        "carName": "Tesla Model S",
+        "image": "audiCar.png",
+        "date": "5th October 2024 2:00 - 3:00 PM",
+        "winner": "John Doe"
+      }
+    ],
+    "payments": [
+      {
+        "id": 1,
+        "title": "Subscription",
+        "amount": -150,
+        "icon": "photo.png"
+      },
+      {
+        "id": 2,
+        "title": "Car Loan",
+        "amount": -200,
+        "icon": "photo.png"
+      },
+      {
+        "id": 3,
+        "title": "Insurance",
+        "amount": -100,
+        "icon": "photo.png"
+      },
+      {
+        "id": 4,
+        "title": "Maintenance",
+        "amount": -50,
+        "icon": "photo.png"
+      }
+    ]
+  }
+  

@@ -9,6 +9,7 @@ import maps from "../../assets/images/mapss.png";
 function BuyACarDetailsDialog() {
   return (
     <>
+    <div className=" max-w-[1920px] mx-auto">
     <div className="w-[100%] h-[100vh] flex items-center justify-center px-3 lg:px-0">
       
     <div className="border rounded-xl p-7 w-full max-w-[672px] mx-auto">
@@ -72,6 +73,7 @@ function BuyACarDetailsDialog() {
           Check loan offers
         </button>
       </div>
+    </div>
     </div>
     </div>
     </>
