@@ -32,7 +32,7 @@ function SellCarForm() {
       initialValues: initialValues,
       validationSchema: sellCarForm,
       onSubmit: (values) => {
-        navigate("/sellyourcar/find-mechanic")
+        navigate("/sellyourcar/sel-car-to-public")
         window.scrollTo({
           top: 0,
         });
@@ -152,10 +152,51 @@ function SellCarForm() {
                     onChange={handleChange}
                     name='street_address'
                     id='street_address'
-                  label="Street address" placeholder="Type here" />
+                  label="Address line 1" placeholder="Type here" />
                    {touched.street_address && errors.street_address && (
                       <small className=" text-custom-red">{errors.street_address}</small>
                     )}
+                </div>
+                <div className=" w-full md:w-1/2">
+                  <InputLogin
+                    // error={errors.street_address && touched.street_address}
+                    type="text"
+                    // value={values.street_address}
+                    // onChange={handleChange}
+                    name='addressline2'
+                    id='addressline2'
+                  label="Address line 2" placeholder="Type here" />
+                   {/* {touched.street_address && errors.street_address && (
+                      <small className=" text-custom-red">{errors.street_address}</small>
+                    )} */}
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-4">
+                <div className=" w-full md:w-1/2">
+                  <InputLogin
+                    // error={errors.street_address && touched.street_address}
+                    // type="tel"
+                    // value={values.street_address}
+                    // onChange={handleChange}
+                    name='province'
+                    id='province'
+                  label="Province" placeholder="Type here" />
+                   {/* {touched.street_address && errors.street_address && (
+                      <small className=" text-custom-red">{errors.street_address}</small>
+                    )} */}
+                </div>
+                <div className=" w-full md:w-1/2">
+                  <InputLogin
+                    // error={errors.street_address && touched.street_address}
+                    type="text"
+                    // value={values.street_address}
+                    // onChange={handleChange}
+                    name='pobox'
+                    id='pobox'
+                  label="PO Box" placeholder="Type here" />
+                   {/* {touched.street_address && errors.street_address && (
+                      <small className=" text-custom-red">{errors.street_address}</small>
+                    )} */}
                 </div>
               </div>
             </div>

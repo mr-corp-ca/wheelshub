@@ -65,7 +65,7 @@ function SellCarFormAppointmentTime() {
   };
 
   const handleClick = () => {
-    navigate("/sellyourcar/find-dealer");
+    navigate("/sellyourcar/find-dealer-direct-sale");
     window.scrollTo({
       top: 0,
       // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling

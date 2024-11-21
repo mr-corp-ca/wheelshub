@@ -102,7 +102,7 @@ function SellCarFormFindMechanic() {
       <div className="cardpart flex justify-center bg-white">
         <div className=" mb-20 -mt-16 lg:-mt-32 w-full md:w-[90%] 2xl:max-w-[1440px] mx-auto bg-white border rounded-[16px] shadow-css py-10 px-5 md:px-16">
           <div className="flex text-center items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
-            <h1>Select mechanic to check the car</h1>
+            <h1>Select mechanic to check the car or</h1>
           </div>
           <div className="flex flex-wrap items-center gap-5 pt-10 pb-5">
             <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
@@ -117,7 +117,7 @@ function SellCarFormFindMechanic() {
           </div>
           {isLoading ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-4 md:gap-6 lg:gap-5">
                 {Array(6)
                   .fill()
                   .map(() => (
@@ -127,7 +127,7 @@ function SellCarFormFindMechanic() {
             </>
           ) : (
             <>
-              <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6 lg:gap-5">
+              <div className="cardpart grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-4 md:gap-6 lg:gap-5">
                 {mechanics.slice(0, visibleMechanics).map((_, index) => (
                   <div
                     key={index}

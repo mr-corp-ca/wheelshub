@@ -7,7 +7,7 @@ import dealerfamily from "../../assets/images/dealerfamily.png";
 import Svgs from "../../assets/svgs/index.js";
 import Skeleton_Find_Mechanic from "../../components/Skeleton/Skeleton_Find_Mechanic.js";
 
-function SellCarFormFindDealer() {
+function FindDealerDirectSale() {
   const navigate = useNavigate();
   const [tabActive, setTabActive] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -111,9 +111,9 @@ function SellCarFormFindDealer() {
         </div>
       </div>
       <div className="cardpart flex justify-center bg-white ">
-        <div className=" mb-20 -mt-32 w-full md:w-[95%] 2xl:w-[1440px] mx-auto bg-white shadow-css border rounded-xl py-10 px-5 xl:px-16">
+        <div className=" mb-20 -mt-32 w-full md:w-[95%] 2xl:w-[1440px] mx-auto bg-white shadow-css border rounded-xl py-10 px-5 xl:px-16 relative">
           <div className="flex items-center justify-center text-2xl md:text-[28px] font-bold font-inter text-gray-800">
-            <h1>Select Dealer to check the car</h1>
+            <h1>Select Dealer to check the car</h1><button onClick={()=>{navigate('/sellyourcar/car-listed-successfully')}} className="border border-gray-1 outline-none rounded-lg text-gray-2 px-2 absolute top-10 right-16 text-lg w-[71px]">Skip</button>
           </div>
           <div className="flex flex-wrap items-center gap-5 pt-10 pb-5">
             <button className="rounded-lg bg-custom-blue text-white px-4 py-2 text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center shadow-2xl shadow-custom-blue">
@@ -257,4 +257,4 @@ function SellCarFormFindDealer() {
   );
 }
 
-export default SellCarFormFindDealer;
+export default FindDealerDirectSale;

@@ -104,7 +104,7 @@ const ownership = [
   },
 ];
 
-const Selcartopublic = () => {
+const SelCarToPublicDirectSale = () => {
   const navigate = useNavigate();
 
   const { values, errors, handleBlur, handleChange, handleSubmit, touched } =
@@ -112,7 +112,7 @@ const Selcartopublic = () => {
       initialValues: initialValues,
       validationSchema: SellCarToPublicSchema,
       onSubmit: (values) => {
-        navigate("/sellyourcar/find-mechanic");
+        navigate("/sellyourcar/find-mechanic-direct-sale");
       },
     });
 
@@ -561,4 +561,4 @@ const Selcartopublic = () => {
   );
 };
 
-export default Selcartopublic;
+export default SelCarToPublicDirectSale;

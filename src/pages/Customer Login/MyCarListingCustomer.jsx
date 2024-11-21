@@ -44,8 +44,8 @@ function MyCarListingCustomer() {
                     <button onClick={()=>{handleActive('1')}} className={`${isActive === '1' ? ' bg-custom-blue text-white shadow-blue-300 shadow-2xl' : ' bg-white border border-gray-1 text-gray-1'} h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center `}>
                     Wheeldealhub
                     </button>
-                    <button onClick={()=>{handleActive('2')}} className={`${isActive === '2' ? ' bg-custom-blue text-white shadow-blue-300 shadow-2xl' : ' bg-white border border-gray-1 text-gray-1'} h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center`}>
-                    Direct selling
+                    <button onClick={()=>{navigate('/customer/mycar-listing-customer-directsale')}} className={`${isActive === '2' ? ' bg-custom-blue text-white shadow-blue-300 shadow-2xl' : ' bg-white border border-gray-1 text-gray-1'} h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans flex items-center justify-center`}>
+                    Direct Sale
                     </button>
                   </div>
         </div>

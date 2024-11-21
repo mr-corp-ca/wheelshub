@@ -4,13 +4,17 @@ import pattern from "../../assets/images/Pattern.png";
 import mailGift from "../../assets/images/mailGift.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index.js'
+import { useNavigate } from "react-router-dom";
 
 
 function MechanicSubscriptions() {
   const [cardbg, setCardbg] = useState(1)
-
+  const navigate = useNavigate()
   const handleCardClick = (item) =>{
     setCardbg(item)
+    setTimeout(() => {
+      navigate('/mechanic/mechanic-payments')
+    }, 500);
   }
   return (
     <>
@@ -49,7 +53,7 @@ function MechanicSubscriptions() {
               </div>
               <div className="flex items-center justify-center pb-4 md:pb-5 py-2">
                 <button className={`w-full max-w-[312px] h-[44px] md:h-[48px] px-[24px] py-[12px] md:py-[13.5px] rounded-lg text-sm md:text-lg font-medium font-Work-sans ${cardbg === index ? "bg-white text-custom-blue" : "bg-custom-blue text-white"} flex items-center justify-center`}>
-                  Subscribe
+                  {cardbg === index ? 'Subscribed' : 'Subscribe'} 
                 </button>
               </div>
               <div className="needhelp flex items-center justify-center">

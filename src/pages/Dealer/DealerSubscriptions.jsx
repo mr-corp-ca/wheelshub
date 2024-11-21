@@ -4,13 +4,18 @@ import pattern from "../../assets/images/Pattern.png";
 import mailGift from "../../assets/images/mailGift.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
 import Svgs from '../../assets/svgs/index'
+import { useNavigate } from "react-router-dom";
 
 
 function DealerSubscriptions() {
   const [cardbg, setCardbg] = useState(1)
+  const navigate = useNavigate()
 
   const handleCardClick = (item) =>{
     setCardbg(item)
+    setTimeout(() => {
+      navigate('/dealer/dealer-payments')
+    }, 500);
   }
   return (
     <>

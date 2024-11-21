@@ -145,10 +145,10 @@ function Sellyourcar({setSelectSell, selectSell}) {
             </div>
             <div
               onClick={() => {
-                handleSelect("sel-car-to-public");
+                handleSelect("sel-car-to-public-directsale");
               }}
               className={`${
-                borderColor === "sel-car-to-public"
+                borderColor === "sel-car-to-public-directsale"
                   ? "border-2  border-custom-blue"
                   : " border-2"
               } border rounded-[16px]  px-[65px] py-[18px] flex items-center justify-center flex-col gap-4 cursor-pointer w-[280px] h-[312px] shadow-css`}
@@ -156,8 +156,8 @@ function Sellyourcar({setSelectSell, selectSell}) {
               <div className="flex items-center gap-4">
                 <input
                   type="radio"
-                  value={"sel-car-to-public"}
-                  checked={loginType === "sel-car-to-public"}
+                  value={"sel-car-to-public-directsale"}
+                  checked={loginType === "sel-car-to-public-directsale"}
                   onChange={(e) => {
                     setLoginType(e.target.value);
                   }}
@@ -165,7 +165,7 @@ function Sellyourcar({setSelectSell, selectSell}) {
                   className=" h-5 w-5"
                 />
                 <h1 className="text-base md:text-lg font-medium font-Work-sans text-gray-1">
-                  Public sale
+                  Direct Sale
                 </h1>
               </div>
               <div>

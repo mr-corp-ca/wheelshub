@@ -20,7 +20,7 @@ export const InputLogin = ({ label, placeholder, value, type, onChange, classNam
             onChange={onChange}
             name={name}
             id={id}
-            type={`${type === 'password' && show === true ? 'password' : 'text'}`}
+            type={`${type === 'password' && show === true ? 'password' : type}`}
             placeholder={placeholder}
             className={` outline-none max-w-full w-full bg-transparent  caret-custom-blue group ${className} `}
           />

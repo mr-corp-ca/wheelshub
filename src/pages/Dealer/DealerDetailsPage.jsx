@@ -140,46 +140,46 @@ function DealerDetailsPage() {
               <div className='flex flex-col md:flex-row justify-between pt-5 gap-5 md:gap-5'>
                 <div className='flex flex-col gap-5  md:w-[50%]'>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Registration year</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Jun</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Registration year</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>Jun</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Fuel type</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Diesel</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Fuel type</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>Diesel</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Kms Driven</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>82000 Kms</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Kms Driven</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>82000 Kms</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Ownership</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>First Owner</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Ownership</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>First Owner</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Transmission</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Manual</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Transmission</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>Manual</h1>
                   </div>
                 </div>
                 <div className='flex flex-col gap-5  md:w-[50%]'>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Insurance</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Comprehensive</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Insurance</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>Comprehensive</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Seats</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>5 Seats</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Seats</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>5 Seats</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>RTO</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>Surrey</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>RTO</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>Surrey</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Engine displacement</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>1248 CC</h1>
+                    <h1 className='text-sm 2xl:text-lg font-normal font-Work-sans text-gray-4'>Engine displacement</h1>
+                    <h1 className='text-sm 2xl:text-lg font-medium font-Work-sans text-gray-1'>1248 CC</h1>
                   </div>
                   <div className='flex items-center justify-between gap-5'>
-                    <h1 className='text-base md:text-lg font-normal font-Work-sans text-gray-4'>Year of manufacture</h1>
-                    <h1 className='text-base md:text-lg font-medium font-Work-sans text-gray-1'>2018</h1>
+                    <h1 className='text-base 2xl:text-lg font-normal font-Work-sans text-gray-4'>Year of manufacture</h1>
+                    <h1 className='text-base 2xl:text-lg font-medium font-Work-sans text-gray-1'>2018</h1>
                   </div>
                 </div>
               </div>

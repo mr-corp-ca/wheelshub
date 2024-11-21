@@ -3,12 +3,16 @@ import greenTick from "../../assets/images/greenTick.png";
 import pattern from "../../assets/images/Pattern.png";
 import mailGift from "../../assets/images/mailGift.png";
 import { Layout } from "../../components/Layout/DashboardLayout";
+import { useNavigate } from "react-router-dom";
 
 function RepresentativeSubscriptions() {
   const [cardbg, setCardbg] = useState(1)
-
+  const navigate = useNavigate()
   const handleCardClick = (item) =>{
     setCardbg(item)
+    setTimeout(() => {
+      navigate('/representative/representative-payments')
+    }, 500);
   }
   return (
     <>

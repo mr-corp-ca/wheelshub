@@ -119,6 +119,11 @@ import CustomerPayments from "./pages/Customer Login/CustomerPayments";
 import ContactUs from "./pages/LandingPages/ContactUs";
 import ForgotPassword from "./pages/OnBoarding/ForgotPassword";
 import CreateNewPassword from "./pages/OnBoarding/CreateNewPassword";
+import SellCarFormFindMechanicDirectSale from "./pages/LandingPages/SellCarFormFindMechanicDirectSale";
+import SelCarToPublicDirectSale from "./pages/LandingPages/SelCarToPublicDirectSale";
+import FindDealerDirectSale from "./pages/LandingPages/FindDealerDirectSale";
+import CarListedSuccessfully from "./pages/LandingPages/CarListedSuccessfully";
+import MyCarListingCustomerDirectSale from "./pages/Customer Login/MyCarListingCustomerDirectSale";
 
 // export const Layout = () => {
 //   const { pathname } = useLocation()
@@ -512,6 +517,10 @@ function App() {
           element: <MyCarListingCustomer />,
         },
         {
+          path: 'mycar-listing-customer-directsale',
+          element: <MyCarListingCustomerDirectSale/>
+        },
+        {
           path: 'customer-chats',
           element: <CustomerChats/>
         },
@@ -588,8 +597,20 @@ function App() {
           element: <SellCarFormFindMechanic />,
         },
         {
+          path: 'find-mechanic-direct-sale',
+          element: <SellCarFormFindMechanicDirectSale/>
+        },
+       {
+        path: 'sel-car-to-public-directsale',
+        element: <SelCarToPublicDirectSale/>
+       },
+        {
           path: "find-dealer",
           element: <SellCarFormFindDealer />,
+        },
+        {
+          path: 'find-dealer-direct-sale',
+          element: <FindDealerDirectSale/>
         },
         {
           path: "appointment",
@@ -607,6 +628,10 @@ function App() {
           path: "verification-process",
           element: <SellCarFormVerificationProcess />,
         },
+        {
+          path: 'car-listed-successfully',
+          element: <CarListedSuccessfully/>
+        }
       ],
     },
 
